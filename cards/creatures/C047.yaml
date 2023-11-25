@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: 
+    color: Green
+    cost-total: 5
+    cost-color: 3
+    hp: 6
+    atk: 3
+    spd: 0
+    traits:
+      - name: 
+        description: In combat, the opposing [CREATURE] has -1 Atk
+        id: T024
+      - name: 
+        description: Excessive damage this [CREATURE] deals is taken by other opposing [CREATURE]s (if there are any)
+        id: T037
+
+  metadata:
+    id: C047
+    value: -80
+    dev-stage: Alpha-1
+    dev-name: 
+    order: 209
+    summary: High stats, EQ, Slow movement, costly
+    notes: |
+      

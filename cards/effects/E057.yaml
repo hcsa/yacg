@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Illegal search
+    color: Black
+    type: Action
+    cost-total: 5
+    cost-color: 3
+    description: |
+      Discard 2 cards to play this card (can't be played if you can't discard 2 cards). Choose 2 cards from deck, shuffle after
+
+  metadata:
+    id: E057
+    dev-stage: Alpha-0
+    dev-name: Search, black
+    order: 803
+    summary: Search, black
+    notes: |
+      * [HS] Increased cost

@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Black
+    cost-total: 0
+    cost-color: 0
+    hp: 1
+    atk: 2
+    spd: 2
+    traits:
+      - name: 
+        description: If ally [CREATURE] dies, gets -1 Atk
+        id: T009
+
+  metadata:
+    id: C001
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 801
+    summary: 0-cost, Dark
+    notes: |
+      

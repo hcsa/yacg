@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Betrayal
+    color: Black
+    type: Aura
+    cost-total: 5
+    cost-color: 3
+    description: |
+      Target [CREATURE] moves to your side
+
+  metadata:
+    id: E063
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 809
+    summary: Take control of creature
+    notes: |
+      

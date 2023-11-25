@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: White
+    cost-total: 2
+    cost-color: 2
+    hp: 2
+    atk: 2
+    spd: 2
+    traits:
+      - name: 
+        description: First damage dealt to this [CREATURE] is nullified
+        id: T028
+
+  metadata:
+    id: C071
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 405
+    summary: Protect, White
+    notes: |
+      

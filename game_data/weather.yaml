@@ -1,0 +1,10 @@
+data:
+  - id: Sun
+    name: Sun
+    description: +2 Atk to Orange creatures
+  - id: Rain
+    name: Rain
+    description: Damage dealt to Blue creatures is reduced by 1
+  - id: Snow
+    name: Snow
+    description: +1 Atk +1 Spd to Cyan creatures

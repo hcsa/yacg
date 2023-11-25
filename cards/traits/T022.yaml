@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: Illegal charge
+    description: |
+      When played, put this [CREATURE] on the opponent's side. You get +4 () of a color
+
+  metadata:
+    id: T022
+    type: Cast
+    value: -30
+    dev-stage: Alpha-0
+    dev-name: Illegal charge
+    order: 22
+    summary: Charge, black
+    notes: |
+      * Main colors: Black

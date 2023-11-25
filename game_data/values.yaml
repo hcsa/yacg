@@ -1,0 +1,94 @@
+values:
+  cost-total:
+    0: 10
+    1: 0
+    2: -10
+    3: -25
+    4: -50
+    5: -85
+    6: -120
+    7: -165
+    8: -210
+    9: -260
+    10: -310
+
+  color:
+    Orange:
+      cost-total-low: -15
+      cost-total-mid: -20
+      cost-total-high: -30
+    Green:
+      cost-total-low: -15
+      cost-total-mid: -25
+      cost-total-high: -45
+    Blue:
+      cost-total-low: -15
+      cost-total-mid: -20
+      cost-total-high: -30
+    White:
+      cost-total-low: -20
+      cost-total-mid: -25
+      cost-total-high: -20
+    Yellow:
+      cost-total-low: -35
+      cost-total-mid: -40
+      cost-total-high: 999999   # Can't happen
+    Purple:
+      cost-total-low: -20
+      cost-total-mid: -20
+      cost-total-high: -25
+    Pink:
+      cost-total-low: 5
+      cost-total-mid: -5
+      cost-total-high: -10
+    Black:
+      cost-total-low: -5
+      cost-total-mid: -10
+      cost-total-high: -15
+    Cyan:
+      cost-total-low: -10
+      cost-total-mid: -15
+      cost-total-high: -20
+
+  hp:
+    1: 0
+    2: 5
+    3: 10
+    4: 15
+    5: 20
+    6: 25
+    7: 30
+    8: 40
+    9: 50
+    10: 60
+    11: 70
+    12: 80
+    13: 95
+    14: 105
+    15: 115
+    16: 125
+    17: 135
+    18: 145
+    19: 155
+    20: 165
+
+  atk:
+    0: -10
+    1: 0
+    2: 10
+    3: 20
+    4: 35
+    5: 50
+    6: 65
+    7: 85
+    8: 105
+    9: 130
+    10: 160
+
+  spd:
+    0: -40
+    1: -20
+    2: 0   # Normal spd
+    3: 20
+    4: 45
+    5: 60

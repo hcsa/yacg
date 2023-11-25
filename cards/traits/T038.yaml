@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      Spd is reversed when deciding combat order (if both [CREATURE]s have Trickster, nothing happens)
+
+  metadata:
+    id: T038
+    type: Combat
+    value: 35
+    dev-stage: Alpha-0
+    dev-name: Trickster
+    order: 38
+    summary: Reverses speed order in combat
+    notes: |
+      * Main colors: Black

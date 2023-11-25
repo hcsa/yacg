@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Gossip
+    color: Black
+    type: Aura
+    cost-total: 1
+    cost-color: 1
+    description: |
+      Target [CREATURE] gets -1Atk
+
+  metadata:
+    id: E062
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 808
+    summary: -Atk, cheap, black
+    notes: |
+      

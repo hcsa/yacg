@@ -1,0 +1,19 @@
+creature:
+  data:
+    name: 
+    color: Yellow
+    cost-total: 0
+    cost-color: 0
+    hp: 1
+    atk: 1
+    spd: 3
+
+  metadata:
+    id: C009
+    value: -5
+    dev-stage: Alpha-1
+    dev-name: Nano bot
+    order: 501
+    summary: 0-cost, Yellow
+    notes: |
+      

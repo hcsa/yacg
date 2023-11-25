@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Definitely on purpose
+    color: Pink
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Destroy target [CREATURE], create a 3HP 3Atk 2Spd token [CREATURE] in their place
+
+  metadata:
+    id: E050
+    dev-stage: Alpha-1
+    dev-name: 
+    order: 708
+    summary: Kill creature, create creature in its place
+    notes: |
+      * [HS] MUST DECIDE IF EFFECTS FROM PAST CREATURE STILL APPLY. For now, we'll say NO, seems simpler that way

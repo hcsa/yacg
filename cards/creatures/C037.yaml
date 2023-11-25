@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Purple
+    cost-total: 4
+    cost-color: 2
+    hp: 6
+    atk: 3
+    spd: 0
+    traits:
+      - name: 
+        description: Any damage dealt by this [CREATURE] kills opposing [CREATURE]
+        id: T008
+
+  metadata:
+    id: C037
+    value: -45
+    dev-stage: Alpha-0
+    dev-name: Vengeful mage
+    order: 608
+    summary: Death touch, good stats
+    notes: |
+      

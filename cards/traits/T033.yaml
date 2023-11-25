@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: Self-destruct
+    description: |
+      When this [CREATURE] attacks, kill this and the opposing [CREATURE]
+
+  metadata:
+    id: T033
+    type: Combat
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: Self-destruct
+    order: 33
+    summary: Its attack kills both itself and opponent
+    notes: |
+      * Main colors: Yellow, Orange

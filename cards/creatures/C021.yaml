@@ -1,0 +1,19 @@
+creature:
+  data:
+    name: 
+    color: Orange
+    cost-total: 1
+    cost-color: 1
+    hp: 2
+    atk: 2
+    spd: 2
+
+  metadata:
+    id: C021
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 102
+    summary: Cheap, no traits, Orange
+    notes: |
+      

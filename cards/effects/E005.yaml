@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Charge
+    color: None
+    type: Action
+    cost-total: 1
+    cost-color: 0
+    description: |
+      Get +3 () of a color
+
+  metadata:
+    id: E005
+    dev-stage: Alpha-0
+    dev-name: Charge
+    order: 5
+    summary: Charge, colorless
+    notes: |
+      * [HS] Before it was giving 2 energy, and it was basically useless. Let's try 3, see if it becomes relevant

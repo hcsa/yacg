@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Orange
+    cost-total: 4
+    cost-color: 3
+    hp: 6
+    atk: 4
+    spd: 2
+    traits:
+      - name: Sun setter
+        description: When played, if 3 [CREATURE]s have this trait, sun is set for 2 games
+        id: T035
+
+  metadata:
+    id: C029
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: Dragon
+    order: 110
+    summary: Sun setter, Orange, good stats
+    notes: |
+      * [HS] Decreased cost

@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Data leak
+    color: Pink
+    type: Field
+    cost-total: 3
+    cost-color: 3
+    description: |
+      At any time, you can look at the top card of your deck. On your turn, you can play the top card of your deck
+
+  metadata:
+    id: E053
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 711
+    summary: Play with top card of deck
+    notes: |
+      

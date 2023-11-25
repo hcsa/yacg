@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      Any damage dealt by this [CREATURE] kills opposing [CREATURE]
+
+  metadata:
+    id: T008
+    type: Combat
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: Death touch
+    order: 8
+    summary: Kills whenever gives damage
+    notes: |
+      * Main colors: Purple

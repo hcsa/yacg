@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Gigantamax
+    color: Green
+    type: Aura
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Target [CREATURE] gets +4 Atk, +4 HP, 0 Spd and Slow movement
+
+  metadata:
+    id: E014
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 203
+    summary: Make creature beg
+    notes: |
+      

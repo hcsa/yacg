@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: 
+    color: Blue
+    cost-total: 4
+    cost-color: 2
+    hp: 8
+    atk: 2
+    spd: 2
+    traits:
+      - name: 
+        description: First damage dealt to this [CREATURE] is nullified
+        id: T028
+      - name: Immunity
+        description: Can't be targeted by effect cards
+        id: T023
+
+  metadata:
+    id: C092
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 307
+    summary: Defensive traits
+    notes: |
+      

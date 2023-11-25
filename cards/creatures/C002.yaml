@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Black
+    cost-total: 2
+    cost-color: 2
+    hp: 4
+    atk: 3
+    spd: 2
+    traits:
+      - name: Illegal charge
+        description: When played, put this [CREATURE] on the opponent's side. You get +4 () of a color
+        id: T022
+
+  metadata:
+    id: C002
+    value: -10
+    dev-stage: Alpha-1
+    dev-name: Energy spy
+    order: 802
+    summary: Charge, black
+    notes: |
+      

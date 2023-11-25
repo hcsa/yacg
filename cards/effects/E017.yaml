@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Cannibalism
+    color: Green
+    type: Aura
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Sacrifice ally [CREATURE], choose target [CREATURE]. Sacrificed [CREATURE] becomes an aura of target [CREATURE]. Target [CREATURE] gains HP and Atk equal to sacrificed [CREATURE]'s HP and Atk, and gets Slow Movement
+
+  metadata:
+    id: E017
+    dev-stage: Alpha-0
+    dev-name: Fusion
+    order: 206
+    summary: Join creatures
+    notes: |
+      

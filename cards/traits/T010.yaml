@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: Defender
+    description: |
+      Can take combat damage targeted at other [CREATURE]
+
+  metadata:
+    id: T010
+    type: Combat
+    value: 40
+    dev-stage: Alpha-0
+    dev-name: Defender
+    order: 10
+    summary: Takes damage from allies
+    notes: |
+      * Main colors: White, Green

@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      When played, deal 1 damage to all other [CREATURE]s
+
+  metadata:
+    id: T015
+    type: Cast
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Earthquake
+    order: 15
+    summary: Spead damage when it's cast
+    notes: |
+      * Main colors: Green

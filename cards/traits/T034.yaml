@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      This creature always attacks last
+
+  metadata:
+    id: T034
+    type: Other
+    value: -20
+    dev-stage: Alpha-0
+    dev-name: Slow movement
+    order: 34
+    summary: Attacks last
+    notes: |
+      * Main colors: Green

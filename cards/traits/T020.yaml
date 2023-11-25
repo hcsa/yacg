@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      When played, fights opponent's last played [CREATURE] in the current game
+
+  metadata:
+    id: T020
+    type: Cast
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Haste
+    order: 20
+    summary: Attacks on cast
+    notes: |
+      * Main colors: Orange

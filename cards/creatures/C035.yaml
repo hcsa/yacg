@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Purple
+    cost-total: 3
+    cost-color: 2
+    hp: 4
+    atk: 4
+    spd: 3
+    traits:
+      - name: 
+        description: After this [CREATURE] attacks, kill it
+        id: T003
+
+  metadata:
+    id: C035
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: Bonehound
+    order: 606
+    summary: 3-cost, Purple
+    notes: |
+      

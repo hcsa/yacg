@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: Reckless
+    description: |
+      When this [CREATURE] attacks, deals 1 damage to itself
+
+  metadata:
+    id: T031
+    type: Combat
+    value: -15
+    dev-stage: Alpha-0
+    dev-name: Reckless
+    order: 31
+    summary: Hurts itself when it attacks
+    notes: |
+      * Main colors: Orange

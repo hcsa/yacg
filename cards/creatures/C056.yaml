@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Cyan
+    cost-total: 3
+    cost-color: 2
+    hp: 2
+    atk: 2
+    spd: 3
+    traits:
+      - name: 
+        description: After this [CREATURE] attacks, you can switch it for another [CREATURE]
+        id: T039
+
+  metadata:
+    id: C056
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 904
+    summary: U-turn, high Spd, cheap
+    notes: |
+      

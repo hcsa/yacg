@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: 
+    color: Pink
+    cost-total: 5
+    cost-color: 2
+    hp: 10
+    atk: 4
+    spd: 2
+    traits:
+      - name: 
+        description: This [CREATURE]'s Atk, Spd and Prio can't be lowered
+        id: T005
+      - name: Immunity
+        description: Can't be targeted by effect cards
+        id: T023
+
+  metadata:
+    id: C066
+    value: 35
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 705
+    summary: Defensive traits, good stats, Pink
+    notes: |
+      

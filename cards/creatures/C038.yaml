@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Neverending curse
+    color: Purple
+    cost-total: 5
+    cost-color: 3
+    hp: 6
+    atk: 3
+    spd: 3
+    traits:
+      - name: 
+        description: If the next [CREATURE] cast during the current game doesn't belong to you, destroy both that [CREATURE] and this one
+        id: T011
+      - name: Restless
+        description: If this [CREATURE] is put in the trash, return it in your hand
+        id: T032
+
+  metadata:
+    id: C038
+    value: 25
+    dev-stage: Alpha-0
+    dev-name: Neverending curse
+    order: 609
+    summary: Destiny bond, Restless
+    notes: |
+      

@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Cold charge
+    color: Cyan
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Sacrifice target own [CREATURE]. Get +() energy of a color, equal to sacrificed [CREATURE]'s HP
+
+  metadata:
+    id: E069
+    dev-stage: Alpha-0
+    dev-name: Charge, cyan
+    order: 906
+    summary: Charge, cyan
+    notes: |
+      

@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: 
+    color: Green
+    cost-total: 4
+    cost-color: 2
+    hp: 4
+    atk: 2
+    spd: 3
+    traits:
+      - name: Arrogant
+        description: If this [CREATURE] kills another [CREATURE], gets -1 Atk
+        id: T001
+      - name: 
+        description: In combat, the opposing [CREATURE] has -1 Atk
+        id: T024
+
+  metadata:
+    id: C044
+    value: -30
+    dev-stage: Alpha-0
+    dev-name: Wolfhound
+    order: 206
+    summary: -Atk when kills, -Atk in combat
+    notes: |
+      

@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: 
+    color: Cyan
+    cost-total: 5
+    cost-color: 4
+    hp: 8
+    atk: 3
+    spd: 3
+    traits:
+      - name: Hail setter
+        description: When played, if 3 [CREATURE]s have this trait, hail is set for 2 games
+        id: T019
+      - name: 
+        description: After this [CREATURE] attacks, you can switch it for another [CREATURE]
+        id: T039
+
+  metadata:
+    id: C061
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 909
+    summary: Hail setter, Cya, good stats
+    notes: |
+      

@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: White
+    cost-total: 4
+    cost-color: 2
+    hp: 8
+    atk: 1
+    spd: 3
+    traits:
+      - name: Defender
+        description: Can take combat damage targeted at other [CREATURE]
+        id: T010
+
+  metadata:
+    id: C080
+    value: 25
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 414
+    summary: Defender, White, good HP
+    notes: |
+      

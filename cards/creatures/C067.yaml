@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: White
+    cost-total: 0
+    cost-color: 0
+    hp: 1
+    atk: 1
+    spd: 2
+    traits:
+      - name: Survivor
+        description: If this [CREATURE] survives combat phase, return to hand instead
+        id: T036
+
+  metadata:
+    id: C067
+    value: 0
+    dev-stage: Alpha-1
+    dev-name: Old warrior
+    order: 401
+    summary: 0-cost, White
+    notes: |
+      

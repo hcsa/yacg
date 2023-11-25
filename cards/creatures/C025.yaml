@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: Fire elemental
+    color: Orange
+    cost-total: 3
+    cost-color: 2
+    hp: 5
+    atk: 3
+    spd: 2
+    traits:
+      - name: Sun setter
+        description: When played, if 3 [CREATURE]s have this trait, sun is set for 2 games
+        id: T035
+
+  metadata:
+    id: C025
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 106
+    summary: Sun setter, Orange, cheapest
+    notes: |
+      * [HS] Buffed its stats. Not sure the cost of the cheapest Sun setter should be less than 3

@@ -1,0 +1,6 @@
+.idea/
+venv/
+_pyinstaller_cache/
+~$*
+/Cards.xlsx
+/Cards (backup).xlsx

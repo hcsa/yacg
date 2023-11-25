@@ -1,0 +1,19 @@
+creature:
+  data:
+    name: 
+    color: White
+    cost-total: 3
+    cost-color: 2
+    hp: 2
+    atk: 2
+    spd: 3
+
+  metadata:
+    id: C077
+    value: -15
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 411
+    summary: 3-cost, White
+    notes: |
+      

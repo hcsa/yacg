@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: War of atrition
+    color: Cyan
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Discard a card to play this card (can't be played if you can't discard cards). Banish bottom 6 cards of opponent's deck
+
+  metadata:
+    id: E073
+    dev-stage: Alpha-0
+    dev-name: Mull+
+    order: 911
+    summary: Mull, discard a card
+    notes: |
+      

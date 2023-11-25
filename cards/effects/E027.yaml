@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Combat proficiency
+    color: White
+    type: Aura
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Target [CREATURE] gets First strike
+
+  metadata:
+    id: E027
+    dev-stage: Alpha-1
+    dev-name: 
+    order: 404
+    summary: Give First strike
+    notes: |
+      

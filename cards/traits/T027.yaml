@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      If this [CREATURE] kills another [CREATURE], gets +1 Atk
+
+  metadata:
+    id: T027
+    type: Combat
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Moxie
+    order: 27
+    summary: +Atk when kills
+    notes: |
+      * Main colors: Orange

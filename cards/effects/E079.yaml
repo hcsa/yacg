@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Field
+    cost-total: 0
+    cost-color: 0
+    description: |
+      Choose a color, get 3 energy of that color. Banish bottom 5 cards of your deck
+
+  metadata:
+    id: E079
+    dev-stage: Conception
+    dev-name: 
+    order: 1001
+    summary: Charge, mull itself
+    notes: |
+      

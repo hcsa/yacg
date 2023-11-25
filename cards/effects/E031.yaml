@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Escalation
+    color: Yellow
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Every [CREATURE] gets -HP equal to their HP - 1
+
+  metadata:
+    id: E031
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 505
+    summary: High spread damage
+    notes: |
+      

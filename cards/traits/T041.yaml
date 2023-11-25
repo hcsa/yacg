@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      If this [CREATURE] is killed in combat, destroy opposing [CREATURE]
+
+  metadata:
+    id: T041
+    type: Combat
+    value: 20
+    dev-stage: Conception
+    dev-name: Vindicative
+    order: 41
+    summary: Kills opponent when it dies
+    notes: |
+      * [HS] Maybe deals damage instead of outright killing?

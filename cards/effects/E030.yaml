@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Explosions!
+    color: Yellow
+    type: Field
+    cost-total: 5
+    cost-color: 3
+    description: |
+      Every [CREATURE] gets Self-destruct
+
+  metadata:
+    id: E030
+    dev-stage: Alpha-1
+    dev-name: Explosions!
+    order: 504
+    summary: All creatures have self-destruct
+    notes: |
+      * [HS] Changes battle dynamics, makes it so the side with the most creatures wins. Has to be very tested

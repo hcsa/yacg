@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      Excessive damage this [CREATURE] deals is taken by other opposing [CREATURE]s (if there are any)
+
+  metadata:
+    id: T037
+    type: Combat
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Trample
+    order: 37
+    summary: Deals excess combat damage to another creature
+    notes: |
+      * Main colors: Green

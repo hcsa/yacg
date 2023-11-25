@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: 
+    color: Cyan
+    cost-total: 4
+    cost-color: 2
+    hp: 4
+    atk: 3
+    spd: 3
+    traits:
+      - name: 
+        description: In combat, the opposing [CREATURE] has -1 Spd
+        id: T021
+      - name: 
+        description: After this [CREATURE] attacks, you can switch it for another [CREATURE]
+        id: T039
+
+  metadata:
+    id: C059
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 907
+    summary: -Spd in combat, U-turn
+    notes: |
+      

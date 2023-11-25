@@ -1,0 +1,17 @@
+trait:
+  data:
+    name: Survivor
+    description: |
+      If this [CREATURE] survives combat phase, return to hand instead
+
+  metadata:
+    id: T036
+    type: Other
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Survivor
+    order: 36
+    summary: If it's not killed, goes to deck at the end of the game
+    notes: |
+      * Main colors: Green, White
+      * [HS] Doesn't seem to be relevant

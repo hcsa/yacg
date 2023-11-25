@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Double-edged sword
+    color: Orange
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Target opposing crature gets -5 HP, target ally [CREATURE] gets -2HP
+
+  metadata:
+    id: E007
+    dev-stage: Alpha-0
+    dev-name: Fireball+
+    order: 103
+    summary: High direct damage, orange
+    notes: |
+      

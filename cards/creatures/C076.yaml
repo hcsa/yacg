@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: White
+    cost-total: 3
+    cost-color: 3
+    hp: 4
+    atk: 2
+    spd: 3
+    traits:
+      - name: Martyr
+        description: If a [CREATURE] were to take combat damage that would kill it, this one can be sacrified. If so, combat damage is nullified
+        id: T025
+
+  metadata:
+    id: C076
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 410
+    summary: Martyr, White
+    notes: |
+      

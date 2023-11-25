@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: White
+    cost-total: 2
+    cost-color: 2
+    hp: 2
+    atk: 1
+    spd: 2
+    traits:
+      - name: Avenger
+        description: If ally [CREATURE] dies, gets +1 Atk
+        id: T002
+
+  metadata:
+    id: C070
+    value: -10
+    dev-stage: Alpha-1
+    dev-name: Hawkeye
+    order: 404
+    summary: Avenger, cheapest
+    notes: |
+      * [HS] Doesn't seem to be very relevant

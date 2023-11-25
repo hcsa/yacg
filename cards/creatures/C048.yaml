@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: 
+    color: Green
+    cost-total: 5
+    cost-color: 4
+    hp: 8
+    atk: 2
+    spd: 2
+    traits:
+      - name: Rain setter
+        description: When played, if 3 [CREATURE]s have this trait, rain is set for 2 games
+        id: T029
+      - name: Sun setter
+        description: When played, if 3 [CREATURE]s have this trait, sun is set for 2 games
+        id: T035
+
+  metadata:
+    id: C048
+    value: -40
+    dev-stage: Alpha-0
+    dev-name: Weather mage
+    order: 210
+    summary: Sun setter, Rain setter, Green
+    notes: |
+      

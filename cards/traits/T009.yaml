@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      If ally [CREATURE] dies, gets -1 Atk
+
+  metadata:
+    id: T009
+    type: Other
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: Defeatist
+    order: 9
+    summary: -Atk when ally dies
+    notes: |
+      

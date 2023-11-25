@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Running conduit
+    color: Yellow
+    cost-total: 4
+    cost-color: 3
+    hp: 6
+    atk: 0
+    spd: 4
+    traits:
+      - name: Energetic
+        description: If another ally [CREATURE] has this trait, every ally [CREATURE] gets +1 Spd. For each additional ally that has this trait, every ally [CREATURE] gets +1 Spd
+        id: T016
+      - name: 
+        description: After this [CREATURE] attacks, you can switch it for another [CREATURE]
+        id: T039
+
+  metadata:
+    id: C018
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Running conduit
+    order: 510
+    summary: +Spd w/ friends, U-turn, high Spd, no Atk
+    notes: |
+      

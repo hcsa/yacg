@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Black
+    cost-total: 3
+    cost-color: 2
+    hp: 6
+    atk: 3
+    spd: 1
+    traits:
+      - name: 
+        description: In combat, the opposing [CREATURE] has -1 Atk
+        id: T024
+
+  metadata:
+    id: C004
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: Bloodhound
+    order: 804
+    summary: -Atk in combat, Black, cheapest
+    notes: |
+      

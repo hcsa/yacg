@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: Mind freeze
+    description: |
+      All effect cards cost +1 () to play
+
+  metadata:
+    id: T026
+    type: Other
+    value: 30
+    dev-stage: Alpha-0
+    dev-name: Mind freeze
+    order: 26
+    summary: Increase cost of effect cards
+    notes: |
+      * Main colors: Cyan

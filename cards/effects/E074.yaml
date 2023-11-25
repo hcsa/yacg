@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Fatigue
+    color: Cyan
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Banish bottom 4 cards of opponent's deck
+
+  metadata:
+    id: E074
+    dev-stage: Alpha-0
+    dev-name: Mull
+    order: 910
+    summary: Mull, cheap
+    notes: |
+      

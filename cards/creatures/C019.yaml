@@ -1,0 +1,19 @@
+creature:
+  data:
+    name: 
+    color: Yellow
+    cost-total: 4
+    cost-color: 2
+    hp: 2
+    atk: 2
+    spd: 5
+
+  metadata:
+    id: C019
+    value: -15
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 511
+    summary: Very high Spd, Yellow
+    notes: |
+      

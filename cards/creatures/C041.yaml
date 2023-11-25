@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Green
+    cost-total: 2
+    cost-color: 2
+    hp: 4
+    atk: 1
+    spd: 2
+    traits:
+      - name: 
+        description: Benefits from Rain
+        id: T014
+
+  metadata:
+    id: C041
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 203
+    summary: Cheap, Rain buffed, Green
+    notes: |
+      

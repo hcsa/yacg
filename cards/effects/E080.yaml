@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Field
+    cost-total: 0
+    cost-color: 0
+    description: |
+      Opponent loses 1 energy of any color. You get 1 energy of any color
+
+  metadata:
+    id: E080
+    dev-stage: Conception
+    dev-name: 
+    order: 1002
+    summary: Charge, drain opponent
+    notes: |
+      

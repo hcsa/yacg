@@ -1,0 +1,19 @@
+creature:
+  data:
+    name: 
+    color: Green
+    cost-total: 2
+    cost-color: 2
+    hp: 4
+    atk: 2
+    spd: 2
+
+  metadata:
+    id: C040
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 202
+    summary: Cheap, no traits, Green
+    notes: |
+      

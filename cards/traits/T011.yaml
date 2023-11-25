@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: 
+    description: |
+      If the next [CREATURE] cast during the current game doesn't belong to you, destroy both that [CREATURE] and this one
+
+  metadata:
+    id: T011
+    type: Cast
+    value: 45
+    dev-stage: Alpha-0
+    dev-name: Destiny bond
+    order: 11
+    summary: Kill next cast creature
+    notes: |
+      * Main colors: Purple

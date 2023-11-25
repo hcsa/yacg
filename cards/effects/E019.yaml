@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Pacifism
+    color: Blue
+    type: Field
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Every [CREATURE] gets -1 Atk
+
+  metadata:
+    id: E019
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 302
+    summary: Spread -Atk, blue
+    notes: |
+      

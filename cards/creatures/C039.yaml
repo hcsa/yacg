@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Green
+    cost-total: 0
+    cost-color: 0
+    hp: 3
+    atk: 1
+    spd: 2
+    traits:
+      - name: 
+        description: After this [CREATURE] attacks, kill it
+        id: T003
+
+  metadata:
+    id: C039
+    value: -15
+    dev-stage: Alpha-1
+    dev-name: Insect
+    order: 201
+    summary: 0-cost, Green
+    notes: |
+      

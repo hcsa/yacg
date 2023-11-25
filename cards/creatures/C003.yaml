@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Black
+    cost-total: 2
+    cost-color: 2
+    hp: 4
+    atk: 3
+    spd: 2
+    traits:
+      - name: Arrogant
+        description: If this [CREATURE] kills another [CREATURE], gets -1 Atk
+        id: T001
+
+  metadata:
+    id: C003
+    value: 10
+    dev-stage: Alpha-1
+    dev-name: 
+    order: 803
+    summary: 2-cost, Arrogant, Black
+    notes: |
+      

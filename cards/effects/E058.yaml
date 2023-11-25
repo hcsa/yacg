@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Illegal restart
+    color: Black
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Both players draw cards until they have 8, then discard cards equal to the number of cards drawn by themselves
+
+  metadata:
+    id: E058
+    dev-stage: Alpha-1
+    dev-name: Refresh, black
+    order: 804
+    summary: Refresh, black
+    notes: |
+      

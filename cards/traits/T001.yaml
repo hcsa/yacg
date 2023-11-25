@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: Arrogant
+    description: |
+      If this [CREATURE] kills another [CREATURE], gets -1 Atk
+
+  metadata:
+    id: T001
+    type: Combat
+    value: -10
+    dev-stage: Alpha-1
+    dev-name: Arrogant
+    order: 1
+    summary: -Atk when kills
+    notes: |
+      * Main colors: Black, Green

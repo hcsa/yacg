@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Recruitment
+    color: White
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Add two 1 HP 1 Atk 2 Spd token [CREATURE]s
+
+  metadata:
+    id: E025
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 402
+    summary: Add 2 tokens, cheap, white
+    notes: |
+      * [HS] Nerfed the tokens, also made it cheaper

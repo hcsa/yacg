@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: 
+    color: Blue
+    cost-total: 5
+    cost-color: 3
+    hp: 10
+    atk: 3
+    spd: 2
+    traits:
+      - name: Rain setter
+        description: When played, if 3 [CREATURE]s have this trait, rain is set for 2 games
+        id: T029
+      - name: Immunity
+        description: Can't be targeted by effect cards
+        id: T023
+
+  metadata:
+    id: C094
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 309
+    summary: Rain setter, Blue, good stats
+    notes: |
+      

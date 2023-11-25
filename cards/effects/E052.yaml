@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Special access
+    color: Pink
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Choose a [CREATURE] in your hand. Pay colorless energy equal to half the total cost of target [CREATURE] (rounded down) to play it
+
+  metadata:
+    id: E052
+    dev-stage: Alpha-0
+    dev-name: Cast
+    order: 710
+    summary: Cast creature
+    notes: |
+      

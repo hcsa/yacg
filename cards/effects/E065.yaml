@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Deterrence
+    color: Cyan
+    type: Field
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Next time an opponent's effect card enters the stack, counter it. Destroy this card afterwards
+
+  metadata:
+    id: E065
+    dev-stage: Alpha-0
+    dev-name: Counter, cyan
+    order: 902
+    summary: Counter, cyan
+    notes: |
+      

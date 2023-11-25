@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: Hail setter
+    description: |
+      When played, if 3 [CREATURE]s have this trait, hail is set for 2 games
+
+  metadata:
+    id: T019
+    type: Cast
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Hail setter
+    order: 19
+    summary: Hail setter
+    notes: |
+      * Main colors: Cyan

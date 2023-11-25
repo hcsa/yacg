@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: 
+    color: Purple
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Destroy target [CREATURE], create a 2HP 4Atk 2Spd token [CREATURE] with Brittle in their place
+
+  metadata:
+    id: E078
+    dev-stage: Alpha-0
+    dev-name: Skeletonfy
+    order: 609
+    summary: Kill creature, create big creature with Brittle
+    notes: |
+      

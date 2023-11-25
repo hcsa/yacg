@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Only the beginning
+    color: Purple
+    type: Action
+    cost-total: 6
+    cost-color: 4
+    description: |
+      Destroy every [CREATURE]. For every [CREATURE] destroyed this way, their owner gets energy of their color equal to their total cost
+
+  metadata:
+    id: E077
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 607
+    summary: Board clear + energy
+    notes: |
+      

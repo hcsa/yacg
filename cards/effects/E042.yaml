@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Devil's deal
+    color: Purple
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Look at the opponent's hand, select 1 card and discard it. Opponent looks at your hand, selects 1 card and discards it
+
+  metadata:
+    id: E042
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 608
+    summary: Discard a card from opponent's hand
+    notes: |
+      

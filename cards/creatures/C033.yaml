@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Purple
+    cost-total: 2
+    cost-color: 2
+    hp: 2
+    atk: 3
+    spd: 3
+    traits:
+      - name: 
+        description: After this [CREATURE] attacks, kill it
+        id: T003
+
+  metadata:
+    id: C033
+    value: -5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 604
+    summary: 2-cost, Brittle
+    notes: |
+      

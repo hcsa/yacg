@@ -1,0 +1,19 @@
+creature:
+  data:
+    name: 
+    color: Yellow
+    cost-total: 2
+    cost-color: 2
+    hp: 2
+    atk: 1
+    spd: 4
+
+  metadata:
+    id: C013
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 504
+    summary: 2-cost, Yellow, no traits
+    notes: |
+      

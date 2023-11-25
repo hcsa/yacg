@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: Restless
+    description: |
+      If this [CREATURE] is put in the trash, return it in your hand
+
+  metadata:
+    id: T032
+    type: Other
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: Restless
+    order: 32
+    summary: When put it trash, goes back to hand
+    notes: |
+      * Main colors: Purple

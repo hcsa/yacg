@@ -1,0 +1,23 @@
+creature:
+  data:
+    name: 
+    color: Pink
+    cost-total: 2
+    cost-color: 2
+    hp: 2
+    atk: 1
+    spd: 1
+    traits:
+      - name: Disable
+        description: For this game, opponent can't play [CREATURE]s with the same name as the one they last played
+        id: T012
+
+  metadata:
+    id: C062
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 701
+    summary: Disable, cheapest, Pink
+    notes: |
+      

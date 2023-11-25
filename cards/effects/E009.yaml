@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Swords dance
+    color: Orange
+    type: Aura
+    cost-total: 1
+    cost-color: 1
+    description: |
+      Target [CREATURE] gets +2 Atk -1 Spd
+
+  metadata:
+    id: E009
+    dev-stage: Alpha-1
+    dev-name: Swords dance
+    order: 101
+    summary: + Atk, cheap, orange
+    notes: |
+      

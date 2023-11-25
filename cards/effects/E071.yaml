@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Blizzard
+    color: Cyan
+    type: Field
+    cost-total: 3
+    cost-color: 3
+    description: |
+      Every opposing [CREATURE] gets -1 Spd
+
+  metadata:
+    id: E071
+    dev-stage: Alpha-0
+    dev-name: Blizzard
+    order: 908
+    summary: -Spd spread, cyan
+    notes: |
+      
