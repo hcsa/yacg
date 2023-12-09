@@ -11,8 +11,8 @@ effect:
   metadata:
     id: E073
     dev-stage: Alpha-0
-    dev-name: Mull+
+    dev-name: Mill+
     order: 911
-    summary: Mull, discard a card
+    summary: Mill, discard a card
     notes: |
       

@@ -22,7 +22,7 @@ creature:
     id: C046
     value: -70
     dev-stage: Alpha-1
-    dev-name: 
+    dev-name: Mountain
     order: 208
     summary: Medium creature, Slow movement, cheapest
     notes: |
