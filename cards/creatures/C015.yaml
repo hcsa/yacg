@@ -4,7 +4,7 @@ creature:
     color: Yellow
     cost-total: 3
     cost-color: 2
-    hp: 2
+    hp: 20
     atk: 4
     spd: 4
     traits:
@@ -20,4 +20,4 @@ creature:
     order: 507
     summary: Reckless, high Spd
     notes: |
-      
+      Boobs
