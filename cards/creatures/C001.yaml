@@ -5,7 +5,7 @@ creature:
     cost-total: 0
     cost-color: 0
     hp: 1
-    atk: 2
+    atk: 20
     spd: 2
     traits:
       - name: 
