@@ -1,6 +1,6 @@
 effect:
   data:
-    name: Gigantamax
+    name: 
     color: Green
     type: Aura
     cost-total: 3
@@ -11,7 +11,7 @@ effect:
   metadata:
     id: E014
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name: Gigantamax
     order: 203
     summary: Make creature beg
     notes: |

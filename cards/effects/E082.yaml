@@ -3,8 +3,8 @@ effect:
     name: Colorblindness
     color: 
     type: Field
-    cost-total: 0
-    cost-color: 0
+    cost-total: 
+    cost-color: 
     description: |
       Whenever a card is played, its owner can choose to pay 1 () of a color using 2 () of another color (can be done multiple times for paying the same card)
 
