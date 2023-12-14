@@ -19,7 +19,7 @@ creature:
     id: C027
     value: 5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name: Flint & Steel
     order: 108
     summary: Haste, +Atk when kills, decent stats
     notes: |

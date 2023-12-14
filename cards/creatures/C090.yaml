@@ -16,7 +16,7 @@ creature:
     id: C090
     value: 0
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name: Cloud
     order: 305
     summary: Rain setter, cheapest, Blue
     notes: |

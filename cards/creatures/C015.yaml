@@ -4,7 +4,7 @@ creature:
     color: Yellow
     cost-total: 3
     cost-color: 2
-    hp: 20
+    hp: 2
     atk: 4
     spd: 4
     traits:
@@ -16,7 +16,7 @@ creature:
     id: C015
     value: 5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name: Driving Henrique
     order: 507
     summary: Reckless, high Spd
     notes: |

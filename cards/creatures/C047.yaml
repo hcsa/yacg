@@ -19,7 +19,7 @@ creature:
     id: C047
     value: -80
     dev-stage: Alpha-1
-    dev-name: 
+    dev-name: Elephant
     order: 209
     summary: High stats, EQ, Slow movement, costly
     notes: |
