@@ -2,4 +2,71 @@ data:
   - id: Orange
     name: Orange
     description: |
-      STUFF
+      - Focus on offense, even if at the cost of HP
+      - Benefits from Sun
+      - Creatures are Atk oriented
+      - Some traits: Haste, Reckless, Moxie, Sun setter
+      - Effects are decent, boost Atk and deal single-target damage
+
+  - id: Green
+    name: Green
+    description: |
+      - Focus on expensive big creatures and buffs
+      - Creatures have big HP and Atk and are slow. Multiple traits are common
+      - Some traits: Earthquake, Trample, Intimidate, Defender, Survivor, Slow movement
+      - Effects are decent and expensive, general buffs
+
+  - id: Blue
+    name: Blue
+    description: |
+      - Focus on stall, protection and healing
+      - Benefits from Rain
+      - Creatures are HP oriented
+      - Some traits: Protect, Immunity, Clear body, Rain setter
+      - Effects are decent, give HP
+
+  - id: White
+    name: White
+    description: |
+      - Focus on combat using lots of small creatures
+      - Traits affect mostly combat
+      - Some traits: Avenger, Rally, Survivor, First strike, Double strike, Martyr
+      - Effects are bad
+
+  - id: Yellow
+    name: Yellow
+    description: |
+      - Focus on Spd, spread damage, self-destruct
+      - Creatures are Spd oriented, mostly cheap
+      - Some traits: Energetic, Self-destruct, U-turn
+      - Effects are decent, spread damage
+
+  - id: Purple
+    name: Purple
+    description: |
+      - Focus on destroying creatures and reviving from trash
+      - Creatures are decent, low HP, lots of Brittle
+      - Some traits: Brittle, Death touch, Restless, Destiny bond
+      - Effects are good
+
+  - id: Pink
+    name: Pink
+    description: |
+      - Heavy focus on effects, control
+      - Creatures are bad, traits support other creatures
+      - Some traits: Disable, Clear body, Immunity
+
+  - id: Black
+    name: Black
+    description: |
+      - Heavy focus on effects, chaotic and disruptive
+      - Creatures are bad, traits disrupt opponent, lowers Atk
+      - Some traits: Illegal charge, Gang up, Trickster
+
+  - id: Cyan
+    name: Cyan
+    description: |
+      - Speed control, good effects, can mill
+      - Benefits from Hail
+      - Creatures are average
+      - Some traits: Cold personality, Mind freeze, Hail setter, Ice touch
