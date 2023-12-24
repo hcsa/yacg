@@ -9,7 +9,7 @@ creature:
     spd: 3
     traits:
       - name: 
-        description: When played, fights opponent's last played [CREATURE] in the current game
+        description: When played, fights opponent's last played [CREATURE] in the current round
         id: T020
       - name: 
         description: If this [CREATURE] kills another [CREATURE], gets +1 Atk

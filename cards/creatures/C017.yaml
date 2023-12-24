@@ -12,7 +12,7 @@ creature:
         description: When this [CREATURE] attacks, kill this and the opposing [CREATURE]
         id: T033
       - name: 
-        description: When played, fights opponent's last played [CREATURE] in the current game
+        description: When played, fights opponent's last played [CREATURE] in the current round
         id: T020
 
   metadata:

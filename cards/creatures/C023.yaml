@@ -9,7 +9,7 @@ creature:
     spd: 2
     traits:
       - name: 
-        description: When played, fights opponent's last played [CREATURE] in the current game
+        description: When played, fights opponent's last played [CREATURE] in the current round
         id: T020
 
   metadata:
