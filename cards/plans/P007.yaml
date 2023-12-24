@@ -1,0 +1,13 @@
+plan:
+  data:
+    name: Plan G
+    description: |
+      Start the game with 2 energy. When you lose a round, get +9 energy.
+
+  metadata:
+    id: P007
+    dev-stage: Alpha-0
+    dev-name: G
+    order: 7
+    summary: Energy when you lose a round
+    notes: |

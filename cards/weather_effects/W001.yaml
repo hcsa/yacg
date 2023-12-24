@@ -1,0 +1,13 @@
+weather:
+  data:
+    name: Sun
+    description: |
+      +2 Atk to Orange creatures
+
+  metadata:
+    id: W001
+    dev-stage: Alpha-0
+    dev-name: Sun
+    order: 1
+    summary: Increase offense for Orange creatures
+    notes: |
