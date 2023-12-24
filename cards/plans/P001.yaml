@@ -1,0 +1,11 @@
+plan:
+  data:
+    name: Plan A
+    description: |
+      At the beginning of rounds 1/2/3, get +6/+3/+1 energy. At the beginning of subsequent rounds, get +1 energy.
+
+  metadata:
+    id: P001
+    dev-name: A
+    summary: Fixed per round, decreasing
+    notes: |

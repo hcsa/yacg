@@ -1,0 +1,11 @@
+plan:
+  data:
+    name: Plan B
+    description: |
+      At the beginning of rounds 1/2/3, get +2/+4/+7 energy. At the beginning of subsequent rounds, get +2 energy.
+
+  metadata:
+    id: P002
+    dev-name: B
+    summary: Fixed per round, increasing
+    notes: |

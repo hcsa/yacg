@@ -1,0 +1,11 @@
+plan:
+  data:
+    name: Plan D
+    description: |
+      Start the game with 2 energy. When a non-token ally [CREATURE] is killed or destroyed, get +2 energy.
+
+  metadata:
+    id: P004
+    dev-name: D
+    summary: Energy per dead ally
+    notes: |
