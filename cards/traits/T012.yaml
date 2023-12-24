@@ -2,7 +2,7 @@ trait:
   data:
     name: Disable
     description: |
-      For this game, opponent can't play [CREATURE]s with the same name as the one they last played
+      For this round, opponent can't play [CREATURE]s with the same name as the one they last played
 
   metadata:
     id: T012

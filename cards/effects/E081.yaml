@@ -6,7 +6,7 @@ effect:
     cost-total: 
     cost-color: 
     description: |
-      Choose a color, get 2 energy of that color. At the beginning of next game, opponent chooses a color and gets 4 energy of that color
+      Choose a color, get 2 energy of that color. At the beginning of next round, opponent chooses a color and gets 4 energy of that color
 
   metadata:
     id: E081

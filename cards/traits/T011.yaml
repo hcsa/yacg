@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      If the next [CREATURE] cast during the current game doesn't belong to you, destroy both that [CREATURE] and this one
+      If the next [CREATURE] cast during the current round doesn't belong to you, destroy both that [CREATURE] and this one
 
   metadata:
     id: T011

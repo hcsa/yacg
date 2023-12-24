@@ -9,7 +9,7 @@ creature:
     spd: 3
     traits:
       - name: Hail setter
-        description: When played, if 3 [CREATURE]s have this trait, hail is set for 2 games
+        description: When played, if 3 [CREATURE]s have this trait, hail is set for 2 rounds
         id: T019
 
   metadata:
