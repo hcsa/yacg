@@ -1,0 +1,70 @@
+plans:
+  - data:
+      name: Plan A
+      description: |
+        At the beginning of rounds 1/2/3, get +6/+3/+1 energy. At the beginning of subsequent rounds, get +1 energy.
+    metadata:
+      id: P001
+      dev-name: A
+      summary: Fixed per round, decreasing
+      notes:
+
+  - data:
+      name: Plan B
+      description: |
+        At the beginning of rounds 1/2/3, get +2/+4/+7 energy. At the beginning of subsequent rounds, get +2 energy.
+    metadata:
+      id: P002
+      dev-name: B
+      summary: Fixed per round, increasing
+      notes:
+
+  - data:
+      name: Plan C
+      description: |
+        Start the game with 2 energy. When you cast a non-token [CREATURE], get +1 energy.
+    metadata:
+      id: P003
+      dev-name: C
+      summary: Energy per cast creature
+      notes:
+
+  - data:
+      name: Plan D
+      description: |
+        Start the game with 2 energy. When a non-token ally [CREATURE] is killed or destroyed, get +2 energy.
+    metadata:
+      id: P004
+      dev-name: D
+      summary: Energy per dead ally
+      notes:
+
+  - data:
+      name: Plan E
+      description: |
+        Start the game with 2 energy. When a non-token opposing [CREATURE] is killed or destroyed, get +3 energy.
+    metadata:
+      id: P005
+      dev-name: E
+      summary: Energy per dead opponent
+      notes:
+
+  - data:
+      name: Plan F
+      description: |
+        Start the game with 2 energy. When a non-token ally [CREATURE] is survives until the end of a round, get +6 energy.
+    metadata:
+      id: P006
+      dev-name: F
+      summary: Energy per surviving ally
+      notes:
+
+  - data:
+      name: Plan G
+      description: |
+        Start the game with 2 energy. When you lose a round, get +9 energy.
+    metadata:
+      id: P007
+      dev-name: G
+      summary: Energy when you lose a round
+      notes:

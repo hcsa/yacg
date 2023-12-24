@@ -102,15 +102,15 @@ the cards remaining on the deck.
 
 You earn energy as follows:
 
-- At the start of the game, you choose 2 methods to get energy. These can be:
+- At the start of the game, you choose 2 of the available plans to get energy. These can be:
     - Get energy at the beginning of every round
     - Get energy whenever you cast a ![card-creature](card-creature.svg)
     - Get energy whenever an opponent ![card-creature](card-creature.svg) is killed or destroyed.
     - Get energy whenever an ally ![card-creature](card-creature.svg) is killed or destroyed.
     - Get energy whenever an ally ![card-creature](card-creature.svg) survives until the end of the round.
     - Get energy whenever you lose a round.
-- To each chosen method, you attach a color. The 2 methods may have the same or different colors.
-- Throughout the game, when a chosen method’s condition applies, you get energy of the color attached to the method.
+- To each chosen plan, you attach a color. The 2 plans may have the same or different colors.
+- Throughout the game, when a chosen plan’s condition applies, you get energy of the color attached to the plan.
 - In addition, whenever a card from the deck enters your hand whose color matches one attached to any of the methods,
   you get +1 energy of that color.
     - This happens if you’re drawing the 8 cards at the start of a game, if you draw a card, if you search for a card
