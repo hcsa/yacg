@@ -13,8 +13,6 @@ EXCEL_TEMPLATE_NAME = "excel_base.xlsx"
 
 
 def main():
-    print(Path(__file__))
-
     base_dir = get_base_dir()
     excel_path = base_dir / EXCEL_NAME
     excel_template_path = base_dir / EXCEL_TEMPLATE_NAME
@@ -56,7 +54,7 @@ def import_to_excel(excel_path: Path, base_dir: Path):
     creatures_dir = base_dir / "cards" / "creatures"
     effects_dir = base_dir / "cards" / "effects"
     traits_dir = base_dir / "cards" / "traits"
-    values_path = base_dir / "game_data" / "values.yaml"
+    values_path = base_dir / "dev_data" / "values.yaml"
 
     with xw.App(visible=False) as app:
         excel_book = app.books.open(str(excel_path))
@@ -340,4 +338,4 @@ if __name__ == "__main__":
     except BaseException:
         e_data = sys.exc_info()
         traceback.print_exception(*e_data)
-        input("\nPress any key to exit...")
+        input("\nPress enter to exit...")
