@@ -1,0 +1,13 @@
+weather:
+  data:
+    name: Rain
+    description: |
+      Damage dealt to Blue creatures is reduced by 1
+
+  metadata:
+    id: W002
+    dev-stage: Alpha-0
+    dev-name: Rain
+    order: 2
+    summary: Increase defense for Blue creatures
+    notes: |

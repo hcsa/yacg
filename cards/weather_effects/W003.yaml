@@ -1,0 +1,13 @@
+weather:
+  data:
+    name: Hail
+    description: |
+      +1 Atk +1 Spd to Cyan creatures
+
+  metadata:
+    id: W003
+    dev-stage: Alpha-0
+    dev-name: Hail
+    order: 3
+    summary: Increase speed for Cyan creatures
+    notes: |
