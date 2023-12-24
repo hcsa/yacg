@@ -6,6 +6,8 @@ plan:
 
   metadata:
     id: P003
+    dev-stage: Alpha-0
     dev-name: C
+    order: 3
     summary: Energy per cast creature
     notes: |

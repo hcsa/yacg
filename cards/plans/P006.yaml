@@ -6,6 +6,8 @@ plan:
 
   metadata:
     id: P006
+    dev-stage: Alpha-0
     dev-name: F
+    order: 6
     summary: Energy per surviving ally
     notes: |

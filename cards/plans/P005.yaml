@@ -6,6 +6,8 @@ plan:
 
   metadata:
     id: P005
+    dev-stage: Alpha-0
     dev-name: E
+    order: 5
     summary: Energy per dead opponent
     notes: |

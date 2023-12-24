@@ -6,6 +6,8 @@ plan:
 
   metadata:
     id: P002
+    dev-stage: Alpha-0
     dev-name: B
+    order: 2
     summary: Fixed per round, increasing
     notes: |

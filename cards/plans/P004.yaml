@@ -6,6 +6,8 @@ plan:
 
   metadata:
     id: P004
+    dev-stage: Alpha-0
     dev-name: D
+    order: 4
     summary: Energy per dead ally
     notes: |

@@ -6,6 +6,8 @@ plan:
 
   metadata:
     id: P007
+    dev-stage: Alpha-0
     dev-name: G
+    order: 7
     summary: Energy when you lose a round
     notes: |
