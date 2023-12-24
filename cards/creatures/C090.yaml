@@ -9,7 +9,7 @@ creature:
     spd: 2
     traits:
       - name: Rain setter
-        description: When played, if 3 [CREATURE]s have this trait, rain is set for 2 games
+        description: When played, if 3 [CREATURE]s have this trait, rain is set for 2 rounds
         id: T029
 
   metadata:

@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      If 2 [CREATURE]s have Rain setter, rain is set for 2 games. Destroy this card afterwards
+      If 2 [CREATURE]s have Rain setter, rain is set for 2 rounds. Destroy this card afterwards
 
   metadata:
     id: E020

@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      When played, fights opponent's last played [CREATURE] in the current game
+      When played, fights opponent's last played [CREATURE] in the current round
 
   metadata:
     id: T020
