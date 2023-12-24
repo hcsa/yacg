@@ -346,4 +346,4 @@ if __name__ == "__main__":
     except BaseException:
         e_data = sys.exc_info()
         traceback.print_exception(*e_data)
-        input("\nPress any key to exit...")
+        input("\nPress enter to exit...")
