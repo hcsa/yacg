@@ -2,7 +2,7 @@ plan:
   data:
     name: Plan D
     description: |
-      Start the game with 2 energy. When a non-token ally [CREATURE] is killed, get +2 energy.
+      Start the game with 2 energy. When a non-token ally [CREATURE] is killed or destroyed, get +2 energy.
 
   metadata:
     id: P004
