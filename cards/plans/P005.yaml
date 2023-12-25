@@ -2,7 +2,7 @@ plan:
   data:
     name: Plan E
     description: |
-      Start the game with 2 energy. When a non-token opposing [CREATURE] is killed, get +3 energy.
+      Start the game with 2 energy. When a non-token opposing [CREATURE] is killed or destroyed, get +3 energy.
 
   metadata:
     id: P005

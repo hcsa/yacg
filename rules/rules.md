@@ -181,9 +181,6 @@ causes it to be destroyed.
 Almost all effects or traits destroy a ![card-creature](card-creature.svg), rather than killing it. If it's not clear in
 which category it falls, assume it destroys.
 
-This distinction is mostly relevant for some energy plans, that give energy when a ![card-creature](card-creature.svg)
-is killed but not when it's destroyed.
-
 ### Targets
 
 Effect cards often refer to "targets". When an effect is played, any targets it requires must be declared by whoever
