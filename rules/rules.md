@@ -42,7 +42,7 @@ There can be multiple effect stacks in this phase.
 
 The phase ends when both players choose consecutively to hold.
 
-### Phase 2 - Casting phase
+### Phase 2 - Creature phase
 
 In this phase, creature cards are played. They are marked with ![card-creature](card-creature.svg) in the top-right
 corner.
@@ -183,3 +183,7 @@ which category it falls, assume it destroys.
 
 This distinction is mostly relevant for some energy plans, that give energy when a ![card-creature](card-creature.svg)
 is killed but not when it's destroyed.
+
+### Targeting
+
+Effects and traits 
