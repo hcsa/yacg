@@ -3,14 +3,14 @@ effect:
     name: Blizzard
     color: Cyan
     type: Field
-    cost-total: 3
-    cost-color: 3
+    cost-total: 
+    cost-color: 
     description: |
-      Every opposing [CREATURE] gets -1 Spd
+      Every opposing [CREATURE] gets -1 Spd. Destroy this card after 3 combat turns
 
   metadata:
     id: E071
-    dev-stage: Alpha-0
+    dev-stage: Conception
     dev-name: Blizzard
     order: 908
     summary: -Spd spread, cyan

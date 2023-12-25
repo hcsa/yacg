@@ -1,18 +1,18 @@
 effect:
   data:
-    name: Trick room
+    name: 
     color: Black
-    type: Aura
-    cost-total: 3
-    cost-color: 2
+    type: Field
+    cost-total: 
+    cost-color: 
     description: |
-      Target ally [CREATURE] gets Trickster
+      All ally [CREATURE]s get Trickster. Destroy this card after 3 combat turns
 
   metadata:
     id: E060
-    dev-stage: Alpha-0
-    dev-name: 
+    dev-stage: Conception
+    dev-name: Trick room
     order: 806
-    summary: Give Trick Room
+    summary: Reverse Spd order for limited time
     notes: |
       * [HS] Changed from giving all ally creatures Trick Room, seemed too good. Now seems a bit useless, lowered its cost

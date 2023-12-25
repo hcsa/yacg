@@ -3,14 +3,14 @@ effect:
     name: Explosions!
     color: Yellow
     type: Field
-    cost-total: 5
-    cost-color: 3
+    cost-total: 
+    cost-color: 
     description: |
-      Every [CREATURE] gets Self-destruct
+      Every [CREATURE] gets Self-destruct. Destroy this card after 3 combat turns
 
   metadata:
     id: E030
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Explosions!
     order: 504
     summary: All creatures have self-destruct
