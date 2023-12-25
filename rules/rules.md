@@ -42,7 +42,7 @@ There can be multiple effect stacks in this phase.
 
 The phase ends when both players choose consecutively to hold.
 
-### Phase 2 - Casting phase
+### Phase 2 - Creature phase
 
 In this phase, creature cards are played. They are marked with ![card-creature](card-creature.svg) in the top-right
 corner.
@@ -171,3 +171,26 @@ If a player’s deck runs out, they keep playing as normal.
 
 If neither player has cards left at the beginning of a match, the game’s winner is the one that has won the most rounds
 so far. If both players have won the same number of rounds, the game ends in a tie.
+
+### Kill VS Destroy
+
+A ![card-creature](card-creature.svg) is "killed" when its HP reaches 0, either by taking combat damage or due to
+effects or traits that reduce its HP. A ![card-creature](card-creature.svg) is "destroyed" when an effect or trait
+causes it to be destroyed.
+
+Almost all effects or traits destroy a ![card-creature](card-creature.svg), rather than killing it. If it's not clear in
+which category it falls, assume it destroys.
+
+This distinction is mostly relevant for some energy plans, that give energy when a ![card-creature](card-creature.svg)
+is killed but not when it's destroyed.
+
+### Targets
+
+Effect cards often refer to "targets". When an effect is played, any targets it requires must be declared by whoever
+played it, following any restrictions on the targets.
+
+> Example: If an effect mentions a "target ally ![card-creature](card-creature.svg)", then the player must declare
+> a ![card-creature](card-creature.svg) on its side to take the effect of the card. If there are no
+> ally ![card-creature](card-creature.svg), then the effect can't be played.
+
+The target restrictions apply when the effect is played, and don't apply when the effect is resolved.

@@ -9,7 +9,7 @@ creature:
     spd: 2
     traits:
       - name: Restless
-        description: If this [CREATURE] is put in the trash, return it in your hand
+        description: If this [CREATURE] is killed or destroyed, it goes into its owner's hand
         id: T032
 
   metadata:

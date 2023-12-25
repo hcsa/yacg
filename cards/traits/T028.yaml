@@ -11,6 +11,6 @@ trait:
     dev-stage: Alpha-0
     dev-name: Protect
     order: 28
-    summary: Nullifies combat damage once
+    summary: Nullifies damage once
     notes: |
       * Main colors: Blue, Green

@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      Any damage dealt by this [CREATURE] kills opposing [CREATURE]
+      Any damage dealt by this [CREATURE] destroys opposing [CREATURE]
 
   metadata:
     id: T008

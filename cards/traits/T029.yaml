@@ -2,11 +2,11 @@ trait:
   data:
     name: Rain setter
     description: |
-      When played, if 3 [CREATURE]s have this trait, rain is set for 2 rounds
+      When this [CREATURE] is played, if 3 [CREATURE]s have this trait, rain is set for 2 rounds
 
   metadata:
     id: T029
-    type: Cast
+    type: Entry
     value: 10
     dev-stage: Alpha-0
     dev-name: Rain setter

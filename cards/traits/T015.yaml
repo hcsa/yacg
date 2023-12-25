@@ -2,11 +2,11 @@ trait:
   data:
     name: 
     description: |
-      When played, deal 1 damage to all other [CREATURE]s
+      When this [CREATURE] is played, it deals 1 damage to all other [CREATURE]s
 
   metadata:
     id: T015
-    type: Cast
+    type: Entry
     value: 15
     dev-stage: Alpha-0
     dev-name: Earthquake

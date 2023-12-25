@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Sacrifice ally [CREATURE], choose target [CREATURE]. Sacrificed [CREATURE] becomes an aura of target [CREATURE]. Target [CREATURE] gains HP and Atk equal to sacrificed [CREATURE]'s HP and Atk, and gets Slow Movement
+      Destroy ally [CREATURE] to destroy, choose target [CREATURE]. Destroyed [CREATURE] becomes an aura of target [CREATURE]. Target [CREATURE] gains HP and Atk equal to sacrificed [CREATURE]'s HP and Atk, and gets Slow Movement. Any cards targetting the destroyed [CREATURE] now target the target [CREATURE]
 
   metadata:
     id: E017

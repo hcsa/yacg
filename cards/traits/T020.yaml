@@ -6,7 +6,7 @@ trait:
 
   metadata:
     id: T020
-    type: Cast
+    type: Entry
     value: 15
     dev-stage: Alpha-0
     dev-name: Haste
