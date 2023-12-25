@@ -2,7 +2,7 @@ trait:
   data:
     name: Survivor
     description: |
-      If this [CREATURE] survives combat phase, return to hand instead
+      If this [CREATURE] survives combat phase, it goes into its owner's hand
 
   metadata:
     id: T036

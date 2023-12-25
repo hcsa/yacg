@@ -6,7 +6,7 @@ effect:
     cost-total: 4
     cost-color: 3
     description: |
-      Choose target effect card in the stack. You can change any of its targets
+      Choose target effect card in the stack. You can change any of its targets (restrictions to the targets still apply)
 
   metadata:
     id: E056

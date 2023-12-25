@@ -9,7 +9,7 @@ creature:
     spd: 2
     traits:
       - name: 
-        description: If ally [CREATURE] dies, gets -1 Atk
+        description: If an ally [CREATURE] is killed or destroyed, gets -1 Atk
         id: T009
 
   metadata:

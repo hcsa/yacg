@@ -15,7 +15,7 @@ creature:
         description: First damage dealt to this [CREATURE] is nullified
         id: T028
       - name: Survivor
-        description: If this [CREATURE] survives combat phase, return to hand instead
+        description: If this [CREATURE] survives combat phase, it goes into its owner's hand
         id: T036
 
   metadata:

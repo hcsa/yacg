@@ -2,11 +2,11 @@ trait:
   data:
     name: Sun setter
     description: |
-      When played, if 3 [CREATURE]s have this trait, sun is set for 2 rounds
+      When this [CREATURE] is played, if 3 [CREATURE]s have this trait, sun is set for 2 rounds
 
   metadata:
     id: T035
-    type: Cast
+    type: Entry
     value: 10
     dev-stage: Alpha-0
     dev-name: Sun setter

@@ -9,7 +9,7 @@ creature:
     spd: 2
     traits:
       - name: 
-        description: If the next [CREATURE] cast during the current round doesn't belong to you, destroy both that [CREATURE] and this one
+        description: If the next [CREATURE] played during the current round doesn't belong to you, destroy both that [CREATURE] and this one
         id: T011
 
   metadata:

@@ -9,7 +9,7 @@ creature:
     spd: 3
     traits:
       - name: 
-        description: After this [CREATURE] attacks, you can switch it for another [CREATURE]
+        description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE] to take damage
         id: T039
 
   metadata:
