@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Aura
+    cost-total: 
+    cost-color: 
+    description: |
+      If target creature were to take combat damage that would kill it, it lives on 1HP instead. Destroy this card after target creature takes damage 1 time
+
+  metadata:
+    id: E086
+    dev-stage: Conception
+    dev-name: Focus Sash
+    order: 1008
+    summary: Avoid 1 hit KO
+    notes: |
+      
