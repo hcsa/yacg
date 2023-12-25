@@ -184,6 +184,13 @@ which category it falls, assume it destroys.
 This distinction is mostly relevant for some energy plans, that give energy when a ![card-creature](card-creature.svg)
 is killed but not when it's destroyed.
 
-### Targeting
+### Targets
 
-Effects and traits 
+Effect cards often refer to "targets". When an effect is played, any targets it requires must be declared by whoever
+played it, following any restrictions on the targets.
+
+> Example: If an effect mentions a "target ally ![card-creature](card-creature.svg)", then the player must declare
+> a ![card-creature](card-creature.svg) on its side to take the effect of the card. If there are no
+> ally ![card-creature](card-creature.svg), then the effect can't be played.
+
+The target restrictions apply when the effect is played, and don't apply when the effect is resolved.
