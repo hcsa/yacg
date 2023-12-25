@@ -183,11 +183,15 @@ which category it falls, assume it destroys.
 
 ### Targets
 
-Effect cards often refer to "targets". When an effect is played, any targets it requires must be declared by whoever
-played it, following any restrictions on the targets.
+Some cards often refer to "targets". When a card is played, any targets it requires must be declared by whoever played
+it, following any restrictions on the targets.
 
-> Example: If an effect mentions a "target ally ![card-creature](card-creature.svg)", then the player must declare
+> Example: If a card mentions a "target ally ![card-creature](card-creature.svg)", then the player must declare
 > a ![card-creature](card-creature.svg) on its side to take the effect of the card. If there are no
-> ally ![card-creature](card-creature.svg), then the effect can't be played.
+> ally ![card-creature](card-creature.svg), then the card can't be played.
 
-The target restrictions apply when the effect is played, and don't apply when the effect is resolved.
+The target restrictions apply when the card is played, and don't apply when the card is resolved.
+
+A card's targets may no longer be on the field after an effect is played but before it's resolved. The card doesn't
+change targets if this happens. When the card is resoled, changes to targets that aren't on the field do not apply,
+while changes to targets that are on the field still apply.
