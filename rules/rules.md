@@ -171,3 +171,15 @@ If a player’s deck runs out, they keep playing as normal.
 
 If neither player has cards left at the beginning of a match, the game’s winner is the one that has won the most rounds
 so far. If both players have won the same number of rounds, the game ends in a tie.
+
+### Kill VS Destroy
+
+A ![card-creature](card-creature.svg) is "killed" when its HP reaches 0, either by taking combat damage or due to
+effects or traits that reduce its HP. A ![card-creature](card-creature.svg) is "destroyed" when an effect or trait
+causes it to be destroyed.
+
+Almost all effects or traits destroy a ![card-creature](card-creature.svg), rather than killing it. If it's not clear in
+which category it falls, assume it destroys.
+
+This distinction is mostly relevant for some energy plans, that give energy when a ![card-creature](card-creature.svg)
+is killed but not when it's destroyed.
