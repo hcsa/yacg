@@ -9,7 +9,7 @@ creature:
     spd: 2
     traits:
       - name: 
-        description: After this [CREATURE] attacks, kill it
+        description: After this [CREATURE] attacks, destroy it
         id: T003
 
   metadata:

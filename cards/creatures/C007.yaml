@@ -12,7 +12,7 @@ creature:
         description: If this [CREATURE] kills another [CREATURE], gets -1 Atk
         id: T001
       - name: 
-        description: If ally [CREATURE] dies, gets -1 Atk
+        description: If an ally [CREATURE] is killed or destroyed, gets -1 Atk
         id: T009
 
   metadata:

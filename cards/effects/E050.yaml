@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Destroy target [CREATURE], create a 3HP 3Atk 2Spd token [CREATURE] in their place
+      Destroy target [CREATURE], create a 3HP 3Atk 2Spd token [CREATURE] in their place. Any cards targetting the destroyed [CREATURE] now target the token [CREATURE]
 
   metadata:
     id: E050

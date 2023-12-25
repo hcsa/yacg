@@ -9,7 +9,7 @@ creature:
     spd: 0
     traits:
       - name: 
-        description: When played, deal 1 damage to all other [CREATURE]s
+        description: When this [CREATURE] is played, it deals 1 damage to all other [CREATURE]s
         id: T015
       - name: 
         description: In combat, the opposing [CREATURE] has -1 Atk

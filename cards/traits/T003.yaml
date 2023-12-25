@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      After this [CREATURE] attacks, kill it
+      After this [CREATURE] attacks, destroy it
 
   metadata:
     id: T003

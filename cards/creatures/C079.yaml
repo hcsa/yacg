@@ -12,7 +12,7 @@ creature:
         description: At the beginning of combat, its owner can decide to have this [CREATURE] attack with +1 Prio. Can only be used once. Stacks
         id: T017
       - name: Survivor
-        description: If this [CREATURE] survives combat phase, return to hand instead
+        description: If this [CREATURE] survives combat phase, it goes into its owner's hand
         id: T036
 
   metadata:

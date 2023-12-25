@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      After this [CREATURE] attacks, you can switch it for another [CREATURE]
+      In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE] to take damage
 
   metadata:
     id: T039

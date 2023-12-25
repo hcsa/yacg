@@ -6,7 +6,7 @@ trait:
 
   metadata:
     id: T019
-    type: Cast
+    type: Entry
     value: 10
     dev-stage: Alpha-0
     dev-name: Hail setter
