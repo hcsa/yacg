@@ -1,12 +1,12 @@
 effect:
   data:
-    name: 
-    color: 
+    name:
+    color:
     type: Aura
-    cost-total: 
-    cost-color: 
+    cost-total:
+    cost-color:
     description: |
-      Target creature gets +1HP taking damage. Destroy this card after target creature takes damage 5 times
+      Target creature gets +1HP after taking damage. Destroy this card after target creature takes damage 5 times
 
   metadata:
     id: E085
