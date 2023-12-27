@@ -3,15 +3,15 @@ effect:
     name: Racing contest
     color: Yellow
     type: Field
-    cost-total: 
-    cost-color: 
+    cost-total:
+    cost-color:
     description: |
-      In combat, Atk is used to decide combat order (instead of Spd), and Spd is used to determine damage dealt (instead of Atk). Destroy this card after 3 combat turns
+      In combat, Atk is used to decide combat order (instead of Spd), and Spd is used to determine damage dealt (instead of Atk). Destroy this card after 3 combat fights
 
   metadata:
     id: E033
     dev-stage: Conception
-    dev-name: 
+    dev-name:
     order: 507
     summary: Swap Atk <--> Spd
     notes: |

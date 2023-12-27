@@ -1,12 +1,12 @@
 effect:
   data:
-    name: 
+    name:
     color: Black
     type: Field
-    cost-total: 
-    cost-color: 
+    cost-total:
+    cost-color:
     description: |
-      All ally [CREATURE]s get Trickster. Destroy this card after 3 combat turns
+      All ally [CREATURE]s get Trickster. Destroy this card after 3 combat fights
 
   metadata:
     id: E060

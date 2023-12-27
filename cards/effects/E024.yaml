@@ -3,16 +3,17 @@ effect:
     name: Motivational speech
     color: White
     type: Field
-    cost-total: 
-    cost-color: 
+    cost-total:
+    cost-color:
     description: |
-      Every ally [CREATURE] gets +1 Atk. Destroy this card after 3 combat turns
+      Every ally [CREATURE] gets +1 Atk. Destroy this card after 3 combat fights
 
   metadata:
     id: E024
     dev-stage: Conception
-    dev-name: 
+    dev-name:
     order: 401
     summary: Spread +Atk, cheap, white
     notes: |
       * [HS] Seems too good, maybe shouldn't stack?
+      * [HS] Added temporal
