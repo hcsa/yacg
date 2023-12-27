@@ -3,16 +3,17 @@ effect:
     name: Explosions!
     color: Yellow
     type: Field
-    cost-total: 5
-    cost-color: 3
+    cost-total:
+    cost-color:
     description: |
-      Every [CREATURE] gets Self-destruct
+      Every [CREATURE] gets Self-destruct. Destroy this card after 3 combat fights
 
   metadata:
     id: E030
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Explosions!
     order: 504
     summary: All creatures have self-destruct
     notes: |
       * [HS] Changes battle dynamics, makes it so the side with the most creatures wins. Has to be very tested
+      * [HS] Added limit to how many fights it can influence, to avoid being too good
