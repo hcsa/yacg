@@ -16,4 +16,4 @@ effect:
     summary: Spread +Atk, cheap, white
     notes: |
       * [HS] Seems too good, maybe shouldn't stack?
-      * [HS] Added temporal
+      * [HS] Added limit to how many fights it can influence, to avoid being too good

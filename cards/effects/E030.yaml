@@ -16,3 +16,4 @@ effect:
     summary: All creatures have self-destruct
     notes: |
       * [HS] Changes battle dynamics, makes it so the side with the most creatures wins. Has to be very tested
+      * [HS] Added limit to how many fights it can influence, to avoid being too good

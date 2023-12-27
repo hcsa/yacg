@@ -16,3 +16,4 @@ effect:
     summary: Swap Atk <--> Spd
     notes: |
       * [HS] I feel like this would be more broken than it's turning out to be
+      * [HS] Added limit to how many fights it can influence, because I still believe this is too good

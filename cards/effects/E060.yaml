@@ -13,6 +13,7 @@ effect:
     dev-stage: Conception
     dev-name: Trick room
     order: 806
-    summary: Reverse Spd order for limited time
+    summary: Reverse Spd order
     notes: |
       * [HS] Changed from giving all ally creatures Trick Room, seemed too good. Now seems a bit useless, lowered its cost
+      * [HS] Made it a field again and added limit to how many fights it can influence, to balance it out

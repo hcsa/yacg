@@ -15,4 +15,5 @@ effect:
     order: 908
     summary: -Spd spread, cyan
     notes: |
+      * [HS] Added limit to how many fights it can influence
       
