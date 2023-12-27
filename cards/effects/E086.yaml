@@ -1,12 +1,12 @@
 effect:
   data:
-    name: 
-    color: 
+    name:
+    color:
     type: Aura
-    cost-total: 
-    cost-color: 
+    cost-total:
+    cost-color:
     description: |
-      If target creature were to take combat damage that would kill it, it lives on 1HP instead. Destroy this card after target creature takes damage 1 time
+      If target creature were to take combat damage that would kill it, it lives on 1HP instead. Destroy this card after target creature takes damage once
 
   metadata:
     id: E086
