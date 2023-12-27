@@ -1,0 +1,18 @@
+effect:
+  data:
+    name:
+    color:
+    type: Aura
+    cost-total:
+    cost-color:
+    description: |
+      Target creature gets +1HP after taking damage. Destroy this card after target creature takes damage 5 times
+
+  metadata:
+    id: E085
+    dev-stage: Conception
+    dev-name: Leftovers
+    order: 1007
+    summary: Gradual recovery
+    notes: |
+      

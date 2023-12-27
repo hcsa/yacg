@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Aura
+    cost-total: 
+    cost-color: 
+    description: |
+      Target creature gets +2 Spd after taking combat damage that leaves it with 2 HP or less. Destroy this card afterwards
+
+  metadata:
+    id: E089
+    dev-stage: Conception
+    dev-name: Salac berry
+    order: 1011
+    summary: Pinch +Spd
+    notes: |
+      

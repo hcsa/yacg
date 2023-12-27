@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Aura
+    cost-total: 
+    cost-color: 
+    description: |
+      Target creature gets +3 HP after taking combat damage that leaves it with 2HP or less. Destroy this card afterwards
+
+  metadata:
+    id: E087
+    dev-stage: Conception
+    dev-name: Figy berry
+    order: 1009
+    summary: Pinch recovery
+    notes: |
+      

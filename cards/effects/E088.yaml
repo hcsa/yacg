@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Aura
+    cost-total: 
+    cost-color: 
+    description: |
+      Target creature gets +3 Atk after taking combat damage that leaves it with 2HP or less. Destroy this card afterwards
+
+  metadata:
+    id: E088
+    dev-stage: Conception
+    dev-name: Liechi Berry
+    order: 1010
+    summary: Pinch +Atk
+    notes: |
+      
