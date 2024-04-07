@@ -1,7 +1,7 @@
 .idea/
 venv/
 _pyinstaller_cache/
-extendscript/
 ~$*
 /Cards.xlsx
 /Cards (backup).xlsx
+jsconfig.json

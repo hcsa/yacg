@@ -1,13 +1,24 @@
 # YACG
 
-Requires Python 3.12.
+## Development
 
+Requires
+- Python 3.12
+- Adobe Illustrator 2022 (26.1)
+
+### Compile executables
 To create the .exe files, install pyinstaller (`pip install pyinstaller`) and run
 
 ```
 pyinstaller scripts/import_to_excel.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
 pyinstaller scripts/export_from_excel.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
 ```
+
+### Modify Adobe Illustrator scripts
+
+These scripts are written in ExtendScript, which is an extension of JavaScript used by Adobe softwares.
+
+The best way to work on these is through VSCode, with the extension "ExtendScript Development Pack". You can run "Types for Adobe: Set-Up Types for Adobe" so VSCode is aware of pre-configured objects that ExtendScript uses.
 
 ## Cards YAML structure
 
