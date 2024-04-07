@@ -9,8 +9,9 @@ Requires
 ### Compile executables
 To create the .exe files, install pyinstaller (`pip install pyinstaller`) and run
 
-```
+```bash
 pyinstaller scripts/import_to_excel.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
+
 pyinstaller scripts/export_from_excel.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
 ```
 
