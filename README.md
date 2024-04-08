@@ -21,6 +21,10 @@ These scripts are written in ExtendScript, which is an extension of JavaScript u
 
 The best way to work on these is through VSCode, with the extension "ExtendScript Development Pack". You can run "Types for Adobe: Set-Up Types for Adobe" so VSCode is aware of pre-configured objects that ExtendScript uses.
 
+The main Adobe Illustrator objects are summarized in the following object model:
+
+![alt text](image.png)
+
 ## Cards YAML structure
 
 ### Creature
