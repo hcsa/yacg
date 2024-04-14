@@ -4,7 +4,7 @@
 
 Requires
 - Python 3.12
-- Adobe Illustrator 2022 (26.1)
+- Adobe Illustrator 2023 (27.3)
 
 ### Compile executables
 To create the .exe files, install pyinstaller (`pip install pyinstaller`) and run
@@ -15,15 +15,26 @@ pyinstaller scripts/import_to_excel.py -F -c --clean --specpath ./_pyinstaller_c
 pyinstaller scripts/export_from_excel.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
 ```
 
-### Modify Adobe Illustrator scripts
+### Modify Illustrator scripts
 
-These scripts are written in ExtendScript, which is an extension of JavaScript used by Adobe softwares.
+These scripts are written in Python, using the `pywin32` module to access the Illustrator's COM objects and modify the files.
 
-The best way to work on these is through VSCode, with the extension "ExtendScript Development Pack". You can run "Types for Adobe: Set-Up Types for Adobe" so VSCode is aware of pre-configured objects that ExtendScript uses.
+The complete object reference can be found [here](https://ai-scripting.docsforadobe.dev/jsobjref/javascript-object-reference.html) (it's listed for Javascript, but the references are the same for Python -- these are the COM objects). The main references are summarized in the following object model:
 
-The main Adobe Illustrator objects are summarized in the following object model:
+![Main Illustrator objects](image.png)
 
-![alt text](image.png)
+The type library has been generated to [illustrator_com.py](./scripts/yacg_python/illustrador_com.py). Unfortunately, the objects' properties are encoded in `_prop_map_get_` attributes, and IntelliSense's autocomplete can't make sense of them.
+
+#### Generate Illustrator type library
+
+The type library is generated using the `makepy` CLI that comes with the `pywin32` module. This requires some work beforehand 
+- Install `pywin32` module (run `pip install pywin32` or equivalent)
+- Go to `[path/to/Python3/or/venv]/Scripts`, there should be a `pywin32_postinstall.py` file there
+- Run `python pywin32_postinstall.py -install` with admin priviledges
+
+After that, running [generate_illustrator_type_library.py](./scripts/generate_illustrator_type_library.py) will generate the type library.
+
+The documentation for type library generation can be found [here](https://timgolden.me.uk/pywin32-docs/html/com/win32com/HTML/QuickStartClientCom.html).
 
 ## Cards YAML structure
 
