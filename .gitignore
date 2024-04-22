@@ -5,3 +5,4 @@ _pyinstaller_cache/
 /Cards.xlsx
 /Cards (backup).xlsx
 jsconfig.json
+__pycache__/
