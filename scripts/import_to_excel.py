@@ -51,9 +51,9 @@ def copy_excel_base(source_path: Path, destination_path: Path):
 
 
 def import_to_excel(excel_path: Path, base_dir: Path):
-    creatures_dir = base_dir / "cards" / "creatures"
-    effects_dir = base_dir / "cards" / "effects"
-    traits_dir = base_dir / "cards" / "traits"
+    creatures_dir = base_dir / "card_data" / "creatures"
+    effects_dir = base_dir / "card_data" / "effects"
+    traits_dir = base_dir / "card_data" / "traits"
     values_path = base_dir / "dev_data" / "values.yaml"
 
     with xw.App(visible=False) as app:

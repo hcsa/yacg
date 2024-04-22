@@ -39,9 +39,9 @@ def get_base_dir() -> Path:
 
 
 def export_from_excel(excel_path: Path, base_dir: Path):
-    creatures_dir = base_dir / "cards" / "creatures"
-    effects_dir = base_dir / "cards" / "effects"
-    traits_dir = base_dir / "cards" / "traits"
+    creatures_dir = base_dir / "card_data" / "creatures"
+    effects_dir = base_dir / "card_data" / "effects"
+    traits_dir = base_dir / "card_data" / "traits"
 
     with xw.App(visible=False) as app:
         excel_book = app.books.open(str(excel_path))

@@ -17,13 +17,13 @@ A.
 
 In this phase, effects cards are played. There are 3 types of effect cards:
 
-- **Actions** (marked with ![card-action](card-action.svg) in the top-right corner) have an immediate effect, then go
+- **Actions** (marked with <img src="./card_design/icons/card-action.svg" height=10>) in the top-right corner)  have an immediate effect, then go
   to the
   discard pile.
-- **Fields** (marked with ![card-field](card-field.svg) in the top-right corner) stay in the field, and their effect
+- **Fields** (marked with <img src="./card_design/icons/card-field.svg" height=10> in the top-right corner) stay in the field, and their effect
   applies
   throughout the round.
-- **Auras** (marked with ![card-aura](card-aura.svg)![card-aura](card-aura.svg) in the top-right corner) are attached
+- **Auras** (marked with <img src="./card_design/icons/card-aura.svg" height=10> in the top-right corner) are attached
   to
   creatures.
     - It’s very unlikely you’ll get to play auras, since there aren’t creatures in play, but maybe it’ll happen with
@@ -44,7 +44,7 @@ The phase ends when both players choose consecutively to hold.
 
 ### Phase 2 - Creature phase
 
-In this phase, creature cards are played. They are marked with ![card-creature](card-creature.svg) in the top-right
+In this phase, creature cards are played. They are marked with <img src="./card_design/icons/card-creature.svg" height=10> in the top-right
 corner.
 
 Each player has the following options available to them:
@@ -62,23 +62,23 @@ This phase proceeds exactly the same as Phase 1.
 
 This phase proceeds as follows:
 
-- Player A chooses a ![card-creature](card-creature.svg) from their side of the field.
-- Player B chooses a ![card-creature](card-creature.svg) from their side of the field.
+- Player A chooses a <img src="./card_design/icons/card-creature.svg" height=10> from their side of the field.
+- Player B chooses a <img src="./card_design/icons/card-creature.svg" height=10> from their side of the field.
 - The chose creatures fight!
-    - Each ![card-creature](card-creature.svg) has ![stat-hp](stat-hp.svg) (Health Points, or
-      HP), ![stat-atk](stat-atk.svg) (Attack, or Atk) and ![stat-spd](stat-spd.svg) (Speed, or Spd) as written on the
+    - Each <img src="./card_design/icons/card-creature.svg" height=10> has <img src="./card_design/icons/stat-hp.svg" height=10> (Health Points, or
+      HP), <img src="./card_design/icons/stat-atk.svg" height=10> (Attack, or Atk) and <img src="./card_design/icons/stat-spe.svg" height=10> (Speed, or Spe) as written on the
       card.
-    - Both ![card-creature](card-creature.svg) fight by attacking each other, reducing  ![stat-hp](stat-hp.svg) of the
-      opponent by an amount equal to their  ![stat-atk](stat-atk.svg). The order in which they attack depends on
-      their ![stat-spd](stat-spd.svg).
-        - The ![card-creature](card-creature.svg) with the highest ![stat-spd](stat-spd.svg) attacks first.
-        - If they have the same ![stat-spd](stat-spd.svg), then they attack simultaneously.
-    - If ![stat-hp](stat-hp.svg) reaches 0, it's killed and put into the discard pile.
-        - If a ![card-creature](card-creature.svg) were to attack second but dies first, then its attack doesn't go
+    - Both <img src="./card_design/icons/card-creature.svg" height=10> fight by attacking each other, reducing <img src="./card_design/icons/stat-hp.svg" height=10> of the
+      opponent by an amount equal to their <img src="./card_design/icons/stat-atk.svg" height=10>. The order in which they attack depends on
+      their <img src="./card_design/icons/stat-spe.svg" height=10>.
+        - The <img src="./card_design/icons/card-creature.svg" height=10> with the highest <img src="./card_design/icons/stat-spe.svg" height=10> attacks first.
+        - If they have the same <img src="./card_design/icons/stat-spe.svg" height=10>, then they attack simultaneously.
+    - If <img src="./card_design/icons/stat-hp.svg" height=10> reaches 0, it's killed and put into the discard pile.
+        - If a <img src="./card_design/icons/card-creature.svg" height=10> were to attack second but dies first, then its attack doesn't go
           through.
-- This repeats over and over again, alternating the player who first chooses a ![card-creature](card-creature.svg) to
+- This repeats over and over again, alternating the player who first chooses a <img src="./card_design/icons/card-creature.svg" height=10> to
   fight.
-- **When a player has no more ![card-creature](card-creature.svg) left, their opponent wins the round**.
+- **When a player has no more <img src="./card_design/icons/card-creature.svg" height=10> left, their opponent wins the round**.
     - If both players have no more creatures left, the round ends in a tie.
 
 ### Round aftermath
@@ -104,10 +104,10 @@ You earn energy as follows:
 
 - At the start of the game, you choose 2 of the available plans to get energy. These can be:
     - Get energy at the beginning of every round
-    - Get energy whenever you cast a ![card-creature](card-creature.svg)
-    - Get energy whenever an opponent ![card-creature](card-creature.svg) is killed or destroyed.
-    - Get energy whenever an ally ![card-creature](card-creature.svg) is killed or destroyed.
-    - Get energy whenever an ally ![card-creature](card-creature.svg) survives until the end of the round.
+    - Get energy whenever you cast a <img src="./card_design/icons/card-creature.svg" height=10>
+    - Get energy whenever an opponent <img src="./card_design/icons/card-creature.svg" height=10> is killed or destroyed.
+    - Get energy whenever an ally <img src="./card_design/icons/card-creature.svg" height=10> is killed or destroyed.
+    - Get energy whenever an ally <img src="./card_design/icons/card-creature.svg" height=10> survives until the end of the round.
     - Get energy whenever you lose a round.
 - To each chosen plan, you attach a color. The 2 plans may have the same or different colors.
 - Throughout the game, when a chosen plan’s condition applies, you get energy of the color attached to the plan.
@@ -135,31 +135,31 @@ Every player can mulligan once per game.
 
 ### Buffs and debuffs
 
-Actions and traits can influence a ![card-creature](card-creature.svg)
-’s ![stat-hp](stat-hp.svg), ![stat-atk](stat-atk.svg) or ![stat-spd](stat-spd.svg). When computing
-a ![card-creature](card-creature.svg)’s stat, buffs are added before debuffs.
+Actions and traits can influence a <img src="./card_design/icons/card-creature.svg" height=10>
+’s <img src="./card_design/icons/stat-hp.svg" height=10>, <img src="./card_design/icons/stat-atk.svg" height=10> or <img src="./card_design/icons/stat-spe.svg" height=10>. When computing
+a <img src="./card_design/icons/card-creature.svg" height=10>’s stat, buffs are added before debuffs.
 
 None of these stats can go below 0; if that
 were to happen, the stat's value is 0.
 
-- If ![stat-hp](stat-hp.svg) is 0, the ![card-creature](card-creature.svg) dies and is put into the discard pile. This
+- If <img src="./card_design/icons/stat-hp.svg" height=10> is 0, the <img src="./card_design/icons/card-creature.svg" height=10> dies and is put into the discard pile. This
   may happen outside of combat.
-- If ![stat-atk](stat-atk.svg) is 0, the ![card-creature](card-creature.svg)'s attacks don't do damage.
+- If <img src="./card_design/icons/stat-atk.svg" height=10> is 0, the <img src="./card_design/icons/card-creature.svg" height=10>'s attacks don't do damage.
 
 ### Standard speed
 
-As a rule of thumb, the “standard” value for ![stat-spd](stat-spd.svg) is 2.
+As a rule of thumb, the “standard” value for <img src="./card_design/icons/stat-spe.svg" height=10> is 2.
 
 ### Weather
 
-Some cards or ![card-creature](card-creature.svg)'s traits may set up weather: sun, rain or hail.
+Some cards or <img src="./card_design/icons/card-creature.svg" height=10>'s traits may set up weather: sun, rain or hail.
 
 Weather lasts for 2 rounds (the one it’s set, plus the one after), or until weather is set up again.
 
 ### Combat stall
 
-The combat phase has a max of 20 fights. If there are ![card-creature](card-creature.svg) left after that, each player
-adds up the ![stat-hp](stat-hp.svg) left on the creatures on their side. The round’s winner is the one with the highest
+The combat phase has a max of 20 fights. If there are <img src="./card_design/icons/card-creature.svg" height=10> left after that, each player
+adds up the <img src="./card_design/icons/stat-hp.svg" height=10> left on the creatures on their side. The round’s winner is the one with the highest
 value; if the values are the same, the round ends in a tie.
 
 ### Empty deck
@@ -174,11 +174,11 @@ so far. If both players have won the same number of rounds, the game ends in a t
 
 ### Kill VS Destroy
 
-A ![card-creature](card-creature.svg) is "killed" when its HP reaches 0, either by taking combat damage or due to
-effects or traits that reduce its HP. A ![card-creature](card-creature.svg) is "destroyed" when an effect or trait
+A <img src="./card_design/icons/card-creature.svg" height=10> is "killed" when its HP reaches 0, either by taking combat damage or due to
+effects or traits that reduce its HP. A <img src="./card_design/icons/card-creature.svg" height=10> is "destroyed" when an effect or trait
 causes it to be destroyed.
 
-Almost all effects or traits destroy a ![card-creature](card-creature.svg), rather than killing it. If it's not clear in
+Almost all effects or traits destroy a <img src="./card_design/icons/card-creature.svg" height=10>, rather than killing it. If it's not clear in
 which category it falls, assume it destroys.
 
 ### Targets
@@ -186,9 +186,9 @@ which category it falls, assume it destroys.
 Some cards often refer to "targets". When a card is played, any targets it requires must be declared by whoever played
 it, following any restrictions on the targets.
 
-> Example: If a card mentions a "target ally ![card-creature](card-creature.svg)", then the player must declare
-> a ![card-creature](card-creature.svg) on its side to take the effect of the card. If there are no
-> ally ![card-creature](card-creature.svg), then the card can't be played.
+> Example: If a card mentions a "target ally <img src="./card_design/icons/card-creature.svg" height=10>", then the player must declare
+> a <img src="./card_design/icons/card-creature.svg" height=10> on its side to take the effect of the card. If there are no
+> ally <img src="./card_design/icons/card-creature.svg" height=10>, then the card can't be played.
 
 The target restrictions apply when the card is played, and don't apply when the card is resolved.
 
