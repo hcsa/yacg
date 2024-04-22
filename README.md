@@ -15,6 +15,9 @@ pyinstaller scripts/import_to_excel.py -F -c --clean --specpath ./_pyinstaller_c
 pyinstaller scripts/export_from_excel.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
 ```
 
+### Icon font
+The icon font is created from the .svg that live [here](/card_design/icons/). A way of creating the font is by uploading the .svg files to [Glyphter](https://glyphter.com/).
+
 ### Modify Illustrator scripts
 
 These scripts are written in Python, using the `pywin32` module to access the Illustrator's COM objects and modify the files.
