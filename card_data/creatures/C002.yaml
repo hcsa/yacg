@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Black
     cost-total: 2
     cost-color: 2
     hp: 4
     atk: 3
-    spd: 2
+    spe: 2
     traits:
       - name: Illegal charge
         description: When played, put this [CREATURE] on the opponent's side. You get +4 () of a color

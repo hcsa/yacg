@@ -6,7 +6,7 @@ creature:
     cost-color: 2
     hp: 2
     atk: 1
-    spd: 2
+    spe: 2
     traits:
       - name: Restless
         description: If this [CREATURE] is killed or destroyed, it goes into its owner's hand

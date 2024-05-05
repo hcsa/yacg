@@ -1,17 +1,17 @@
 creature:
   data:
-    name: 
+    name:
     color: Green
     cost-total: 5
     cost-color: 3
     hp: 6
     atk: 3
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: Benefits from Sun
         id: T004
-      - name: 
+      - name:
         description: Benefits from Rain
         id: T014
 
@@ -19,7 +19,7 @@ creature:
     id: C051
     value: -45
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 211
     summary: Sun buffed, Rain buffed, Green
     notes: |

@@ -1,17 +1,17 @@
 creature:
   data:
-    name: 
+    name:
     color: Green
     cost-total: 4
     cost-color: 2
     hp: 4
     atk: 2
-    spd: 3
+    spe: 3
     traits:
       - name: Arrogant
         description: If this [CREATURE] kills another [CREATURE], gets -1 Atk
         id: T001
-      - name: 
+      - name:
         description: In combat, the opposing [CREATURE] has -1 Atk
         id: T024
 

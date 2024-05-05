@@ -1,14 +1,14 @@
 creature:
   data:
-    name: 
+    name:
     color: Pink
     cost-total: 5
     cost-color: 2
     hp: 10
     atk: 4
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: This [CREATURE]'s Atk, Spd and Prio can't be lowered
         id: T005
       - name: Immunity
@@ -19,7 +19,7 @@ creature:
     id: C066
     value: 35
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 705
     summary: Defensive traits, good stats, Pink
     notes: |

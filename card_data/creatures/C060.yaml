@@ -1,17 +1,17 @@
 creature:
   data:
-    name: 
+    name:
     color: Cyan
     cost-total: 4
     cost-color: 3
     hp: 6
     atk: 4
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: If another ally [CREATURE] has this trait, every opposing [CREATURE] gets -1 Spd. For each additional ally that has this trait, every opposing [CREATURE] gets -1 Spd
         id: T007
-      - name: 
+      - name:
         description: In combat, the opposing [CREATURE] has -1 Spd
         id: T021
 

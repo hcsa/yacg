@@ -1,14 +1,14 @@
 creature:
   data:
-    name: 
+    name:
     color: Blue
     cost-total: 4
     cost-color: 2
     hp: 8
     atk: 2
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: First damage dealt to this [CREATURE] is nullified
         id: T028
       - name: Immunity

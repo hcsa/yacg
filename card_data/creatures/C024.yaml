@@ -1,14 +1,14 @@
 creature:
   data:
-    name: 
+    name:
     color: Orange
     cost-total: 3
     cost-color: 2
     hp: 2
     atk: 3
-    spd: 3
+    spe: 3
     traits:
-      - name: 
+      - name:
         description: If this [CREATURE] kills another [CREATURE], gets +1 Atk
         id: T027
 

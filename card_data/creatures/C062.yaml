@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Pink
     cost-total: 2
     cost-color: 2
     hp: 2
     atk: 1
-    spd: 1
+    spe: 1
     traits:
       - name: Disable
         description: For this round, opponent can't play [CREATURE]s with the same name as the one they last played
@@ -16,7 +16,7 @@ creature:
     id: C062
     value: -10
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 701
     summary: Disable, cheapest, Pink
     notes: |

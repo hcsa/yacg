@@ -6,7 +6,7 @@ creature:
     cost-color: 2
     hp: 2
     atk: 1
-    spd: 3
+    spe: 3
     traits:
       - name: Energetic
         description: If another ally [CREATURE] has this trait, every ally [CREATURE] gets +1 Spd. For each additional ally that has this trait, every ally [CREATURE] gets +1 Spd

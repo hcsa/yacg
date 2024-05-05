@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 2
     cost-color: 2
     hp: 2
     atk: 1
-    spd: 2
+    spe: 2
     traits:
       - name: Avenger
         description: If an ally [CREATURE] is killed or destroyed, gets +1 Atk

@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 0
     cost-color: 0
     hp: 1
     atk: 1
-    spd: 2
+    spe: 2
     traits:
       - name: Survivor
         description: If this [CREATURE] survives combat phase, it goes into its owner's hand

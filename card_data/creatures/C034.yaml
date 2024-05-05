@@ -6,9 +6,9 @@ creature:
     cost-color: 3
     hp: 2
     atk: 1
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: If the next [CREATURE] played during the current round doesn't belong to you, destroy both that [CREATURE] and this one
         id: T011
 

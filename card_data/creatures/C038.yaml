@@ -6,9 +6,9 @@ creature:
     cost-color: 3
     hp: 6
     atk: 3
-    spd: 3
+    spe: 3
     traits:
-      - name: 
+      - name:
         description: If the next [CREATURE] played during the current round doesn't belong to you, destroy both that [CREATURE] and this one
         id: T011
       - name: Restless

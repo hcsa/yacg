@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Blue
     cost-total: 5
     cost-color: 3
     hp: 10
     atk: 3
-    spd: 2
+    spe: 2
     traits:
       - name: Rain setter
         description: When this [CREATURE] is played, if 3 [CREATURE]s have this trait, rain is set for 2 rounds

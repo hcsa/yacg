@@ -1,17 +1,17 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 4
     cost-color: 3
     hp: 3
     atk: 4
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: At the beginning of combat, its owner can decide to have this [CREATURE] attack with +1 Prio. Can only be used once. Stacks
         id: T017
-      - name: 
+      - name:
         description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE] to take damage
         id: T039
 
@@ -19,7 +19,7 @@ creature:
     id: C083
     value: 25
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 417
     summary: First strike, U-turn
     notes: |

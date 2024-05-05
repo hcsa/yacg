@@ -6,7 +6,7 @@ creature:
     cost-color: 0
     hp: 1
     atk: 0
-    spd: 1
+    spe: 1
     traits:
       - name: Self-destruct
         description: When this [CREATURE] attacks, kill this and the opposing [CREATURE]

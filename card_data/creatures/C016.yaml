@@ -1,17 +1,17 @@
 creature:
   data:
-    name: 
+    name:
     color: Yellow
     cost-total: 3
     cost-color: 2
     hp: 2
     atk: 2
-    spd: 3
+    spe: 3
     traits:
-      - name: 
+      - name:
         description: When played, fights opponent's last played [CREATURE] in the current round
         id: T020
-      - name: 
+      - name:
         description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE] to take damage
         id: T039
 

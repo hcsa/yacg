@@ -1,14 +1,14 @@
 creature:
   data:
-    name: 
+    name:
     color: Black
     cost-total: 3
     cost-color: 2
     hp: 6
     atk: 3
-    spd: 1
+    spe: 1
     traits:
-      - name: 
+      - name:
         description: In combat, the opposing [CREATURE] has -1 Atk
         id: T024
 

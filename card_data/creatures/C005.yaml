@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Black
     cost-total: 3
     cost-color: 2
     hp: 4
     atk: 2
-    spd: 1
+    spe: 1
     traits:
       - name: Gang up
         description: If another ally [CREATURE] has this trait, every opposing [CREATURE] gets -1 Atk. For each additional ally that has this trait, every opposing [CREATURE] gets -1 Atk

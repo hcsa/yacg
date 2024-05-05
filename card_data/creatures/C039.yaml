@@ -1,14 +1,14 @@
 creature:
   data:
-    name: 
+    name:
     color: Green
     cost-total: 0
     cost-color: 0
     hp: 3
     atk: 1
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: After this [CREATURE] attacks, kill it
         id: T003
 

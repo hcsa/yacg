@@ -1,14 +1,14 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 3
     cost-color: 2
     hp: 2
     atk: 1
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: If another ally [CREATURE] has this trait, every ally [CREATURE] gets +1 Atk. For each additional ally that has this trait, every ally [CREATURE] gets +1 Atk
         id: T030
 

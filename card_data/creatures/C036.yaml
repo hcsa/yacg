@@ -1,14 +1,14 @@
 creature:
   data:
-    name: 
+    name:
     color: Purple
     cost-total: 4
     cost-color: 2
     hp: 4
     atk: 6
-    spd: 3
+    spe: 3
     traits:
-      - name: 
+      - name:
         description: After this [CREATURE] attacks, kill it
         id: T003
 
@@ -16,7 +16,7 @@ creature:
     id: C036
     value: 10
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 607
     summary: 4-cost, Purple
     notes: |

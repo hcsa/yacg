@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 3
     cost-color: 3
     hp: 4
     atk: 2
-    spd: 3
+    spe: 3
     traits:
       - name: Martyr
         description: If another [CREATURE] were to take combat damage that would kill it, this one can be destroyed. If so, combat damage is nullified
@@ -16,7 +16,7 @@ creature:
     id: C076
     value: 20
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 410
     summary: Martyr, White
     notes: |

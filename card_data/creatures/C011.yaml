@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Yellow
     cost-total: 1
     cost-color: 1
     hp: 2
     atk: 0
-    spd: 2
+    spe: 2
     traits:
       - name: Self-destruct
         description: When this [CREATURE] attacks, kill this and the opposing [CREATURE]

@@ -1,17 +1,17 @@
 creature:
   data:
-    name: 
+    name:
     color: Black
     cost-total: 4
     cost-color: 2
     hp: 8
     atk: 3
-    spd: 2
+    spe: 2
     traits:
       - name: Arrogant
         description: If this [CREATURE] kills another [CREATURE], gets -1 Atk
         id: T001
-      - name: 
+      - name:
         description: If an ally [CREATURE] is killed or destroyed, gets -1 Atk
         id: T009
 

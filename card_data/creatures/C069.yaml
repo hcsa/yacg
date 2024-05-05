@@ -1,18 +1,18 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 1
     cost-color: 1
     hp: 2
     atk: 2
-    spd: 2
+    spe: 2
 
   metadata:
     id: C069
     value: -5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 403
     summary: 1-cost, White, no traits
     notes: |

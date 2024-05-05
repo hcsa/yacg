@@ -6,15 +6,15 @@ creature:
     cost-color: 5
     hp: 8
     atk: 5
-    spd: 0
+    spe: 0
     traits:
-      - name: 
+      - name:
         description: When this [CREATURE] is played, it deals 1 damage to all other [CREATURE]s
         id: T015
-      - name: 
+      - name:
         description: In combat, the opposing [CREATURE] has -1 Atk
         id: T024
-      - name: 
+      - name:
         description: Excessive damage this [CREATURE] deals is taken by other opposing [CREATURE]s (if there are any)
         id: T037
 

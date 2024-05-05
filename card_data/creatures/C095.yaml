@@ -1,20 +1,20 @@
 creature:
   data:
-    name: 
+    name:
     color: Blue
     cost-total: 6
     cost-color: 4
     hp: 16
     atk: 2
-    spd: 1
+    spe: 1
     traits:
-      - name: 
+      - name:
         description: This [CREATURE]'s Atk, Spd and Prio can't be lowered
         id: T005
       - name: Immunity
         description: Can't be targeted by effect cards
         id: T023
-      - name: 
+      - name:
         description: First damage dealt to this [CREATURE] is nullified
         id: T028
 
@@ -22,7 +22,7 @@ creature:
     id: C095
     value: 10
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 310
     summary: High HP, a bunch of defensive traits
     notes: |

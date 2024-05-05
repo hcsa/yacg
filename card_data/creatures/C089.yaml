@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Blue
     cost-total: 2
     cost-color: 2
     hp: 4
     atk: 1
-    spd: 2
+    spe: 2
 
   metadata:
     id: C089

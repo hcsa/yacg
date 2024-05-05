@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Pink
     cost-total: 4
     cost-color: 2
     hp: 8
     atk: 3
-    spd: 2
+    spe: 2
     traits:
       - name: Disable
         description: For this round, opponent can't play [CREATURE]s with the same name as the one they last played
@@ -16,7 +16,7 @@ creature:
     id: C065
     value: 15
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 704
     summary: Disable, good stats, Pink
     notes: |

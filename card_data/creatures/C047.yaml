@@ -1,17 +1,17 @@
 creature:
   data:
-    name: 
+    name:
     color: Green
     cost-total: 5
     cost-color: 3
     hp: 6
     atk: 3
-    spd: 0
+    spe: 0
     traits:
-      - name: 
+      - name:
         description: In combat, the opposing [CREATURE] has -1 Atk
         id: T024
-      - name: 
+      - name:
         description: Excessive damage this [CREATURE] deals is taken by other opposing [CREATURE]s (if there are any)
         id: T037
 

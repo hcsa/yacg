@@ -1,14 +1,14 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 5
     cost-color: 4
     hp: 6
     atk: 3
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: At the end of combat, its owner can decide to have this [CREATURE] attack again. Can only be used once. Stacks
         id: T013
 
@@ -16,7 +16,7 @@ creature:
     id: C084
     value: -5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 418
     summary: Double strike, White, good stats
     notes: |

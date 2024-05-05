@@ -1,23 +1,23 @@
 creature:
   data:
-    name: 
+    name:
     color: Green
     cost-total: 10
     cost-color: 7
     hp: 16
     atk: 6
-    spd: 0
+    spe: 0
     traits:
-      - name: 
+      - name:
         description: When this [CREATURE] is played, it deals 1 damage to all other [CREATURE]s
         id: T015
-      - name: 
+      - name:
         description: In combat, the opposing [CREATURE] has -1 Atk
         id: T024
-      - name: 
+      - name:
         description: Excessive damage this [CREATURE] deals is taken by other opposing [CREATURE]s (if there are any)
         id: T037
-      - name: 
+      - name:
         description: This creature always attacks last
         id: T034
 

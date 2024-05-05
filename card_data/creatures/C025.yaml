@@ -6,7 +6,7 @@ creature:
     cost-color: 2
     hp: 5
     atk: 3
-    spd: 2
+    spe: 2
     traits:
       - name: Sun setter
         description: When this [CREATURE] is played, if 3 [CREATURE]s have this trait, sun is set for 2 rounds
@@ -16,7 +16,7 @@ creature:
     id: C025
     value: 5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 106
     summary: Sun setter, Orange, cheapest
     notes: |

@@ -1,14 +1,14 @@
 creature:
   data:
-    name: 
+    name:
     color: Green
     cost-total: 2
     cost-color: 2
     hp: 4
     atk: 1
-    spd: 2
+    spe: 2
     traits:
-      - name: 
+      - name:
         description: Benefits from Rain
         id: T014
 
@@ -16,7 +16,7 @@ creature:
     id: C041
     value: 0
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 203
     summary: Cheap, Rain buffed, Green
     notes: |

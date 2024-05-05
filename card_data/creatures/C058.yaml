@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Cyan
     cost-total: 4
     cost-color: 3
     hp: 6
     atk: 2
-    spd: 3
+    spe: 3
     traits:
       - name: Mind freeze
         description: All effect cards cost +1 () to play
@@ -16,7 +16,7 @@ creature:
     id: C058
     value: 20
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 906
     summary: Mind freeze, Cyan
     notes: |

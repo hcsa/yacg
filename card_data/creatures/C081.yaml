@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 4
     cost-color: 2
     hp: 6
     atk: 2
-    spd: 3
+    spe: 3
     traits:
       - name: Avenger
         description: If an ally [CREATURE] is killed or destroyed, gets +1 Atk
@@ -16,7 +16,7 @@ creature:
     id: C081
     value: -5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 415
     summary: Avenger, good stats
     notes: |

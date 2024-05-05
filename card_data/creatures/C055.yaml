@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Cyan
     cost-total: 3
     cost-color: 2
     hp: 4
     atk: 1
-    spd: 3
+    spe: 3
     traits:
       - name: Hail setter
         description: When played, if 3 [CREATURE]s have this trait, hail is set for 2 rounds
@@ -16,7 +16,7 @@ creature:
     id: C055
     value: 5
     dev-stage: Alpha-1
-    dev-name: 
+    dev-name:
     order: 903
     summary: Hail setter, Cyan, cheapest
     notes: |

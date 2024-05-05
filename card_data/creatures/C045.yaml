@@ -1,12 +1,12 @@
 creature:
   data:
-    name: 
+    name:
     color: Green
     cost-total: 4
     cost-color: 2
     hp: 6
     atk: 1
-    spd: 2
+    spe: 2
     traits:
       - name: Defender
         description: Can take combat damage targeted at other [CREATURE]
@@ -16,7 +16,7 @@ creature:
     id: C045
     value: -10
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 207
     summary: Defender, considerable HP without being to costly
     notes: |
