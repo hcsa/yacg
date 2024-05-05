@@ -1,9 +1,6 @@
 """
 Generates type library to use with Adobe Illustrator
 
-To be run from root, as:
-python ./scripts/generate_illustrator_type_library.py
-
 Requires some work beforehand, check README for more details
 """
 
