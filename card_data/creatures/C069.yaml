@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: White
     cost-total: 1
     cost-color: 1
@@ -12,7 +12,7 @@ creature:
     id: C069
     value: -5
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 403
     summary: 1-cost, White, no traits
     notes: |

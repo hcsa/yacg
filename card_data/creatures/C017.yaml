@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Yellow
     cost-total: 4
     cost-color: 3
@@ -11,7 +11,7 @@ creature:
       - name: Self-destruct
         description: When this [CREATURE] attacks, kill this and the opposing [CREATURE]
         id: T033
-      - name:
+      - name: 
         description: When played, fights opponent's last played [CREATURE] in the current round
         id: T020
 

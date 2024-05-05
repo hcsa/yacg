@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Green
     cost-total: 2
     cost-color: 2
@@ -12,7 +12,7 @@ creature:
     id: C040
     value: 0
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 202
     summary: Cheap, no traits, Green
     notes: |

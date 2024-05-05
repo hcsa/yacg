@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Green
     cost-total: 6
     cost-color: 4
@@ -11,7 +11,7 @@ creature:
       - name: Defender
         description: Can take combat damage targeted at other [CREATURE]
         id: T010
-      - name:
+      - name: 
         description: First damage dealt to this [CREATURE] is nullified
         id: T028
       - name: Survivor

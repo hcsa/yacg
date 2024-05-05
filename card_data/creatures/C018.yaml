@@ -11,7 +11,7 @@ creature:
       - name: Energetic
         description: If another ally [CREATURE] has this trait, every ally [CREATURE] gets +1 Spd. For each additional ally that has this trait, every ally [CREATURE] gets +1 Spd
         id: T016
-      - name:
+      - name: 
         description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE] to take damage
         id: T039
 

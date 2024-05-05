@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Blue
     cost-total: 2
     cost-color: 2
@@ -8,7 +8,7 @@ creature:
     atk: 1
     spe: 2
     traits:
-      - name:
+      - name: 
         description: First damage dealt to this [CREATURE] is nullified
         id: T028
 
@@ -16,7 +16,7 @@ creature:
     id: C087
     value: 0
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 302
     summary: Protect, Blue, cheapest
     notes: |

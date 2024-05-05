@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Orange
     cost-total: 4
     cost-color: 2
@@ -8,10 +8,10 @@ creature:
     atk: 3
     spe: 3
     traits:
-      - name:
+      - name: 
         description: When played, fights opponent's last played [CREATURE] in the current round
         id: T020
-      - name:
+      - name: 
         description: If this [CREATURE] kills another [CREATURE], gets +1 Atk
         id: T027
 

@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Cyan
     cost-total: 2
     cost-color: 2
@@ -12,7 +12,7 @@ creature:
     id: C054
     value: 5
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 902
     summary: 2-cost, Cyan
     notes: |

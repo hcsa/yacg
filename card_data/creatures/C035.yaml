@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Purple
     cost-total: 3
     cost-color: 2
@@ -8,7 +8,7 @@ creature:
     atk: 4
     spe: 3
     traits:
-      - name:
+      - name: 
         description: After this [CREATURE] attacks, kill it
         id: T003
 

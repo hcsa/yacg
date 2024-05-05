@@ -16,7 +16,7 @@ creature:
     id: C025
     value: 5
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 106
     summary: Sun setter, Orange, cheapest
     notes: |

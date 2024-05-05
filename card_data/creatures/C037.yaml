@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Purple
     cost-total: 4
     cost-color: 2
@@ -8,7 +8,7 @@ creature:
     atk: 3
     spe: 0
     traits:
-      - name:
+      - name: 
         description: Any damage dealt by this [CREATURE] destroys opposing [CREATURE]
         id: T008
 

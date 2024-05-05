@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Green
     cost-total: 2
     cost-color: 2
@@ -8,7 +8,7 @@ creature:
     atk: 2
     spe: 2
     traits:
-      - name:
+      - name: 
         description: Benefits from Sun
         id: T004
 
@@ -16,7 +16,7 @@ creature:
     id: C042
     value: 0
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 204
     summary: Cheap, Sun buffed, Green
     notes: |
