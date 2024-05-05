@@ -3,41 +3,57 @@
 ## Development
 
 Requires
+
 - Python 3.12
 - Adobe Illustrator 2023 (27.3)
 
 ### Compile executables
+
 To create the .exe files, install pyinstaller (`pip install pyinstaller`) and run
 
 ```bash
-pyinstaller scripts/import_to_excel.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
+pyinstaller scripts/yaml_to_excel.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
+```
 
-pyinstaller scripts/export_from_excel.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
+```bash
+pyinstaller scripts/excel_to_yaml.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
 ```
 
 ### Icon font
-The icon font is created from the .svg that live [here](/card_design/icons/). A way of creating the font is by uploading the .svg files to [Glyphter](https://glyphter.com/).
+
+The icon font is created from the .svg that live [here](/card_design/icons/). A way of creating the font is by uploading
+the .svg files to [Glyphter](https://glyphter.com/).
 
 ### Modify Illustrator scripts
 
-These scripts are written in Python, using the `pywin32` module to access the Illustrator's COM objects and modify the files.
+These scripts are written in Python, using the `pywin32` module to access the Illustrator's COM objects and modify the
+files.
 
-The complete object reference can be found [here](https://ai-scripting.docsforadobe.dev/jsobjref/javascript-object-reference.html) (it's listed for Javascript, but the references are the same for Python -- these are the COM objects). The main references are summarized in the following object model:
+The complete object reference can be
+found [here](https://ai-scripting.docsforadobe.dev/jsobjref/javascript-object-reference.html) (it's listed for
+Javascript, but the references are the same for Python -- these are the COM objects). The main references are summarized
+in the following object model:
 
 ![Main Illustrator objects](image.png)
 
-The type library has been generated to [illustrator_com.py](./scripts/yacg_python/illustrador_com.py). Unfortunately, the objects' properties are encoded in `_prop_map_get_` attributes, and IntelliSense's autocomplete can't make sense of them.
+The type library has been generated to [illustrator_com.py](./scripts/yacg_python/illustrador_com.py). Unfortunately,
+the objects' properties are encoded in `_prop_map_get_` attributes, and IntelliSense's autocomplete can't make sense of
+them.
 
 #### Generate Illustrator type library
 
-The type library is generated using the `makepy` CLI that comes with the `pywin32` module. This requires some work beforehand 
+The type library is generated using the `makepy` CLI that comes with the `pywin32` module. This requires some work
+beforehand
+
 - Install `pywin32` module (run `pip install pywin32` or equivalent)
 - Go to `[path/to/Python3/or/venv]/Scripts`, there should be a `pywin32_postinstall.py` file there
 - Run `python pywin32_postinstall.py -install` with admin priviledges
 
-After that, running [generate_illustrator_type_library.py](./scripts/generate_illustrator_type_library.py) will generate the type library.
+After that, running [generate_illustrator_type_library.py](./scripts/generate_illustrator_type_library.py) will generate
+the type library.
 
-The documentation for type library generation can be found [here](https://timgolden.me.uk/pywin32-docs/html/com/win32com/HTML/QuickStartClientCom.html).
+The documentation for type library generation can be
+found [here](https://timgolden.me.uk/pywin32-docs/html/com/win32com/HTML/QuickStartClientCom.html).
 
 ## Cards YAML structure
 
@@ -53,7 +69,7 @@ creature:
     cost-color: 2
     hp: 3
     atk: 1
-    spd: 2
+    spe: 2
     traits: # Max 4
       # Traits are matched by ID, name and description are redundant.
       # They're here to be human-friendly.
