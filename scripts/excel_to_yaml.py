@@ -2,14 +2,16 @@
 Run this script to move card data from Excel to YAML files
 """
 
+import sys
+import traceback
 from typing import Iterator
 
 import numpy as np
 import pandas as pd
 import xlwings as xw
 
-import yacg_python.card_data as card_data
-from yacg_python.common_vars import EXCEL_PATH
+import scripts.yacg_python.card_data as card_data
+from scripts.yacg_python.common_vars import EXCEL_PATH
 
 
 def main():
@@ -303,10 +305,9 @@ def new_id_generator(id_row: pd.Series) -> Iterator[str]:
 
 if __name__ == "__main__":
     # noinspection PyBroadException
-    # try:
-    #     main()
-    # except BaseException:
-    #     e_data = sys.exc_info()
-    #     traceback.print_exception(*e_data)
-    #     input("\nPress enter to exit...")
-    main()
+    try:
+        main()
+    except BaseException:
+        e_data = sys.exc_info()
+        traceback.print_exception(*e_data)
+        input("\nPress enter to exit...")
