@@ -6,13 +6,13 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Destroy target [CREATURE].
-      Create a 3 [HP] 3 [ATK] 2 [SPE] token [CREATURE] in their place. Any cards targetting the destroyed [CREATURE] now target the token [CREATURE].
+      Destroy target (CREATURE).
+      Create a 3 (HP) 3 (ATK) 2 (SPE) token (CREATURE) in their place. Any cards targetting the destroyed (CREATURE) now target the token (CREATURE).
 
   metadata:
     id: E050
     dev-stage: Alpha-1
-    dev-name: 
+    dev-name:
     order: 708
     summary: Kill creature, create creature in its place
     notes: |

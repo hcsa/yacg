@@ -6,12 +6,12 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Every [CREATURE] gets -2 [HP]
+      Every (CREATURE) gets -2 (HP)
 
   metadata:
     id: E008
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 104
     summary: Spread damage, cheap
     notes: |

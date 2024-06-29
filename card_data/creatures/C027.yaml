@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Orange
     cost-total: 4
     cost-color: 2
@@ -8,11 +8,11 @@ creature:
     atk: 3
     spe: 3
     traits:
-      - name: 
-        description: When played, fights opponent's last played [CREATURE].
+      - name:
+        description: When played, fights opponent's last played (CREATURE).
         id: T020
-      - name: 
-        description: If this [CREATURE] kills another [CREATURE], get +1 [ATK].
+      - name:
+        description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
         id: T027
 
   metadata:

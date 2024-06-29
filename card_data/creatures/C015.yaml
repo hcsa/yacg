@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Yellow
     cost-total: 3
     cost-color: 2
@@ -9,7 +9,7 @@ creature:
     spe: 4
     traits:
       - name: Reckless
-        description: When this [CREATURE] attacks, get -1 [HP].
+        description: When this (CREATURE) attacks, get -1 (HP).
         id: T031
 
   metadata:

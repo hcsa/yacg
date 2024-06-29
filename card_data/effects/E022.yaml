@@ -6,12 +6,12 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Target [CREATURE] gets Immunity.
+      Target (CREATURE) gets Immunity.
 
   metadata:
     id: E022
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 305
     summary: Give Immunity
     notes: |

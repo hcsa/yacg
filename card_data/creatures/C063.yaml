@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Pink
     cost-total: 3
     cost-color: 2
@@ -8,15 +8,15 @@ creature:
     atk: 3
     spe: 2
     traits:
-      - name: 
-        description: This [CREATURE]'s [ATK] and [SPE] can't be lowered.
+      - name:
+        description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
         id: T005
 
   metadata:
     id: C063
     value: 15
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 702
     summary: Clear body, cheapest, Pink
     notes: |

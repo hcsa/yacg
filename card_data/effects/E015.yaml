@@ -6,12 +6,12 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Target ally [CREATURE] fights target opposing [CREATURE].
+      Target ally (CREATURE) fights target opposing (CREATURE).
 
   metadata:
     id: E015
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 204
     summary: Force fight
     notes: |

@@ -1,12 +1,12 @@
 effect:
   data:
-    name: 
+    name:
     color: Yellow
     type: Aura
     cost-total: 1
     cost-color: 1
     description: |
-      Target [CREATURE] gets +1 [SPE] and - [HP].
+      Target (CREATURE) gets +1 (SPE) and - (HP).
 
   metadata:
     id: E028

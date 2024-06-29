@@ -6,12 +6,12 @@ effect:
     cost-total: 1
     cost-color: 1
     description: |
-      Choose 1 [CREATURE] from deck, put it in the trash, shuffle the deck afterwards.
+      Choose 1 (CREATURE) from deck, put it in the trash, shuffle the deck afterwards.
 
   metadata:
     id: E041
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 601
     summary: Kill own creature
     notes: |

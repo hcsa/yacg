@@ -1,7 +1,7 @@
 trait:
   data:
-    name: 
-    description: Any damage dealt by this [CREATURE] destroys opposing [CREATURE].
+    name:
+    description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
 
   metadata:
     id: T008

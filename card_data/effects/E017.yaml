@@ -6,9 +6,9 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Destroy ally [CREATURE] and choose target [CREATURE].
-      Destroyed [CREATURE] becomes an aura of target [CREATURE]. Target [CREATURE] gains [HP] and [ATK] equal to destroyed [CREATURE]'s [HP] and [ATK], and gets Slow Movement.
-      Any cards targetting the destroyed [CREATURE] now target the new [CREATURE].
+      Destroy ally (CREATURE) and choose target (CREATURE).
+      Destroyed (CREATURE) becomes an aura of target (CREATURE). Target (CREATURE) gains (HP) and (ATK) equal to destroyed (CREATURE)'s (HP) and (ATK), and gets Slow Movement.
+      Any cards targetting the destroyed (CREATURE) now target the new (CREATURE).
 
   metadata:
     id: E017

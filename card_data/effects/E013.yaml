@@ -6,12 +6,12 @@ effect:
     cost-total: 1
     cost-color: 1
     description: |
-      Target [CREATURE] gets +2 [ATK] and -1 [SPE].
+      Target (CREATURE) gets +2 (ATK) and -1 (SPE).
 
   metadata:
     id: E013
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 202
     summary: + Atk, cheap, green
     notes: |

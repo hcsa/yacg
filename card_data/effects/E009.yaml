@@ -1,12 +1,12 @@
 effect:
   data:
-    name: 
+    name:
     color: Orange
     type: Aura
     cost-total: 1
     cost-color: 1
     description: |
-      Target [CREATURE] gets +2 [ATK] and -1 [SPE].
+      Target (CREATURE) gets +2 (ATK) and -1 (SPE).
 
   metadata:
     id: E009

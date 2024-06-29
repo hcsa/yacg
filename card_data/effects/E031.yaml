@@ -6,12 +6,12 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Every [CREATURE] gets 1 [HP].
+      Every (CREATURE) gets 1 (HP).
 
   metadata:
     id: E031
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 505
     summary: High spread damage
     notes: |

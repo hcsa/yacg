@@ -1,7 +1,7 @@
 trait:
   data:
-    name: 
-    description: In combat, opposing [CREATURE] gets -1 [ATK].
+    name:
+    description: In combat, opposing (CREATURE) gets -1 (ATK).
 
   metadata:
     id: T024

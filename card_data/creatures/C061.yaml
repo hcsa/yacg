@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Cyan
     cost-total: 5
     cost-color: 4
@@ -9,17 +9,17 @@ creature:
     spe: 3
     traits:
       - name: Hail setter
-        description: When played, if 3 [CREATURE] have this trait, Hail is set for 2 rounds.
+        description: When played, if 3 (CREATURE) have this trait, Hail is set for 2 rounds.
         id: T019
-      - name: 
-        description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE].
+      - name:
+        description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
         id: T039
 
   metadata:
     id: C061
     value: 5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 909
     summary: Hail setter, Cya, good stats
     notes: |

@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Cyan
     cost-total: 4
     cost-color: 2
@@ -8,18 +8,18 @@ creature:
     atk: 3
     spe: 3
     traits:
-      - name: 
-        description: In combat, opposing [CREATURE] gets -1 [SPE].
+      - name:
+        description: In combat, opposing (CREATURE) gets -1 (SPE).
         id: T021
-      - name: 
-        description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE].
+      - name:
+        description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
         id: T039
 
   metadata:
     id: C059
     value: 20
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 907
     summary: -Spd in combat, U-turn
     notes: |

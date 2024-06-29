@@ -1,7 +1,7 @@
 trait:
   data:
     name: Reckless
-    description: When this [CREATURE] attacks, get -1 [HP].
+    description: When this (CREATURE) attacks, get -1 (HP).
 
   metadata:
     id: T031

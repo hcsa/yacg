@@ -6,7 +6,7 @@ effect:
     cost-total: 5
     cost-color: 3
     description: |
-      Every [CREATURE] gets Self-destruct.
+      Every (CREATURE) gets Self-destruct.
 
   metadata:
     id: E030

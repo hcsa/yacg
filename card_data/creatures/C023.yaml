@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Orange
     cost-total: 2
     cost-color: 2
@@ -8,15 +8,15 @@ creature:
     atk: 2
     spe: 2
     traits:
-      - name: 
-        description: When played, fights opponent's last played [CREATURE].
+      - name:
+        description: When played, fights opponent's last played (CREATURE).
         id: T020
 
   metadata:
     id: C023
     value: 5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 104
     summary: Haste, Orange, cheapest
     notes: |

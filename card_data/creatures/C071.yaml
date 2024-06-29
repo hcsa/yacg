@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 2
     cost-color: 2
@@ -8,15 +8,15 @@ creature:
     atk: 2
     spe: 2
     traits:
-      - name: 
-        description: First damage dealt to this [CREATURE] is nullified (this trait stacks).
+      - name:
+        description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
         id: T028
 
   metadata:
     id: C071
     value: 0
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 405
     summary: Protect, White
     notes: |

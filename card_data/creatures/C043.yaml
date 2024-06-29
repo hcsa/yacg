@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Green
     cost-total: 3
     cost-color: 2
@@ -9,14 +9,14 @@ creature:
     spe: 2
     traits:
       - name: Arrogant
-        description: If this [CREATURE] kills another [CREATURE], get -1 [ATK].
+        description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
         id: T001
 
   metadata:
     id: C043
     value: -25
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 205
     summary: -Atk when kills, cheapest
     notes: |

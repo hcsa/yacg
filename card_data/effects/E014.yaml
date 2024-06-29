@@ -1,12 +1,12 @@
 effect:
   data:
-    name: 
+    name:
     color: Green
     type: Aura
     cost-total: 3
     cost-color: 2
     description: |
-      Target [CREATURE] gets +4 [ATK], +4 [HP], 0 [SPE] and Slow movement.
+      Target (CREATURE) gets +4 (ATK), +4 (HP), 0 (SPE) and Slow movement.
 
   metadata:
     id: E014

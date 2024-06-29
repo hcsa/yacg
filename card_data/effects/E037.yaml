@@ -6,13 +6,13 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Choose target [CREATURE] in a trash and play it.
-      Target [CREATURE] gets Brittle.
+      Choose target (CREATURE) in a trash and play it.
+      Target (CREATURE) gets Brittle.
 
   metadata:
     id: E037
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 603
     summary: Cast from own trash, gets Brittle
     notes: |

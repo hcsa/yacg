@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: Brittle
-        description: After this [CREATURE] attacks, destroy it.
+        description: After this (CREATURE) attacks, destroy it.
         id: T003
 
   metadata:

@@ -6,12 +6,12 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      In combat, if the two [CREATURE] have the same [SPE], own [CREATURE] attacks first.
+      In combat, if the two (CREATURE) have the same (SPE), own (CREATURE) attacks first.
 
   metadata:
     id: E076
     dev-stage: Alpha-1
-    dev-name: 
+    dev-name:
     order: 913
     summary: Untie Spd ties
     notes: |

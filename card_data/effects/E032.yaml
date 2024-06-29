@@ -6,12 +6,12 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Target [CREATURE] gets +[ATK] equal to their [SPD] (applies after other buffs/debuffs).
+      Target (CREATURE) gets +(ATK) equal to their (SPE) (applies after other buffs/debuffs).
 
   metadata:
     id: E032
     dev-stage: Alpha-1
-    dev-name: 
+    dev-name:
     order: 506
     summary: +Atk based on Spd, yellow
     notes: |

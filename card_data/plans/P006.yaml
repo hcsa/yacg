@@ -2,7 +2,7 @@ plan:
   data:
     name: Plan F
     description: |
-      Start the game with 2 energy. When a non-token ally [CREATURE] survives until the end of a round, get +6 energy.
+      Start the game with 2 energy. When a non-token ally (CREATURE) survives until the end of a round, get +6 energy.
 
   metadata:
     id: P006

@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: White
     cost-total: 4
     cost-color: 3
@@ -8,11 +8,11 @@ creature:
     atk: 2
     spe: 2
     traits:
-      - name: 
-        description: At the beginning of combat, its owner can decide to have this [CREATURE] attack first. Can only be used once (this trait stacks).
+      - name:
+        description: At the beginning of combat, its owner can decide to have this (CREATURE) attack first. Can only be used once (this trait stacks).
         id: T017
       - name: Survivor
-        description: At the end of the round, this [CREATURE] is put into the deck.
+        description: At the end of the round, this (CREATURE) is put into the deck.
         id: T036
 
   metadata:

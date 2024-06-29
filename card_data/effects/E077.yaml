@@ -6,13 +6,13 @@ effect:
     cost-total: 6
     cost-color: 4
     description: |
-      Destroy every [CREATURE].
-      For every [CREATURE] destroyed, their owner gets +[NOCOLOR] of their color equal to [CREATURE] total cost.
+      Destroy every (CREATURE).
+      For every (CREATURE) destroyed, their owner gets +[NOCOLOR] of their color equal to (CREATURE) total cost.
 
   metadata:
     id: E077
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 607
     summary: Board clear + energy
     notes: |

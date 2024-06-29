@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Cyan
     cost-total: 1
     cost-color: 1
@@ -8,15 +8,15 @@ creature:
     atk: 1
     spe: 2
     traits:
-      - name: 
-        description: In combat, opposing [CREATURE] gets -1 [SPE].
+      - name:
+        description: In combat, opposing (CREATURE) gets -1 (SPE).
         id: T021
 
   metadata:
     id: C053
     value: 5
     dev-stage: Alpha-1
-    dev-name: 
+    dev-name:
     order: 901
     summary: -Spd in combat, cheapest, Cyan
     notes: |

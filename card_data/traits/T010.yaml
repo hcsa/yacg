@@ -1,7 +1,7 @@
 trait:
   data:
     name: Defender
-    description: Can take combat damage targeted at other [CREATURE].
+    description: Can take combat damage targeted at other (CREATURE).
 
   metadata:
     id: T010

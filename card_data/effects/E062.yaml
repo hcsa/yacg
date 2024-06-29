@@ -6,12 +6,12 @@ effect:
     cost-total: 1
     cost-color: 1
     description: |
-      Target [CREATURE] gets -1 [ATK].
+      Target (CREATURE) gets -1 (ATK).
 
   metadata:
     id: E062
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 808
     summary: -Atk, cheap, black
     notes: |

@@ -6,12 +6,12 @@ effect:
     cost-total: 1
     cost-color: 1
     description: |
-      Target [CREATURE] gets -1 [SPE].
+      Target (CREATURE) gets -1 (SPE).
 
   metadata:
     id: E070
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 907
     summary: -Spd, cheap, cyan
     notes: |

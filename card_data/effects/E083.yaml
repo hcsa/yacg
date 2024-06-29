@@ -1,18 +1,18 @@
 effect:
   data:
     name: Go big or go home
-    color: 
+    color:
     type: Field
-    cost-total: 
-    cost-color: 
+    cost-total:
+    cost-color:
     description: |
-      All ally [CREATURE] have 0 Atk (applies after all other buffs).
+      All ally (CREATURE) have 0 Atk (applies after all other buffs).
       If you win this round, you win the game.
 
   metadata:
     id: E083
     dev-stage: Conception
-    dev-name: 
+    dev-name:
     order: 1005
     summary: Win condition, 0 Atk
     notes: |

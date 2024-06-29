@@ -1,7 +1,7 @@
 trait:
   data:
-    name: 
-    description: First damage dealt to this [CREATURE] is nullified (this trait stacks).
+    name:
+    description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
 
   metadata:
     id: T028

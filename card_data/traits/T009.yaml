@@ -1,7 +1,7 @@
 trait:
   data:
-    name: 
-    description: If an ally [CREATURE] is killed or destroyed, gain -1 [ATK].
+    name:
+    description: If an ally (CREATURE) is killed or destroyed, gain -1 (ATK).
 
   metadata:
     id: T009

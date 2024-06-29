@@ -1,7 +1,7 @@
 trait:
   data:
     name: Brittle
-    description: After this [CREATURE] attacks, destroy it.
+    description: After this (CREATURE) attacks, destroy it.
 
   metadata:
     id: T003

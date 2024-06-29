@@ -2,7 +2,7 @@ plan:
   data:
     name: Plan C
     description: |
-      Start the game with 2 energy. When you cast a non-token [CREATURE], get +1 energy.
+      Start the game with 2 energy. When you cast a non-token (CREATURE), get +1 energy.
 
   metadata:
     id: P003

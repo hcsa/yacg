@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Orange
     cost-total: 4
     cost-color: 3
@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: Sun setter
-        description: When played, if 3 [CREATURE] have this trait, Sun is set for 2 rounds.
+        description: When played, if 3 (CREATURE) have this trait, Sun is set for 2 rounds.
         id: T035
 
   metadata:

@@ -9,14 +9,14 @@ creature:
     spe: 2
     traits:
       - name: Sun setter
-        description: When played, if 3 [CREATURE] have this trait, Sun is set for 2 rounds.
+        description: When played, if 3 (CREATURE) have this trait, Sun is set for 2 rounds.
         id: T035
 
   metadata:
     id: C025
     value: 5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 106
     summary: Sun setter, Orange, cheapest
     notes: |

@@ -6,12 +6,12 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Target ally [CREATURE] gets Trickster.
+      Target ally (CREATURE) gets Trickster.
 
   metadata:
     id: E060
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 806
     summary: Give Trick Room
     notes: |

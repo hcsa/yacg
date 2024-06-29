@@ -6,12 +6,12 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Target ally [CREATURE] gets Self-destruct.
+      Target ally (CREATURE) gets Self-destruct.
 
   metadata:
     id: E029
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 502
     summary: Give Self-destruct
     notes: |

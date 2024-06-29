@@ -6,12 +6,12 @@ effect:
     cost-total: 4
     cost-color: 2
     description: |
-      Return target [CREATURE] to their owner's hand.
+      Return target (CREATURE) to their owner's hand.
 
   metadata:
     id: E021
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 304
     summary: Uncast
     notes: |
