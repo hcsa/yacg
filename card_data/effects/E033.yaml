@@ -6,7 +6,7 @@ effect:
     cost-total: 4
     cost-color: 3
     description: |
-      In combat, Atk is used to decide combat order (instead of Spd), and Spd is used to determine damage dealt (instead of Atk)
+      In combat, [ATK] is used to decide combat order (instead of [SPE]), and [SPE] is used to determine damage dealt (instead of [ATK]).
 
   metadata:
     id: E033

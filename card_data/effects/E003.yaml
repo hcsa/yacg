@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 0
     description: |
-      Choose 1 card from deck, shuffle after
+      Choose 1 card from deck, put it in your hand, and shuffle the deck afterwards.
 
   metadata:
     id: E003

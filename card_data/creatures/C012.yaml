@@ -9,7 +9,7 @@ creature:
     spe: 3
     traits:
       - name: Energetic
-        description: If another ally [CREATURE] has this trait, every ally [CREATURE] gets +1 Spd. For each additional ally that has this trait, every ally [CREATURE] gets +1 Spd
+        description: If another ally [CREATURE] has this trait, every ally [CREATURE] gets +1 [SPE]. For each additional ally that has this trait, every ally [CREATURE] gets +1 [SPE].
         id: T016
 
   metadata:

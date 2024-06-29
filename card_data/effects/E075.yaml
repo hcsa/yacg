@@ -6,7 +6,8 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      If 2 [CREATURE]s have Hail setter, hail is set for 2 rounds. Destroy this card afterwards
+      If 2 [CREATURE] have Hail setter, Hail is set for 2 rounds.
+      When that happens, destroy this card.
 
   metadata:
     id: E075

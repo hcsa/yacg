@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Draw cards until you have 8 or more, then discard cards until you have 3
+      Draw cards until you have 8 or more, then discard cards until you have 3.
 
   metadata:
     id: E046

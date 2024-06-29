@@ -9,10 +9,10 @@ creature:
     spe: 2
     traits:
       - name: 
-        description: At the beginning of combat, its owner can decide to have this [CREATURE] attack with +1 Prio. Can only be used once. Stacks
+        description: At the beginning of combat, its owner can decide to have this [CREATURE] attack first. Can only be used once (this trait stacks).
         id: T017
       - name: Avenger
-        description: If an ally [CREATURE] is killed or destroyed, gets +1 Atk
+        description: If an ally [CREATURE] is killed or destroyed, get +1 [ATK].
         id: T002
 
   metadata:

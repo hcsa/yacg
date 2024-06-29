@@ -2,7 +2,7 @@ trait:
   data:
     name: Gang up
     description: |
-      If another ally [CREATURE] has this trait, every opposing [CREATURE] gets -1 Atk. For each additional ally that has this trait, every opposing [CREATURE] gets -1 Atk
+      If another ally [CREATURE] has this trait, every opposing [CREATURE] gets -1 [ATK]. For each additional ally that has this trait, every opposing [CREATURE] gets -1 [ATK].
 
   metadata:
     id: T018

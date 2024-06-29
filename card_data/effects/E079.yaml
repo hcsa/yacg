@@ -6,7 +6,8 @@ effect:
     cost-total: 
     cost-color: 
     description: |
-      Choose a color, get 3 energy of that color. Banish bottom 5 cards of your deck
+      Get +3 [NOCOLOR] of a color of your choosing.
+      Banish the bottom 5 cards of your deck.
 
   metadata:
     id: E079

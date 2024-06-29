@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 0
     description: |
-      Discard your hand and draw 5 cards
+      Discard your hand and draw 5 cards.
 
   metadata:
     id: E004

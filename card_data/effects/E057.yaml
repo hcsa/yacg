@@ -6,7 +6,8 @@ effect:
     cost-total: 5
     cost-color: 3
     description: |
-      Discard 2 cards to play this card (can't be played if you can't discard 2 cards). Choose 2 cards from deck, shuffle after
+      Discard 2 cards to play this card (can't be played if you can't discard 2 cards).
+      Choose 2 cards from deck, put them in your hand, and shuffle the deck afterwards.
 
   metadata:
     id: E057

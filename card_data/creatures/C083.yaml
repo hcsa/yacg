@@ -9,10 +9,10 @@ creature:
     spe: 2
     traits:
       - name: 
-        description: At the beginning of combat, its owner can decide to have this [CREATURE] attack with +1 Prio. Can only be used once. Stacks
+        description: At the beginning of combat, its owner can decide to have this [CREATURE] attack first. Can only be used once (this trait stacks).
         id: T017
       - name: 
-        description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE] to take damage
+        description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE].
         id: T039
 
   metadata:

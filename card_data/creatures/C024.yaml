@@ -9,7 +9,7 @@ creature:
     spe: 3
     traits:
       - name: 
-        description: If this [CREATURE] kills another [CREATURE], gets +1 Atk
+        description: If this [CREATURE] kills another [CREATURE], get +1 [ATK].
         id: T027
 
   metadata:

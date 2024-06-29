@@ -9,10 +9,10 @@ creature:
     spe: 3
     traits:
       - name: 
-        description: When played, fights opponent's last played [CREATURE] in the current round
+        description: When played, fights opponent's last played [CREATURE].
         id: T020
       - name: Reckless
-        description: When this [CREATURE] attacks, deals 1 damage to itself
+        description: When this [CREATURE] attacks, get -1 [HP].
         id: T031
 
   metadata:

@@ -9,7 +9,7 @@ creature:
     spe: 0
     traits:
       - name: 
-        description: Any damage dealt by this [CREATURE] destroys opposing [CREATURE]
+        description: Any damage dealt by this [CREATURE] destroys opposing [CREATURE].
         id: T008
 
   metadata:

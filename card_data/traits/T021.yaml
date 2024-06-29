@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      In combat, the opposing [CREATURE] has -1 Spd
+      In combat, opposing [CREATURE] gets -1 [SPE].
 
   metadata:
     id: T021

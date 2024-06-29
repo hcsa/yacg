@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Add two 1 HP 1 Atk 2 Spd token [CREATURE]s
+      Add 2 token [CREATURE] with 1 [HP] 1 [AtK] 2 [SPE].
 
   metadata:
     id: E025

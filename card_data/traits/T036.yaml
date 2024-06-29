@@ -2,7 +2,7 @@ trait:
   data:
     name: Survivor
     description: |
-      If this [CREATURE] survives combat phase, it goes into its owner's hand
+      At the end of the round, this [CREATURE] is put into the deck.
 
   metadata:
     id: T036

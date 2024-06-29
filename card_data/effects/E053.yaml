@@ -6,7 +6,8 @@ effect:
     cost-total: 3
     cost-color: 3
     description: |
-      At any time, you can look at the top card of your deck. On your turn, you can play the top card of your deck
+      At any time, you can look at the top card of your deck.
+      On your turn, you can play the top card of your deck.
 
   metadata:
     id: E053

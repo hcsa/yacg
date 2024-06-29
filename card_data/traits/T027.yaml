@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      If this [CREATURE] kills another [CREATURE], gets +1 Atk
+      If this [CREATURE] kills another [CREATURE], get +1 [ATK].
 
   metadata:
     id: T027

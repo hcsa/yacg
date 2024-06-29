@@ -6,7 +6,7 @@ effect:
     cost-total: 5
     cost-color: 3
     description: |
-      Effect cards and [CREATURE]s cost 0 to play
+      All [EFFECT] and [CREATURE] cost [NOCOLOR] to play.
 
   metadata:
     id: E054

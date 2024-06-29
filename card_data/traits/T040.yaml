@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      This [CREATURE] can be used as an Effect card. When it's resolved, put it on your side of the field
+      This [CREATURE] can be played as an [EFFECT]. Resolve the [EFFECT] by putting it in your side.
 
   metadata:
     id: T040

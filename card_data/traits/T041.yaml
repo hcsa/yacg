@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      If this [CREATURE] is killed in combat, destroy opposing [CREATURE]
+      If this [CREATURE] is killed in combat, destroy opposing [CREATURE].
 
   metadata:
     id: T041

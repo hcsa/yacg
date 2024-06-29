@@ -8,8 +8,8 @@ creature:
     atk: 2
     spe: 2
     traits:
-      - name: 
-        description: After this [CREATURE] attacks, kill it
+      - name: Brittle
+        description: After this [CREATURE] attacks, destroy it.
         id: T003
 
   metadata:

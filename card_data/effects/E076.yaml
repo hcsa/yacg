@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      In combat, if two [CREATURE]s attack with the same Spd and Prio, own [CREATURE] attacks first
+      In combat, if the two [CREATURE] have the same [SPE], own [CREATURE] attacks first.
 
   metadata:
     id: E076

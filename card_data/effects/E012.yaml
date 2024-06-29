@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Combat phase lasts at most 5 turns
+      Combat phase lasts at most 5 turns.
 
   metadata:
     id: E012

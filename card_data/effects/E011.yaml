@@ -6,7 +6,8 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      If 2 [CREATURE]s have Sun setter, sun is set for 2 rounds. Destroy this card afterwards
+      If 2 [CREATURE] have Sun setter, Sun is set for 2 rounds.
+      When that happens, destroy this card.
 
   metadata:
     id: E011

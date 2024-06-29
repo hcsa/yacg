@@ -9,10 +9,10 @@ creature:
     spe: 2
     traits:
       - name: 
-        description: This [CREATURE]'s Atk, Spd and Prio can't be lowered
+        description: This [CREATURE]'s [ATK] and [SPE] can't be lowered.
         id: T005
       - name: Immunity
-        description: Can't be targeted by effect cards
+        description: Can't be targeted by any [EFFECT].
         id: T023
 
   metadata:

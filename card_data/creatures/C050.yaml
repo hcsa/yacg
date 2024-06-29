@@ -9,13 +9,13 @@ creature:
     spe: 2
     traits:
       - name: Defender
-        description: Can take combat damage targeted at other [CREATURE]
+        description: Can take combat damage targeted at other [CREATURE].
         id: T010
       - name: 
-        description: First damage dealt to this [CREATURE] is nullified
+        description: First damage dealt to this [CREATURE] is nullified (this trait stacks).
         id: T028
       - name: Survivor
-        description: If this [CREATURE] survives combat phase, it goes into its owner's hand
+        description: At the end of the round, this [CREATURE] is put into the deck.
         id: T036
 
   metadata:

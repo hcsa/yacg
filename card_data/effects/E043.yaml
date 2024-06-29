@@ -6,7 +6,8 @@ effect:
     cost-total: 4
     cost-color: 3
     description: |
-      At the beginning of next round, draw 2 extra cards. Doesn't stack
+      At the beginning of next round, draw 2 extra cards.
+      Multiple copies of this card don't stack.
 
   metadata:
     id: E043

@@ -6,7 +6,8 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Destroy target [CREATURE], create a 2HP 4Atk 2Spd token [CREATURE] with Brittle in their place. Any cards targetting the destroyed [CREATURE] now target the token [CREATURE]
+      Destroy target [CREATURE].
+      Create a 2 [HP] 4 [ATK] 2 [SPE] token [CREATURE] with Brittle in their place. Any cards targetting the destroyed [CREATURE] now target the token [CREATURE].
 
   metadata:
     id: E078

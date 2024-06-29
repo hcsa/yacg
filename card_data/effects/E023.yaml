@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Reveal each player's hand
+      Reveal each player's hand.
 
   metadata:
     id: E023

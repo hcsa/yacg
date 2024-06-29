@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Both players draw or discard cards until they have 4 cards left on their hand
+      Both players draw or discard cards until they have 4 cards left on their hand.
 
   metadata:
     id: E067

@@ -6,7 +6,8 @@ effect:
     cost-total: 
     cost-color: 
     description: |
-      All your creatures have 0 Atk (applies after all other buffs). If you win the round, you win the game
+      All ally [CREATURE] have 0 Atk (applies after all other buffs).
+      If you win this round, you win the game.
 
   metadata:
     id: E083

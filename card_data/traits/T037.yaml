@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      Excessive damage this [CREATURE] deals is taken by other opposing [CREATURE]s (if there are any)
+      Excessive damage this [CREATURE] deals is taken by other opposing [CREATURE]s (if there are any).
 
   metadata:
     id: T037

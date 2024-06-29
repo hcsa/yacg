@@ -6,7 +6,7 @@ effect:
     cost-total: 1
     cost-color: 1
     description: |
-      Choose 1 [CREATURE] from deck and put it in trash, shuffle after
+      Choose 1 [CREATURE] from deck, put it in the trash, shuffle the deck afterwards.
 
   metadata:
     id: E041

@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Choose 1 card from trash and put it in your hand. Banish this card afterwards
+      Choose 1 card from trash and put it in your hand. Banish this card afterwards.
 
   metadata:
     id: E066

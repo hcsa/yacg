@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Target [CREATURE] gets -2 HP, other target [CREATURE] gets +2 HP
+      Target [CREATURE] gets -2 [HP], other target [CREATURE] gets +2 [HP].
 
   metadata:
     id: E038

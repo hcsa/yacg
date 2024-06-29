@@ -6,7 +6,7 @@ effect:
     cost-total: 1
     cost-color: 1
     description: |
-      Target [CREATURE] gets +2 Atk -1Spd
+      Target [CREATURE] gets +2 [ATK] and -1 [SPE].
 
   metadata:
     id: E013

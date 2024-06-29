@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Banish bottom 4 cards of opponent's deck
+      Banish the bottom 4 cards of opponent's deck.
 
   metadata:
     id: E074

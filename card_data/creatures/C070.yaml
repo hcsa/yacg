@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: Avenger
-        description: If an ally [CREATURE] is killed or destroyed, gets +1 Atk
+        description: If an ally [CREATURE] is killed or destroyed, get +1 [ATK].
         id: T002
 
   metadata:

@@ -2,7 +2,7 @@ trait:
   data:
     name: Restless
     description: |
-      If this [CREATURE] is killed or destroyed, it goes into its owner's hand
+      If this [CREATURE] is killed or destroyed, it goes into its owner's hand.
 
   metadata:
     id: T032

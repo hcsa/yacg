@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: 
-        description: Benefits from Hail
+        description: Benefits from Hail.
         id: T006
 
   metadata:

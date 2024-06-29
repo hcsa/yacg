@@ -9,7 +9,7 @@ creature:
     spe: 0
     traits:
       - name: 
-        description: Spd is reversed when deciding combat order (if both [CREATURE]s have Trickster, nothing happens)
+        description: [SPE] is reversed when deciding combat order (this trait stacks).
         id: T038
 
   metadata:

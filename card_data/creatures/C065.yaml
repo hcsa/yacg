@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: Disable
-        description: For this round, opponent can't play [CREATURE]s with the same name as the one they last played
+        description: For this round, opponent can't play [CREATURE] with the same name as the one they last played.
         id: T012
 
   metadata:

@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Target opposing crature gets -5 HP, target ally [CREATURE] gets -2HP
+      Target opposing [CREATURE] gets -5 [HP], target ally [CREATURE] gets -2 [HP].
 
   metadata:
     id: E007

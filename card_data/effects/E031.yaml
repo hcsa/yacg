@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Every [CREATURE] gets -HP equal to their HP - 1
+      Every [CREATURE] gets 1 [HP].
 
   metadata:
     id: E031

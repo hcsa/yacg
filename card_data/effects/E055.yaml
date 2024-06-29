@@ -6,7 +6,8 @@ effect:
     cost-total: 4
     cost-color: 2
     description: |
-      Draw 3 cards, opponent draws 1 card
+      Draw 3 cards.
+      Opponent draws 1 card.
 
   metadata:
     id: E055

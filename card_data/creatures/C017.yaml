@@ -9,10 +9,10 @@ creature:
     spe: 2
     traits:
       - name: Self-destruct
-        description: When this [CREATURE] attacks, kill this and the opposing [CREATURE]
+        description: When this [CREATURE] attacks, kill this and the opposing [CREATURE].
         id: T033
       - name: 
-        description: When played, fights opponent's last played [CREATURE] in the current round
+        description: When played, fights opponent's last played [CREATURE].
         id: T020
 
   metadata:

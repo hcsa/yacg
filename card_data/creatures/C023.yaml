@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: 
-        description: When played, fights opponent's last played [CREATURE] in the current round
+        description: When played, fights opponent's last played [CREATURE].
         id: T020
 
   metadata:

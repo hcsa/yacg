@@ -2,7 +2,7 @@ trait:
   data:
     name: Self-destruct
     description: |
-      When this [CREATURE] attacks, kill this and the opposing [CREATURE]
+      When this [CREATURE] attacks, kill this and the opposing [CREATURE].
 
   metadata:
     id: T033

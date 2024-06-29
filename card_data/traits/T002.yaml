@@ -2,7 +2,7 @@ trait:
   data:
     name: Avenger
     description: |
-      If an ally [CREATURE] is killed or destroyed, gets +1 Atk
+      If an ally [CREATURE] is killed or destroyed, get +1 [ATK].
 
   metadata:
     id: T002

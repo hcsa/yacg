@@ -9,7 +9,7 @@ creature:
     spe: 3
     traits:
       - name: Martyr
-        description: If another [CREATURE] were to take combat damage that would kill it, this one can be destroyed. If so, combat damage is nullified
+        description: If another [CREATURE] were to take combat damage that would kill it, you can choose to kill this [CREATURE]. If so, combat damage is nullified.
         id: T025
 
   metadata:

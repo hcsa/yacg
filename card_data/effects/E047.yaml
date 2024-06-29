@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 3
     description: |
-      Effect cards can't be played if the effect stack has 2 cards
+      [EFFECT] cards can't be played if the [EFFECT] stack has 2 or more [EFFECT].
 
   metadata:
     id: E047

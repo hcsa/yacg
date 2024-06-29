@@ -9,10 +9,10 @@ creature:
     spe: 3
     traits:
       - name: 
-        description: When played, fights opponent's last played [CREATURE] in the current round
+        description: When played, fights opponent's last played [CREATURE].
         id: T020
       - name: 
-        description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE] to take damage
+        description: In combat, after this [CREATURE] attacks, you can switch it for another [CREATURE].
         id: T039
 
   metadata:

@@ -6,7 +6,8 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Look at the opponent's hand, select 1 card and discard it. Opponent looks at your hand, selects 1 card and discards it
+      Look at the opponent's hand, select 1 card and discard it.
+      Opponent looks at your hand, selects 1 card and discards it.
 
   metadata:
     id: E042

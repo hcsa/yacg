@@ -6,7 +6,8 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Next time an opponent's effect card enters the stack, counter it. Destroy this card afterwards
+      Next time an opponent's [EFFECT] card enters the [EFFECT] stack, counter it.
+      When that happens, destroy this card.
 
   metadata:
     id: E065

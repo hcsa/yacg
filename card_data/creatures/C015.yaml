@@ -9,7 +9,7 @@ creature:
     spe: 4
     traits:
       - name: Reckless
-        description: When this [CREATURE] attacks, deals 1 damage to itself
+        description: When this [CREATURE] attacks, get -1 [HP].
         id: T031
 
   metadata:

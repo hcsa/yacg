@@ -2,7 +2,7 @@ trait:
   data:
     name: Mind freeze
     description: |
-      All effect cards cost +1 () to play
+      All [EFFECT] cost +1 [NOCOLOR] to play.
 
   metadata:
     id: T026

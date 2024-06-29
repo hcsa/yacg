@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 0
     description: |
-      Draw 2 cards
+      Draw 2 cards.
 
   metadata:
     id: E001

@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: 
-        description: Benefits from Rain
+        description: Benefits from Rain.
         id: T014
 
   metadata:

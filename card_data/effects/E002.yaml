@@ -6,7 +6,8 @@ effect:
     cost-total: 2
     cost-color: 0
     description: |
-      Counter target effect card. While this card is on the effect stack, opponent's effect cards cost -2 () colorless to play
+      Counter target [EFFECT].
+      While this card is in the [EFFECT] stack, opponent's effect cards cost -2 [NOCOLOR] to play.
 
   metadata:
     id: E002

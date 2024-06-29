@@ -2,7 +2,7 @@ trait:
   data:
     name: Hail setter
     description: |
-      When played, if 3 [CREATURE]s have this trait, hail is set for 2 rounds
+      When played, if 3 [CREATURE] have this trait, Hail is set for 2 rounds.
 
   metadata:
     id: T019

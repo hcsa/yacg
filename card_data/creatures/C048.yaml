@@ -9,10 +9,10 @@ creature:
     spe: 2
     traits:
       - name: Rain setter
-        description: When this [CREATURE] is played, if 3 [CREATURE]s have this trait, rain is set for 2 rounds
+        description: When played, if 3 [CREATURE] have this trait, Rain is set for 2 rounds.
         id: T029
       - name: Sun setter
-        description: When this [CREATURE] is played, if 3 [CREATURE]s have this trait, sun is set for 2 rounds
+        description: When played, if 3 [CREATURE] have this trait, Sun is set for 2 rounds.
         id: T035
 
   metadata:

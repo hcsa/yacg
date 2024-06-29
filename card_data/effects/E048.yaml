@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      At the beginning of next round, choose a color. You get 3 energy of that color
+      At the beginning of next round, choose a color. You get +3 [NOCOLOR] of that color.
 
   metadata:
     id: E048

@@ -6,7 +6,7 @@ effect:
     cost-total: 1
     cost-color: 1
     description: |
-      Target [CREATURE] gets +1 Spd -1 HP
+      Target [CREATURE] gets +1 [SPE] and - [HP].
 
   metadata:
     id: E028

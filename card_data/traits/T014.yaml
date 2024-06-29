@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      Benefits from Rain
+      Benefits from Rain.
 
   metadata:
     id: T014

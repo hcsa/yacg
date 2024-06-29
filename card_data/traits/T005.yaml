@@ -2,7 +2,7 @@ trait:
   data:
     name: 
     description: |
-      This [CREATURE]'s Atk, Spd and Prio can't be lowered
+      This [CREATURE]'s [ATK] and [SPE] can't be lowered.
 
   metadata:
     id: T005

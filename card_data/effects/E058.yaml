@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Both players draw cards until they have 8, then discard cards equal to the number of cards drawn by themselves
+      Both players draw cards until they have 8, then discard cards equal to the number of cards drawn by themselves.
 
   metadata:
     id: E058

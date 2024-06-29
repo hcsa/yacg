@@ -6,7 +6,8 @@ effect:
     cost-total: 
     cost-color: 
     description: |
-      Opponent loses 1 energy of any color. You get 1 energy of any color
+      Opponent get -1 [NOCOLOR] of the color of their choosing.
+      You get +1 [NOCOLOR] of the color of your choosing.
 
   metadata:
     id: E080
