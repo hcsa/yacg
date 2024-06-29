@@ -56,6 +56,12 @@ def create_card(card: card_data.Card, output_path: Path) -> None:
         raise IllustratorTemplateError(
             f"Expected 2nd layer's name to be 'CreatureLayer', found '{creature_layer.Name}' instead")
     create_card_creature_layer(card, creature_layer)
+
+    base_layer = document.Layers.Item(3)
+    if not base_layer.Name == "BaseLayer":
+        raise IllustratorTemplateError(
+            f"Expected 3rd layer's name to be 'BaseLayer', found '{creature_layer.Name}' instead")
+    create_card_base_layer(card, base_layer)
     print("HERE")
 
 
@@ -285,6 +291,48 @@ def replace_keywords_with_icons(text_frame: illustrator.TextFrame) -> List[int]:
     ]
 
     return icons_indexes
+
+
+def create_card_base_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
+    version_tag = "TEST"
+
+    if not layer.TextFrames.Count == 5:
+        raise IllustratorTemplateError(
+            f"Expected base layer to have 5 group items, found {layer.TextFrames.Count} instead")
+    text_frames_names_found = {
+        "Title": False,
+        "CostTotalText": False,
+        "CostColorText": False,
+        "CostNonColorText": False,
+        "Identifier": False,
+    }
+    for i in range(1, 6):
+        text_frame = layer.TextFrames.Item(i)
+        text_frame_name = text_frame.Name
+        if text_frame_name not in text_frames_names_found.keys():
+            raise IllustratorTemplateError(
+                f"Expected base layer's text frame {i} to have a name in the list "
+                f"{list(text_frames_names_found.keys())}, found name '{text_frame_name}' instead"
+            )
+        if text_frames_names_found[text_frame_name]:
+            raise IllustratorTemplateError(
+                f"In base layer, found two text frames with the name '{text_frame_name}'")
+        text_frames_names_found[text_frame_name] = True
+
+        contents = ""
+        if text_frame_name == "Title":
+            contents = card.data.name
+            if contents == "":
+                contents = f"({card.metadata.dev_name})"
+        elif text_frame_name == "CostTotalText":
+            contents = str(card.data.cost_total)
+        elif text_frame_name == "CostColorText":
+            contents = str(card.data.cost_color)
+        elif text_frame_name == "CostNonColorText":
+            contents = str(card.data.cost_total - card.data.cost_color)
+        elif text_frame_name == "Identifier":
+            contents = f"{version_tag} | {card.metadata.id}"
+        text_frame.Contents = contents
 
 
 card_data.import_all_data()
