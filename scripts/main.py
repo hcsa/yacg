@@ -62,7 +62,18 @@ def create_card(card: card_data.Card, output_path: Path) -> None:
         raise IllustratorTemplateError(
             f"Expected 3rd layer's name to be 'BaseLayer', found '{creature_layer.Name}' instead")
     create_card_base_layer(card, base_layer)
-    print("HERE")
+
+    background_layer = document.Layers.Item(4)
+    if not background_layer.Name == "BackgroundLayer":
+        raise IllustratorTemplateError(
+            f"Expected 4th layer's name to be 'BackgroundLayer', found '{background_layer.Name}' instead")
+    create_card_background_layer(card, background_layer)
+
+    aux_layer = document.Layers.Item(5)
+    if not aux_layer.Name == "AuxLayer":
+        raise IllustratorTemplateError(
+            f"Expected 5th layer's name to be 'AuxLayer', found '{aux_layer.Name}' instead")
+    aux_layer.Visible = False
 
 
 def create_card_non_creature_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
@@ -245,8 +256,6 @@ def create_card_creature_layer(card: card_data.Card, layer: illustrator.Layer) -
                 trait_description_style.ApplyTo(paragraph.Characters.Item(i), True)
     # Validate and fill in card's description - END
 
-    print("HERE")
-
 
 def replace_keywords_with_icons(text_frame: illustrator.TextFrame) -> List[int]:
     """
@@ -333,6 +342,53 @@ def create_card_base_layer(card: card_data.Card, layer: illustrator.Layer) -> No
         elif text_frame_name == "Identifier":
             contents = f"{version_tag} | {card.metadata.id}"
         text_frame.Contents = contents
+
+
+def create_card_background_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
+    group_item_names_to_color = {
+        "BackgroundNone": card_data.Color.NONE,
+        "BackgroundBlack": card_data.Color.BLACK,
+        "BackgroundBlue": card_data.Color.BLUE,
+        "BackgroundCyan": card_data.Color.CYAN,
+        "BackgroundGreen": card_data.Color.GREEN,
+        "BackgroundOrange": card_data.Color.ORANGE,
+        "BackgroundPink": card_data.Color.PINK,
+        "BackgroundPurple": card_data.Color.PURPLE,
+        "BackgroundWhite": card_data.Color.WHITE,
+        "BackgroundYellow": card_data.Color.YELLOW,
+    }
+    color: card_data.Color = card.data.color
+
+    if not layer.GroupItems.Count == 10:
+        raise IllustratorTemplateError(
+            f"Expected 'BackgroundLayer' to have 10 group items, found {layer.GroupItems.Count} instead")
+    group_item_names_found = {
+        "BackgroundNone": False,
+        "BackgroundBlack": False,
+        "BackgroundBlue": False,
+        "BackgroundCyan": False,
+        "BackgroundGreen": False,
+        "BackgroundOrange": False,
+        "BackgroundPink": False,
+        "BackgroundPurple": False,
+        "BackgroundWhite": False,
+        "BackgroundYellow": False,
+    }
+
+    for i in range(1, 11):
+        group_item = layer.GroupItems.Item(i)
+        group_item_name = group_item.Name
+        if group_item_name not in group_item_names_found.keys():
+            raise IllustratorTemplateError(
+                f"Expected background layer's group icon {i} to have a name in the list "
+                f"{list(group_item_names_found.keys())}, found name '{group_item_name}' instead"
+            )
+        if group_item_names_found[group_item_name]:
+            raise IllustratorTemplateError(
+                f"In background layer, found two group icons with the name '{group_item_name}'")
+        group_item_names_found[group_item_name] = True
+
+        group_item.Hidden = not (group_item_names_to_color[group_item_name] == color)
 
 
 card_data.import_all_data()
