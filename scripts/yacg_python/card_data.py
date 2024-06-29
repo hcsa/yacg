@@ -656,6 +656,7 @@ class Effect(Card):
         Writes the effect data to the corresponding YAML file.
         """
 
+        description_str = self.data.description.strip().replace("\n", "\n      ")
         notes_str = self.metadata.notes.strip().replace("\n", "\n      ")
 
         yaml_content = f"""
@@ -667,7 +668,7 @@ effect:
     cost-total: {self.data.cost_total if self.data.cost_total is not None else ""}
     cost-color: {self.data.cost_color if self.data.cost_color is not None else ""}
     description: |
-      {self.data.description}
+      {description_str}
 
   metadata:
     id: {self.metadata.id}
