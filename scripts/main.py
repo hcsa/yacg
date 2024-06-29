@@ -9,7 +9,7 @@ import win32com.client.gencache
 
 import scripts.yacg_python.card_data as card_data
 import scripts.yacg_python.illustrator_com as illustrator
-from scripts.yacg_python.common_vars import CARD_FRONT_PATH
+from scripts.yacg_python.common_vars import CARD_FRONT_PATH, GIT_TAG_NAME
 
 
 class IllustratorTemplateError(ValueError):
@@ -303,8 +303,6 @@ def replace_keywords_with_icons(text_frame: illustrator.TextFrame) -> List[int]:
 
 
 def create_card_base_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
-    version_tag = "TEST"
-
     if not layer.TextFrames.Count == 5:
         raise IllustratorTemplateError(
             f"Expected base layer to have 5 group items, found {layer.TextFrames.Count} instead")
@@ -340,7 +338,10 @@ def create_card_base_layer(card: card_data.Card, layer: illustrator.Layer) -> No
         elif text_frame_name == "CostNonColorText":
             contents = str(card.data.cost_total - card.data.cost_color)
         elif text_frame_name == "Identifier":
-            contents = f"{version_tag} | {card.metadata.id}"
+            if GIT_TAG_NAME is None:
+                contents = f"TEST | {card.metadata.id}"
+            else:
+                contents = f"{GIT_TAG_NAME} | {card.metadata.id}"
         text_frame.Contents = contents
 
 
@@ -397,6 +398,6 @@ effect = card_data.Effect.get_effect_dict()["E001"]
 
 with tempfile.TemporaryDirectory() as temp_dir:
     output_path = Path(temp_dir) / "card_front.temp"
-    create_card(creature, output_path)
+    create_card(effect, output_path)
 
     print("HERE")

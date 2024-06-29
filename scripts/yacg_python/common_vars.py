@@ -1,9 +1,12 @@
 import os
 import sys
 from pathlib import Path
+from typing import Optional
+
+from git import Repo
 
 
-def get_base_dir() -> Path:
+def _get_base_dir() -> Path:
     if getattr(sys, 'frozen', False):
         # We're running from .exe
         # .exe is located in the root
@@ -21,7 +24,7 @@ def get_base_dir() -> Path:
     return base_dir
 
 
-BASE_DIR = get_base_dir()
+BASE_DIR = _get_base_dir()
 
 EXCEL_PATH = BASE_DIR / "Cards.xlsx"
 EXCEL_BACKUP_PATH = BASE_DIR / "Cards (backup).xlsx"
@@ -35,3 +38,15 @@ EFFECT_DATA_PATH = CARD_DATA_PATH / "effects"
 TRAIT_DATA_PATH = CARD_DATA_PATH / "traits"
 
 VALUES_DATA_PATH = BASE_DIR / "dev_data" / "values.yaml"
+
+
+def _get_git_tag() -> Optional[str]:
+    repo = Repo.init(BASE_DIR)
+    commit = repo.head.commit
+    for tag in repo.tags:
+        if tag.commit == commit:
+            return tag.name
+    return None
+
+
+GIT_TAG_NAME = _get_git_tag()
