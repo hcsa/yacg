@@ -230,10 +230,10 @@ def create_card_creature_layer(card: card_data.Card, layer: illustrator.Layer) -
         paragraph = description_text_frame.Paragraphs.Item(paragraph_index)
 
         icons_indexes = replace_keywords_with_icons(paragraph)
-        for i in range(1, len(trait_name) + 2):  # 1-indexed, also includes the space after trait name
+        for i in range(1, len(trait_name) + 2):  # Includes the space after trait name
             trait_name_style.ApplyTo(paragraph.Characters.Item(i), True)
 
-        for i in range(len(trait_name) + 2, len(paragraph.Contents) + 1):  # 1-indexed
+        for i in range(len(trait_name) + 2, len(paragraph.Contents) + 1):
             if i in icons_indexes:
                 icon_style.ApplyTo(paragraph.Characters.Item(i), True)
             else:
@@ -246,7 +246,7 @@ def create_card_creature_layer(card: card_data.Card, layer: illustrator.Layer) -
 def replace_keywords_with_icons(text_frame: illustrator.TextFrame) -> List[int]:
     """
     Replaces all keywords in the text frame with the respective icons
-    Returns the index (1-indexed) of the icons
+    Returns the index of the icons (1-indexed)
     """
 
     keyword_to_character_dict: Dict[str, str] = {
