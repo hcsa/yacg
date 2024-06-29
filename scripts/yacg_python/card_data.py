@@ -199,6 +199,10 @@ class TraitType(Enum):
         return self._description_
 
 
+class Card:
+    pass
+
+
 @dataclass(frozen=True)
 class TraitData:
     name: str
@@ -366,7 +370,7 @@ class CreatureMetadata:
 
 
 @dataclass(frozen=True)
-class Creature:
+class Creature(Card):
     _id_prefix: ClassVar[str] = "C"
     _creature_dict: ClassVar[Dict[str, Self]] = {}
 
@@ -562,7 +566,7 @@ class EffectMetadata:
 
 
 @dataclass(frozen=True)
-class Effect:
+class Effect(Card):
     _id_prefix: ClassVar[str] = "E"
     _effect_dict: ClassVar[Dict[str, Self]] = {}
 

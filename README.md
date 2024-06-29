@@ -5,7 +5,8 @@
 Requires
 
 - Python 3.12
-- Adobe Illustrator 2023 (27.3)
+- Adobe Illustrator 2023 (v27.3)
+- Installing fonts in the [fonts](/card_design/fonts) folder
 
 ### Compile executables
 
@@ -19,10 +20,43 @@ pyinstaller scripts/yaml_to_excel.py -F -c --clean --specpath ./_pyinstaller_cac
 pyinstaller scripts/excel_to_yaml.py -F -c --clean --specpath ./_pyinstaller_cache/ --distpath ./ --workpath ./_pyinstaller_cache/
 ```
 
-### Icon font
+### Fonts
 
-The icon font is created from the .svg that live [here](/card_design/icons/). A way of creating the font is by uploading
-the .svg files to [Glyphter](https://glyphter.com/).
+This project uses two fonts, which are stored in the [fonts](/card_design/fonts) folder.
+
+- The [icons font](./card_design/fonts/YACG-Icons.ttf) contains all icons used in cards. This font is used in card
+  texts, to replace certain keywords with appropriate icons. These are stored in Unicode characters, in the block from
+  U+E000 to U+F8FF (which is reserved for private use).
+
+| **Icon** | **Keyword** | **Unicode** |
+|:--------:|:-----------:|:-----------:|
+| Creature | [CREATURE]  |    E100     |
+|  Action  |  [ACTION]   |    E101     |
+|   Aura   |   [AURA]    |    E102     |
+|  Field   |   [FIELD]   |    E103     |
+|    HP    |    [HP]     |    E200     |
+|   Atk    |    [ATK]    |    E201     |
+|   Spe    |    [SPE]    |    E202     |
+| No color |  [NOCOLOR]  |    E300     |
+|  Black   |   [BLACK]   |    E301     |
+|   Blue   |   [BLUE]    |    E302     |
+|   Cyan   |   [CYAN]    |    E303     |
+|  Green   |   [GREEN]   |    E304     |
+|  Orange  |  [ORANGE]   |    E305     |
+|   Pink   |   [PINK]    |    E306     |
+|  Purple  |  [PURPLE]   |    E307     |
+|  White   |   [WHITE]   |    E308     |
+|  Yellow  |  [YELLOW]   |    E309     |
+
+- The [auxiliary font](./card_design/fonts/YACG-Auxiliary.ttf) is used when generating the cards. It contains a
+  character for all the Unicode characters form the icons font, plus all the characters from U+0020 to U+007E (Basic
+  Latin Unicode block, except for the C0 controls and the delete control).
+
+The icons font is created from the .svg that live in the [icons](./card_design/icons) folder. A way of creating the font
+is by uploading the .svg files to [Icomoon](https://icomoon.io/). The Icomoon project is stored as a JSON
+in [icomoon_project](/card_design/icomoon_project/) folder.
+> In Icomoon, strokes get ignored when generating fonts. You can convert them to fills using Illustrator — these are
+> stored [here](/card_design/icons/expanded). See more details [here](https://icomoon.io/docs/#stroke-to-fill).
 
 ### Modify Illustrator scripts
 
