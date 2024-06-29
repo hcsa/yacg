@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 3
     description: |
-      Whenever a (CREATURE) with Brittle is killed or destroyed, play it for 0 (NOCOLOR). Any cards targetting this (CREATURE) still target it.
+      Whenever a (CREATURE) with Brittle is killed or destroyed, play it for 0 (NOCOLOR). Any cards targeting this (CREATURE) still target it.
       When that happens, destroy this card.
 
   metadata:

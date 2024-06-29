@@ -6,7 +6,7 @@ effect:
     cost-total: 1
     cost-color: 0
     description: |
-      Get +3 (NOCOLOR) of a color of your choosing.
+      Gain 3 (NOCOLOR) of a color of your choosing.
 
   metadata:
     id: E005

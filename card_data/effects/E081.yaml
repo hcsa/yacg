@@ -6,8 +6,8 @@ effect:
     cost-total:
     cost-color:
     description: |
-      Get +2 (NOCOLOR) of a color of your choosing.
-      At the beginning of next round, opponent gets +4 (NOCOLOR) of a color of their choosing.
+      Gain 2 (NOCOLOR) of a color of your choosing.
+      At the beginning of next round, opponent gains 4 (NOCOLOR) of a color of their choosing.
 
   metadata:
     id: E081

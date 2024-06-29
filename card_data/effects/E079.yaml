@@ -6,7 +6,7 @@ effect:
     cost-total:
     cost-color:
     description: |
-      Get +3 (NOCOLOR) of a color of your choosing.
+      Gain 3 (NOCOLOR) of a color of your choosing.
       Banish the bottom 5 cards of your deck.
 
   metadata:

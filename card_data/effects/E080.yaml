@@ -6,8 +6,8 @@ effect:
     cost-total:
     cost-color:
     description: |
-      Opponent get -1 (NOCOLOR) of the color of their choosing.
-      You get +1 (NOCOLOR) of the color of your choosing.
+      Opponent loses 1 (NOCOLOR) of the color of their choosing.
+      You gain 1 (NOCOLOR) of the color of your choosing.
 
   metadata:
     id: E080
