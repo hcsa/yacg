@@ -126,7 +126,42 @@ def create_card_non_creature_layer(card: card_data.Card, layer: illustrator.Laye
             f"Expected non-creature layer to have 1 text frame, found {layer.TextFrames.Count} instead"
         )
     description_text_frame = layer.TextFrames.Item(1)
+
+    # Load required fonts
+    description_style_name = "Description"
+    icon_style_name = "Icons"
+    auxiliary_style_name = "Auxiliary"
+    try:
+        trait_description_style = layer.Parent.CharacterStyles.Item(description_style_name)
+    except pywintypes.com_error:
+        raise IllustratorTemplateError(f"Failed to find a character style named '{description_style_name}'")
+    try:
+        icon_style = layer.Parent.CharacterStyles.Item(icon_style_name)
+    except pywintypes.com_error:
+        raise IllustratorTemplateError(f"Failed to find a character style named '{icon_style_name}'")
+    try:
+        auxiliary_style = layer.Parent.CharacterStyles.Item(auxiliary_style_name)
+    except pywintypes.com_error:
+        raise IllustratorTemplateError(f"Failed to find a character style named '{auxiliary_style_name}'")
+
+    # If we change the contents of text that has multiple styles, Illustrator's styles get confused and bugs happen.
+    # To avoid this, we first set all contents to a single style, then change the content's text, then apply the
+    # different styles.
+
+    # Some of the text will be icons, which are special Unicode characters.
+    # Almost all fonts don't have these characters.
+    # If a character is set to a style whose font doesn't have that character, bugs happen.
+    # That's why we need to start by setting the whole text to the auxiliary style: its font has all Basic Latin
+    # characters, plus the special characters for icons.
+    auxiliary_style.ApplyTo(description_text_frame.TextRange, True)
+
     description_text_frame.Contents = card.data.description
+    icons_indexes = replace_keywords_with_icons(description_text_frame)
+    for i in range(1, len(description_text_frame.Contents) + 1):
+        if i in icons_indexes:
+            icon_style.ApplyTo(description_text_frame.Characters.Item(i), True)
+        else:
+            trait_description_style.ApplyTo(description_text_frame.Characters.Item(i), True)
     # Validate and fill in card description - END
 
 
@@ -188,8 +223,8 @@ def create_card_creature_layer(card: card_data.Card, layer: illustrator.Layer) -
     description_text_frame = layer.TextFrames.Item(1)
 
     # Load required fonts
-    trait_name_style_name = "Creature Trait Name"
-    trait_description_style_name = "Creature Trait Description"
+    description_style_name = "Description"
+    trait_name_style_name = "Trait Name"
     icon_style_name = "Icons"
     auxiliary_style_name = "Auxiliary"
     try:
@@ -197,9 +232,9 @@ def create_card_creature_layer(card: card_data.Card, layer: illustrator.Layer) -
     except pywintypes.com_error:
         raise IllustratorTemplateError(f"Failed to find a character style named '{trait_name_style_name}'")
     try:
-        trait_description_style = layer.Parent.CharacterStyles.Item(trait_description_style_name)
+        trait_description_style = layer.Parent.CharacterStyles.Item(description_style_name)
     except pywintypes.com_error:
-        raise IllustratorTemplateError(f"Failed to find a character style named '{trait_description_style_name}'")
+        raise IllustratorTemplateError(f"Failed to find a character style named '{description_style_name}'")
     try:
         icon_style = layer.Parent.CharacterStyles.Item(icon_style_name)
     except pywintypes.com_error:
@@ -328,8 +363,9 @@ def create_card_base_layer(card: card_data.Card, layer: illustrator.Layer) -> No
 
         contents = ""
         if text_frame_name == "Title":
-            contents = card.data.name
-            if contents == "":
+            if not card.data.name == "":
+                contents = card.data.name
+            elif not card.metadata.dev_name == "":
                 contents = f"({card.metadata.dev_name})"
         elif text_frame_name == "CostTotalText":
             contents = str(card.data.cost_total)
@@ -403,10 +439,14 @@ card_data.import_all_data()
 # Pink: E053
 # Black: E061
 # Cyan: E069
-effect = card_data.Effect.get_effect_dict()["E002"]
 
 with tempfile.TemporaryDirectory() as temp_dir:
-    output_path = Path(temp_dir) / "card_front.temp"
-    create_card(effect, output_path)
+    for card_id in ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E053", "E061", "E069"]:
+        if card_id[0] == "E":
+            card = card_data.Effect.get_effect_dict()[card_id]
+        else:
+            card = card_data.Creature.get_creature_dict()[card_id]
+        output_path = Path(temp_dir) / f"{card_id}_front.temp"
+        create_card(card, output_path)
 
     print("HERE")
