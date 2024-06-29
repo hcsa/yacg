@@ -1,8 +1,7 @@
 trait:
   data:
     name: Mind freeze
-    description: |
-      All [EFFECT] cost +1 [NOCOLOR] to play.
+    description: All [EFFECT] cost +1 [NOCOLOR] to play.
 
   metadata:
     id: T026

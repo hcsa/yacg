@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      Benefits from Sun.
+    description: Benefits from Sun.
 
   metadata:
     id: T004

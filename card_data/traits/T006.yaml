@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      Benefits from Hail.
+    description: Benefits from Hail.
 
   metadata:
     id: T006

@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      If another ally [CREATURE] has this trait, every opposing [CREATURE] gets -1 [SPE]. For each additional ally [CREATURE] that has this trait, every opposing [CREATURE] gets -1 [SPE].
+    description: If another ally [CREATURE] has this trait, every opposing [CREATURE] gets -1 [SPE]. For each additional ally [CREATURE] that has this trait, every opposing [CREATURE] gets -1 [SPE].
 
   metadata:
     id: T007

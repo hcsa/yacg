@@ -1,8 +1,7 @@
 trait:
   data:
     name: Arrogant
-    description: |
-      If this [CREATURE] kills another [CREATURE], get -1 [ATK].
+    description: If this [CREATURE] kills another [CREATURE], get -1 [ATK].
 
   metadata:
     id: T001

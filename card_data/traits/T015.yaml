@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      When this [CREATURE] is played, it deals 1 damage to every other [CREATURE].
+    description: When this [CREATURE] is played, it deals 1 damage to every other [CREATURE].
 
   metadata:
     id: T015

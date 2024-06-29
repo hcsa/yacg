@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      This [CREATURE] always attacks last.
+    description: This [CREATURE] always attacks last.
 
   metadata:
     id: T034

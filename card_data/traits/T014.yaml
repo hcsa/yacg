@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      Benefits from Rain.
+    description: Benefits from Rain.
 
   metadata:
     id: T014

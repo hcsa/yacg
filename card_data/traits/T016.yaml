@@ -1,8 +1,7 @@
 trait:
   data:
     name: Energetic
-    description: |
-      If another ally [CREATURE] has this trait, every ally [CREATURE] gets +1 [SPE]. For each additional ally that has this trait, every ally [CREATURE] gets +1 [SPE].
+    description: If another ally [CREATURE] has this trait, every ally [CREATURE] gets +1 [SPE]. For each additional ally that has this trait, every ally [CREATURE] gets +1 [SPE].
 
   metadata:
     id: T016

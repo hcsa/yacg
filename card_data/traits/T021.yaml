@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      In combat, opposing [CREATURE] gets -1 [SPE].
+    description: In combat, opposing [CREATURE] gets -1 [SPE].
 
   metadata:
     id: T021

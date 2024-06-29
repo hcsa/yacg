@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      [SPE] is reversed when deciding combat order (this trait stacks).
+    description: [SPE] is reversed when deciding combat order (this trait stacks).
 
   metadata:
     id: T038

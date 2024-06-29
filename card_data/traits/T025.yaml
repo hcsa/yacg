@@ -1,8 +1,7 @@
 trait:
   data:
     name: Martyr
-    description: |
-      If another [CREATURE] were to take combat damage that would kill it, you can choose to kill this [CREATURE]. If so, combat damage is nullified.
+    description: If another [CREATURE] were to take combat damage that would kill it, you can choose to kill this [CREATURE]. If so, combat damage is nullified.
 
   metadata:
     id: T025

@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      This [CREATURE]'s [ATK] and [SPE] can't be lowered.
+    description: This [CREATURE]'s [ATK] and [SPE] can't be lowered.
 
   metadata:
     id: T005

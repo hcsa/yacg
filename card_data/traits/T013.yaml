@@ -1,8 +1,7 @@
 trait:
   data:
     name: 
-    description: |
-      At the end of combat, its owner can decide to have this [CREATURE] attack again. Can only be used once (this trait stacks).
+    description: At the end of combat, its owner can decide to have this [CREATURE] attack again. Can only be used once (this trait stacks).
 
   metadata:
     id: T013

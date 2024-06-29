@@ -308,8 +308,7 @@ class Trait:
 trait:
   data:
     name: {self.data.name}
-    description: |
-      {self.data.description}
+    description: {self.data.description}
 
   metadata:
     id: {self.metadata.id}
