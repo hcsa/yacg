@@ -6,12 +6,12 @@ effect:
     cost-total: 3
     cost-color: 3
     description: |
-      [EFFECT] cards can't be played if the [EFFECT] stack has 2 or more [EFFECT].
+      (EFFECT) cards can't be played if the (EFFECT) stack has 2 or more (EFFECT).
 
   metadata:
     id: E047
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 705
     summary: Limit effect stack to 2
     notes: |

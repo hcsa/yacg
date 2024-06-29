@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Choose target (CREATURE) in your trash and play it. Pay [NOCOLOR] equal to half the total cost of target (CREATURE) (rounded down).
+      Choose target (CREATURE) in your trash and play it. Pay (NOCOLOR) equal to half the total cost of target (CREATURE) (rounded down).
 
   metadata:
     id: E036

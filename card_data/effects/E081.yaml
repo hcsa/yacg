@@ -1,18 +1,18 @@
 effect:
   data:
-    name: 
-    color: 
+    name:
+    color:
     type: Field
-    cost-total: 
-    cost-color: 
+    cost-total:
+    cost-color:
     description: |
-      Get +2 [NOCOLOR] of a color of your choosing.
-      At the beginning of next round, opponent gets +4 [NOCOLOR] of a color of their choosing.
+      Get +2 (NOCOLOR) of a color of your choosing.
+      At the beginning of next round, opponent gets +4 (NOCOLOR) of a color of their choosing.
 
   metadata:
     id: E081
     dev-stage: Conception
-    dev-name: 
+    dev-name:
     order: 1003
     summary: Charge, delayed opponent charge
     notes: |

@@ -12,7 +12,7 @@ creature:
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
         id: T005
       - name: Immunity
-        description: Can't be targeted by any [EFFECT].
+        description: Can't be targeted by any (EFFECT).
         id: T023
 
   metadata:

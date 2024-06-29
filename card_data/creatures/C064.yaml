@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name:
     color: Pink
     cost-total: 3
     cost-color: 2
@@ -9,14 +9,14 @@ creature:
     spe: 1
     traits:
       - name: Immunity
-        description: Can't be targeted by any [EFFECT].
+        description: Can't be targeted by any (EFFECT).
         id: T023
 
   metadata:
     id: C064
     value: 5
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 703
     summary: Immunity, Pink
     notes: |

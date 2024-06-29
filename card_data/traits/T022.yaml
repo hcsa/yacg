@@ -1,7 +1,7 @@
 trait:
   data:
     name: Illegal charge
-    description: When played, place this (CREATURE) on the opponent's side. You get +4 [NOCOLOR] of a color of your choosing.
+    description: When played, place this (CREATURE) on the opponent's side. You get +4 (NOCOLOR) of a color of your choosing.
 
   metadata:
     id: T022

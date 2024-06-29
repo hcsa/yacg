@@ -1,7 +1,7 @@
 trait:
   data:
     name: Immunity
-    description: Can't be targeted by any [EFFECT].
+    description: Can't be targeted by any (EFFECT).
 
   metadata:
     id: T023

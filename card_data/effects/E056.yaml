@@ -6,7 +6,7 @@ effect:
     cost-total: 4
     cost-color: 3
     description: |
-      Choose target [EFFECT] in the [EFFECT] stack. You can change any of its targets (restrictions to the targets still apply).
+      Choose target (EFFECT) in the (EFFECT) stack. You can change any of its targets (restrictions to the targets still apply).
 
   metadata:
     id: E056

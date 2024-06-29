@@ -7,7 +7,7 @@ effect:
     cost-color: 2
     description: |
       Destroy target ally (CREATURE) and choose a color.
-      Get +[NOCOLOR] that color equal to destroyed (CREATURE)'s (HP).
+      Get +(NOCOLOR) that color equal to destroyed (CREATURE)'s (HP).
 
   metadata:
     id: E069

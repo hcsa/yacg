@@ -7,7 +7,7 @@ effect:
     cost-color: 4
     description: |
       Destroy every (CREATURE).
-      For every (CREATURE) destroyed, their owner gets +[NOCOLOR] of their color equal to (CREATURE) total cost.
+      For every (CREATURE) destroyed, their owner gets +(NOCOLOR) of their color equal to (CREATURE) total cost.
 
   metadata:
     id: E077
