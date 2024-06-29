@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Next time an opponent's (EFFECT) card enters the (EFFECT) stack, counter it.
+      Next time an opponent's (ACTION), (AURA) or (FIELD) card enters the effect stack, counter it.
       When that happens, destroy this card.
 
   metadata:

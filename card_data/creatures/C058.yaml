@@ -9,7 +9,7 @@ creature:
     spe: 3
     traits:
       - name: Mind freeze
-        description: All (EFFECT) cost +1 (NOCOLOR) to play.
+        description: All (ACTION), (AURA) and (FIELD) cost +1 (NOCOLOR) to play.
         id: T026
 
   metadata:

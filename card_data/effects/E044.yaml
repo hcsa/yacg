@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Counter target (EFFECT) card, return it to their owner's hand instead of destroying it.
+      Counter target (ACTION), (AURA) or (FIELD), return it to their owner's hand instead of destroying it.
       Draw a card.
 
   metadata:

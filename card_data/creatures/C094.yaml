@@ -12,7 +12,7 @@ creature:
         description: When played, if 3 (CREATURE) have this trait, Rain is set for 2 rounds.
         id: T029
       - name: Immunity
-        description: Can't be targeted by any (EFFECT).
+        description: Can't be targeted by any (ACTION).
         id: T023
 
   metadata:

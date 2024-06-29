@@ -9,7 +9,7 @@ creature:
     spe: 1
     traits:
       - name: Immunity
-        description: Can't be targeted by any (EFFECT).
+        description: Can't be targeted by any (ACTION).
         id: T023
 
   metadata:

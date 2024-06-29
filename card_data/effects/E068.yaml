@@ -6,7 +6,7 @@ effect:
     cost-total: 4
     cost-color: 3
     description: |
-      (EFFECT) cards can't be played.
+      (ACTION), (AURA) and (FIELD) cards can't be played.
 
   metadata:
     id: E068

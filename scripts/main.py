@@ -264,23 +264,23 @@ def replace_keywords_with_icons(text_frame: illustrator.TextFrame) -> List[int]:
     """
 
     keyword_to_character_dict: Dict[str, str] = {
-        "[CREATURE]": "\uE100",
-        "[ACTION]": "\uE101",
-        "[AURA]": "\uE102",
-        "[FIELD]": "\uE103",
-        "[HP]": "\uE200",
-        "[ATK]": "\uE201",
-        "[SPE]": "\uE202",
-        "[NOCOLOR]": "\uE300",
-        "[BLACK]": "\uE301",
-        "[BLUE]": "\uE302",
-        "[CYAN]": "\uE303",
-        "[GREEN]": "\uE304",
-        "[ORANGE]": "\uE305",
-        "[PINK]": "\uE306",
-        "[PURPLE]": "\uE307",
-        "[WHITE]": "\uE308",
-        "[YELLOW]": "\uE309",
+        "(CREATURE)": "\uE100",
+        "(ACTION)": "\uE101",
+        "(AURA)": "\uE102",
+        "(FIELD)": "\uE103",
+        "(HP)": "\uE200",
+        "(ATK)": "\uE201",
+        "(SPE)": "\uE202",
+        "(NOCOLOR)": "\uE300",
+        "(BLACK)": "\uE301",
+        "(BLUE)": "\uE302",
+        "(CYAN)": "\uE303",
+        "(GREEN)": "\uE304",
+        "(ORANGE)": "\uE305",
+        "(PINK)": "\uE306",
+        "(PURPLE)": "\uE307",
+        "(WHITE)": "\uE308",
+        "(YELLOW)": "\uE309",
     }
 
     substitute_pattern_string = "|".join(
@@ -393,8 +393,17 @@ def create_card_background_layer(card: card_data.Card, layer: illustrator.Layer)
 
 
 card_data.import_all_data()
-creature = card_data.Creature.get_creature_dict()["C046"]
-effect = card_data.Effect.get_effect_dict()["E001"]
+# None: E002
+# Orange: C020
+# Green: C049
+# Blue: C095
+# White: C069
+# Yellow: E032
+# Purple: E077
+# Pink: E053
+# Black: E061
+# Cyan: E069
+effect = card_data.Effect.get_effect_dict()["E002"]
 
 with tempfile.TemporaryDirectory() as temp_dir:
     output_path = Path(temp_dir) / "card_front.temp"
