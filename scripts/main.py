@@ -192,16 +192,15 @@ def create_card_creature_layer(card: card_data.Card, layer: illustrator.Layer) -
     except pywintypes.com_error:
         raise IllustratorTemplateError(f"Failed to find a character style named '{auxiliary_style_name}'")
 
-    # If we change the contents of text that has multiple styles, Illustrator's styles get confused and bugs happen
+    # If we change the contents of text that has multiple styles, Illustrator's styles get confused and bugs happen.
     # To avoid this, we first set all contents to a single style, then change the content's text, then apply the
-    # different styles
+    # different styles.
 
-    # Some of the text will be icons, which are special Unicode characters
-    # Almost all fonts don't have these characters
-    # If a character is set to a style whose font doesn't have that character, bugs happen
+    # Some of the text will be icons, which are special Unicode characters.
+    # Almost all fonts don't have these characters.
+    # If a character is set to a style whose font doesn't have that character, bugs happen.
     # That's why we need to start by setting the whole text to the auxiliary style: its font has all Basic Latin
-    # characters, plus the special characters for icons
-
+    # characters, plus the special characters for icons.
     auxiliary_style.ApplyTo(description_text_frame.TextRange, True)
 
     # Stores trait names. Will be used later to format the trait names
