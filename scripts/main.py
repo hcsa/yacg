@@ -347,47 +347,69 @@ def replace_keywords_with_icons(text_frame: illustrator.TextFrame) -> List[int]:
 
 
 def create_card_front_base_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
-    if not layer.TextFrames.Count == 5:
+    if not layer.PageItems.Count == 10:
         raise IllustratorTemplateError(
-            f"Expected base layer to have 5 group items, found {layer.TextFrames.Count} instead")
-    text_frames_names_found = {
+            f"Expected base layer to have 10 sub items, found {layer.PathItems.Count} instead")
+    page_items_names_found = {
         "Title": False,
         "CostTotalText": False,
         "CostColorText": False,
         "CostNonColorText": False,
+        "CostNonColorBackground": False,
+        "ImageBorder": False,
+        "ImagePlaceholder": False,
         "Identifier": False,
+        "OuterBorderLine": False,
+        "InnerBorderLine": False,
     }
-    for i in range(1, 6):
-        text_frame = layer.TextFrames.Item(i)
-        text_frame_name = text_frame.Name
-        if text_frame_name not in text_frames_names_found.keys():
+    for i in range(1, 11):
+        page_item = layer.TextFrames.Item(i)
+        page_item_name = page_item.Name
+        if page_item_name not in page_items_names_found.keys():
             raise IllustratorTemplateError(
-                f"Expected base layer's text frame {i} to have a name in the list "
-                f"{list(text_frames_names_found.keys())}, found name '{text_frame_name}' instead"
+                f"Expected base layer's sub item {i} to have a name in the list "
+                f"{list(page_items_names_found.keys())}, found name '{page_item_name}' instead"
             )
-        if text_frames_names_found[text_frame_name]:
+        if page_items_names_found[page_item_name]:
             raise IllustratorTemplateError(
-                f"In base layer, found two text frames with the name '{text_frame_name}'")
-        text_frames_names_found[text_frame_name] = True
+                f"In base layer, found two sub items with the name '{page_item_name}'")
+        page_items_names_found[page_item_name] = True
 
-        contents = ""
-        if text_frame_name == "Title":
+        if page_item_name == "Title":
+            page_item.Hidden = False
             if not card.data.name == "":
                 contents = card.data.name
             elif not card.metadata.dev_name == "":
                 contents = f"({card.metadata.dev_name})"
-        elif text_frame_name == "CostTotalText":
-            contents = str(card.data.cost_total)
-        elif text_frame_name == "CostColorText":
-            contents = str(card.data.cost_color)
-        elif text_frame_name == "CostNonColorText":
-            contents = str(card.data.cost_total - card.data.cost_color)
-        elif text_frame_name == "Identifier":
+            else:
+                contents = ""
+            page_item.Contents = contents
+        elif page_item_name == "CostTotalText":
+            page_item.Hidden = False
+            page_item.Contents = str(card.data.cost_total)
+        elif page_item_name == "CostColorText":
+            page_item.Hidden = False
+            page_item.Contents = str(card.data.cost_color)
+        elif page_item_name == "CostNonColorText":
+            page_item.Hidden = False
+            page_item.Contents = str(card.data.cost_total - card.data.cost_color)
+        elif page_item_name == "CostNonColorBackground":
+            page_item.Hidden = False
+        elif page_item_name == "ImageBorder":
+            page_item.Hidden = False
+        elif page_item_name == "ImagePlaceholder":
+            page_item.Hidden = False
+        elif page_item_name == "Identifier":
+            page_item.Hidden = False
             if GIT_TAG_NAME is None:
                 contents = f"TEST | {card.metadata.id}"
             else:
                 contents = f"{GIT_TAG_NAME} | {card.metadata.id}"
-        text_frame.Contents = contents
+            page_item.Contents = contents
+        elif page_item_name == "OuterBorderLine":
+            page_item.Hidden = True
+        elif page_item_name == "InnerBorderLine":
+            page_item.Hidden = True
 
 
 def create_card_front_background_color_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
