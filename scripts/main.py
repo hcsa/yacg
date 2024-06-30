@@ -1,3 +1,4 @@
+import os
 import re
 import shutil
 import tempfile
@@ -36,18 +37,45 @@ def get_illustrator_app() -> illustrator._Application:
     return app
 
 
-def create_card(card: card_data.Card, output_path: Path) -> None:
+def export_to_tiff(document: illustrator.Document, tiff_path: Path) -> None:
+    export_options = illustrator.ExportOptionsTIFF()
+    export_options.AntiAliasing = illustrator.constants.aiArtOptimized
+    export_options.ByteOrder = illustrator.constants.aiIBMPC
+    export_options.ImageColorSpace = illustrator.constants.aiImageRGB
+    export_options.LZWCompression = False
+    export_options.Resolution = 400
+    export_options.SaveMultipleArtboards = False
+
+    document.Export(tiff_path, illustrator.constants.aiTIFF, export_options)
+
+
+def create_card(card: card_data.Card, output_dir: Path) -> None:
     app = get_illustrator_app()
 
-    card_front_path = output_path / f"{card.metadata.id}_front.temp"
-    shutil.copy2(CARD_FRONT_PATH, card_front_path)
-    card_front_document: illustrator.Document = app.Open(card_front_path)
-    create_card_front(card, card_front_document)
+    # Card front
+    card_front_path = output_dir / f"{card.metadata.id}_front"  # Format is added on export
+    card_front_document_path = output_dir / f"{card.metadata.id}_front.temp"
 
-    card_back_path = output_path / f"{card.metadata.id}_back.temp"
-    shutil.copy2(CARD_FRONT_PATH, card_back_path)
-    card_back_document: illustrator.Document = app.Open(card_back_path)
+    shutil.copy2(CARD_FRONT_PATH, card_front_document_path)
+    card_front_document = app.Open(card_front_document_path)
+    create_card_front(card, card_front_document)
+    export_to_tiff(card_front_document, card_front_path)
+    card_front_document.Close(illustrator.constants.aiDoNotSaveChanges)
+    os.remove(card_front_document_path)
+
+    # Card back
+    card_back_path = output_dir / f"{card.metadata.id}_back"  # Format is added on export
+    card_back_document_path = output_dir / f"{card.metadata.id}_back.temp"
+
+    shutil.copy2(CARD_FRONT_PATH, card_back_document_path)
+    card_back_document = app.Open(card_back_document_path)
     create_card_back(card, card_back_document)
+    export_to_tiff(card_back_document, card_back_path)
+    card_back_document.Close(illustrator.constants.aiDoNotSaveChanges)
+    os.remove(card_back_document_path)
+
+    print(output_dir)
+    print("HERE")
 
 
 def create_card_front(card: card_data.Card, document: illustrator.Document) -> None:
@@ -363,7 +391,7 @@ def create_card_front_base_layer(card: card_data.Card, layer: illustrator.Layer)
         "InnerBorderLine": False,
     }
     for i in range(1, 11):
-        page_item = layer.TextFrames.Item(i)
+        page_item = layer.PageItems.Item(i)
         page_item_name = page_item.Name
         if page_item_name not in page_items_names_found.keys():
             raise IllustratorTemplateError(
