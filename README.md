@@ -63,16 +63,23 @@ in [icomoon_project](/card_design/icomoon_project/) folder.
 These scripts are written in Python, using the `pywin32` module to access the Illustrator's COM objects and modify the
 files.
 
-The complete object reference can be
-found [here](https://ai-scripting.docsforadobe.dev/jsobjref/javascript-object-reference.html) (it's listed for
-Javascript, but the references are the same for Python -- these are the COM objects). The main references are summarized
-in the following object model:
+The best documentation available is
+the [Adobe Illustrator Scripting Guide](https://ai-scripting.docsforadobe.dev/jsobjref/javascript-object-reference.html).
+Even though it's for Javascript, most of the time the references are close enough to the COM objects' interface, so they
+work the same for Python. The main references are summarized in the following object model:
 
 ![Main Illustrator objects](image.png)
 
-The type library has been generated to [illustrator_com.py](./scripts/yacg_python/illustrador_com.py). Unfortunately,
+The type library for Python has been generated to [illustrator_com.py](./scripts/yacg_python/illustrador_com.py).
+Unfortunately,
 the objects' properties are encoded in `_prop_map_get_` attributes, and IntelliSense's autocomplete can't make sense of
-them.
+them. To get exact references for the COM objects' interface, you can:
+
+- Use [OleViewDotNet](https://github.com/tyranid/oleviewdotnet), an open-source tool that lets you navigate the
+  interface and invoke objects. You can find an overview [here](https://stackoverflow.com/a/42944052).
+
+- Use "oleviewer.exe", a tool from
+  the [Windows SDK tools](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/).
 
 #### Generate Illustrator type library
 
