@@ -72,11 +72,11 @@ def create_card_front(card: card_data.Card, document: illustrator.Document) -> N
             f"Expected 3rd layer's name to be 'BaseLayer', found '{creature_layer.Name}' instead")
     create_card_front_base_layer(card, base_layer)
 
-    background_layer = document.Layers.Item(4)
-    if not background_layer.Name == "BackgroundLayer":
+    background_color_layer = document.Layers.Item(4)
+    if not background_color_layer.Name == "BackgroundColorLayer":
         raise IllustratorTemplateError(
-            f"Expected 4th layer's name to be 'BackgroundLayer', found '{background_layer.Name}' instead")
-    create_card_front_background_layer(card, background_layer)
+            f"Expected 4th layer's name to be 'BackgroundColorLayer', found '{background_color_layer.Name}' instead")
+    create_card_front_background_color_layer(card, background_color_layer)
 
     aux_layer = document.Layers.Item(5)
     if not aux_layer.Name == "AuxLayer":
@@ -114,12 +114,12 @@ def create_card_front_non_creature_layer(card: card_data.Card, layer: illustrato
         group_item_name = group_item.Name
         if group_item_name not in group_item_names_found.keys():
             raise IllustratorTemplateError(
-                f"Expected non-creature layer's group icon {i} to have a name in the list "
+                f"Expected non-creature layer's group item {i} to have a name in the list "
                 f"{list(group_item_names_found.keys())}, found name '{group_item_name}' instead"
             )
         if group_item_names_found[group_item_name]:
             raise IllustratorTemplateError(
-                f"In non-creature layer, found two group icons with the name '{group_item_name}'")
+                f"In non-creature layer, found two group items with the name '{group_item_name}'")
         group_item_names_found[group_item_name] = True
         effect_type = group_item_name_to_effect_type[group_item_name]
 
@@ -199,12 +199,12 @@ def create_card_front_creature_layer(card: card_data.Card, layer: illustrator.La
         group_item_name = group_item.Name
         if group_item_name not in group_item_names_found.keys():
             raise IllustratorTemplateError(
-                f"Expected creature layer's group icon {i} to have a name in the list "
+                f"Expected creature layer's group item {i} to have a name in the list "
                 f"{list(group_item_names_found.keys())}, found name '{group_item_name}' instead"
             )
         if group_item_names_found[group_item_name]:
             raise IllustratorTemplateError(
-                f"In creature layer, found two group icons with the name '{group_item_name}'")
+                f"In creature layer, found two group items with the name '{group_item_name}'")
         group_item_names_found[group_item_name] = True
 
         if group_item_name == "CreatureIcon":
@@ -390,7 +390,7 @@ def create_card_front_base_layer(card: card_data.Card, layer: illustrator.Layer)
         text_frame.Contents = contents
 
 
-def create_card_front_background_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
+def create_card_front_background_color_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
     group_item_names_to_color = {
         "BackgroundNone": card_data.Color.NONE,
         "BackgroundBlack": card_data.Color.BLACK,
@@ -407,7 +407,7 @@ def create_card_front_background_layer(card: card_data.Card, layer: illustrator.
 
     if not layer.GroupItems.Count == 10:
         raise IllustratorTemplateError(
-            f"Expected 'BackgroundLayer' to have 10 group items, found {layer.GroupItems.Count} instead")
+            f"Expected 'BackgroundColorLayer' to have 10 group items, found {layer.GroupItems.Count} instead")
     group_item_names_found = {
         "BackgroundNone": False,
         "BackgroundBlack": False,
@@ -426,12 +426,12 @@ def create_card_front_background_layer(card: card_data.Card, layer: illustrator.
         group_item_name = group_item.Name
         if group_item_name not in group_item_names_found.keys():
             raise IllustratorTemplateError(
-                f"Expected background layer's group icon {i} to have a name in the list "
+                f"Expected background color layer's group item {i} to have a name in the list "
                 f"{list(group_item_names_found.keys())}, found name '{group_item_name}' instead"
             )
         if group_item_names_found[group_item_name]:
             raise IllustratorTemplateError(
-                f"In background layer, found two group icons with the name '{group_item_name}'")
+                f"In background color layer, found two group items with the name '{group_item_name}'")
         group_item_names_found[group_item_name] = True
 
         group_item.Hidden = not (group_item_names_to_color[group_item_name] == color)
@@ -459,11 +459,11 @@ def create_card_back(card: card_data.Card, document: illustrator.Document) -> No
             f"Expected 3rd layer's name to be 'BaseLayer', found '{creature_layer.Name}' instead")
     base_layer.Visible = False
 
-    background_layer = document.Layers.Item(4)
-    if not background_layer.Name == "BackgroundLayer":
+    background_color_layer = document.Layers.Item(4)
+    if not background_color_layer.Name == "BackgroundColorLayer":
         raise IllustratorTemplateError(
-            f"Expected 4th layer's name to be 'BackgroundLayer', found '{background_layer.Name}' instead")
-    create_card_back_background_layer(card, background_layer)
+            f"Expected 4th layer's name to be 'BackgroundColorLayer', found '{background_color_layer.Name}' instead")
+    create_card_back_background_color_layer(card, background_color_layer)
 
     aux_layer = document.Layers.Item(5)
     if not aux_layer.Name == "AuxLayer":
@@ -472,7 +472,7 @@ def create_card_back(card: card_data.Card, document: illustrator.Document) -> No
     aux_layer.Visible = False
 
 
-def create_card_back_background_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
+def create_card_back_background_color_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
     group_item_names_to_color = {
         "BackgroundNone": card_data.Color.NONE,
         "BackgroundBlack": card_data.Color.BLACK,
@@ -489,7 +489,7 @@ def create_card_back_background_layer(card: card_data.Card, layer: illustrator.L
 
     if not layer.GroupItems.Count == 10:
         raise IllustratorTemplateError(
-            f"Expected 'BackgroundLayer' to have 10 group items, found {layer.GroupItems.Count} instead"
+            f"Expected 'BackgroundColorLayer' to have 10 group items, found {layer.GroupItems.Count} instead"
         )
     group_item_names_found = {
         "BackgroundNone": False,
@@ -509,12 +509,12 @@ def create_card_back_background_layer(card: card_data.Card, layer: illustrator.L
         group_item_name = group_item.Name
         if group_item_name not in group_item_names_found.keys():
             raise IllustratorTemplateError(
-                f"Expected background layer's group icon {i} to have a name in the list "
+                f"Expected background color layer's group item {i} to have a name in the list "
                 f"{list(group_item_names_found.keys())}, found name '{group_item_name}' instead"
             )
         if group_item_names_found[group_item_name]:
             raise IllustratorTemplateError(
-                f"In background layer, found two group icons with the name '{group_item_name}'")
+                f"In background color layer, found two group items with the name '{group_item_name}'")
         group_item_names_found[group_item_name] = True
 
         if not group_item_names_to_color[group_item_name] == color:
@@ -527,13 +527,13 @@ def create_card_back_background_layer(card: card_data.Card, layer: illustrator.L
         # Get background icon
         if not group_item.GroupItems.Count == 1:
             raise IllustratorTemplateError(
-                f"Expected group '{group_item_name}' in 'BackgroundLayer' to have 1 group item, found "
+                f"Expected group '{group_item_name}' in 'BackgroundColorLayer' to have 1 group item, found "
                 f"{group_item.GroupItems.Count} instead"
             )
         if not group_item.GroupItems.Item(1).Name == "Icon":
             raise IllustratorTemplateError(
-                f"Expected group '{group_item_name}' in 'BackgroundLayer' to have a subgroup named 'Icon', found name "
-                f"{group_item.GroupItems.Item(1).Name} instead"
+                f"Expected group '{group_item_name}' in 'BackgroundColorLayer' to have a subgroup named 'Icon', found "
+                f"name {group_item.GroupItems.Item(1).Name} instead"
             )
         icon = group_item.GroupItems.Item(1)
 
@@ -554,7 +554,7 @@ def create_card_back_background_layer(card: card_data.Card, layer: illustrator.L
         # Validate path items - START
         if not group_item.PathItems.Count == 3:
             raise IllustratorTemplateError(
-                f"Expected group '{group_item_name}' in 'BackgroundLayer' to have 3 path items, found "
+                f"Expected group '{group_item_name}' in 'BackgroundColorLayer' to have 3 path items, found "
                 f"{group_item.PathItems.Count} instead"
             )
         path_item_names_found = {
@@ -567,12 +567,12 @@ def create_card_back_background_layer(card: card_data.Card, layer: illustrator.L
             path_item_name = path_item.Name
             if path_item_name not in path_item_names_found.keys():
                 raise IllustratorTemplateError(
-                    f"Expected background layer, group '{group_item_name}', path item {j} to have a name in the list "
-                    f"{list(path_item_names_found.keys())}, found name '{path_item_name}' instead"
+                    f"Expected background color layer, group '{group_item_name}', path item {j} to have a name in the "
+                    f"list {list(path_item_names_found.keys())}, found name '{path_item_name}' instead"
                 )
             if path_item_names_found[path_item_name]:
                 raise IllustratorTemplateError(
-                    f"In background layer, group '{group_item_name}', found two subgroups with the name "
+                    f"In background color layer, group '{group_item_name}', found two subgroups with the name "
                     f"'{path_item_name}'")
             path_item_names_found[path_item_name] = True
 
