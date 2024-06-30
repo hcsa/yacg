@@ -53,7 +53,7 @@ def create_card(card: card_data.Card, output_dir: Path) -> None:
     app = get_illustrator_app()
 
     # Card front
-    card_front_path = output_dir / f"{card.metadata.id}_front"  # Format is added on export
+    card_front_path = output_dir / f"{card.metadata.id}_front"  # Extension is added on export
     card_front_document_path = output_dir / f"{card.metadata.id}_front.temp"
 
     shutil.copy2(CARD_FRONT_PATH, card_front_document_path)
@@ -64,7 +64,7 @@ def create_card(card: card_data.Card, output_dir: Path) -> None:
     os.remove(card_front_document_path)
 
     # Card back
-    card_back_path = output_dir / f"{card.metadata.id}_back"  # Format is added on export
+    card_back_path = output_dir / f"{card.metadata.id}_back"  # Extension is added on export
     card_back_document_path = output_dir / f"{card.metadata.id}_back.temp"
 
     shutil.copy2(CARD_FRONT_PATH, card_back_document_path)
