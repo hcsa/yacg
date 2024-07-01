@@ -74,9 +74,6 @@ def create_card(card: card_data.Card, output_dir: Path) -> None:
     card_back_document.Close(illustrator.constants.aiDoNotSaveChanges)
     os.remove(card_back_document_path)
 
-    print(output_dir)
-    print("HERE")
-
 
 def create_card_front(card: card_data.Card, document: illustrator.Document) -> None:
     if not document.Layers.Count == 5:
@@ -650,8 +647,8 @@ def create_card_back_background_color_layer(card: card_data.Card, layer: illustr
 card_data.import_all_data()
 
 with tempfile.TemporaryDirectory() as temp_dir:
-    # card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E053", "E061", "E069"]
-    card_list = ["E053"]
+    card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E053", "E061", "E069"]
+    # card_list = ["E053"]
     for card_id in card_list:
         if card_id[0] == "E":
             card = card_data.Effect.get_effect_dict()[card_id]
@@ -659,4 +656,5 @@ with tempfile.TemporaryDirectory() as temp_dir:
             card = card_data.Creature.get_creature_dict()[card_id]
         create_card(card, Path(temp_dir))
 
+    print(temp_dir)
     print("HERE")
