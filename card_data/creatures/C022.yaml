@@ -8,7 +8,7 @@ creature:
     atk: 1
     spe: 3
     traits:
-      - name:
+      - name: 
         description: When played, fights opponent's last played (CREATURE).
         id: T020
       - name: Reckless
@@ -19,7 +19,7 @@ creature:
     id: C022
     value: 5
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 103
     summary: Haste, Reckless, Orange
     notes: |

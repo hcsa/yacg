@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Green
     cost-total: 4
     cost-color: 3
@@ -8,13 +8,13 @@ creature:
     atk: 2
     spe: 0
     traits:
-      - name:
+      - name: 
         description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
         id: T015
-      - name:
+      - name: 
         description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
         id: T028
-      - name:
+      - name: 
         description: This (CREATURE) always attacks last.
         id: T034
 

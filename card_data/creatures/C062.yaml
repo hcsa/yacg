@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Pink
     cost-total: 2
     cost-color: 2
@@ -16,7 +16,7 @@ creature:
     id: C062
     value: -10
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 701
     summary: Disable, cheapest, Pink
     notes: |

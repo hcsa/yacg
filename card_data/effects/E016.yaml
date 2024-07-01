@@ -11,7 +11,7 @@ effect:
   metadata:
     id: E016
     dev-stage: Alpha-1
-    dev-name:
+    dev-name: 
     order: 205
     summary: Force fight, bypass traits, green
     notes: |

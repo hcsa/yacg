@@ -11,7 +11,7 @@ effect:
   metadata:
     id: E034
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 914
     summary: Board clear
     notes: |

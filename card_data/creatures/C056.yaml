@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Cyan
     cost-total: 3
     cost-color: 2
@@ -8,7 +8,7 @@ creature:
     atk: 2
     spe: 3
     traits:
-      - name:
+      - name: 
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
         id: T039
 
@@ -16,7 +16,7 @@ creature:
     id: C056
     value: 10
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 904
     summary: U-turn, high Spd, cheap
     notes: |

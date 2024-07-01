@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: This (CREATURE) can be played as an (ACTION). Resolve the (ACTION) by putting it in your side.
 
   metadata:

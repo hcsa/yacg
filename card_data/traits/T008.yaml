@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
 
   metadata:

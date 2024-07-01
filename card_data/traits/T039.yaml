@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
 
   metadata:

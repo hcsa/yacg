@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Purple
     cost-total: 4
     cost-color: 2
@@ -16,7 +16,7 @@ creature:
     id: C036
     value: 10
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 607
     summary: 4-cost, Purple
     notes: |

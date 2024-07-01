@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
 
   metadata:

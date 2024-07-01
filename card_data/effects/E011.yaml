@@ -12,7 +12,7 @@ effect:
   metadata:
     id: E011
     dev-stage: Alpha-1
-    dev-name:
+    dev-name: 
     order: 106
     summary: Sun setter as an effect
     notes: |

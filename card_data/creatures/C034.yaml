@@ -8,7 +8,7 @@ creature:
     atk: 1
     spe: 2
     traits:
-      - name:
+      - name: 
         description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). When that happens, destroy this (CREATURE).
         id: T011
 

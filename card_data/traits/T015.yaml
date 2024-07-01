@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
 
   metadata:

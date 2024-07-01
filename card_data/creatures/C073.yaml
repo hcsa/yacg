@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: White
     cost-total: 3
     cost-color: 2
@@ -16,7 +16,7 @@ creature:
     id: C073
     value: 10
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 408
     summary: Defender, White, cheap
     notes: |

@@ -12,7 +12,7 @@ effect:
   metadata:
     id: E084
     dev-stage: Conception
-    dev-name:
+    dev-name: 
     order: 1006
     summary: Single damage, can bounce back and fourth indefinetly
     notes: |

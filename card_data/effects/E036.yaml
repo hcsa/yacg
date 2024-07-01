@@ -11,7 +11,7 @@ effect:
   metadata:
     id: E036
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 602
     summary: Cast from own trash, pay cost
     notes: |

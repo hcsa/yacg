@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: White
     cost-total: 3
     cost-color: 3
@@ -16,7 +16,7 @@ creature:
     id: C076
     value: 20
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 410
     summary: Martyr, White
     notes: |

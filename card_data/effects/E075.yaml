@@ -12,7 +12,7 @@ effect:
   metadata:
     id: E075
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 912
     summary: Hail setter as an effect
     notes: |

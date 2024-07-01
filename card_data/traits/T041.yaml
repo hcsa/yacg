@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: If this (CREATURE) is killed in combat, destroy opposing (CREATURE).
 
   metadata:

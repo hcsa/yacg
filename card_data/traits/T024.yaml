@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: In combat, opposing (CREATURE) gets -1 (ATK).
 
   metadata:

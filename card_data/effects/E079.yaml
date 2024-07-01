@@ -1,10 +1,10 @@
 effect:
   data:
-    name:
-    color:
+    name: 
+    color: 
     type: Field
-    cost-total:
-    cost-color:
+    cost-total: 
+    cost-color: 
     description: |
       Gain 3 (NOCOLOR) of a color of your choosing.
       Banish the bottom 5 cards of your deck.
@@ -12,7 +12,7 @@ effect:
   metadata:
     id: E079
     dev-stage: Conception
-    dev-name:
+    dev-name: 
     order: 1001
     summary: Charge, mull itself
     notes: |

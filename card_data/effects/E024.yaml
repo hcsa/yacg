@@ -11,7 +11,7 @@ effect:
   metadata:
     id: E024
     dev-stage: Alpha-1
-    dev-name:
+    dev-name: 
     order: 401
     summary: Spread +Atk, cheap, white
     notes: |

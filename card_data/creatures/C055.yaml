@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Cyan
     cost-total: 3
     cost-color: 2
@@ -16,7 +16,7 @@ creature:
     id: C055
     value: 5
     dev-stage: Alpha-1
-    dev-name:
+    dev-name: 
     order: 903
     summary: Hail setter, Cyan, cheapest
     notes: |

@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Pink
     cost-total: 3
     cost-color: 2
@@ -16,7 +16,7 @@ creature:
     id: C064
     value: 5
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 703
     summary: Immunity, Pink
     notes: |

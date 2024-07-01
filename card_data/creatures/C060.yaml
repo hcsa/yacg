@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Cyan
     cost-total: 4
     cost-color: 3
@@ -8,10 +8,10 @@ creature:
     atk: 4
     spe: 2
     traits:
-      - name:
+      - name: 
         description: If another ally (CREATURE) has this trait, every opposing (CREATURE) gets -1 (SPE). For each additional ally (CREATURE) that has this trait, every opposing (CREATURE) gets -1 (SPE).
         id: T007
-      - name:
+      - name: 
         description: In combat, opposing (CREATURE) gets -1 (SPE).
         id: T021
 

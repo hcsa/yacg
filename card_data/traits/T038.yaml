@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: (SPE) is reversed when deciding combat order (this trait stacks).
 
   metadata:

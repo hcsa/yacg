@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Green
     cost-total: 5
     cost-color: 4

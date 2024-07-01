@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: White
     cost-total: 1
     cost-color: 1
@@ -8,7 +8,7 @@ creature:
     atk: 1
     spe: 1
     traits:
-      - name:
+      - name: 
         description: At the beginning of combat, its owner can decide to have this (CREATURE) attack first. Can only be used once (this trait stacks).
         id: T017
 

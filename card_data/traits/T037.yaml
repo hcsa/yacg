@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s (if there are any).
 
   metadata:

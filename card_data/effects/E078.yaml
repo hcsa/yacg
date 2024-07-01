@@ -1,6 +1,6 @@
 effect:
   data:
-    name:
+    name: 
     color: Purple
     type: Action
     cost-total: 3

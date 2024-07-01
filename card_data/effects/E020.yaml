@@ -12,7 +12,7 @@ effect:
   metadata:
     id: E020
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 303
     summary: Rain setter as an effect
     notes: |

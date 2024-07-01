@@ -1,6 +1,6 @@
 trait:
   data:
-    name:
+    name: 
     description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
 
   metadata:

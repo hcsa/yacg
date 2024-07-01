@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: White
     cost-total: 4
     cost-color: 3
@@ -8,7 +8,7 @@ creature:
     atk: 1
     spe: 1
     traits:
-      - name:
+      - name: 
         description: If another ally (CREATURE) has this trait, every ally (CREATURE) gets +1 (ATK). For each additional ally that has this trait, every ally (CREATURE) gets +1 (ATK).
         id: T030
       - name: Martyr

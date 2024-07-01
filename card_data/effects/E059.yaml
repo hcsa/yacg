@@ -11,7 +11,7 @@ effect:
   metadata:
     id: E059
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 805
     summary: Limit effect stack to 1
     notes: |

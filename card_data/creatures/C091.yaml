@@ -1,6 +1,6 @@
 creature:
   data:
-    name:
+    name: 
     color: Blue
     cost-total: 3
     cost-color: 2
@@ -8,7 +8,7 @@ creature:
     atk: 2
     spe: 2
     traits:
-      - name:
+      - name: 
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
         id: T005
 
@@ -16,7 +16,7 @@ creature:
     id: C091
     value: -10
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 306
     summary: Clear body
     notes: |

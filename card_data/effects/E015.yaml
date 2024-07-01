@@ -11,7 +11,7 @@ effect:
   metadata:
     id: E015
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 204
     summary: Force fight
     notes: |

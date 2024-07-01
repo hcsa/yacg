@@ -11,7 +11,7 @@ effect:
   metadata:
     id: E041
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 601
     summary: Kill own creature
     notes: |
