@@ -1,7 +1,7 @@
 trait:
   data:
     name: Immunity
-    description: Can't be targeted by any (ACTION).
+    description: Can't be targeted by any (ACTION) or (AURA).
 
   metadata:
     id: T023

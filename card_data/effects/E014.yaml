@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Target (CREATURE) gets +4 (ATK), +4 (HP), 0 (SPE) and Slow movement.
+      Target (CREATURE) gets +4 (ATK), +4 (HP), 0 (SPE) and (REF:T034).
 
   metadata:
     id: E014

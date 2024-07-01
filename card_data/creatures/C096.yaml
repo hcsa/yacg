@@ -1,0 +1,19 @@
+creature:
+  data:
+    name: 
+    color: Green
+    cost-total: 2
+    cost-color: 1
+    hp: 3
+    atk: 3
+    spe: 2
+
+  metadata:
+    id: C096
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 202
+    summary: Creation of E050, while also being usable
+    notes: |
+      

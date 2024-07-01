@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Target (CREATURE) gets Immunity.
+      Target (CREATURE) gets (REF:T023).
 
   metadata:
     id: E022

@@ -7,7 +7,7 @@ effect:
     cost-color: 2
     description: |
       Destroy target (CREATURE).
-      Create a 3 (HP) 3 (ATK) 2 (SPE) token (CREATURE) in their place. Any cards targetting the destroyed (CREATURE) now target the token (CREATURE).
+      Create a (REF:C096) in their place. Any cards targeting the destroyed (CREATURE) now target the new (CREATURE).
 
   metadata:
     id: E050

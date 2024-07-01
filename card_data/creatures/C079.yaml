@@ -12,7 +12,7 @@ creature:
         description: At the beginning of combat, its owner can decide to have this (CREATURE) attack first. Can only be used once (this trait stacks).
         id: T017
       - name: Survivor
-        description: At the end of the round, this (CREATURE) is put into the deck.
+        description: At the end of the round, this (CREATURE) returns to the deck.
         id: T036
 
   metadata:

@@ -7,7 +7,7 @@ effect:
     cost-color: 2
     description: |
       Choose target (CREATURE) in a trash and play it.
-      Target (CREATURE) gets Brittle.
+      Target (CREATURE) gets (REF:T003).
 
   metadata:
     id: E037

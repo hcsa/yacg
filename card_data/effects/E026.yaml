@@ -6,7 +6,7 @@ effect:
     cost-total: 4
     cost-color: 2
     description: |
-      Target (CREATURE) gets -(HP) equal to the sum of (ATK) of all ally (CREATURE).
+      Target (CREATURE) gets -(HP) equal to the sum of (ATK) of all ally (CREATURE)s.
 
   metadata:
     id: E026

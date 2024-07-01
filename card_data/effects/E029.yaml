@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Target ally (CREATURE) gets Self-destruct.
+      Target ally (CREATURE) gets (REF:T033).
 
   metadata:
     id: E029

@@ -12,7 +12,7 @@ creature:
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
         id: T005
       - name: Immunity
-        description: Can't be targeted by any (ACTION).
+        description: Can't be targeted by any (ACTION) or (AURA).
         id: T023
       - name: 
         description: First damage dealt to this (CREATURE) is nullified (this trait stacks).

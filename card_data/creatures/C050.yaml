@@ -15,7 +15,7 @@ creature:
         description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
         id: T028
       - name: Survivor
-        description: At the end of the round, this (CREATURE) is put into the deck.
+        description: At the end of the round, this (CREATURE) returns to the deck.
         id: T036
 
   metadata:

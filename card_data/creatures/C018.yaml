@@ -9,7 +9,7 @@ creature:
     spe: 4
     traits:
       - name: Energetic
-        description: If another ally (CREATURE) has this trait, every ally (CREATURE) gets +1 (SPE). For each additional ally that has this trait, every ally (CREATURE) gets +1 (SPE).
+        description: If another ally (CREATURE) has (REF:T016), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:T016), every ally (CREATURE) gets +1 (SPE).
         id: T016
       - name: 
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).

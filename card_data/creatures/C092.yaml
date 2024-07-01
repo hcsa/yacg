@@ -12,7 +12,7 @@ creature:
         description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
         id: T028
       - name: Immunity
-        description: Can't be targeted by any (ACTION).
+        description: Can't be targeted by any (ACTION) or (AURA).
         id: T023
 
   metadata:
