@@ -200,18 +200,19 @@ class TraitType(Enum):
         return self._description_
 
 
-class Card(ABC):
-
-    @abstractmethod
-    def get_color(self) -> Color:
-        pass
-
+class CardData(ABC):
     @abstractmethod
     def get_id(self) -> str:
         pass
 
     @abstractmethod
     def get_name(self) -> str:
+        pass
+
+
+class Card(CardData):
+    @abstractmethod
+    def get_color(self) -> Color:
         pass
 
     @abstractmethod
@@ -242,7 +243,7 @@ class TraitMetadata:
 
 
 @dataclass(frozen=True)
-class Trait:
+class Trait(CardData):
     _id_prefix: ClassVar[str] = "T"
     _trait_dict: ClassVar[Dict[str, Self]] = {}
 
@@ -256,6 +257,16 @@ class Trait:
             raise ValueError(f"Trait with ID '{self.metadata.id}' already exists")
         self._trait_dict[self.metadata.id] = self
 
+    def get_id(self) -> str:
+        return self.metadata.id
+
+    def get_name(self) -> str:
+        if not self.data.name == "":
+            return self.data.name
+        elif not self.metadata.dev_name == "":
+            return f"({self.metadata.dev_name})"
+        return ""
+
     # Class method for _trait_dict
     # Implemented a class method, so it's read-only and is documented in a way IntelliSense can read it
     @classmethod
@@ -265,6 +276,10 @@ class Trait:
         """
 
         return cls._trait_dict
+
+    @classmethod
+    def get_trait(cls, trait_id: str) -> Self:
+        return cls._trait_dict[trait_id]
 
     @classmethod
     def import_from_yaml(cls, trait_id: str) -> Self:
@@ -403,9 +418,6 @@ class Creature(Card):
             raise ValueError(f"Creature with ID '{self.metadata.id}' already exists")
         self._creature_dict[self.metadata.id] = self
 
-    def get_color(self) -> Color:
-        return self.data.color
-
     def get_id(self) -> str:
         return self.metadata.id
 
@@ -415,6 +427,9 @@ class Creature(Card):
         elif not self.metadata.dev_name == "":
             return f"({self.metadata.dev_name})"
         return ""
+
+    def get_color(self) -> Color:
+        return self.data.color
 
     def get_cost_total(self) -> int:
         return self.data.cost_total
@@ -431,6 +446,10 @@ class Creature(Card):
         """
 
         return cls._creature_dict
+
+    @classmethod
+    def get_creature(cls, creature_id: str) -> Self:
+        return cls._creature_dict[creature_id]
 
     @classmethod
     def import_from_yaml(cls, creature_id: str) -> Self:
@@ -648,6 +667,10 @@ class Effect(Card):
         return cls._effect_dict
 
     @classmethod
+    def get_effect(cls, effect_id: str) -> Self:
+        return cls._effect_dict[effect_id]
+
+    @classmethod
     def import_from_yaml(cls, effect_id: str) -> Self:
         """
         Reads the effect data from the corresponding YAML file.
@@ -779,3 +802,21 @@ def export_all_data() -> None:
     Trait.export_all_to_yaml()
     Creature.export_all_to_yaml()
     Effect.export_all_to_yaml()
+
+
+def get_card_data(card_data_id: str) -> CardData:
+    if card_data_id.startswith(Trait._id_prefix):
+        return Trait.get_trait(card_data_id)
+    if card_data_id.startswith(Creature._id_prefix):
+        return Creature.get_creature(card_data_id)
+    if card_data_id.startswith(Effect._id_prefix):
+        return Effect.get_effect(card_data_id)
+    raise ValueError(f"Card data id '{card_data_id}' has an unexpected prefix")
+
+
+def get_card(card_id: str) -> Card:
+    if card_id.startswith(Creature._id_prefix):
+        return Creature.get_creature(card_id)
+    if card_id.startswith(Effect._id_prefix):
+        return Effect.get_effect(card_id)
+    raise ValueError(f"Card id '{card_id}' has an unexpected prefix")

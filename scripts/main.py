@@ -8,7 +8,7 @@ from typing import List, Dict
 import pywintypes
 import win32com.client.gencache
 
-import scripts.yacg_python.card_data as card_data
+import scripts.yacg_python.cards as cards
 import scripts.yacg_python.illustrator_com as illustrator
 from scripts.yacg_python.common_vars import CARD_FRONT_PATH, GIT_TAG_NAME
 
@@ -49,7 +49,7 @@ def export_to_tiff(document: illustrator.Document, tiff_path: Path) -> None:
     document.Export(tiff_path, illustrator.constants.aiTIFF, export_options)
 
 
-def create_card(card: card_data.Card, output_dir: Path) -> None:
+def create_card(card: cards.Card, output_dir: Path) -> None:
     app = get_illustrator_app()
 
     # Card front
@@ -75,7 +75,7 @@ def create_card(card: card_data.Card, output_dir: Path) -> None:
     os.remove(card_back_document_path)
 
 
-def create_card_front(card: card_data.Card, document: illustrator.Document) -> None:
+def create_card_front(card: cards.Card, document: illustrator.Document) -> None:
     if not document.Layers.Count == 5:
         raise IllustratorTemplateError(f"Expected 5 layers, found {document.Layers.Count} instead")
 
@@ -110,14 +110,14 @@ def create_card_front(card: card_data.Card, document: illustrator.Document) -> N
     aux_layer.Visible = False
 
 
-def create_card_front_non_creature_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
-    if isinstance(card, card_data.Creature):
+def create_card_front_non_creature_layer(card: cards.Card, layer: illustrator.Layer) -> None:
+    if isinstance(card, cards.Creature):
         # This layer isn't used by creature cards
         layer.Visible = False
         return
 
     # If we're here, card is an effect
-    card: card_data.Effect
+    card: cards.Effect
     layer.Visible = True
 
     # Validate and select card icon - START
@@ -130,9 +130,9 @@ def create_card_front_non_creature_layer(card: card_data.Card, layer: illustrato
         "FieldIcon": False,
     }
     group_item_name_to_effect_type = {
-        "AuraIcon": card_data.EffectType.AURA,
-        "ActionIcon": card_data.EffectType.ACTION,
-        "FieldIcon": card_data.EffectType.FIELD,
+        "AuraIcon": cards.EffectType.AURA,
+        "ActionIcon": cards.EffectType.ACTION,
+        "FieldIcon": cards.EffectType.FIELD,
     }
     for i in range(1, 4):
         group_item = layer.GroupItems.Item(i)
@@ -190,6 +190,7 @@ def create_card_front_non_creature_layer(card: card_data.Card, layer: illustrato
     auxiliary_style.ApplyTo(description_text_frame.TextRange, True)
 
     description_text_frame.Contents = card.data.description
+    replace_refs(description_text_frame)
     icons_indexes = replace_keywords_with_icons(description_text_frame)
     for i in range(1, len(description_text_frame.Contents) + 1):
         if i in icons_indexes:
@@ -199,14 +200,14 @@ def create_card_front_non_creature_layer(card: card_data.Card, layer: illustrato
     # Validate and fill in card description - END
 
 
-def create_card_front_creature_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
-    if isinstance(card, card_data.Effect):
+def create_card_front_creature_layer(card: cards.Card, layer: illustrator.Layer) -> None:
+    if isinstance(card, cards.Effect):
         # This layer isn't used by effect cards
         layer.Visible = False
         return
 
     # If we're here, card is a creature
-    card: card_data.Creature
+    card: cards.Creature
     layer.Visible = True
 
     # Validate and fill in card's stats - START
@@ -314,6 +315,7 @@ def create_card_front_creature_layer(card: card_data.Card, layer: illustrator.La
     for paragraph_index, trait_name in enumerate(trait_names, start=1):
         paragraph = description_text_frame.Paragraphs.Item(paragraph_index)
 
+        replace_refs(paragraph)
         icons_indexes = replace_keywords_with_icons(paragraph)
         for i in range(1, len(trait_name) + 2):  # Includes the space after trait name
             trait_name_style.ApplyTo(paragraph.Characters.Item(i), True)
@@ -371,7 +373,32 @@ def replace_keywords_with_icons(text_frame: illustrator.TextFrame) -> List[int]:
     return icons_indexes
 
 
-def create_card_front_base_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
+def replace_refs(text_frame: illustrator.TextFrame) -> None:
+    """
+    Replaces all references in card with the corresponding name
+    """
+
+    substitute_pattern_string = r"\(REF\:(?P<card_data_id>.+?)\)"
+    substitute_pattern = re.compile(substitute_pattern_string, re.NOFLAG)
+
+    def replacement(match):
+        card_data_id = match["card_data_id"]
+        card_data = cards.get_card_data(card_data_id)
+        name = card_data.get_name()
+        if name == "":
+            if isinstance(card_data, cards.Card):
+                return f"(Card {card_data_id})"
+            else:
+                return f"(Trait {card_data_id})"
+        return name
+
+    text_frame.Contents = substitute_pattern.sub(
+        replacement,
+        text_frame.Contents
+    )
+
+
+def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> None:
     if not layer.PageItems.Count == 10:
         raise IllustratorTemplateError(
             f"Expected base layer to have 10 sub items, found {layer.PathItems.Count} instead")
@@ -431,18 +458,18 @@ def create_card_front_base_layer(card: card_data.Card, layer: illustrator.Layer)
             page_item.Hidden = True
 
 
-def create_card_front_background_color_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
+def create_card_front_background_color_layer(card: cards.Card, layer: illustrator.Layer) -> None:
     group_item_names_to_color = {
-        "BackgroundNone": card_data.Color.NONE,
-        "BackgroundBlack": card_data.Color.BLACK,
-        "BackgroundBlue": card_data.Color.BLUE,
-        "BackgroundCyan": card_data.Color.CYAN,
-        "BackgroundGreen": card_data.Color.GREEN,
-        "BackgroundOrange": card_data.Color.ORANGE,
-        "BackgroundPink": card_data.Color.PINK,
-        "BackgroundPurple": card_data.Color.PURPLE,
-        "BackgroundWhite": card_data.Color.WHITE,
-        "BackgroundYellow": card_data.Color.YELLOW,
+        "BackgroundNone": cards.Color.NONE,
+        "BackgroundBlack": cards.Color.BLACK,
+        "BackgroundBlue": cards.Color.BLUE,
+        "BackgroundCyan": cards.Color.CYAN,
+        "BackgroundGreen": cards.Color.GREEN,
+        "BackgroundOrange": cards.Color.ORANGE,
+        "BackgroundPink": cards.Color.PINK,
+        "BackgroundPurple": cards.Color.PURPLE,
+        "BackgroundWhite": cards.Color.WHITE,
+        "BackgroundYellow": cards.Color.YELLOW,
     }
     color = card.get_color()
 
@@ -478,7 +505,7 @@ def create_card_front_background_color_layer(card: card_data.Card, layer: illust
         group_item.Hidden = not (group_item_names_to_color[group_item_name] == color)
 
 
-def create_card_back(card: card_data.Card, document: illustrator.Document) -> None:
+def create_card_back(card: cards.Card, document: illustrator.Document) -> None:
     if not document.Layers.Count == 5:
         raise IllustratorTemplateError(f"Expected 5 layers, found {document.Layers.Count} instead")
 
@@ -513,18 +540,18 @@ def create_card_back(card: card_data.Card, document: illustrator.Document) -> No
     aux_layer.Visible = False
 
 
-def create_card_back_background_color_layer(card: card_data.Card, layer: illustrator.Layer) -> None:
+def create_card_back_background_color_layer(card: cards.Card, layer: illustrator.Layer) -> None:
     group_item_names_to_color = {
-        "BackgroundNone": card_data.Color.NONE,
-        "BackgroundBlack": card_data.Color.BLACK,
-        "BackgroundBlue": card_data.Color.BLUE,
-        "BackgroundCyan": card_data.Color.CYAN,
-        "BackgroundGreen": card_data.Color.GREEN,
-        "BackgroundOrange": card_data.Color.ORANGE,
-        "BackgroundPink": card_data.Color.PINK,
-        "BackgroundPurple": card_data.Color.PURPLE,
-        "BackgroundWhite": card_data.Color.WHITE,
-        "BackgroundYellow": card_data.Color.YELLOW,
+        "BackgroundNone": cards.Color.NONE,
+        "BackgroundBlack": cards.Color.BLACK,
+        "BackgroundBlue": cards.Color.BLUE,
+        "BackgroundCyan": cards.Color.CYAN,
+        "BackgroundGreen": cards.Color.GREEN,
+        "BackgroundOrange": cards.Color.ORANGE,
+        "BackgroundPink": cards.Color.PINK,
+        "BackgroundPurple": cards.Color.PURPLE,
+        "BackgroundWhite": cards.Color.WHITE,
+        "BackgroundYellow": cards.Color.YELLOW,
     }
     color = card.get_color()
 
@@ -638,16 +665,13 @@ def create_card_back_background_color_layer(card: card_data.Card, layer: illustr
                 path_item.FillColor.Blue = 120
 
 
-card_data.import_all_data()
+cards.import_all_data()
 
 with tempfile.TemporaryDirectory() as temp_dir:
-    card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E053", "E061", "E069"]
-    # card_list = ["E053"]
+    card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E050", "E061", "E069"]
+    # card_list = ["E050"]
     for card_id in card_list:
-        if card_id[0] == "E":
-            c = card_data.Effect.get_effect_dict()[card_id]
-        else:
-            c = card_data.Creature.get_creature_dict()[card_id]
+        c = cards.get_card(card_id)
         create_card(c, Path(temp_dir))
 
     print(temp_dir)

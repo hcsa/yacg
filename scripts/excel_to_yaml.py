@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import xlwings as xw
 
-import scripts.yacg_python.card_data as card_data
+import scripts.yacg_python.cards as card_data
 from scripts.yacg_python.common_vars import EXCEL_PATH
 
 
@@ -102,7 +102,7 @@ def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
 
     for _, row in df.iterrows():
         traits = [
-            card_data.Trait.get_trait_dict()[row[f"id-trait-{i}"].strip()]
+            card_data.Trait.get_trait(row[f"id-trait-{i}"].strip())
             for i in range(1, 5)
             if not row[f"id-trait-{i}"].strip() == ""
         ]
