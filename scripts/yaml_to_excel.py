@@ -33,7 +33,6 @@ def copy_excel_template():
 
 def export_to_excel():
     with xw.App(visible=False) as app:
-        app.visible = True
         excel_book = app.books.open(str(EXCEL_PATH))
 
         export_to_traits_sheet(excel_book.sheets["Traits"])
