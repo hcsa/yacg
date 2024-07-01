@@ -22,18 +22,18 @@ class IllustratorTemplateError(ValueError):
         super().__init__(message)
 
 
-def get_illustrator_app() -> illustrator._Application:
+def get_illustrator_app() -> illustrator.Application:
     """
     If Illustrator is open, returns the opened application.
     Otherwise, opens a new one and returns it.
     """
 
     try:
-        app: illustrator._Application = win32com.client.GetActiveObject("Illustrator.Application")._dispobj_
+        app: illustrator.Application = win32com.client.GetActiveObject("Illustrator.Application")._dispobj_
         # If this doesn't return com_error, then an Illustrator app was already open
     except pywintypes.com_error:
         # The Illustrator app wasn't open, open it
-        app: illustrator._Application = win32com.client.Dispatch("Illustrator.Application")
+        app: illustrator.Application = win32com.client.Dispatch("Illustrator.Application")
     return app
 
 
@@ -53,8 +53,8 @@ def create_card(card: card_data.Card, output_dir: Path) -> None:
     app = get_illustrator_app()
 
     # Card front
-    card_front_path = output_dir / f"{card.metadata.id}_front"  # Extension is added on export
-    card_front_document_path = output_dir / f"{card.metadata.id}_front.temp"
+    card_front_path = output_dir / f"{card.get_id()}_front"  # Extension is added on export
+    card_front_document_path = output_dir / f"{card.get_id()}_front.temp"
 
     shutil.copy2(CARD_FRONT_PATH, card_front_document_path)
     card_front_document = app.Open(card_front_document_path)
@@ -64,8 +64,8 @@ def create_card(card: card_data.Card, output_dir: Path) -> None:
     os.remove(card_front_document_path)
 
     # Card back
-    card_back_path = output_dir / f"{card.metadata.id}_back"  # Extension is added on export
-    card_back_document_path = output_dir / f"{card.metadata.id}_back.temp"
+    card_back_path = output_dir / f"{card.get_id()}_back"  # Extension is added on export
+    card_back_document_path = output_dir / f"{card.get_id()}_back.temp"
 
     shutil.copy2(CARD_FRONT_PATH, card_back_document_path)
     card_back_document = app.Open(card_back_document_path)
@@ -402,22 +402,16 @@ def create_card_front_base_layer(card: card_data.Card, layer: illustrator.Layer)
 
         if page_item_name == "Title":
             page_item.Hidden = False
-            if not card.data.name == "":
-                contents = card.data.name
-            elif not card.metadata.dev_name == "":
-                contents = f"({card.metadata.dev_name})"
-            else:
-                contents = ""
-            page_item.Contents = contents
+            page_item.Contents = card.get_name()
         elif page_item_name == "CostTotalText":
             page_item.Hidden = False
-            page_item.Contents = str(card.data.cost_total)
+            page_item.Contents = str(card.get_cost_total())
         elif page_item_name == "CostColorText":
             page_item.Hidden = False
-            page_item.Contents = str(card.data.cost_color)
+            page_item.Contents = str(card.get_cost_color())
         elif page_item_name == "CostNonColorText":
             page_item.Hidden = False
-            page_item.Contents = str(card.data.cost_total - card.data.cost_color)
+            page_item.Contents = str(card.get_cost_total() - card.get_cost_color())
         elif page_item_name == "CostNonColorBackground":
             page_item.Hidden = False
         elif page_item_name == "ImageBorder":
@@ -427,9 +421,9 @@ def create_card_front_base_layer(card: card_data.Card, layer: illustrator.Layer)
         elif page_item_name == "Identifier":
             page_item.Hidden = False
             if GIT_TAG_NAME is None:
-                contents = f"TEST | {card.metadata.id}"
+                contents = f"TEST | {card.get_id()}"
             else:
-                contents = f"{GIT_TAG_NAME} | {card.metadata.id}"
+                contents = f"{GIT_TAG_NAME} | {card.get_id()}"
             page_item.Contents = contents
         elif page_item_name == "OuterBorderLine":
             page_item.Hidden = True
@@ -450,7 +444,7 @@ def create_card_front_background_color_layer(card: card_data.Card, layer: illust
         "BackgroundWhite": card_data.Color.WHITE,
         "BackgroundYellow": card_data.Color.YELLOW,
     }
-    color: card_data.Color = card.data.color
+    color = card.get_color()
 
     if not layer.GroupItems.Count == 10:
         raise IllustratorTemplateError(
@@ -532,7 +526,7 @@ def create_card_back_background_color_layer(card: card_data.Card, layer: illustr
         "BackgroundWhite": card_data.Color.WHITE,
         "BackgroundYellow": card_data.Color.YELLOW,
     }
-    color: card_data.Color = card.data.color
+    color = card.get_color()
 
     if not layer.GroupItems.Count == 10:
         raise IllustratorTemplateError(
@@ -651,10 +645,10 @@ with tempfile.TemporaryDirectory() as temp_dir:
     # card_list = ["E053"]
     for card_id in card_list:
         if card_id[0] == "E":
-            card = card_data.Effect.get_effect_dict()[card_id]
+            c = card_data.Effect.get_effect_dict()[card_id]
         else:
-            card = card_data.Creature.get_creature_dict()[card_id]
-        create_card(card, Path(temp_dir))
+            c = card_data.Creature.get_creature_dict()[card_id]
+        create_card(c, Path(temp_dir))
 
     print(temp_dir)
     print("HERE")

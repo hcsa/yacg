@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, Optional, Self, ClassVar, List
@@ -199,8 +200,27 @@ class TraitType(Enum):
         return self._description_
 
 
-class Card:
-    pass
+class Card(ABC):
+
+    @abstractmethod
+    def get_color(self) -> Color:
+        pass
+
+    @abstractmethod
+    def get_id(self) -> str:
+        pass
+
+    @abstractmethod
+    def get_name(self) -> str:
+        pass
+
+    @abstractmethod
+    def get_cost_total(self) -> int:
+        pass
+
+    @abstractmethod
+    def get_cost_color(self) -> int:
+        pass
 
 
 @dataclass(frozen=True)
@@ -382,6 +402,25 @@ class Creature(Card):
         if self.metadata.id in self._creature_dict:
             raise ValueError(f"Creature with ID '{self.metadata.id}' already exists")
         self._creature_dict[self.metadata.id] = self
+
+    def get_color(self) -> Color:
+        return self.data.color
+
+    def get_id(self) -> str:
+        return self.metadata.id
+
+    def get_name(self) -> str:
+        if not self.data.name == "":
+            return self.data.name
+        elif not self.metadata.dev_name == "":
+            return f"({self.metadata.dev_name})"
+        return ""
+
+    def get_cost_total(self) -> int:
+        return self.data.cost_total
+
+    def get_cost_color(self) -> int:
+        return self.data.cost_color
 
     # Class method for _creature_dict
     # Implemented a class method, so it's read-only and is documented in a way IntelliSense can read it
@@ -578,6 +617,25 @@ class Effect(Card):
         if self.metadata.id in self._effect_dict:
             raise ValueError(f"Effect with ID '{self.metadata.id}' already exists")
         self._effect_dict[self.metadata.id] = self
+
+    def get_color(self) -> Color:
+        return self.data.color
+
+    def get_id(self) -> str:
+        return self.metadata.id
+
+    def get_name(self) -> str:
+        if not self.data.name == "":
+            return self.data.name
+        elif not self.metadata.dev_name == "":
+            return f"({self.metadata.dev_name})"
+        return ""
+
+    def get_cost_total(self) -> int:
+        return self.data.cost_total
+
+    def get_cost_color(self) -> int:
+        return self.data.cost_color
 
     # Class method for _effect_dict
     # Implemented a class method, so it's read-only and is documented in a way IntelliSense can read it
