@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Don't mind if I do
+    color: 
+    type: Field
+    cost-total: 
+    cost-color: 
+    description: |
+      Whenever opponent draws a card, you may pay 1 (NOCOLOR). If you do, draw a card.
+
+  metadata:
+    id: E085
+    dev-stage: Conception
+    dev-name: 
+    order: 1007
+    summary: 
+    notes: |
+      

@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Mental toll
+    color: Pink
+    type: Field
+    cost-total: 
+    cost-color: 
+    description: |
+      Whenever opponent draws a card, they must pay (NOCOLOR). If they don't, they can't draw that card.
+
+  metadata:
+    id: E087
+    dev-stage: Conception
+    dev-name: 
+    order: 1009
+    summary: Cost on card draw
+    notes: |
+      
