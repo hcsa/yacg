@@ -3,14 +3,14 @@ import re
 import shutil
 import tempfile
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Any
 
 import pywintypes
 import win32com.client.gencache
 
 import scripts.yacg_python.cards as cards
 import scripts.yacg_python.illustrator_com as illustrator
-from scripts.yacg_python.common_vars import CARD_FRONT_PATH, GIT_TAG_NAME
+from scripts.yacg_python.common_vars import CARD_TEMPLATE_PATH, GIT_TAG_NAME
 
 
 class IllustratorTemplateError(ValueError):
@@ -37,7 +37,7 @@ def get_illustrator_app() -> illustrator.Application:
     return app
 
 
-def export_to_tiff(document: illustrator.Document, tiff_path: Path) -> None:
+def export_to_tiff(document: illustrator.Document, file_path: Path) -> None:
     export_options = illustrator.ExportOptionsTIFF()
     export_options.AntiAliasing = illustrator.constants.aiArtOptimized
     export_options.ByteOrder = illustrator.constants.aiIBMPC
@@ -46,7 +46,159 @@ def export_to_tiff(document: illustrator.Document, tiff_path: Path) -> None:
     export_options.Resolution = 400
     export_options.SaveMultipleArtboards = False
 
-    document.Export(tiff_path, illustrator.constants.aiTIFF, export_options)
+    # We use .with_suffix("") to remove extension, because it's added automatically
+    document.Export(file_path.with_suffix(""), illustrator.constants.aiTIFF, export_options)
+
+
+def get_style_description(text_frame: illustrator.TextFrame) -> illustrator.CharacterStyle:
+    style_name = "Description"
+    try:
+        style = text_frame.Layer.Parent.CharacterStyles.Item(style_name)
+    except pywintypes.com_error:
+        raise IllustratorTemplateError(f"Failed to find a character style named '{style_name}'")
+    return style
+
+
+def get_style_trait_name(text_frame: illustrator.TextFrame) -> illustrator.CharacterStyle:
+    style_name = "Trait Name"
+    try:
+        style = text_frame.Layer.Parent.CharacterStyles.Item(style_name)
+    except pywintypes.com_error:
+        raise IllustratorTemplateError(f"Failed to find a character style named '{style_name}'")
+    return style
+
+
+def get_style_icons(text_frame: illustrator.TextFrame) -> illustrator.CharacterStyle:
+    style_name = "Icons"
+    try:
+        style = text_frame.Layer.Parent.CharacterStyles.Item(style_name)
+    except pywintypes.com_error:
+        raise IllustratorTemplateError(f"Failed to find a character style named '{style_name}'")
+    return style
+
+
+def prepare_text_frame(text_frame: illustrator.TextFrame) -> None:
+    """
+    Sets the character style of the text frame to the auxiliary character style.
+
+    This function should be called when either:
+    - The text frame's contents have multiple styles. Changing the contents of text that has multiple styles makes
+    Illustrator confused, so it's needed to have a single style before changing contents.
+    - The text frame will have icons. The icons are encoded as special Unicode characters that almost all fonts don't
+    implement. If a character is set to a style whose font doesn't have that character, bugs happen. The auxiliary
+    character style implements these special characters.
+    """
+
+    style_name = "Auxiliary"
+    try:
+        style: illustrator.CharacterStyle = text_frame.Layer.Parent.CharacterStyles.Item(style_name)
+    except pywintypes.com_error:
+        raise IllustratorTemplateError(f"Failed to find a character style named '{style_name}'")
+    style.ApplyTo(text_frame.TextRange, True)
+
+
+def get_all_page_items_by_name(parent: Any, page_item_names: List[str]) -> Dict[str, Any]:
+    """
+    Returns a dict with the page items name as keys and the page items as values.
+
+    - Parent must have the "PageItems" property.
+    - The list of page item names must be exhaustive.
+    """
+
+    parent_name = parent.Name
+
+    if not parent.PageItems.Count == len(page_item_names):
+        raise IllustratorTemplateError(
+            f"Object '{parent_name}': expected {len(page_item_names)} page items, found {parent.PageItems.Count} "
+            f"instead"
+        )
+
+    page_items_dict: Dict[str, Any] = {}
+    for i in range(1, len(page_item_names) + 1):
+        page_item = parent.PageItems.Item(i)
+        page_item_name = page_item.Name
+        if page_item_name not in page_item_names:
+            raise IllustratorTemplateError(
+                f"Object '{parent_name}', page item with index {i}: expected to have a name in the list "
+                f"{page_item_names}, found name '{page_item_name}' instead"
+            )
+        if page_item_name in page_items_dict:
+            raise IllustratorTemplateError(
+                f"bject '{parent_name}': found two page items with the name '{page_item_name}'"
+            )
+        page_items_dict[page_item_name] = page_item
+
+    return page_items_dict
+
+
+def replace_keywords_with_icons(text_frame: illustrator.TextFrame) -> List[int]:
+    """
+    Replaces all keywords in the text frame with the respective icons
+    Returns the index of the icons (1-indexed)
+    """
+
+    keyword_to_character_dict: Dict[str, str] = {
+        "(CREATURE)": "\uE100",
+        "(ACTION)": "\uE101",
+        "(AURA)": "\uE102",
+        "(FIELD)": "\uE103",
+        "(HP)": "\uE200",
+        "(ATK)": "\uE201",
+        "(SPE)": "\uE202",
+        "(NOCOLOR)": "\uE300",
+        "(BLACK)": "\uE301",
+        "(BLUE)": "\uE302",
+        "(CYAN)": "\uE303",
+        "(GREEN)": "\uE304",
+        "(ORANGE)": "\uE305",
+        "(PINK)": "\uE306",
+        "(PURPLE)": "\uE307",
+        "(WHITE)": "\uE308",
+        "(YELLOW)": "\uE309",
+    }
+
+    substitute_pattern_string = "|".join(
+        re.escape(key) for key in keyword_to_character_dict  # Escape the values because they have special characters
+    )
+    substitute_pattern = re.compile(substitute_pattern_string, re.NOFLAG)
+    text_frame.Contents = substitute_pattern.sub(
+        lambda match: keyword_to_character_dict[match.group(0)],
+        text_frame.Contents
+    )
+
+    find_icons_pattern_string = "|".join(keyword_to_character_dict.values())
+    find_icons_pattern = re.compile(find_icons_pattern_string, re.NOFLAG)
+    icons_indexes = [
+        match.start() + 1
+        for match in find_icons_pattern.finditer(text_frame.Contents)
+    ]
+
+    return icons_indexes
+
+
+def replace_card_refs(text_frame: illustrator.TextFrame) -> None:
+    """
+    Replaces all references in card with the corresponding name
+    """
+
+    substitute_pattern_string = r"\(REF\:(?P<card_data_id>.+?)\)"
+    substitute_pattern = re.compile(substitute_pattern_string, re.NOFLAG)
+
+    def replacement(match):
+        card_data_id = match["card_data_id"]
+        card_data = cards.get_card_data(card_data_id)
+        name = card_data.get_name()
+        if name == "":
+            if isinstance(card_data, cards.Card):
+                return f"(Card {card_data_id})"
+            else:
+                return f"(Trait {card_data_id})"
+        return name
+
+    text_frame.Contents = substitute_pattern.sub(
+        replacement,
+        text_frame.Contents
+    )
 
 
 def create_card(card: cards.Card, output_dir: Path) -> None:
@@ -56,7 +208,7 @@ def create_card(card: cards.Card, output_dir: Path) -> None:
     card_front_path = output_dir / f"{card.get_id()}_front"  # Extension is added on export
     card_front_document_path = output_dir / f"{card.get_id()}_front.temp"
 
-    shutil.copy2(CARD_FRONT_PATH, card_front_document_path)
+    shutil.copy2(CARD_TEMPLATE_PATH, card_front_document_path)
     card_front_document = app.Open(card_front_document_path)
     create_card_front(card, card_front_document)
     export_to_tiff(card_front_document, card_front_path)
@@ -67,7 +219,7 @@ def create_card(card: cards.Card, output_dir: Path) -> None:
     card_back_path = output_dir / f"{card.get_id()}_back"  # Extension is added on export
     card_back_document_path = output_dir / f"{card.get_id()}_back.temp"
 
-    shutil.copy2(CARD_FRONT_PATH, card_back_document_path)
+    shutil.copy2(CARD_TEMPLATE_PATH, card_back_document_path)
     card_back_document = app.Open(card_back_document_path)
     create_card_back(card, card_back_document)
     export_to_tiff(card_back_document, card_back_path)
@@ -120,84 +272,31 @@ def create_card_front_non_creature_layer(card: cards.Card, layer: illustrator.La
     card: cards.Effect
     layer.Visible = True
 
-    # Validate and select card icon - START
-    if not layer.GroupItems.Count == 3:
-        raise IllustratorTemplateError(
-            f"Expected non-creature layer to have 3 group items, found {layer.GroupItems.Count} instead")
-    group_item_names_found = {
-        "AuraIcon": False,
-        "ActionIcon": False,
-        "FieldIcon": False,
-    }
-    group_item_name_to_effect_type = {
-        "AuraIcon": cards.EffectType.AURA,
-        "ActionIcon": cards.EffectType.ACTION,
-        "FieldIcon": cards.EffectType.FIELD,
-    }
-    for i in range(1, 4):
-        group_item = layer.GroupItems.Item(i)
-        group_item_name = group_item.Name
-        if group_item_name not in group_item_names_found.keys():
-            raise IllustratorTemplateError(
-                f"Expected non-creature layer's group item {i} to have a name in the list "
-                f"{list(group_item_names_found.keys())}, found name '{group_item_name}' instead"
-            )
-        if group_item_names_found[group_item_name]:
-            raise IllustratorTemplateError(
-                f"In non-creature layer, found two group items with the name '{group_item_name}'")
-        group_item_names_found[group_item_name] = True
-        effect_type = group_item_name_to_effect_type[group_item_name]
+    page_items = get_all_page_items_by_name(
+        layer,
+        ["AuraIcon", "ActionIcon", "FieldIcon", "Description"]
+    )
 
-        if effect_type == card.data.type:
-            group_item.Hidden = False
-        else:
-            group_item.Hidden = True
-    # Validate and select card icon - END
+    page_items["AuraIcon"].Hidden = (not card.data.type == cards.EffectType.AURA)
+    page_items["ActionIcon"].Hidden = (not card.data.type == cards.EffectType.AURA)
+    page_items["FieldIcon"].Hidden = (not card.data.type == cards.EffectType.AURA)
+    create_card_front_non_creature_layer_description(card, page_items["Description"])
 
-    # Validate and fill in card description - START
-    if not layer.TextFrames.Count == 1:
-        raise IllustratorTemplateError(
-            f"Expected non-creature layer to have 1 text frame, found {layer.TextFrames.Count} instead"
-        )
-    description_text_frame = layer.TextFrames.Item(1)
 
-    # Load required fonts
-    description_style_name = "Description"
-    icon_style_name = "Icons"
-    auxiliary_style_name = "Auxiliary"
-    try:
-        trait_description_style = layer.Parent.CharacterStyles.Item(description_style_name)
-    except pywintypes.com_error:
-        raise IllustratorTemplateError(f"Failed to find a character style named '{description_style_name}'")
-    try:
-        icon_style = layer.Parent.CharacterStyles.Item(icon_style_name)
-    except pywintypes.com_error:
-        raise IllustratorTemplateError(f"Failed to find a character style named '{icon_style_name}'")
-    try:
-        auxiliary_style = layer.Parent.CharacterStyles.Item(auxiliary_style_name)
-    except pywintypes.com_error:
-        raise IllustratorTemplateError(f"Failed to find a character style named '{auxiliary_style_name}'")
+def create_card_front_non_creature_layer_description(card: cards.Effect, description: illustrator.TextFrame) -> None:
+    description_style = get_style_description(description)
+    icons_style = get_style_icons(description)
 
-    # If we change the contents of text that has multiple styles, Illustrator's styles get confused and bugs happen.
-    # To avoid this, we first set all contents to a single style, then change the content's text, then apply the
-    # different styles.
+    prepare_text_frame(description)
 
-    # Some of the text will be icons, which are special Unicode characters.
-    # Almost all fonts don't have these characters.
-    # If a character is set to a style whose font doesn't have that character, bugs happen.
-    # That's why we need to start by setting the whole text to the auxiliary style: its font has all Basic Latin
-    # characters, plus the special characters for icons.
-    auxiliary_style.ApplyTo(description_text_frame.TextRange, True)
-
-    description_text_frame.Contents = card.data.description
-    replace_refs(description_text_frame)
-    icons_indexes = replace_keywords_with_icons(description_text_frame)
-    for i in range(1, len(description_text_frame.Contents) + 1):
+    description.Contents = card.data.description
+    replace_card_refs(description)
+    icons_indexes = replace_keywords_with_icons(description)
+    for i in range(1, len(description.Contents) + 1):
         if i in icons_indexes:
-            icon_style.ApplyTo(description_text_frame.Characters.Item(i), True)
+            icons_style.ApplyTo(description.Characters.Item(i), True)
         else:
-            trait_description_style.ApplyTo(description_text_frame.Characters.Item(i), True)
-    # Validate and fill in card description - END
+            description_style.ApplyTo(description.Characters.Item(i), True)
 
 
 def create_card_front_creature_layer(card: cards.Card, layer: illustrator.Layer) -> None:
@@ -210,253 +309,138 @@ def create_card_front_creature_layer(card: cards.Card, layer: illustrator.Layer)
     card: cards.Creature
     layer.Visible = True
 
-    # Validate and fill in card's stats - START
-    if not layer.GroupItems.Count == 4:
+    page_items = get_all_page_items_by_name(
+        layer,
+        ["CreatureIcon", "Health", "Attack", "Speed", "Description"]
+    )
+
+    page_items["CreatureIcon"].Hidden = False
+    create_card_front_creature_layer_stat_group(card, page_items["Health"])
+    create_card_front_creature_layer_stat_group(card, page_items["Attack"])
+    create_card_front_creature_layer_stat_group(card, page_items["Speed"])
+    create_card_front_creature_layer_description(card, page_items["Description"])
+
+
+def create_card_front_creature_layer_stat_group(card: cards.Creature, stat_group: illustrator.GroupItem) -> None:
+    stat_group_name = stat_group.Name
+
+    if not stat_group.TextFrames.Count == 1:
         raise IllustratorTemplateError(
-            f"Expected 'CreatureLayer' to have 4 group items, found {layer.GroupItems.Count} instead")
-    group_item_names_found = {
-        "CreatureIcon": False,
-        "Health": False,
-        "Attack": False,
-        "Speed": False,
-    }
-    for i in range(1, 5):
-        group_item = layer.GroupItems.Item(i)
-        group_item_name = group_item.Name
-        if group_item_name not in group_item_names_found.keys():
-            raise IllustratorTemplateError(
-                f"Expected creature layer's group item {i} to have a name in the list "
-                f"{list(group_item_names_found.keys())}, found name '{group_item_name}' instead"
-            )
-        if group_item_names_found[group_item_name]:
-            raise IllustratorTemplateError(
-                f"In creature layer, found two group items with the name '{group_item_name}'")
-        group_item_names_found[group_item_name] = True
-
-        if group_item_name == "CreatureIcon":
-            continue
-
-        # If we're here, we're looking at one of the 3 creature's stats
-        if not group_item.TextFrames.Count == 1:
-            raise IllustratorTemplateError(
-                f"Expected non-creature layer's '{group_item_name}' to have 1 text frame, found "
-                f"{group_item.TextFrames.Count} instead")
-        stat_value_text_frame = group_item.TextFrames.Item(1)
-        if group_item_name == "Health":
-            stat_value_text_frame.Contents = str(card.data.hp)
-        elif group_item_name == "Attack":
-            stat_value_text_frame.Contents = str(card.data.atk)
-        else:
-            stat_value_text_frame.Contents = str(card.data.spe)
-    # Validate and fill in card's stats - END
-
-    # Validate and fill in card's description - START
-    if not layer.TextFrames.Count == 1:
-        raise IllustratorTemplateError(
-            f"Expected non-creature layer to have 1 text frame, found {layer.TextFrames.Count} instead"
+            f"Layer 'CreatureLayer', page item '{stat_group_name}': expected 1 text frame, found "
+            f"{stat_group.TextFrames.Count} instead"
         )
-    description_text_frame = layer.TextFrames.Item(1)
 
-    # Load required fonts
-    description_style_name = "Description"
-    trait_name_style_name = "Trait Name"
-    icon_style_name = "Icons"
-    auxiliary_style_name = "Auxiliary"
-    try:
-        trait_name_style = layer.Parent.CharacterStyles.Item(trait_name_style_name)
-    except pywintypes.com_error:
-        raise IllustratorTemplateError(f"Failed to find a character style named '{trait_name_style_name}'")
-    try:
-        trait_description_style = layer.Parent.CharacterStyles.Item(description_style_name)
-    except pywintypes.com_error:
-        raise IllustratorTemplateError(f"Failed to find a character style named '{description_style_name}'")
-    try:
-        icon_style = layer.Parent.CharacterStyles.Item(icon_style_name)
-    except pywintypes.com_error:
-        raise IllustratorTemplateError(f"Failed to find a character style named '{icon_style_name}'")
-    try:
-        auxiliary_style = layer.Parent.CharacterStyles.Item(auxiliary_style_name)
-    except pywintypes.com_error:
-        raise IllustratorTemplateError(f"Failed to find a character style named '{auxiliary_style_name}'")
+    stat_text_frame = stat_group.TextFrames.Item(1)
+    if stat_group_name == "Health":
+        stat_text_frame.Contents = str(card.data.hp)
+    elif stat_group_name == "Attack":
+        stat_text_frame.Contents = str(card.data.atk)
+    elif stat_group_name == "Speed":
+        stat_text_frame.Contents = str(card.data.spe)
 
-    # If we change the contents of text that has multiple styles, Illustrator's styles get confused and bugs happen.
-    # To avoid this, we first set all contents to a single style, then change the content's text, then apply the
-    # different styles.
 
-    # Some of the text will be icons, which are special Unicode characters.
-    # Almost all fonts don't have these characters.
-    # If a character is set to a style whose font doesn't have that character, bugs happen.
-    # That's why we need to start by setting the whole text to the auxiliary style: its font has all Basic Latin
-    # characters, plus the special characters for icons.
-    auxiliary_style.ApplyTo(description_text_frame.TextRange, True)
+def create_card_front_creature_layer_description(card: cards.Creature, description: illustrator.TextFrame) -> None:
+    description_style = get_style_description(description)
+    trait_name_style = get_style_trait_name(description)
+    icons_style = get_style_icons(description)
+
+    prepare_text_frame(description)
+    description.Contents = ""
 
     # Stores trait names. Will be used later to format the trait names
     trait_names: List[str] = []
 
     # Fill in contents
-    description_text_frame.Contents = ""
     for trait_index, trait in enumerate(card.data.traits, start=1):
         if trait_index > 1:
             # This isn't the first trait added
             # So we must add a new line to separate from the previous trait
-            description_text_frame.Contents = description_text_frame.Contents + "\r"
+            description.Contents = description.Contents + "\r"
 
         # Add trait name and description
-        # (If name is empty, use dev name instead)
-        trait_name = trait.data.name
-        if trait_name == "":
-            trait_name = f"({trait.metadata.dev_name})"
-        trait_text = f"{trait_name} {trait.data.description}"
-        description_text_frame.Contents = description_text_frame.Contents + trait_text
+        trait_name = trait.get_name()
+        description.Contents = description.Contents + f"{trait_name} {trait.data.description}"
 
         trait_names.append(trait_name)
 
-    # Format context by paragraph
+    # Format contents by paragraph
     for paragraph_index, trait_name in enumerate(trait_names, start=1):
-        paragraph = description_text_frame.Paragraphs.Item(paragraph_index)
+        paragraph = description.Paragraphs.Item(paragraph_index)
 
-        replace_refs(paragraph)
+        replace_card_refs(paragraph)
         icons_indexes = replace_keywords_with_icons(paragraph)
+
         for i in range(1, len(trait_name) + 2):  # Includes the space after trait name
             trait_name_style.ApplyTo(paragraph.Characters.Item(i), True)
 
         for i in range(len(trait_name) + 2, len(paragraph.Contents) + 1):
             if i in icons_indexes:
-                icon_style.ApplyTo(paragraph.Characters.Item(i), True)
+                icons_style.ApplyTo(paragraph.Characters.Item(i), True)
             else:
-                trait_description_style.ApplyTo(paragraph.Characters.Item(i), True)
-    # Validate and fill in card's description - END
-
-
-def replace_keywords_with_icons(text_frame: illustrator.TextFrame) -> List[int]:
-    """
-    Replaces all keywords in the text frame with the respective icons
-    Returns the index of the icons (1-indexed)
-    """
-
-    keyword_to_character_dict: Dict[str, str] = {
-        "(CREATURE)": "\uE100",
-        "(ACTION)": "\uE101",
-        "(AURA)": "\uE102",
-        "(FIELD)": "\uE103",
-        "(HP)": "\uE200",
-        "(ATK)": "\uE201",
-        "(SPE)": "\uE202",
-        "(NOCOLOR)": "\uE300",
-        "(BLACK)": "\uE301",
-        "(BLUE)": "\uE302",
-        "(CYAN)": "\uE303",
-        "(GREEN)": "\uE304",
-        "(ORANGE)": "\uE305",
-        "(PINK)": "\uE306",
-        "(PURPLE)": "\uE307",
-        "(WHITE)": "\uE308",
-        "(YELLOW)": "\uE309",
-    }
-
-    substitute_pattern_string = "|".join(
-        re.escape(key) for key in keyword_to_character_dict  # Escape the values because they have special characters
-    )
-    substitute_pattern = re.compile(substitute_pattern_string, re.NOFLAG)
-    text_frame.Contents = substitute_pattern.sub(
-        lambda match: keyword_to_character_dict[match.group(0)],
-        text_frame.Contents
-    )
-
-    find_icons_pattern_string = "|".join(keyword_to_character_dict.values())
-    find_icons_pattern = re.compile(find_icons_pattern_string, re.NOFLAG)
-    icons_indexes = [
-        match.start() + 1
-        for match in find_icons_pattern.finditer(text_frame.Contents)
-    ]
-
-    return icons_indexes
-
-
-def replace_refs(text_frame: illustrator.TextFrame) -> None:
-    """
-    Replaces all references in card with the corresponding name
-    """
-
-    substitute_pattern_string = r"\(REF\:(?P<card_data_id>.+?)\)"
-    substitute_pattern = re.compile(substitute_pattern_string, re.NOFLAG)
-
-    def replacement(match):
-        card_data_id = match["card_data_id"]
-        card_data = cards.get_card_data(card_data_id)
-        name = card_data.get_name()
-        if name == "":
-            if isinstance(card_data, cards.Card):
-                return f"(Card {card_data_id})"
-            else:
-                return f"(Trait {card_data_id})"
-        return name
-
-    text_frame.Contents = substitute_pattern.sub(
-        replacement,
-        text_frame.Contents
-    )
+                description_style.ApplyTo(paragraph.Characters.Item(i), True)
 
 
 def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> None:
-    if not layer.PageItems.Count == 10:
-        raise IllustratorTemplateError(
-            f"Expected base layer to have 10 sub items, found {layer.PathItems.Count} instead")
-    page_items_names_found = {
-        "Title": False,
-        "CostTotalText": False,
-        "CostColorText": False,
-        "CostNonColorText": False,
-        "CostNonColorBackground": False,
-        "ImagePlaceholder": False,
-        "Identifier": False,
-        "OuterBorderLine": False,
-        "InnerBorderLine": False,
-    }
-    for i in range(1, 10):
-        page_item = layer.PageItems.Item(i)
-        page_item_name = page_item.Name
-        if page_item_name not in page_items_names_found.keys():
-            raise IllustratorTemplateError(
-                f"Expected base layer's sub item {i} to have a name in the list "
-                f"{list(page_items_names_found.keys())}, found name '{page_item_name}' instead"
-            )
-        if page_items_names_found[page_item_name]:
-            raise IllustratorTemplateError(
-                f"In base layer, found two sub items with the name '{page_item_name}'")
-        page_items_names_found[page_item_name] = True
+    layer.Visible = True
 
-        if page_item_name == "Title":
-            page_item.Hidden = False
-            page_item.Contents = card.get_name()
-        elif page_item_name == "CostTotalText":
-            page_item.Hidden = False
-            page_item.Contents = str(card.get_cost_total())
-        elif page_item_name == "CostColorText":
-            page_item.Hidden = False
-            page_item.Contents = str(card.get_cost_color())
-        elif page_item_name == "CostNonColorText":
-            page_item.Hidden = False
-            page_item.Contents = str(card.get_cost_total() - card.get_cost_color())
-        elif page_item_name == "CostNonColorBackground":
-            page_item.Hidden = False
-        elif page_item_name == "ImagePlaceholder":
-            page_item.Hidden = False
-        elif page_item_name == "Identifier":
-            page_item.Hidden = False
-            if GIT_TAG_NAME is None:
-                contents = f"TEST | {card.get_id()}"
-            else:
-                contents = f"{GIT_TAG_NAME} | {card.get_id()}"
-            page_item.Contents = contents
-        elif page_item_name == "OuterBorderLine":
-            page_item.Hidden = True
-        elif page_item_name == "InnerBorderLine":
-            page_item.Hidden = True
+    page_items = get_all_page_items_by_name(
+        layer,
+        [
+            "Title",
+            "CostTotalText",
+            "CostColorText",
+            "CostNonColorText",
+            "CostNonColorBackground",
+            "ImagePlaceholder",
+            "Identifier",
+            "OuterBorderLine",
+            "InnerBorderLine"
+        ]
+    )
+
+    page_items["Title"].Hidden = False
+    page_items["Title"].Contents = card.get_name()
+
+    page_items["CostTotalText"].Hidden = False
+    page_items["CostTotalText"].Contents = str(card.get_cost_total())
+
+    page_items["CostColorText"].Hidden = False
+    page_items["CostColorText"].Contents = str(card.get_cost_color())
+
+    page_items["CostNonColorText"].Hidden = False
+    page_items["CostNonColorText"].Contents = str(card.get_cost_total() - card.get_cost_color())
+
+    page_items["Identifier"].Hidden = False
+    if GIT_TAG_NAME is None:
+        page_items["Identifier"].Contents = f"TEST | {card.get_id()}"
+    else:
+        page_items["Identifier"].Contents = f"{GIT_TAG_NAME} | {card.get_id()}"
+
+    page_items["CostNonColorBackground"].Hidden = False
+    page_items["ImagePlaceholder"].Hidden = False
+    page_items["OuterBorderLine"].Hidden = True
+    page_items["InnerBorderLine"].Hidden = True
 
 
 def create_card_front_background_color_layer(card: cards.Card, layer: illustrator.Layer) -> None:
-    group_item_names_to_color = {
+    color = card.get_color()
+
+    page_items = get_all_page_items_by_name(
+        layer,
+        [
+            "BackgroundNone",
+            "BackgroundBlack",
+            "BackgroundBlue",
+            "BackgroundCyan",
+            "BackgroundGreen",
+            "BackgroundOrange",
+            "BackgroundPink",
+            "BackgroundPurple",
+            "BackgroundWhite",
+            "BackgroundYellow",
+        ]
+    )
+    page_items_to_color = {
         "BackgroundNone": cards.Color.NONE,
         "BackgroundBlack": cards.Color.BLACK,
         "BackgroundBlue": cards.Color.BLUE,
@@ -468,38 +452,16 @@ def create_card_front_background_color_layer(card: cards.Card, layer: illustrato
         "BackgroundWhite": cards.Color.WHITE,
         "BackgroundYellow": cards.Color.YELLOW,
     }
-    color = card.get_color()
 
-    if not layer.GroupItems.Count == 10:
-        raise IllustratorTemplateError(
-            f"Expected 'BackgroundColorLayer' to have 10 group items, found {layer.GroupItems.Count} instead")
-    group_item_names_found = {
-        "BackgroundNone": False,
-        "BackgroundBlack": False,
-        "BackgroundBlue": False,
-        "BackgroundCyan": False,
-        "BackgroundGreen": False,
-        "BackgroundOrange": False,
-        "BackgroundPink": False,
-        "BackgroundPurple": False,
-        "BackgroundWhite": False,
-        "BackgroundYellow": False,
-    }
+    for page_item_name, page_item in page_items.items():
+        if not page_items_to_color[page_item_name] == color:
+            page_item.Hidden = True
+            continue
 
-    for i in range(1, 11):
-        group_item = layer.GroupItems.Item(i)
-        group_item_name = group_item.Name
-        if group_item_name not in group_item_names_found.keys():
-            raise IllustratorTemplateError(
-                f"Expected background color layer's group item {i} to have a name in the list "
-                f"{list(group_item_names_found.keys())}, found name '{group_item_name}' instead"
-            )
-        if group_item_names_found[group_item_name]:
-            raise IllustratorTemplateError(
-                f"In background color layer, found two group items with the name '{group_item_name}'")
-        group_item_names_found[group_item_name] = True
-
-        group_item.Hidden = not (group_item_names_to_color[group_item_name] == color)
+        # If we're here, the page item color matches the card's color
+        page_item.Hidden = False
+        for i in range(1, page_item.PageItems.Count + 1):
+            page_item.PageItems.Item(i).Hidden = False
 
 
 def create_card_back(card: cards.Card, document: illustrator.Document) -> None:
@@ -538,7 +500,26 @@ def create_card_back(card: cards.Card, document: illustrator.Document) -> None:
 
 
 def create_card_back_background_color_layer(card: cards.Card, layer: illustrator.Layer) -> None:
-    group_item_names_to_color = {
+    layer.Visible = True
+    
+    color = card.get_color()
+
+    page_items = get_all_page_items_by_name(
+        layer,
+        [
+            "BackgroundNone",
+            "BackgroundBlack",
+            "BackgroundBlue",
+            "BackgroundCyan",
+            "BackgroundGreen",
+            "BackgroundOrange",
+            "BackgroundPink",
+            "BackgroundPurple",
+            "BackgroundWhite",
+            "BackgroundYellow",
+        ]
+    )
+    page_items_to_color = {
         "BackgroundNone": cards.Color.NONE,
         "BackgroundBlack": cards.Color.BLACK,
         "BackgroundBlue": cards.Color.BLUE,
@@ -550,123 +531,67 @@ def create_card_back_background_color_layer(card: cards.Card, layer: illustrator
         "BackgroundWhite": cards.Color.WHITE,
         "BackgroundYellow": cards.Color.YELLOW,
     }
-    color = card.get_color()
 
-    if not layer.GroupItems.Count == 10:
-        raise IllustratorTemplateError(
-            f"Expected 'BackgroundColorLayer' to have 10 group items, found {layer.GroupItems.Count} instead"
-        )
-    group_item_names_found = {
-        "BackgroundNone": False,
-        "BackgroundBlack": False,
-        "BackgroundBlue": False,
-        "BackgroundCyan": False,
-        "BackgroundGreen": False,
-        "BackgroundOrange": False,
-        "BackgroundPink": False,
-        "BackgroundPurple": False,
-        "BackgroundWhite": False,
-        "BackgroundYellow": False,
-    }
+    for page_item_name, page_item in page_items.items():
+        if not page_items_to_color[page_item_name] == color:
+            page_item.Hidden = True
+        else:
+            create_card_back_background_color_layer_color_group(card, page_item)
 
-    for i in range(1, 11):
-        group_item = layer.GroupItems.Item(i)
-        group_item_name = group_item.Name
-        if group_item_name not in group_item_names_found.keys():
-            raise IllustratorTemplateError(
-                f"Expected background color layer's group item {i} to have a name in the list "
-                f"{list(group_item_names_found.keys())}, found name '{group_item_name}' instead"
-            )
-        if group_item_names_found[group_item_name]:
-            raise IllustratorTemplateError(
-                f"In background color layer, found two group items with the name '{group_item_name}'")
-        group_item_names_found[group_item_name] = True
 
-        if not group_item_names_to_color[group_item_name] == color:
-            group_item.Hidden = True
-            continue
+def create_card_back_background_color_layer_color_group(card: cards.Card, group_item: illustrator.GroupItem) -> None:
+    group_item.Hidden = False
 
-        # If we're here, we've found the group whose color matches the card
-        group_item.Hidden = False
+    page_items = get_all_page_items_by_name(
+        group_item,
+        [
+            "Icon",
+            "CostColorBackground",
+            "Background",
+            "Border"
+        ]
+    )
+    icon = page_items["Icon"]
+    border = page_items["Border"]
 
-        # Get background icon
-        if not group_item.GroupItems.Count == 1:
-            raise IllustratorTemplateError(
-                f"Expected group '{group_item_name}' in 'BackgroundColorLayer' to have 1 group item, found "
-                f"{group_item.GroupItems.Count} instead"
-            )
-        if not group_item.GroupItems.Item(1).Name == "Icon":
-            raise IllustratorTemplateError(
-                f"Expected group '{group_item_name}' in 'BackgroundColorLayer' to have a subgroup named 'Icon', found "
-                f"name {group_item.GroupItems.Item(1).Name} instead"
-            )
-        icon = group_item.GroupItems.Item(1)
+    page_items["CostColorBackground"].Hidden = True
+    page_items["Background"].Hidden = False
+    icon.Hidden = False
+    border.Hidden = False
 
-        # Move icon to center
-        (icon_position_x, icon_position_y) = icon.Position
-        icon_width = icon.Width
-        icon_height = icon.Height
-        document_width = icon.Application.ActiveDocument.Width
-        document_height = icon.Application.ActiveDocument.Height
-        icon.Translate(
-            - icon_position_x + document_width / 2 - icon_width / 2,
-            - icon_position_y + document_height / 2 + icon_height / 2
-        )
+    # Move icon to center
+    (icon_position_x, icon_position_y) = icon.Position
+    icon_width = icon.Width
+    icon_height = icon.Height
+    document_width = icon.Application.ActiveDocument.Width
+    document_height = icon.Application.ActiveDocument.Height
+    icon.Translate(
+        - icon_position_x + document_width / 2 - icon_width / 2,
+        - icon_position_y + document_height / 2 + icon_height / 2
+    )
 
-        # Rescale icon
-        icon.Resize(200, 200, ScaleAbout=illustrator.constants.aiTransformCenter)
+    # Rescale icon
+    icon.Resize(200, 200, ScaleAbout=illustrator.constants.aiTransformCenter)
 
-        # Validate path items - START
-        if not group_item.PathItems.Count == 3:
-            raise IllustratorTemplateError(
-                f"Expected group '{group_item_name}' in 'BackgroundColorLayer' to have 3 path items, found "
-                f"{group_item.PathItems.Count} instead"
-            )
-        path_item_names_found = {
-            "CostColorBackground": False,
-            "Background": False,
-            "Border": False,
-        }
-        for j in range(1, 4):
-            path_item = group_item.PathItems.Item(j)
-            path_item_name = path_item.Name
-            if path_item_name not in path_item_names_found.keys():
-                raise IllustratorTemplateError(
-                    f"Expected background color layer, group '{group_item_name}', path item {j} to have a name in the "
-                    f"list {list(path_item_names_found.keys())}, found name '{path_item_name}' instead"
-                )
-            if path_item_names_found[path_item_name]:
-                raise IllustratorTemplateError(
-                    f"In background color layer, group '{group_item_name}', found two subgroups with the name "
-                    f"'{path_item_name}'")
-            path_item_names_found[path_item_name] = True
+    # Change icon opacity and color to be the same as border
+    icon.Opacity = page_items["Border"].Opacity
+    for k in range(1, icon.PageItems.Count):
+        icon.PathItems.Item(k).FillColor.Red = border.FillColor.Red
+        icon.PathItems.Item(k).FillColor.Green = border.FillColor.Green
+        icon.PathItems.Item(k).FillColor.Blue = border.FillColor.Blue
 
-            if path_item_name == "CostColorBackground":
-                path_item.Hidden = True
-            if path_item_name == "Background":
-                path_item.Hidden = False
-            if path_item_name == "Border":
-                path_item.Hidden = False
-
-                # Change icon opacity and color to be the same as border
-                icon.Opacity = path_item.Opacity
-                for k in range(1, icon.PathItems.Count):
-                    icon.PathItems.Item(k).FillColor.Red = path_item.FillColor.Red
-                    icon.PathItems.Item(k).FillColor.Green = path_item.FillColor.Green
-                    icon.PathItems.Item(k).FillColor.Blue = path_item.FillColor.Blue
-
-                # Change border to gray
-                path_item.Opacity = 100
-                path_item.FillColor.Red = 120
-                path_item.FillColor.Green = 120
-                path_item.FillColor.Blue = 120
+    # Change border to gray
+    border.Opacity = 100
+    border.FillColor.Red = 120
+    border.FillColor.Green = 120
+    border.FillColor.Blue = 120
 
 
 cards.import_all_data()
 
 with tempfile.TemporaryDirectory() as temp_dir:
     card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E050", "E061", "E069"]
-    # card_list = ["E050"]
+    # card_list = ["C049"]
     for card_id in card_list:
         c = cards.get_card(card_id)
         create_card(c, Path(temp_dir))
