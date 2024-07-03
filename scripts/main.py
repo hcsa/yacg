@@ -408,13 +408,12 @@ def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> 
         "CostColorText": False,
         "CostNonColorText": False,
         "CostNonColorBackground": False,
-        "ImageBorder": False,
         "ImagePlaceholder": False,
         "Identifier": False,
         "OuterBorderLine": False,
         "InnerBorderLine": False,
     }
-    for i in range(1, 11):
+    for i in range(1, 10):
         page_item = layer.PageItems.Item(i)
         page_item_name = page_item.Name
         if page_item_name not in page_items_names_found.keys():
@@ -440,8 +439,6 @@ def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> 
             page_item.Hidden = False
             page_item.Contents = str(card.get_cost_total() - card.get_cost_color())
         elif page_item_name == "CostNonColorBackground":
-            page_item.Hidden = False
-        elif page_item_name == "ImageBorder":
             page_item.Hidden = False
         elif page_item_name == "ImagePlaceholder":
             page_item.Hidden = False
