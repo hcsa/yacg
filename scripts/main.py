@@ -82,11 +82,13 @@ def prepare_text_frame(text_frame: illustrator.TextFrame) -> None:
     Sets the character style of the text frame to the auxiliary character style.
 
     This function should be called when either:
+
     - The text frame's contents have multiple styles. Changing the contents of text that has multiple styles makes
-    Illustrator confused, so it's needed to have a single style before changing contents.
+      Illustrator confused, so it's needed to have a single style before changing contents.
+
     - The text frame will have icons. The icons are encoded as special Unicode characters that almost all fonts don't
-    implement. If a character is set to a style whose font doesn't have that character, bugs happen. The auxiliary
-    character style implements these special characters.
+      implement. If a character is set to a style whose font doesn't have that character, bugs happen. The auxiliary
+      character style implements these special characters.
     """
 
     style_name = "Auxiliary"
@@ -501,7 +503,7 @@ def create_card_back(card: cards.Card, document: illustrator.Document) -> None:
 
 def create_card_back_background_color_layer(card: cards.Card, layer: illustrator.Layer) -> None:
     layer.Visible = True
-    
+
     color = card.get_color()
 
     page_items = get_all_page_items_by_name(
