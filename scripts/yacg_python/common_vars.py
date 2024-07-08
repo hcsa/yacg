@@ -30,7 +30,8 @@ EXCEL_PATH = BASE_DIR / "Cards.xlsx"
 EXCEL_BACKUP_PATH = BASE_DIR / "Cards (backup).xlsx"
 EXCEL_TEMPLATE_PATH = BASE_DIR / "excel_base.xlsx"
 
-CARD_FRONT_PATH = BASE_DIR / "card_design" / "card_template.ai"
+CARD_TEMPLATE_PATH = BASE_DIR / "card_design" / "card_template.ai"
+CART_ART_DIR = BASE_DIR / "card_design" / "art"
 
 CARD_DATA_PATH = BASE_DIR / "card_data"
 CREATURE_DATA_PATH = CARD_DATA_PATH / "creatures"
