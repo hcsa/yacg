@@ -377,6 +377,8 @@ def create_card_front_creature_layer_description(card: cards.Creature, descripti
 
         for i in range(len(trait_name) + 2, len(paragraph.Contents) + 1):
             if i in icons_indexes:
+                # Sometimes needs to be applied twice to take effect
+                icons_style.ApplyTo(paragraph.Characters.Item(i), True)
                 icons_style.ApplyTo(paragraph.Characters.Item(i), True)
             else:
                 description_style.ApplyTo(paragraph.Characters.Item(i), True)
