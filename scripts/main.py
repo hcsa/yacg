@@ -404,7 +404,7 @@ def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> 
             "CostColorText",
             "CostNonColorText",
             "CostNonColorBackground",
-            "Art",
+            "ArtBorder",
             "Identifier",
             "OuterBorderLine",
             "InnerBorderLine"
@@ -429,7 +429,7 @@ def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> 
     else:
         page_items["Identifier"].Contents = f"{GIT_TAG_NAME} | {card.get_id()}"
 
-    create_card_front_base_layer_add_art(card, page_items["Art"])
+    create_card_front_base_layer_add_art(card, page_items["ArtBorder"])
 
     page_items["CostNonColorBackground"].Hidden = False
     page_items["OuterBorderLine"].Hidden = True
