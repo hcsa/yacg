@@ -10,10 +10,19 @@ import win32com.client.gencache
 
 import scripts.yacg_python.cards as cards
 import scripts.yacg_python.illustrator_com as illustrator
-from scripts.yacg_python.common_vars import CARD_TEMPLATE_PATH, GIT_TAG_NAME
+from scripts.yacg_python.common_vars import CARD_TEMPLATE_PATH, GIT_TAG_NAME, CART_ART_DIR
 
 
-class IllustratorTemplateError(ValueError):
+class CardGenerationError(ValueError):
+    """
+    Raised when something unexpected happened while generating a card
+    """
+
+    def __init__(self, message):
+        super().__init__(message)
+
+
+class IllustratorTemplateError(CardGenerationError):
     """
     Raised when an unexpected element or setting of an Illustrator template is found
     """
@@ -420,10 +429,43 @@ def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> 
     else:
         page_items["Identifier"].Contents = f"{GIT_TAG_NAME} | {card.get_id()}"
 
+    create_card_front_base_layer_add_art(card, page_items["Art"])
+
     page_items["CostNonColorBackground"].Hidden = False
-    page_items["Art"].Hidden = False
     page_items["OuterBorderLine"].Hidden = True
     page_items["InnerBorderLine"].Hidden = True
+
+
+def create_card_front_base_layer_add_art(card: cards.Card, art_border: illustrator.PathItem) -> None:
+    art_border.Hidden = False
+
+    art_files = list(CART_ART_DIR.glob(f"{card.get_id()}.*"))
+    if len(art_files) == 0:
+        # No art file found, nothing else to do
+        return
+    if len(art_files) > 1:
+        raise CardGenerationError(f"Found multiple arts for card {card.get_id()}: {[file.name for file in art_files]}")
+    art_file = art_files[0]
+
+    layer = art_border.Layer
+    art_picture = layer.PlacedItems.Add()
+
+    # Select art_border's layer as active layer
+    # Without this, next line throws exception
+    layer.Parent.ActiveLayer = layer
+
+    # Link Illustrator's file to art file
+    art_picture.File = str(art_file)
+
+    # Adjust picture settings
+    art_picture.Position = art_border.Position
+    art_picture.Height = art_border.Height
+    art_picture.Width = art_border.Width
+
+    # Create clipping mask
+    art_picture.ZOrder(illustrator.constants.aiSendToBack)  # Art picture must be behind art border for mask to work
+    layer.Parent.Selection = (art_border, art_picture)  # Both border and picture must be selected for mask to work
+    layer.Application.ExecuteMenuCommand("makeMask")
 
 
 def create_card_front_background_color_layer(card: cards.Card, layer: illustrator.Layer) -> None:
@@ -594,8 +636,8 @@ def create_card_back_background_color_layer_color_group(card: cards.Card, group_
 cards.import_all_data()
 
 with tempfile.TemporaryDirectory() as temp_dir:
-    card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E050", "E061", "E069"]
-    # card_list = ["C049"]
+    # card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E050", "E061", "E069"]
+    card_list = ["C049"]
     for card_id in card_list:
         c = cards.get_card(card_id)
         create_card(c, Path(temp_dir))
