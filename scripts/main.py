@@ -50,7 +50,7 @@ def export_to_tiff(document: illustrator.Document, file_path: Path) -> None:
     export_options = illustrator.ExportOptionsTIFF()
     export_options.AntiAliasing = illustrator.constants.aiArtOptimized
     export_options.ByteOrder = illustrator.constants.aiIBMPC
-    export_options.ImageColorSpace = illustrator.constants.aiImageRGB
+    export_options.ImageColorSpace = illustrator.constants.aiImageCMYK
     export_options.LZWCompression = False
     export_options.Resolution = 400
     export_options.SaveMultipleArtboards = False
@@ -289,8 +289,8 @@ def create_card_front_non_creature_layer(card: cards.Card, layer: illustrator.La
     )
 
     page_items["AuraIcon"].Hidden = (not card.data.type == cards.EffectType.AURA)
-    page_items["ActionIcon"].Hidden = (not card.data.type == cards.EffectType.AURA)
-    page_items["FieldIcon"].Hidden = (not card.data.type == cards.EffectType.AURA)
+    page_items["ActionIcon"].Hidden = (not card.data.type == cards.EffectType.ACTION)
+    page_items["FieldIcon"].Hidden = (not card.data.type == cards.EffectType.FIELD)
     create_card_front_non_creature_layer_description(card, page_items["Description"])
 
 
@@ -404,7 +404,7 @@ def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> 
             "CostColorText",
             "CostNonColorText",
             "CostNonColorBackground",
-            "ArtBorder",
+            "ArtClipGroup",
             "Identifier",
             "OuterBorderLine",
             "InnerBorderLine"
@@ -417,8 +417,11 @@ def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> 
     page_items["CostTotalText"].Hidden = False
     page_items["CostTotalText"].Contents = str(card.get_cost_total())
 
-    page_items["CostColorText"].Hidden = False
-    page_items["CostColorText"].Contents = str(card.get_cost_color())
+    if card.get_color() == cards.Color.NONE:
+        page_items["CostColorText"].Hidden = True
+    else:
+        page_items["CostColorText"].Hidden = False
+        page_items["CostColorText"].Contents = str(card.get_cost_color())
 
     page_items["CostNonColorText"].Hidden = False
     page_items["CostNonColorText"].Contents = str(card.get_cost_total() - card.get_cost_color())
@@ -429,43 +432,40 @@ def create_card_front_base_layer(card: cards.Card, layer: illustrator.Layer) -> 
     else:
         page_items["Identifier"].Contents = f"{GIT_TAG_NAME} | {card.get_id()}"
 
-    create_card_front_base_layer_add_art(card, page_items["ArtBorder"])
+    create_card_front_base_layer_add_art(card, page_items["ArtClipGroup"])
 
     page_items["CostNonColorBackground"].Hidden = False
     page_items["OuterBorderLine"].Hidden = True
     page_items["InnerBorderLine"].Hidden = True
 
 
-def create_card_front_base_layer_add_art(card: cards.Card, art_border: illustrator.PathItem) -> None:
-    art_border.Hidden = False
+def create_card_front_base_layer_add_art(card: cards.Card, art_clip_group: illustrator.GroupItem) -> None:
+    art_clip_group.Hidden = False
+
+    page_items = get_all_page_items_by_name(
+        art_clip_group,
+        [
+            "ArtBorder",
+            "ArtLinkedFile"
+        ]
+    )
+    page_items["ArtBorder"].Hidden = False
+    art_linked_file = page_items["ArtLinkedFile"]
 
     art_files = list(CART_ART_DIR.glob(f"{card.get_id()}.*"))
     if len(art_files) == 0:
-        # No art file found, nothing else to do
+        # No art file found, just hide the default art
+        art_linked_file.Hidden = True
         return
     if len(art_files) > 1:
         raise CardGenerationError(f"Found multiple arts for card {card.get_id()}: {[file.name for file in art_files]}")
     art_file = art_files[0]
-
-    layer = art_border.Layer
-    art_picture = layer.PlacedItems.Add()
-
-    # Select art_border's layer as active layer
-    # Without this, next line throws exception
-    layer.Parent.ActiveLayer = layer
-
-    # Link Illustrator's file to art file
-    art_picture.File = str(art_file)
+    art_linked_file.File = str(art_file)
 
     # Adjust picture settings
-    art_picture.Position = art_border.Position
-    art_picture.Height = art_border.Height
-    art_picture.Width = art_border.Width
-
-    # Create clipping mask
-    art_picture.ZOrder(illustrator.constants.aiSendToBack)  # Art picture must be behind art border for mask to work
-    layer.Parent.Selection = (art_border, art_picture)  # Both border and picture must be selected for mask to work
-    layer.Application.ExecuteMenuCommand("makeMask")
+    art_linked_file.Position = art_clip_group.Position
+    art_linked_file.Height = art_clip_group.Height
+    art_linked_file.Width = art_clip_group.Width
 
 
 def create_card_front_background_color_layer(card: cards.Card, layer: illustrator.Layer) -> None:
@@ -588,20 +588,21 @@ def create_card_back_background_color_layer(card: cards.Card, layer: illustrator
 def create_card_back_background_color_layer_color_group(card: cards.Card, group_item: illustrator.GroupItem) -> None:
     group_item.Hidden = False
 
-    page_items = get_all_page_items_by_name(
-        group_item,
-        [
-            "Icon",
-            "CostColorBackground",
-            "Background",
-            "Border"
-        ]
-    )
+    page_item_names = [
+        "Icon",
+        "Background",
+        "Border"
+    ]
+    if not card.get_color() == cards.Color.NONE:
+        page_item_names.append("CostColorBackground")
+
+    page_items = get_all_page_items_by_name(group_item, page_item_names)
     icon = page_items["Icon"]
     border = page_items["Border"]
 
-    page_items["CostColorBackground"].Hidden = True
     page_items["Background"].Hidden = False
+    if not card.get_color() == cards.Color.NONE:
+        page_items["CostColorBackground"].Hidden = True
     icon.Hidden = False
     border.Hidden = False
 
@@ -613,7 +614,7 @@ def create_card_back_background_color_layer_color_group(card: cards.Card, group_
     document_height = icon.Application.ActiveDocument.Height
     icon.Translate(
         - icon_position_x + document_width / 2 - icon_width / 2,
-        - icon_position_y + document_height / 2 + icon_height / 2
+        - icon_position_y - document_height / 2 + icon_height / 2
     )
 
     # Rescale icon
@@ -621,26 +622,22 @@ def create_card_back_background_color_layer_color_group(card: cards.Card, group_
 
     # Change icon opacity and color to be the same as border
     icon.Opacity = page_items["Border"].Opacity
-    for k in range(1, icon.PageItems.Count):
-        icon.PathItems.Item(k).FillColor.Red = border.FillColor.Red
-        icon.PathItems.Item(k).FillColor.Green = border.FillColor.Green
-        icon.PathItems.Item(k).FillColor.Blue = border.FillColor.Blue
+    for k in range(1, icon.PageItems.Count + 1):
+        icon.PathItems.Item(k).FillColor = border.FillColor
 
     # Change border to gray
-    border.Opacity = 100
-    border.FillColor.Red = 120
-    border.FillColor.Green = 120
-    border.FillColor.Blue = 120
+    border.FillColor = illustrator.GrayColor()
+    border.FillColor.Gray = 70
 
 
 cards.import_all_data()
 
 with tempfile.TemporaryDirectory() as temp_dir:
-    # card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E050", "E061", "E069"]
-    card_list = ["C049"]
+    print(temp_dir)
+    card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E050", "E061", "E069"]
+    # card_list = ["C049"]
     for card_id in card_list:
         c = cards.get_card(card_id)
         create_card(c, Path(temp_dir))
 
-    print(temp_dir)
     print("HERE")
