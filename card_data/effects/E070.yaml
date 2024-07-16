@@ -4,7 +4,7 @@ effect:
     color: Cyan
     type: Aura
     cost-total: 1
-    cost-color: 1
+    cost-color: 0
     description: |
       Target (CREATURE) gets -1 (SPE).
 

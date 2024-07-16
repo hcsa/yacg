@@ -10,7 +10,7 @@ effect:
 
   metadata:
     id: E033
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: 
     order: 507
     summary: Swap Atk <--> Spd

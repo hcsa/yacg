@@ -21,7 +21,7 @@ creature:
   metadata:
     id: C049
     value: -120
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Grande atum
     order: 213
     summary: High stats, EQ, Trample, -Atk in combat, costly

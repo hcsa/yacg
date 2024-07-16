@@ -3,7 +3,7 @@ creature:
     name: 
     color: Green
     cost-total: 5
-    cost-color: 3
+    cost-color: 2
     hp: 6
     atk: 3
     spe: 0
@@ -18,7 +18,7 @@ creature:
   metadata:
     id: C047
     value: -80
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Elephant
     order: 209
     summary: High stats, EQ, Slow movement, costly

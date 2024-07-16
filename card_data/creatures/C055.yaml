@@ -15,7 +15,7 @@ creature:
   metadata:
     id: C055
     value: 5
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: 
     order: 903
     summary: Hail setter, Cyan, cheapest

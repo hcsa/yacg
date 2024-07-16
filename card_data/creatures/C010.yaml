@@ -3,7 +3,7 @@ creature:
     name: 
     color: Yellow
     cost-total: 2
-    cost-color: 2
+    cost-color: 1
     hp: 1
     atk: 1
     spe: 3
@@ -15,7 +15,7 @@ creature:
   metadata:
     id: C010
     value: -10
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Jumper
     order: 503
     summary: U-turn, Yellow, cheapest

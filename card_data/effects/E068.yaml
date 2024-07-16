@@ -10,7 +10,7 @@ effect:
 
   metadata:
     id: E068
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: 
     order: 905
     summary: Limit effect stack to 0 = No effects can be played

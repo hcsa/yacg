@@ -10,7 +10,7 @@ effect:
 
   metadata:
     id: E009
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Swords dance
     order: 101
     summary: + Atk, cheap, orange

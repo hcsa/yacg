@@ -10,7 +10,7 @@ effect:
 
   metadata:
     id: E056
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Counter, black
     order: 802
     summary: Counter, black

@@ -3,7 +3,7 @@ creature:
     name: Running conduit
     color: Yellow
     cost-total: 4
-    cost-color: 3
+    cost-color: 2
     hp: 6
     atk: 0
     spe: 4

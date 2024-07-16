@@ -11,7 +11,7 @@ creature:
   metadata:
     id: C009
     value: -5
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Nano bot
     order: 501
     summary: 0-cost, Yellow

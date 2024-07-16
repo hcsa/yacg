@@ -10,7 +10,7 @@ effect:
 
   metadata:
     id: E003
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Search
     order: 3
     summary: Search, colorless

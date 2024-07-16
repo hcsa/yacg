@@ -15,7 +15,7 @@ creature:
   metadata:
     id: C020
     value: -15
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: TNT
     order: 101
     summary: 0-cost, Self-destruct, Orange

@@ -15,7 +15,7 @@ creature:
   metadata:
     id: C067
     value: 0
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Old warrior
     order: 401
     summary: 0-cost, White

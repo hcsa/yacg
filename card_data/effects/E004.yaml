@@ -10,7 +10,7 @@ effect:
 
   metadata:
     id: E004
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Refresh
     order: 4
     summary: Refresh, colorless

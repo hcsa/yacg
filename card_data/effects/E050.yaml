@@ -11,7 +11,7 @@ effect:
 
   metadata:
     id: E050
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: 
     order: 708
     summary: Kill creature, create creature in its place

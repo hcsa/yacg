@@ -10,7 +10,7 @@ effect:
 
   metadata:
     id: E030
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Explosions!
     order: 504
     summary: All creatures have self-destruct

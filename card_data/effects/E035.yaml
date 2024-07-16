@@ -10,7 +10,7 @@ effect:
 
   metadata:
     id: E035
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: 
     order: 503
     summary: Kill creature, sacrifice ally

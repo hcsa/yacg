@@ -3,7 +3,7 @@ creature:
     name: 
     color: Black
     cost-total: 2
-    cost-color: 2
+    cost-color: 1
     hp: 4
     atk: 3
     spe: 2
@@ -15,7 +15,7 @@ creature:
   metadata:
     id: C003
     value: 10
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Ego
     order: 803
     summary: 2-cost, Arrogant, Black

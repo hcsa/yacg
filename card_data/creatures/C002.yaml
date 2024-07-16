@@ -15,7 +15,7 @@ creature:
   metadata:
     id: C002
     value: -10
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Energy spy
     order: 802
     summary: Charge, black

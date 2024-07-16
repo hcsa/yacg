@@ -3,7 +3,7 @@ creature:
     name: 
     color: Yellow
     cost-total: 3
-    cost-color: 2
+    cost-color: 1
     hp: 2
     atk: 4
     spe: 4

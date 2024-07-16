@@ -15,7 +15,7 @@ creature:
   metadata:
     id: C039
     value: -15
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Insect
     order: 201
     summary: 0-cost, Green

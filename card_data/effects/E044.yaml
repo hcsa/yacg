@@ -11,7 +11,7 @@ effect:
 
   metadata:
     id: E044
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Counter, pink
     order: 702
     summary: Counter, pink

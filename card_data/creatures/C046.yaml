@@ -3,7 +3,7 @@ creature:
     name: 
     color: Green
     cost-total: 4
-    cost-color: 3
+    cost-color: 2
     hp: 6
     atk: 2
     spe: 0
@@ -21,7 +21,7 @@ creature:
   metadata:
     id: C046
     value: -70
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Mountain
     order: 208
     summary: Medium creature, Slow movement, cheapest

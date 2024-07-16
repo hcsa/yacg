@@ -3,7 +3,7 @@ creature:
     name: Zombie
     color: Purple
     cost-total: 2
-    cost-color: 2
+    cost-color: 1
     hp: 2
     atk: 1
     spe: 2

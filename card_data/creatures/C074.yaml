@@ -3,7 +3,7 @@ creature:
     name: 
     color: White
     cost-total: 3
-    cost-color: 2
+    cost-color: 1
     hp: 4
     atk: 2
     spe: 1
@@ -15,7 +15,7 @@ creature:
   metadata:
     id: C074
     value: -5
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Slow big warrior
     order: 409
     summary: First strike, White

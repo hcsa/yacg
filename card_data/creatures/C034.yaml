@@ -3,7 +3,7 @@ creature:
     name: Ghost hand
     color: Purple
     cost-total: 3
-    cost-color: 3
+    cost-color: 2
     hp: 2
     atk: 1
     spe: 2

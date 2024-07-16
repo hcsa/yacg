@@ -11,7 +11,7 @@ effect:
 
   metadata:
     id: E064
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Draw, cyan
     order: 901
     summary: Draw, cyan

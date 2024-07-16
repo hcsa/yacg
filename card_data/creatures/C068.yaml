@@ -15,7 +15,7 @@ creature:
   metadata:
     id: C068
     value: 5
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Slow warrior
     order: 402
     summary: 1-cost, White, First Strike
