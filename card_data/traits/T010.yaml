@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Reroute
+    name: Scapegoat
     description: Can take combat damage targeted at other (CREATURE).
 
   metadata:
