@@ -52,7 +52,7 @@ def export_to_tiff(document: illustrator.Document, file_path: Path) -> None:
     export_options.ByteOrder = illustrator.constants.aiIBMPC
     export_options.ImageColorSpace = illustrator.constants.aiImageCMYK
     export_options.LZWCompression = False
-    export_options.Resolution = 400
+    export_options.Resolution = 300
     export_options.SaveMultipleArtboards = False
 
     # We use .with_suffix("") to remove extension, because it's added automatically
@@ -635,7 +635,7 @@ cards.import_all_data()
 with tempfile.TemporaryDirectory() as temp_dir:
     print(temp_dir)
     card_list = ["E002", "C020", "C049", "C095", "C069", "E032", "E077", "E050", "E061", "E069"]
-    # card_list = ["C049"]
+    # card_list = ["C095"]
     for card_id in card_list:
         c = cards.get_card(card_id)
         create_card(c, Path(temp_dir))
