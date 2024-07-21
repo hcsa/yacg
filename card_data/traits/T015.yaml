@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Big entrance
     description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 15
     dev-stage: Alpha-0
     dev-name: Earthquake
-    order: 15
+    order: 701
     summary: Spead damage when it's cast
     notes: |
       * Main colors: Green

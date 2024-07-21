@@ -8,8 +8,8 @@ creature:
     atk: 1
     spe: 1
     traits:
-      - name: Disable
-        description: For this round, opponent can't play (CREATURE) with the same name as the one they last played.
+      - name: Cancel culture
+        description: For this round, opponent can't play (CREATURE) that share traits with the last played (CREATURE).
         id: T012
 
   metadata:

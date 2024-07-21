@@ -8,7 +8,7 @@ creature:
     atk: 2
     spe: 2
     traits:
-      - name: 
+      - name: Iron will
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
         id: T005
 

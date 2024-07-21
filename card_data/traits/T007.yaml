@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Lethargic
     description: If another ally (CREATURE) has (REF:T007), every opposing (CREATURE) gets -1 (SPE). For each additional ally (CREATURE) that has (REF:T007), every opposing (CREATURE) gets -1 (SPE).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 25
     dev-stage: Alpha-0
     dev-name: Cold personality
-    order: 7
+    order: 314
     summary: -Spd w/ friends
     notes: |
       * Main colors: Cyan

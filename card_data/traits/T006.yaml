@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Cold affinity
     description: Benefits from Hail.
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 10
     dev-stage: Alpha-0
     dev-name: Cold blood
-    order: 6
+    order: 213
     summary: Hail buffed
     notes: |
       * Main colors: Blue

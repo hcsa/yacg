@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Rain setter
+    name: Storm warning
     description: When played, if 3 (CREATURE) have (REF:T029), Rain is set for 2 rounds.
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 10
     dev-stage: Alpha-0
     dev-name: Rain setter
-    order: 29
+    order: 202
     summary: Rain setter
     notes: |
       * Main colors: Blue, Green

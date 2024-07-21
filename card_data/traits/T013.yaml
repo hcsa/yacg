@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Take two
     description: At the end of combat, its owner can decide to have this (CREATURE) attack again. Can only be used once (this trait stacks).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 60
     dev-stage: Alpha-0
     dev-name: Double strike
-    order: 13
+    order: 502
     summary: Attacks twice
     notes: |
       * Main colors: White

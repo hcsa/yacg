@@ -8,7 +8,7 @@ creature:
     atk: 3
     spe: 2
     traits:
-      - name: Sun setter
+      - name: Drought warning
         description: When played, if 3 (CREATURE) have (REF:T035), Sun is set for 2 rounds.
         id: T035
 

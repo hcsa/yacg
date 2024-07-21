@@ -9,7 +9,7 @@ trait:
     value: 20
     dev-stage: Alpha-0
     dev-name: Self-destruct
-    order: 33
+    order: 604
     summary: Its attack kills both itself and opponent
     notes: |
       * Main colors: Yellow, Orange

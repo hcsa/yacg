@@ -9,7 +9,7 @@ trait:
     value: -30
     dev-stage: Alpha-0
     dev-name: Illegal charge
-    order: 22
+    order: 801
     summary: Charge, black
     notes: |
       * Main colors: Black

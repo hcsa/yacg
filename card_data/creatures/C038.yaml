@@ -8,10 +8,10 @@ creature:
     atk: 3
     spe: 3
     traits:
-      - name: 
+      - name: Spiteful
         description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). When that happens, destroy this (CREATURE).
         id: T011
-      - name: Restless
+      - name: Recover
         description: If this (CREATURE) is killed or destroyed, it goes into its owner's hand.
         id: T032
 

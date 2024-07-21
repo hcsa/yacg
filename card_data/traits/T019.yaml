@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Hail setter
+    name: Hail warning
     description: When played, if 3 (CREATURE) have (REF:T019), Hail is set for 2 rounds.
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 10
     dev-stage: Alpha-0
     dev-name: Hail setter
-    order: 19
+    order: 203
     summary: Hail setter
     notes: |
       * Main colors: Cyan

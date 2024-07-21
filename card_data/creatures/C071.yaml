@@ -8,7 +8,7 @@ creature:
     atk: 2
     spe: 2
     traits:
-      - name: 
+      - name: Shields up
         description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
         id: T028
 

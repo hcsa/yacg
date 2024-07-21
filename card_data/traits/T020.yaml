@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Hot-head
     description: When played, fights opponent's last played (CREATURE).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 15
     dev-stage: Alpha-0
     dev-name: Haste
-    order: 20
+    order: 703
     summary: Attacks on cast
     notes: |
       * Main colors: Orange

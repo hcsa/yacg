@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Bloodlust
     description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 15
     dev-stage: Alpha-0
     dev-name: Moxie
-    order: 27
+    order: 101
     summary: +Atk when kills
     notes: |
       * Main colors: Orange

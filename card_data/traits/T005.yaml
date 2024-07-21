@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Iron will
     description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 10
     dev-stage: Alpha-0
     dev-name: Clear body
-    order: 5
+    order: 802
     summary: Stats can't be lowered
     notes: |
       * Main colors: Blue, Pink

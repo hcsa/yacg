@@ -1,15 +1,15 @@
 trait:
   data:
-    name: 
+    name: Finisher
     description: This (CREATURE) always attacks last.
 
   metadata:
     id: T034
-    type: Other
+    type: Combat
     value: -20
     dev-stage: Alpha-0
     dev-name: Slow movement
-    order: 34
+    order: 503
     summary: Attacks last
     notes: |
       * Main colors: Green

@@ -8,7 +8,7 @@ creature:
     atk: 1
     spe: 3
     traits:
-      - name: 
+      - name: Tag team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
         id: T039
 

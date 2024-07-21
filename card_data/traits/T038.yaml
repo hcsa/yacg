@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Golf rules
     description: (SPE) is reversed when deciding combat order (this trait stacks).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 35
     dev-stage: Alpha-0
     dev-name: Trickster
-    order: 38
+    order: 607
     summary: Reverses speed order in combat
     notes: |
       * Main colors: Black

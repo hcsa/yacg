@@ -9,7 +9,7 @@ trait:
     value: 25
     dev-stage: Alpha-0
     dev-name: Martyr
-    order: 25
+    order: 402
     summary: Can be sacrificed to prevent damage to another creature
     notes: |
       * Main colors: White

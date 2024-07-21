@@ -9,7 +9,7 @@ trait:
     value: 10
     dev-stage: Alpha-0
     dev-name: Survivor
-    order: 36
+    order: 808
     summary: If it's not killed, goes to deck at the end of the round
     notes: |
       * Main colors: Green, White

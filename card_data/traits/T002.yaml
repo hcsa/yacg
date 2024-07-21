@@ -9,7 +9,7 @@ trait:
     value: 15
     dev-stage: Alpha-1
     dev-name: Avenger
-    order: 2
+    order: 103
     summary: +Atk when ally dies
     notes: |
       * Main colors: White

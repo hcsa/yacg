@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Defeatist
     description: If an ally (CREATURE) is killed or destroyed, gain -1 (ATK).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: -10
     dev-stage: Alpha-0
     dev-name: Defeatist
-    order: 9
+    order: 104
     summary: -Atk when ally dies
     notes: |
       

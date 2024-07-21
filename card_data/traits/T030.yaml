@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Rally
     description: If another ally (CREATURE) has (REF:T030), every ally (CREATURE) gets +1 (ATK). For each additional ally that has (REF:T030), every ally (CREATURE) gets +1 (ATK).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 25
     dev-stage: Alpha-0
     dev-name: Rally
-    order: 30
+    order: 311
     summary: +Atk w/ friends
     notes: |
       * Main colors: White

@@ -8,7 +8,7 @@ creature:
     atk: 1
     spe: 2
     traits:
-      - name: Restless
+      - name: Recover
         description: If this (CREATURE) is killed or destroyed, it goes into its owner's hand.
         id: T032
 

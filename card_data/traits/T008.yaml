@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Venom
     description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 20
     dev-stage: Alpha-0
     dev-name: Death touch
-    order: 8
+    order: 601
     summary: Kills whenever gives damage
     notes: |
       * Main colors: Purple

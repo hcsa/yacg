@@ -8,10 +8,10 @@ creature:
     atk: 3
     spe: 2
     traits:
-      - name: 
+      - name: Heat affinity
         description: Benefits from Sun.
         id: T004
-      - name: 
+      - name: Aqua affinity
         description: Benefits from Rain.
         id: T014
 

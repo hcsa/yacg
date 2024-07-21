@@ -8,10 +8,10 @@ creature:
     atk: 4
     spe: 2
     traits:
-      - name: 
+      - name: Lethargic
         description: If another ally (CREATURE) has (REF:T007), every opposing (CREATURE) gets -1 (SPE). For each additional ally (CREATURE) that has (REF:T007), every opposing (CREATURE) gets -1 (SPE).
         id: T007
-      - name: 
+      - name: Cold stare
         description: In combat, opposing (CREATURE) gets -1 (SPE).
         id: T021
 

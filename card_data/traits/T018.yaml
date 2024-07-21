@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Gang up
+    name: Bully
     description: If another ally (CREATURE) has (REF:T018), every opposing (CREATURE) gets -1 (ATK). For each additional ally that has (REF:T018), every opposing (CREATURE) gets -1 (ATK).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 20
     dev-stage: Alpha-0
     dev-name: Gang up
-    order: 18
+    order: 312
     summary: -Atk w/ friends
     notes: |
       * Main colors: Black

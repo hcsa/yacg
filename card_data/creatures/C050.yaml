@@ -8,10 +8,10 @@ creature:
     atk: 1
     spe: 2
     traits:
-      - name: Defender
+      - name: Reroute
         description: Can take combat damage targeted at other (CREATURE).
         id: T010
-      - name: 
+      - name: Shields up
         description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
         id: T028
       - name: Survivor

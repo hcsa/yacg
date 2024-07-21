@@ -9,7 +9,7 @@ trait:
     value: 20
     dev-stage: Alpha-0
     dev-name: Immunity
-    order: 23
+    order: 804
     summary: Can't be targeted
     notes: |
       * Main colors: Blue, Pink

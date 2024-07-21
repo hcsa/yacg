@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Grudge
     description: If this (CREATURE) is killed in combat, destroy opposing (CREATURE).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 20
     dev-stage: Conception
     dev-name: Vindicative
-    order: 41
+    order: 602
     summary: Kills opponent when it dies
     notes: |
       * [HS] Maybe deals damage instead of outright killing?

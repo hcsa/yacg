@@ -1,15 +1,15 @@
 trait:
   data:
-    name: 
+    name: Spiteful
     description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). When that happens, destroy this (CREATURE).
 
   metadata:
     id: T011
-    type: Entry
+    type: Other
     value: 45
     dev-stage: Alpha-0
     dev-name: Destiny bond
-    order: 11
+    order: 803
     summary: Kill next cast creature
     notes: |
       * Main colors: Purple

@@ -1,6 +1,6 @@
 creature:
   data:
-    name: 
+    name: Guya
     color: Green
     cost-total: 4
     cost-color: 2
@@ -8,13 +8,13 @@ creature:
     atk: 2
     spe: 0
     traits:
-      - name: 
+      - name: Big entrance
         description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
         id: T015
-      - name: 
+      - name: Shields up
         description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
         id: T028
-      - name: 
+      - name: Finisher
         description: This (CREATURE) always attacks last.
         id: T034
 

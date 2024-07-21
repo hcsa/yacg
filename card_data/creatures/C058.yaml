@@ -8,7 +8,7 @@ creature:
     atk: 2
     spe: 3
     traits:
-      - name: Mind freeze
+      - name: Taxing
         description: All (ACTION), (AURA) and (FIELD) cost +1 (NOCOLOR) to play.
         id: T026
 

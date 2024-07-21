@@ -1,15 +1,15 @@
 trait:
   data:
-    name: 
+    name: Essence drain
     description: Whenever a (CREATURE) is killed, gain +1 (NOCOLOR) of the (CREATURE)'s color.
 
   metadata:
     id: T043
     type: Other
-    value: 15
+    value: 25
     dev-stage: Conception
     dev-name: 
-    order: 43
+    order: 811
     summary: 
     notes: |
       

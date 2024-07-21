@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Mind freeze
+    name: Taxing
     description: All (ACTION), (AURA) and (FIELD) cost +1 (NOCOLOR) to play.
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 30
     dev-stage: Alpha-0
     dev-name: Mind freeze
-    order: 26
+    order: 805
     summary: Increase cost of effect cards
     notes: |
       * Main colors: Cyan

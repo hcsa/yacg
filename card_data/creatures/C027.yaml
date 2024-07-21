@@ -8,10 +8,10 @@ creature:
     atk: 3
     spe: 3
     traits:
-      - name: 
+      - name: Hot-head
         description: When played, fights opponent's last played (CREATURE).
         id: T020
-      - name: 
+      - name: Bloodlust
         description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
         id: T027
 

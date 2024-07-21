@@ -1,7 +1,7 @@
 trait:
   data:
-    name: Disable
-    description: For this round, opponent can't play (CREATURE) with the same name as the one they last played.
+    name: Cancel culture
+    description: For this round, opponent can't play (CREATURE) that share traits with the last played (CREATURE).
 
   metadata:
     id: T012
@@ -9,8 +9,9 @@ trait:
     value: 10
     dev-stage: Alpha-0
     dev-name: Disable
-    order: 12
+    order: 702
     summary: Stop casting copies of a creature
     notes: |
       * Main colors: Pink
       * [HS] Seemed more useful when there were 4 copies of the same card. Now seems very situational, only useful against ally traits and weather setting traits. Maybe could be replaced by disabling the traits of a creature?
+      * [HS] Buffed to disable creatures that share a trait (instead of name)

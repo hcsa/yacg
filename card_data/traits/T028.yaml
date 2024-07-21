@@ -1,6 +1,6 @@
 trait:
   data:
-    name: 
+    name: Shields up
     description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 15
     dev-stage: Alpha-0
     dev-name: Protect
-    order: 28
+    order: 806
     summary: Nullifies damage once
     notes: |
       * Main colors: Blue, Green

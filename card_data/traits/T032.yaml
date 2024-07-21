@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Restless
+    name: Recover
     description: If this (CREATURE) is killed or destroyed, it goes into its owner's hand.
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 20
     dev-stage: Alpha-0
     dev-name: Restless
-    order: 32
+    order: 807
     summary: When put it trash, goes back to hand
     notes: |
       * Main colors: Purple

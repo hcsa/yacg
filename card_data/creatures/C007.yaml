@@ -11,7 +11,7 @@ creature:
       - name: Arrogant
         description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
         id: T001
-      - name: 
+      - name: Defeatist
         description: If an ally (CREATURE) is killed or destroyed, gain -1 (ATK).
         id: T009
 

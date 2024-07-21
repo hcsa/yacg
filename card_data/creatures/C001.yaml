@@ -8,7 +8,7 @@ creature:
     atk: 2
     spe: 2
     traits:
-      - name: 
+      - name: Defeatist
         description: If an ally (CREATURE) is killed or destroyed, gain -1 (ATK).
         id: T009
 
