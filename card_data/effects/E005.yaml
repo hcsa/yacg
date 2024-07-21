@@ -3,10 +3,10 @@ effect:
     name: Charge
     color: None
     type: Action
-    cost-total: 1
+    cost-total: 0
     cost-color: 0
     description: |
-      Gain 3 (NOCOLOR) of a color of your choosing.
+      Gain 2 (NOCOLOR) of a color of your choosing.
 
   metadata:
     id: E005
@@ -16,3 +16,4 @@ effect:
     summary: Charge, colorless
     notes: |
       * [HS] Before it was giving 2 energy, and it was basically useless. Let's try 3, see if it becomes relevant
+      * [HS] Lowered cost to 0 and to give 2 energy

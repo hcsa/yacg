@@ -1,18 +1,18 @@
 effect:
   data:
-    name: Strength
+    name: Growth spur
     color: Green
     type: Aura
-    cost-total: 1
+    cost-total: 2
     cost-color: 1
     description: |
-      Target (CREATURE) gets +2 (ATK) and -1 (SPE).
+      Target (CREATURE) gets +1 (HP) and +1 (ATK).
 
   metadata:
     id: E013
     dev-stage: Alpha-0
     dev-name: 
     order: 202
-    summary: + Atk, cheap, green
+    summary: Buff, cheap, green
     notes: |
       

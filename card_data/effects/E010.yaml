@@ -1,13 +1,13 @@
 effect:
   data:
-    name: 
+    name: Go nuts
     color: Orange
     type: Aura
     cost-total: 3
     cost-color: 2
     description: |
       Target (CREATURE) gets +3 (ATK) and (REF:T031).
-      Opponent fights it until target (CREATURE) is killed or they have no more (CREATURE) left.
+      Opponent fights it until target (CREATURE) is killed or opponents has no more (CREATURE) left.
 
   metadata:
     id: E010

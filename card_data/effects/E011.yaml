@@ -1,6 +1,6 @@
 effect:
   data:
-    name: Sun forecast
+    name: Drought forecast
     color: Orange
     type: Field
     cost-total: 2

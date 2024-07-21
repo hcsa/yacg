@@ -1,6 +1,6 @@
 effect:
   data:
-    name: 
+    name: Bad temperament
     color: Orange
     type: Aura
     cost-total: 1
@@ -13,6 +13,6 @@ effect:
     dev-stage: Alpha-0
     dev-name: Swords dance
     order: 101
-    summary: + Atk, cheap, orange
+    summary: Buff, cheap, orange
     notes: |
       
