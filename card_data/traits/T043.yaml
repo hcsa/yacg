@@ -9,7 +9,7 @@ trait:
     value: 25
     dev-stage: Conception
     dev-name: 
-    order: 811
-    summary: 
+    order: 903
+    summary: +Energy on kills
     notes: |
       

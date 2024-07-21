@@ -9,7 +9,7 @@ trait:
     value: 15
     dev-stage: Conception
     dev-name: Flash
-    order: 809
+    order: 901
     summary: Can be cast at any point
     notes: |
       

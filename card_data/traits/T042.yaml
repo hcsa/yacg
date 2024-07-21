@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Re-action
+    name: Reaction
     description: Whenever you play a (ACTION), draw a card.
 
   metadata:
@@ -9,7 +9,7 @@ trait:
     value: 15
     dev-stage: Conception
     dev-name: 
-    order: 810
-    summary: 
+    order: 902
+    summary: Action play, draw
     notes: |
       
