@@ -7,7 +7,7 @@ trait:
     id: T041
     type: Combat
     value: 20
-    dev-stage: Conception
+    dev-stage: Alpha-0
     dev-name: Vindicative
     order: 602
     summary: Kills opponent when it dies
