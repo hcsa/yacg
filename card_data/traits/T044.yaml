@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Jealous
+    description: In combat, if the opposing (CREATURE) has any buffs to their stats, get +2 (ATK).
+
+  metadata:
+    id: T044
+    type: Combat
+    value: 20
+    dev-stage: Conception
+    dev-name: Jealous
+    order: 904
+    summary: Combat buffs if opponent is buffed
+    notes: |
+      
