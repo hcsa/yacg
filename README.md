@@ -68,7 +68,7 @@ the [Adobe Illustrator Scripting Guide](https://ai-scripting.docsforadobe.dev/js
 Even though it's for Javascript, most of the time the references are close enough to the COM objects' interface, so they
 work the same for Python. The main references are summarized in the following object model:
 
-![Main Illustrator objects](image.png)
+![Main Illustrator objects](illustrator_object_model.png)
 
 The type library for Python has been generated to [illustrator_com.py](./scripts/yacg_python/illustrador_com.py).
 Unfortunately,
