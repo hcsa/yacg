@@ -61,8 +61,8 @@ cards.import_all_data()
 output_dir_fronts = OUTPUT_DIR / "fronts"
 output_dir_backs = OUTPUT_DIR / "backs"
 
-os.makedirs(output_dir_fronts)
-os.makedirs(output_dir_backs)
+os.makedirs(output_dir_fronts, exist_ok=True)
+os.makedirs(output_dir_backs, exist_ok=True)
 
 print_index = 1
 for card in card_printing.get_all_cards_to_print():
