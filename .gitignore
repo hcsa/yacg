@@ -2,9 +2,10 @@
 .vscode/
 venv/
 _pyinstaller_cache/
+__pycache__/
+card_design/art/*/**
+print_output/
 ~$*
 /Cards.xlsx
 /Cards (backup).xlsx
 jsconfig.json
-__pycache__/
-card_design/art/*/
