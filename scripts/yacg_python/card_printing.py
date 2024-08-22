@@ -462,7 +462,7 @@ def _print_card_front(
     base_layer = document.Layers.Item(3)
     if not base_layer.Name == "BaseLayer":
         raise IllustratorTemplateError(
-            f"Expected 3rd layer's name to be 'BaseLayer', found '{creature_layer.Name}' instead")
+            f"Expected 3rd layer's name to be 'BaseLayer', found '{base_layer.Name}' instead")
     _print_card_front_base_layer(card, base_layer, print_criteria)
 
     background_color_layer = document.Layers.Item(4)
@@ -697,6 +697,8 @@ def _print_card_front_base_layer_add_art(card: cards.Card, art_clip_group: illus
 
 
 def _print_card_front_background_color_layer(card: cards.Card, layer: illustrator.Layer) -> None:
+    layer.Visible = True
+
     color = card.get_color()
 
     page_items = _get_all_page_items_by_name(
@@ -745,7 +747,7 @@ def _print_card_front_background_color_layer(card: cards.Card, layer: illustrato
                 page_item.PageItems.Item(i).Hidden = False
 
 
-def _print_card_back(card: cards.Card, document: illustrator.Document) -> None:
+def _print_card_back(color: cards.Color, document: illustrator.Document) -> None:
     if not document.Layers.Count == 5:
         raise IllustratorTemplateError(f"Expected 5 layers, found {document.Layers.Count} instead")
 
@@ -764,14 +766,14 @@ def _print_card_back(card: cards.Card, document: illustrator.Document) -> None:
     base_layer = document.Layers.Item(3)
     if not base_layer.Name == "BaseLayer":
         raise IllustratorTemplateError(
-            f"Expected 3rd layer's name to be 'BaseLayer', found '{creature_layer.Name}' instead")
+            f"Expected 3rd layer's name to be 'BaseLayer', found '{base_layer.Name}' instead")
     base_layer.Visible = False
 
     background_color_layer = document.Layers.Item(4)
     if not background_color_layer.Name == "BackgroundColorLayer":
         raise IllustratorTemplateError(
             f"Expected 4th layer's name to be 'BackgroundColorLayer', found '{background_color_layer.Name}' instead")
-    _print_card_back_background_color_layer(card.get_color(), background_color_layer)
+    _print_card_back_background_color_layer(color, background_color_layer)
 
     aux_layer = document.Layers.Item(5)
     if not aux_layer.Name == "AuxLayer":
@@ -884,7 +886,7 @@ def print_blank_card(
 
         shutil.copy2(CARD_TEMPLATE_PATH, card_front_document_path)
         card_front_document = app.Open(card_front_document_path)
-        _print_blank_card_front(card_front_document)
+        _print_blank_card_front(color, card_front_document)
         _export_to_tiff(card_front_document, card_front_path)
         card_front_document.Close(illustrator.constants.aiDoNotSaveChanges)
         os.remove(card_front_document_path)
@@ -900,32 +902,112 @@ def print_blank_card(
 
         shutil.copy2(CARD_TEMPLATE_PATH, card_back_document_path)
         card_back_document = app.Open(card_back_document_path)
-        _print_blank_card_back(color, card_back_document)
+        _print_card_back(color, card_back_document)
         _export_to_tiff(card_back_document, card_back_path)
         card_back_document.Close(illustrator.constants.aiDoNotSaveChanges)
         os.remove(card_back_document_path)
 
 
-def _print_blank_card_front(document: illustrator.Document) -> None:
+def _print_blank_card_front(color: cards.Color, document: illustrator.Document) -> None:
     for i in range(1, document.Layers.Count + 1):
         layer = document.Layers.Item(i)
         layer.Visible = False
 
-
-def _print_blank_card_back(color: cards.Color, document: illustrator.Document) -> None:
-    found_background_layer = False
-    for i in range(1, document.Layers.Count + 1):
-        layer = document.Layers.Item(i)
-        if not layer.Name == "BackgroundColorLayer":
-            layer.Visible = False
-        else:
-            if found_background_layer:
-                raise IllustratorTemplateError(
-                    f"Found 2 layers named 'BackgroundColorLayer'"
-                )
-            found_background_layer = True
-            _print_card_back_background_color_layer(color, layer)
-    if not found_background_layer:
+    base_layer = document.Layers.Item(3)
+    if not base_layer.Name == "BaseLayer":
         raise IllustratorTemplateError(
-            f"Layer 'BackgroundColorLayer' wasn't found"
-        )
+            f"Expected 3rd layer's name to be 'BaseLayer', found '{base_layer.Name}' instead")
+    _print_blank_card_front_base_layer(base_layer)
+
+    background_color_layer = document.Layers.Item(4)
+    if not background_color_layer.Name == "BackgroundColorLayer":
+        raise IllustratorTemplateError(
+            f"Expected 4th layer's name to be 'BackgroundColorLayer', found '{background_color_layer.Name}' instead")
+    _print_blank_card_front_background_color_layer(color, background_color_layer)
+
+
+def _print_blank_card_front_base_layer(layer: illustrator.Layer) -> None:
+    layer.Visible = True
+
+    page_items = _get_all_page_items_by_name(
+        layer,
+        [
+            "Title",
+            "CostTotalText",
+            "CostColorText",
+            "CostNonColorText",
+            "CostNonColorBackground",
+            "ArtClipGroup",
+            "Number",
+            "Identifier",
+            "OuterBorderLine",
+            "InnerBorderLine"
+        ]
+    )
+
+    page_items["Title"].Hidden = True
+    page_items["CostTotalText"].Hidden = True
+    page_items["CostColorText"].Hidden = True
+    page_items["CostNonColorText"].Hidden = True
+    page_items["CostNonColorBackground"].Hidden = False
+    page_items["Number"].Hidden = True
+    page_items["Identifier"].Hidden = True
+    page_items["OuterBorderLine"].Hidden = True
+    page_items["InnerBorderLine"].Hidden = True
+
+    _print_blank_card_front_base_layer_add_art(page_items["ArtClipGroup"])
+
+
+def _print_blank_card_front_base_layer_add_art(art_clip_group: illustrator.GroupItem) -> None:
+    art_clip_group.Hidden = False
+
+    page_items = _get_all_page_items_by_name(
+        art_clip_group,
+        [
+            "ArtBorder",
+            "ArtLinkedFile"
+        ]
+    )
+    page_items["ArtBorder"].Hidden = False
+    page_items["ArtLinkedFile"].Hidden = True
+
+
+def _print_blank_card_front_background_color_layer(color: cards.Color, layer: illustrator.Layer) -> None:
+    layer.Visible = True
+    page_items = _get_all_page_items_by_name(
+        layer,
+        [
+            "BackgroundNone",
+            "BackgroundBlack",
+            "BackgroundBlue",
+            "BackgroundCyan",
+            "BackgroundGreen",
+            "BackgroundOrange",
+            "BackgroundPink",
+            "BackgroundPurple",
+            "BackgroundWhite",
+            "BackgroundYellow",
+        ]
+    )
+    page_items_to_color = {
+        "BackgroundNone": cards.Color.NONE,
+        "BackgroundBlack": cards.Color.BLACK,
+        "BackgroundBlue": cards.Color.BLUE,
+        "BackgroundCyan": cards.Color.CYAN,
+        "BackgroundGreen": cards.Color.GREEN,
+        "BackgroundOrange": cards.Color.ORANGE,
+        "BackgroundPink": cards.Color.PINK,
+        "BackgroundPurple": cards.Color.PURPLE,
+        "BackgroundWhite": cards.Color.WHITE,
+        "BackgroundYellow": cards.Color.YELLOW,
+    }
+
+    for page_item_name, page_item in page_items.items():
+        if not page_items_to_color[page_item_name] == color:
+            page_item.Hidden = True
+            continue
+
+        # If we're here, the page item color matches the card's color
+        page_item.Hidden = False
+        for i in range(1, page_item.PageItems.Count + 1):
+            page_item.PageItems.Item(i).Hidden = False
