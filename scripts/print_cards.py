@@ -1,5 +1,5 @@
 """
-Run this script to generate all playable cards
+Run this script to print all playable cards
 """
 
 import scripts.yacg_python.card_printing as card_printing
