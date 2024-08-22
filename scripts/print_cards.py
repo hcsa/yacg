@@ -104,4 +104,3 @@ for color in EMPTY_CARDS:
                 skip_front=True
             )
         print_index += 1
-print("Done!")
