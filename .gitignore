@@ -7,3 +7,4 @@ _pyinstaller_cache/
 /Cards (backup).xlsx
 jsconfig.json
 __pycache__/
+card_design/art/*/
