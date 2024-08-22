@@ -73,7 +73,7 @@ for card in card_printing.get_all_cards_to_print():
         card_number_copies = 1
 
     for copy_index in range(1, card_number_copies + 1):
-        file_name = f"{print_index:03d}_{card_id}.{copy_index}"
+        file_name = f"{print_index:03d}_{card_id}-{copy_index}"
         if len(list(output_dir_fronts.glob(f"{file_name}*"))) == 0:
             card_printing.print_card(
                 card,
@@ -92,7 +92,7 @@ for card in card_printing.get_all_cards_to_print():
 
 for color in EMPTY_CARDS:
     for copy_index in range(1, EMPTY_CARDS[color] + 1):
-        file_name = f"{print_index:03d}_{str(color)}.{copy_index}"
+        file_name = f"{print_index:03d}_{str(color)}-{copy_index}"
         if len(list(output_dir_fronts.glob(f"{file_name}*"))) == 0:
             card_printing.print_blank_card(
                 color,
