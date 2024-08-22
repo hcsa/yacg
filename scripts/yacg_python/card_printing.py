@@ -9,7 +9,7 @@ import win32com.client.gencache
 
 import scripts.yacg_python.cards as cards
 import scripts.yacg_python.illustrator_com as illustrator
-from scripts.yacg_python.common_vars import CARD_TEMPLATE_PATH, GIT_TAG_NAME, CART_ART_DIR
+from scripts.yacg_python.common_vars import CARD_TEMPLATE_PATH, GIT_TAG_NAME, CARD_ARTS_DIR
 
 # For tokens, a "fake trait" is added describing the token rules
 # These configure the "fake trait" name and description
@@ -680,7 +680,7 @@ def _print_card_front_base_layer_add_art(card: cards.Card, art_clip_group: illus
 
     art_border.Hidden = False
 
-    art_files = list(CART_ART_DIR.glob(f"{card.get_id()}.*"))
+    art_files = list(CARD_ARTS_DIR.glob(f"{card.get_id()}.*"))
     if len(art_files) == 0:
         # No art file found, just hide the default art
         art_linked_file.Hidden = True
