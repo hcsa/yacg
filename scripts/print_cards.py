@@ -1,6 +1,7 @@
 """
 Run this script to print all playable cards
 """
+import os
 
 import scripts.yacg_python.card_printing as card_printing
 import scripts.yacg_python.cards as cards
@@ -59,6 +60,9 @@ cards.import_all_data()
 
 output_dir_fronts = OUTPUT_DIR / "fronts"
 output_dir_backs = OUTPUT_DIR / "backs"
+
+os.makedirs(output_dir_fronts)
+os.makedirs(output_dir_backs)
 
 print_index = 1
 for card in card_printing.get_all_cards_to_print():
