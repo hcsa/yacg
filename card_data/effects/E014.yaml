@@ -1,12 +1,13 @@
 effect:
   data:
-    name: Big boy
+    name: Big Boy
     color: Green
     type: Aura
     cost-total: 3
     cost-color: 2
     description: |
-      Target (CREATURE) gets +4 (ATK), +4 (HP), 0 (SPE) and (REF:T034).
+      Target (CREATURE) gets +4 (HP) and +2 (ATK).
+      Target (CREATURE) has (REF:T034.NAME) ((REF:T034.DESCRIPTION)).
 
   metadata:
     id: E014

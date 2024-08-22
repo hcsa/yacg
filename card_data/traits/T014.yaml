@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Aqua affinity
+    name: Aqua Affinity
     description: Benefits from Rain.
 
   metadata:

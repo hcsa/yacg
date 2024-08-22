@@ -1,10 +1,10 @@
 effect:
   data:
-    name: Growth spur
+    name: Growth Spur
     color: Green
     type: Aura
     cost-total: 2
-    cost-color: 1
+    cost-color: 0
     description: |
       Target (CREATURE) gets +1 (HP) and +1 (ATK).
 

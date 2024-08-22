@@ -1,29 +1,27 @@
 creature:
   data:
-    name: 
+    name: Greater Neighing Tuna
     color: Green
-    cost-total: 10
+    is-token: False
+    cost-total: 9
     cost-color: 6
-    hp: 16
+    hp: 18
     atk: 6
     spe: 0
     traits:
-      - name: Big entrance
-        description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
-        id: T015
-      - name: Scary stare
+      - name: Scary Stare
         description: In combat, opposing (CREATURE) gets -1 (ATK).
         id: T024
       - name: Brute
-        description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s (if there are any).
+        description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
         id: T037
-      - name: Finisher
+      - name: Sluggish
         description: This (CREATURE) always attacks last.
         id: T034
 
   metadata:
     id: C052
-    value: -185
+    value: -125
     dev-stage: Alpha-0
     dev-name: Titanic beast
     order: 214

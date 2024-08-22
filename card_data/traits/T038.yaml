@@ -1,7 +1,7 @@
 trait:
   data:
-    name: Golf rules
-    description: (SPE) is reversed when deciding combat order (this trait stacks).
+    name: Tortoise Rules
+    description: (SPE) is reversed when deciding combat order.
 
   metadata:
     id: T038

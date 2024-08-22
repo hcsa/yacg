@@ -11,13 +11,13 @@ import pandas as pd
 import xlwings as xw
 import yaml
 
-import scripts.yacg_python.cards as card_data
+from scripts.yacg_python import cards
 from scripts.yacg_python.common_vars import EXCEL_PATH, EXCEL_BACKUP_PATH, EXCEL_TEMPLATE_PATH, VALUES_DATA_PATH
 
 
 def main():
     print(f"Importing card data from YAML files to '{EXCEL_PATH.name}'...")
-    card_data.import_all_data()
+    cards.import_all_data()
     copy_excel_template()
     export_to_excel()
     print("Done!")
@@ -79,7 +79,7 @@ def export_to_traits_sheet(traits_sheet: xw.Sheet):
 def get_traits_df() -> pd.DataFrame:
     df_data = []
 
-    for trait in card_data.Trait.get_trait_dict().values():
+    for trait in cards.Trait.get_trait_dict().values():
         df_row = {
             "id": trait.metadata.id,
             "order": trait.metadata.order,
@@ -112,7 +112,7 @@ def get_traits_df() -> pd.DataFrame:
 
 
 def export_to_creatures_sheet(creatures_sheet: xw.Sheet):
-    df = get_creature_df()
+    df = get_creatures_df()
 
     # Copy formatting from template row
     for _ in range(len(df)):
@@ -130,36 +130,31 @@ def export_to_creatures_sheet(creatures_sheet: xw.Sheet):
     creatures_sheet["G3"].options(index=False, header=False).value = df["hp"]
     creatures_sheet["H3"].options(index=False, header=False).value = df["atk"]
     creatures_sheet["I3"].options(index=False, header=False).value = df["spe"]
-    creatures_sheet["O3"].options(index=False, header=False).value = df["dev-stage"]
-    creatures_sheet["P3"].options(index=False, header=False).value = df["dev-name"]
-    creatures_sheet["Q3"].options(index=False, header=False).value = df["summary"]
-    creatures_sheet["R3"].options(index=False, header=False).value = df["notes"]
-    creatures_sheet["S3"].options(index=False, header=False).value = df["id-trait-1"]
-    creatures_sheet["T3"].options(index=False, header=False).value = df["id-trait-2"]
-    creatures_sheet["U3"].options(index=False, header=False).value = df["id-trait-3"]
-    creatures_sheet["V3"].options(index=False, header=False).value = df["id-trait-4"]
+    creatures_sheet["O3"].options(index=False, header=False).value = df["is-token"]
+    creatures_sheet["P3"].options(index=False, header=False).value = df["dev-stage"]
+    creatures_sheet["Q3"].options(index=False, header=False).value = df["dev-name"]
+    creatures_sheet["R3"].options(index=False, header=False).value = df["summary"]
+    creatures_sheet["S3"].options(index=False, header=False).value = df["notes"]
+    creatures_sheet["T3"].options(index=False, header=False).value = df["id-trait-1"]
+    creatures_sheet["U3"].options(index=False, header=False).value = df["id-trait-2"]
+    creatures_sheet["V3"].options(index=False, header=False).value = df["id-trait-3"]
+    creatures_sheet["W3"].options(index=False, header=False).value = df["id-trait-4"]
 
     # Delete template row
     creatures_sheet.range("2:2").delete(shift="up")
 
-    creatures_sheet["A1"].expand("table").api.Sort(
-        Key1=creatures_sheet.range("AF:AF").api,
-        Order1=2,
-        Key2=creatures_sheet.range("B:B").api,
-        Header=1,
-        Orientation=1,
-    )
 
-
-def get_creature_df() -> pd.DataFrame:
+def get_creatures_df() -> pd.DataFrame:
     df_data = []
 
-    for creature in card_data.Creature.get_creature_dict().values():
+    creature_list = [c for c in cards.get_all_cards() if isinstance(c, cards.Creature)]
+    for creature in creature_list:
         df_row = {
             "id": creature.metadata.id,
             "order": creature.metadata.order,
             "name": creature.data.name,
             "color": (creature.data.color.name if creature.data.color is not None else None),
+            "is-token": creature.data.is_token,
             "cost-total": creature.data.cost_total,
             "cost-color": creature.data.cost_color,
             "hp": creature.data.hp,
@@ -182,6 +177,7 @@ def get_creature_df() -> pd.DataFrame:
         "order",
         "name",
         "color",
+        "is-token",
         "cost-total",
         "cost-color",
         "hp",
@@ -225,19 +221,12 @@ def export_to_effects_sheet(effects_sheet: xw.Sheet):
     # Delete template row
     effects_sheet.range("2:2").delete(shift="up")
 
-    effects_sheet["A1"].expand("table").api.Sort(
-        Key1=effects_sheet.range("M:M").api,
-        Order1=2,
-        Key2=effects_sheet.range("B:B").api,
-        Header=1,
-        Orientation=1,
-    )
-
 
 def get_effects_df() -> pd.DataFrame:
     df_data = []
 
-    for effect in card_data.Effect.get_effect_dict().values():
+    effect_list = [c for c in cards.get_all_cards() if isinstance(c, cards.Effect)]
+    for effect in effect_list:
         df_row = {
             "id": effect.metadata.id,
             "order": effect.metadata.order,

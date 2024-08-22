@@ -1,20 +1,21 @@
 creature:
   data:
-    name: 
+    name: Tree Guardian
     color: Green
+    is-token: False
     cost-total: 4
     cost-color: 3
-    hp: 6
+    hp: 5
     atk: 1
     spe: 2
     traits:
-      - name: Scapegoat
-        description: Can take combat damage targeted at other (CREATURE).
+      - name: Bodyguard
+        description: Can take combat damage targeted at other ally (CREATURE)s.
         id: T010
 
   metadata:
     id: C045
-    value: -10
+    value: -15
     dev-stage: Alpha-0
     dev-name: 
     order: 207

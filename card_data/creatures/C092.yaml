@@ -1,18 +1,19 @@
 creature:
   data:
-    name: 
+    name: Tsunami
     color: Blue
+    is-token: False
     cost-total: 4
     cost-color: 1
     hp: 8
     atk: 2
     spe: 2
     traits:
-      - name: Shields up
-        description: First damage dealt to this (CREATURE) is nullified (this trait stacks).
+      - name: Shields Up
+        description: First damage dealt to this (CREATURE) is nullified.
         id: T028
-      - name: Immunity
-        description: Can't be targeted by any (ACTION) or (AURA).
+      - name: Mental Strength
+        description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
         id: T023
 
   metadata:

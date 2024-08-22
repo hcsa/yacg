@@ -1,12 +1,12 @@
 effect:
   data:
-    name: Coming clean
+    name: Forced Confessions
     color: Purple
     type: Action
     cost-total: 2
     cost-color: 2
     description: |
-      Look at the opponent's hand, select 1 card and discard it.
+      Look at opponent's hand, select 1 card and discard it.
       Opponent looks at your hand, selects 1 card and discards it.
 
   metadata:

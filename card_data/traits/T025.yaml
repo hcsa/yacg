@@ -5,11 +5,11 @@ trait:
 
   metadata:
     id: T025
-    type: Combat
+    type: Other
     value: 25
     dev-stage: Alpha-0
     dev-name: Martyr
-    order: 402
+    order: 410
     summary: Can be sacrificed to prevent damage to another creature
     notes: |
       * Main colors: White

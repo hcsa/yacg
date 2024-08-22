@@ -1,26 +1,27 @@
 creature:
   data:
-    name: Great A'Tuin
+    name: Great Tuna
     color: Green
+    is-token: False
     cost-total: 7
     cost-color: 5
-    hp: 8
+    hp: 10
     atk: 5
-    spe: 0
+    spe: 1
     traits:
-      - name: Big entrance
+      - name: Big Entrance
         description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
         id: T015
-      - name: Scary stare
+      - name: Scary Stare
         description: In combat, opposing (CREATURE) gets -1 (ATK).
         id: T024
       - name: Brute
-        description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s (if there are any).
+        description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
         id: T037
 
   metadata:
     id: C049
-    value: -120
+    value: -75
     dev-stage: Alpha-0
     dev-name: Grande atum
     order: 213

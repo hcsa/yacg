@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Finisher
+    name: Sluggish
     description: This (CREATURE) always attacks last.
 
   metadata:

@@ -1,6 +1,6 @@
 effect:
   data:
-    name: Chain lightling
+    name: Chain Lightning
     color: Yellow
     type: Action
     cost-total: 2

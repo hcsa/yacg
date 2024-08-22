@@ -1,14 +1,15 @@
 creature:
   data:
-    name: 
+    name: Sun Grasper
     color: Green
+    is-token: False
     cost-total: 2
     cost-color: 1
     hp: 2
     atk: 2
     spe: 2
     traits:
-      - name: Heat affinity
+      - name: Heat Affinity
         description: Benefits from Sun.
         id: T004
 

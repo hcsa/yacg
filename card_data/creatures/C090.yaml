@@ -1,15 +1,16 @@
 creature:
   data:
-    name: 
+    name: Water Fox
     color: Blue
+    is-token: False
     cost-total: 3
     cost-color: 2
     hp: 6
     atk: 2
     spe: 2
     traits:
-      - name: Storm warning
-        description: When played, if 3 (CREATURE) have (REF:T029), Rain is set for 2 rounds.
+      - name: Storm Warning
+        description: When played, if 3 (CREATURE)s have (REF:T029.NAME), Rain is set for 2 rounds.
         id: T029
 
   metadata:

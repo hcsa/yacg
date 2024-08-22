@@ -1,18 +1,20 @@
 effect:
   data:
-    name: Racing contest
+    name: Racing Contest
     color: Yellow
     type: Field
     cost-total: 4
     cost-color: 3
     description: |
-      In combat, (ATK) is used to decide combat order (instead of (SPE)), and (SPE) is used to determine damage dealt (instead of (ATK)).
+      When playing this card, put 3 markers on it. After a fight, remove a marker from this card. If it has 0 markers, destroy this card.
+      In fights, (SPE) is used to decide damage dealt.
 
   metadata:
     id: E033
     dev-stage: Alpha-0
     dev-name: 
     order: 507
-    summary: Swap Atk <--> Spd
+    summary: Use Spe in place of Atk
     notes: |
       * [HS] I feel like this would be more broken than it's turning out to be
+      * [HS] Swapping Spe <---> Atk wasn't really doing anything. Changed to only use Spe for damage dealt, will create another card that uses Atk to decide combat order (E093)

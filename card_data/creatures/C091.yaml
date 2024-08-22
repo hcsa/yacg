@@ -1,14 +1,15 @@
 creature:
   data:
-    name: 
+    name: Crab
     color: Blue
+    is-token: False
     cost-total: 3
     cost-color: 1
     hp: 4
     atk: 2
     spe: 2
     traits:
-      - name: Iron will
+      - name: Iron Will
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
         id: T005
 

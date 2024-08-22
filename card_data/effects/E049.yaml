@@ -1,6 +1,6 @@
 effect:
   data:
-    name: Future sight
+    name: Future Sight
     color: Pink
     type: Action
     cost-total: 2
@@ -12,8 +12,8 @@ effect:
   metadata:
     id: E049
     dev-stage: Alpha-0
-    dev-name: Draw, pink
+    dev-name: Search, pink
     order: 707
-    summary: Draw, pink
+    summary: Search, pink
     notes: |
       * [HS] Doesn't feel very useful, made it cheaper

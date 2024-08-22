@@ -1,23 +1,24 @@
 creature:
   data:
-    name: 
+    name: Master Mage
     color: Pink
+    is-token: False
     cost-total: 5
     cost-color: 2
-    hp: 10
-    atk: 4
+    hp: 8
+    atk: 3
     spe: 2
     traits:
-      - name: Iron will
+      - name: Iron Will
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
         id: T005
-      - name: Immunity
-        description: Can't be targeted by any (ACTION) or (AURA).
+      - name: Mental Strength
+        description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
         id: T023
 
   metadata:
     id: C066
-    value: 35
+    value: 0
     dev-stage: Alpha-0
     dev-name: 
     order: 705

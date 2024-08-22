@@ -15,43 +15,54 @@ class Color(Enum):
 
     NONE = (
         "None",
+        0
     )
     ORANGE = (
         "Orange",
+        1
     )
     GREEN = (
         "Green",
+        2
     )
     BLUE = (
         "Blue",
+        3
     )
     WHITE = (
         "White",
+        4
     )
     YELLOW = (
         "Yellow",
+        5
     )
     PURPLE = (
         "Purple",
+        6
     )
     PINK = (
         "Pink",
+        7
     )
     BLACK = (
         "Black",
+        8
     )
     CYAN = (
         "Cyan",
+        9
     )
 
     def __new__(cls, *args):
-        if len(args) != 1:
+        if len(args) != 2:
             raise RuntimeError(
                 f"A {cls.__name__} is ill-defined. "
-                "It requires 1 args: a human-readable name"
+                "It requires 2 args: a human-readable name and a value used for sorting"
             )
         obj = object.__new__(cls)
         obj._value_ = str(args[0])
+        obj._sort_key_ = int(args[1])
         return obj
 
     def __str__(self) -> str:
@@ -61,6 +72,10 @@ class Color(Enum):
     def name(self) -> str:
         return self._value_
 
+    @property  # Ensures the attribute is read-only
+    def sort_key(self) -> int:
+        return self._sort_key_
+
 
 class EffectType(Enum):
     """
@@ -69,28 +84,32 @@ class EffectType(Enum):
 
     ACTION = (
         "Action",
-        "Has an immediate effect. Goes to the discard pile after resolved"
-    )
-    FIELD = (
-        "Field",
-        "Has a continued effect. Stays on the board after resolved, until the end of the round"
+        "Has an immediate effect. Goes to the discard pile after resolved",
+        0
     )
     AURA = (
         "Aura",
         "Has a continued effect on a creature. "
         "Stays attached to it after resolved, goes to the discard pile whenever the attached creature is no longer on "
-        "the field"
+        "the field",
+        1
+    )
+    FIELD = (
+        "Field",
+        "Has a continued effect. Stays on the board after resolved, until the end of the round",
+        2
     )
 
     def __new__(cls, *args):
-        if len(args) != 2:
+        if len(args) != 3:
             raise RuntimeError(
                 f"A {cls.__name__} is ill-defined. "
-                "It requires 2 args: a human-readable name and a description"
+                "It requires 3 args: a human-readable name, a description and a value used for sorting"
             )
         obj = object.__new__(cls)
         obj._value_ = str(args[0])
         obj._description_ = str(args[1])
+        obj._sort_key_ = int(args[2])
         return obj
 
     def __str__(self) -> str:
@@ -104,6 +123,10 @@ class EffectType(Enum):
     def description(self) -> str:
         return self._description_
 
+    @property  # Ensures the attribute is read-only
+    def sort_key(self) -> int:
+        return self._sort_key_
+
 
 class DevStage(Enum):
     """
@@ -113,17 +136,17 @@ class DevStage(Enum):
     CONCEPTION = (
         "Conception",
         "Still in conception, not all fields may be filled in",
-        100
+        1000
     )
     ALPHA_0 = (
         "Alpha-0",
         "Ready to be used, never tried out",
-        200
+        100
     )
     ALPHA_1 = (
         "Alpha-1",
         "Has been used at least once",
-        201
+        101
     )
     DISCONTINUED = (
         "Discontinued",
@@ -135,12 +158,12 @@ class DevStage(Enum):
         if len(args) != 3:
             raise RuntimeError(
                 f"A {cls.__name__} is ill-defined. "
-                "It requires 3 args: a human-readable name, a description and an order number (used for sorting)"
+                "It requires 3 args: a human-readable name, a description and a value used for sorting"
             )
         obj = object.__new__(cls)
         obj._value_ = str(args[0])
         obj._description_ = str(args[1])
-        obj._order_ = int(args[2])
+        obj._sort_key_ = int(args[2])
         return obj
 
     def __str__(self) -> str:
@@ -155,8 +178,8 @@ class DevStage(Enum):
         return self._description_
 
     @property  # Ensures the attribute is read-only
-    def order(self) -> int:
-        return self._order_
+    def sort_key(self) -> int:
+        return self._sort_key_
 
 
 class TraitType(Enum):
@@ -209,19 +232,30 @@ class CardData(ABC):
     def get_name(self) -> str:
         pass
 
+    @abstractmethod
+    def get_dev_stage(self) -> DevStage:
+        pass
+
 
 class Card(CardData):
     @abstractmethod
-    def get_color(self) -> Color:
+    def get_color(self) -> Optional[Color]:
         pass
 
     @abstractmethod
-    def get_cost_total(self) -> int:
+    def get_cost_total(self) -> Optional[int]:
         pass
 
     @abstractmethod
-    def get_cost_color(self) -> int:
+    def get_cost_color(self) -> Optional[int]:
         pass
+
+    def is_playable(self) -> bool:
+        """
+        Returns True if card is ready to be used, False otherwise (eg, card is discontinued)
+        """
+
+        return self.get_dev_stage() not in [DevStage.CONCEPTION, DevStage.DISCONTINUED]
 
 
 @dataclass(frozen=True)
@@ -266,6 +300,9 @@ class Trait(CardData):
         elif not self.metadata.dev_name == "":
             return f"({self.metadata.dev_name})"
         return ""
+
+    def get_dev_stage(self) -> DevStage:
+        return self.metadata.dev_stage
 
     # Class method for _trait_dict
     # Implemented a class method, so it's read-only and is documented in a way IntelliSense can read it
@@ -384,6 +421,7 @@ trait:
 class CreatureData:
     name: str
     color: Optional[Color]
+    is_token: bool
     cost_total: Optional[int]
     cost_color: Optional[int]
     hp: Optional[int]
@@ -428,13 +466,16 @@ class Creature(Card):
             return f"({self.metadata.dev_name})"
         return ""
 
-    def get_color(self) -> Color:
+    def get_dev_stage(self) -> DevStage:
+        return self.metadata.dev_stage
+
+    def get_color(self) -> Optional[Color]:
         return self.data.color
 
-    def get_cost_total(self) -> int:
+    def get_cost_total(self) -> Optional[int]:
         return self.data.cost_total
 
-    def get_cost_color(self) -> int:
+    def get_cost_color(self) -> Optional[int]:
         return self.data.cost_color
 
     # Class method for _creature_dict
@@ -481,6 +522,11 @@ class Creature(Card):
                 Color(str(yaml_data["data"]["color"]))
                 if yaml_data["data"]["color"] is not None
                 else None
+            ),
+            is_token=(
+                bool(yaml_data["data"]["is-token"])
+                if yaml_data["data"]["is-token"] is not None
+                else False
             ),
             cost_total=(
                 int(yaml_data["data"]["cost-total"])
@@ -561,6 +607,7 @@ creature:
   data:
     name: {self.data.name}
     color: {self.data.color.name if self.data.color is not None else ""}
+    is-token: {self.data.is_token}
     cost-total: {self.data.cost_total if self.data.cost_total is not None else ""}
     cost-color: {self.data.cost_color if self.data.cost_color is not None else ""}
     hp: {self.data.hp if self.data.hp is not None else ""}
@@ -637,7 +684,7 @@ class Effect(Card):
             raise ValueError(f"Effect with ID '{self.metadata.id}' already exists")
         self._effect_dict[self.metadata.id] = self
 
-    def get_color(self) -> Color:
+    def get_color(self) -> Optional[Color]:
         return self.data.color
 
     def get_id(self) -> str:
@@ -650,10 +697,13 @@ class Effect(Card):
             return f"({self.metadata.dev_name})"
         return ""
 
-    def get_cost_total(self) -> int:
+    def get_dev_stage(self) -> DevStage:
+        return self.metadata.dev_stage
+
+    def get_cost_total(self) -> Optional[int]:
         return self.data.cost_total
 
-    def get_cost_color(self) -> int:
+    def get_cost_color(self) -> Optional[int]:
         return self.data.cost_color
 
     # Class method for _effect_dict
@@ -820,3 +870,44 @@ def get_card(card_id: str) -> Card:
     if card_id.startswith(Effect._id_prefix):
         return Effect.get_effect(card_id)
     raise ValueError(f"Card id '{card_id}' has an unexpected prefix")
+
+
+def get_all_cards(sort_method: str = "canonical") -> List[Card]:
+    def key_sort_method_name(card: Card):
+        return card.get_name()
+
+    def key_sort_method_canonical(card: Card):
+        """
+        Ordered by:
+        - Is playable
+        - Dev stage (doesn't apply if card is playable)
+        - Is a token creature
+        - Color
+        - Is creature or not (first creatures, then effects)
+        - Cost total
+        - Name
+        """
+
+        return (
+            int(not card.is_playable()),
+            (card.get_dev_stage().sort_key if not card.is_playable() else 0),
+            int(isinstance(card, Creature) and card.data.is_token),
+            card.get_color().sort_key if card.get_color() is not None else float('inf'),
+            int(isinstance(card, Effect)),
+            card.get_cost_total() if card.get_cost_total() is not None else float('inf'),
+            card.get_name()
+        )
+
+    key_sort_method_dict = {
+        "name": key_sort_method_name,
+        "canonical": key_sort_method_canonical
+    }
+    if sort_method not in key_sort_method_dict:
+        available_sort_methods_str = "'" + "', '".join(key_sort_method_dict.keys()) + "'"
+        raise ValueError(
+            f"Unknown sort method '{sort_method}', available methods are: {available_sort_methods_str}"
+        )
+
+    output = list(Creature.get_creature_dict().values()) + list(Effect.get_effect_dict().values())
+    output = sorted(output, key=key_sort_method_dict[sort_method])
+    return output

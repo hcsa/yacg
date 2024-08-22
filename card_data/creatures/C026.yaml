@@ -1,10 +1,11 @@
 creature:
   data:
-    name: 
+    name: Walking Lava
     color: Orange
+    is-token: False
     cost-total: 3
     cost-color: 1
-    hp: 2
+    hp: 3
     atk: 2
     spe: 3
     traits:
@@ -14,7 +15,7 @@ creature:
 
   metadata:
     id: C026
-    value: 10
+    value: 15
     dev-stage: Alpha-0
     dev-name: 
     order: 107

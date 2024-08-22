@@ -1,20 +1,21 @@
 creature:
   data:
-    name: 
+    name: Snowman
     color: Cyan
+    is-token: False
     cost-total: 1
     cost-color: 0
     hp: 1
     atk: 1
     spe: 2
     traits:
-      - name: Cold stare
+      - name: Cold Stare
         description: In combat, opposing (CREATURE) gets -1 (SPE).
         id: T021
 
   metadata:
     id: C053
-    value: 5
+    value: 0
     dev-stage: Alpha-0
     dev-name: 
     order: 901

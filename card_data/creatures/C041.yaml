@@ -1,14 +1,15 @@
 creature:
   data:
-    name: 
+    name: Entangled Swamper
     color: Green
+    is-token: False
     cost-total: 2
     cost-color: 1
     hp: 4
     atk: 1
     spe: 2
     traits:
-      - name: Aqua affinity
+      - name: Aqua Affinity
         description: Benefits from Rain.
         id: T014
 

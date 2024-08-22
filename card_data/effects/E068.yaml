@@ -6,13 +6,14 @@ effect:
     cost-total: 4
     cost-color: 3
     description: |
-      (ACTION), (AURA) and (FIELD) cards can't be played.
+      Effects ((ACTION), (AURA) and (FIELD)) can't be played.
 
   metadata:
     id: E068
     dev-stage: Alpha-0
     dev-name: 
-    order: 905
+    order: 907
     summary: Limit effect stack to 0 = No effects can be played
     notes: |
+      * Parallel of E047 and E059
       * [HS] Definitely the easiest to use out of all "limit effect stack" cards

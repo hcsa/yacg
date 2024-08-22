@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Cold affinity
+    name: Cold Affinity
     description: Benefits from Hail.
 
   metadata:

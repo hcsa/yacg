@@ -1,16 +1,17 @@
 creature:
   data:
-    name: 
+    name: Speedster
     color: Yellow
+    is-token: False
     cost-total: 4
     cost-color: 1
-    hp: 2
+    hp: 5
     atk: 2
     spe: 5
 
   metadata:
     id: C019
-    value: -15
+    value: 0
     dev-stage: Alpha-0
     dev-name: Lightning McQueen
     order: 511

@@ -7,7 +7,7 @@ effect:
     cost-color: 2
     description: |
       Destroy target (CREATURE).
-      Create a (REF:C097) in their place. Any cards targetting the destroyed (CREATURE) now target the new (CREATURE).
+      Create an instance of (REF:C100.NAME) in their place. Any cards targetting the destroyed (CREATURE) now target the new (CREATURE).
 
   metadata:
     id: E078
@@ -16,4 +16,4 @@ effect:
     order: 609
     summary: Kill creature, create big creature with Brittle
     notes: |
-      
+      * [HS] SHOULD CREATE TOKENS, OTHERWISE IT'S CONFUSING WHAT HAPPENS ONCE THE CREATURE IS KILLED/RETURNS TO DECK

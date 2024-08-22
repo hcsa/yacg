@@ -1,12 +1,12 @@
 effect:
   data:
-    name: Special access
+    name: Unexpected Visit
     color: Pink
     type: Action
     cost-total: 2
     cost-color: 2
     description: |
-      Choose target (CREATURE) in your hand and play it. Pay (NOCOLOR) equal target (CREATURE)'s total cost (rounded down).
+      Choose target (CREATURE) in your hand and play it. You must pay its usual cost.
 
   metadata:
     id: E052

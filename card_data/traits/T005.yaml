@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Iron will
+    name: Iron Will
     description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
 
   metadata:

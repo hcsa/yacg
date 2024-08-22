@@ -1,12 +1,12 @@
 effect:
   data:
-    name: Peace of mind
+    name: Mindfulness
     color: Blue
     type: Aura
     cost-total: 2
-    cost-color: 2
+    cost-color: 1
     description: |
-      Target (CREATURE) gets (REF:T023).
+      Target (CREATURE) has (REF:T023.NAME) ((REF:T023.DESCRIPTION).
 
   metadata:
     id: E022

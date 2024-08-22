@@ -1,15 +1,16 @@
 creature:
   data:
-    name: 
+    name: Scout
     color: Black
+    is-token: False
     cost-total: 2
     cost-color: 2
     hp: 4
     atk: 3
     spe: 2
     traits:
-      - name: Illegal charge
-        description: When played, place this (CREATURE) on the opponent's side. You gain 4 (NOCOLOR) of a color of your choosing.
+      - name: Illegal Charge
+        description: When played, this (CREATURE) is placed on the opponent's side. You gain 4 (NOCOLOR) of a color of your choosing.
         id: T022
 
   metadata:

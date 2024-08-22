@@ -1,10 +1,10 @@
 effect:
   data:
-    name: Illegal restart
+    name: Illegal Restart
     color: Black
     type: Action
     cost-total: 3
-    cost-color: 2
+    cost-color: 1
     description: |
       Both players draw cards until they have 8, then discard cards equal to the number of cards drawn by themselves.
 

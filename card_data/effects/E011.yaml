@@ -1,13 +1,13 @@
 effect:
   data:
-    name: Drought forecast
+    name: Drought Forecast
     color: Orange
     type: Field
     cost-total: 2
     cost-color: 2
     description: |
-      If 2 (CREATURE) have (REF:T035), Sun is set for 2 rounds.
-      When that happens, destroy this card.
+      If 2 (CREATURE)s have (REF:T035.NAME), Sun is set for 2 rounds.
+      If that happens, destroy this card.
 
   metadata:
     id: E011

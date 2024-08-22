@@ -1,7 +1,7 @@
 trait:
   data:
-    name: Take two
-    description: At the end of combat, its owner can decide to have this (CREATURE) attack the same opposing (CREATURE) again. Can only be used once (this trait stacks).
+    name: Take Two
+    description: At the end of combat, you can have this (CREATURE) attack the opposing (CREATURE) again. Can only be used once.
 
   metadata:
     id: T013

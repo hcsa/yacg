@@ -1,7 +1,8 @@
 creature:
   data:
-    name: 
+    name: Cavalry
     color: White
+    is-token: False
     cost-total: 2
     cost-color: 1
     hp: 2

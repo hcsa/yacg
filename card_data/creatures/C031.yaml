@@ -1,12 +1,13 @@
 creature:
   data:
-    name: 
+    name: Toad
     color: Purple
+    is-token: False
     cost-total: 2
     cost-color: 2
     hp: 1
     atk: 1
-    spe: 0
+    spe: 1
     traits:
       - name: Poisonous
         description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
@@ -14,7 +15,7 @@ creature:
 
   metadata:
     id: C031
-    value: -50
+    value: -30
     dev-stage: Alpha-0
     dev-name: Rat
     order: 602

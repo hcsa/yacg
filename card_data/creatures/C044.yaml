@@ -1,23 +1,24 @@
 creature:
   data:
-    name: 
+    name: Alpha Wolf
     color: Green
+    is-token: False
     cost-total: 4
     cost-color: 2
-    hp: 4
+    hp: 6
     atk: 2
     spe: 3
     traits:
-      - name: Arrogant
+      - name: Power Down
         description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
         id: T001
-      - name: Scary stare
+      - name: Scary Stare
         description: In combat, opposing (CREATURE) gets -1 (ATK).
         id: T024
 
   metadata:
     id: C044
-    value: -30
+    value: -15
     dev-stage: Alpha-0
     dev-name: Wolfhound
     order: 206

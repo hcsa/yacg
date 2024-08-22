@@ -1,7 +1,7 @@
 trait:
   data:
-    name: Cancel culture
-    description: For this round, opponent can't play (CREATURE) that share traits with the last played (CREATURE).
+    name: Negate
+    description: The next (CREATURE) opponent plays can't share traits with their last played (CREATURE).
 
   metadata:
     id: T012

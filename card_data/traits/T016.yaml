@@ -1,12 +1,12 @@
 trait:
   data:
-    name: Energetic
-    description: If another ally (CREATURE) has (REF:T016), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:T016), every ally (CREATURE) gets +1 (SPE).
+    name: Energetic Aura
+    description: If another ally (CREATURE) has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE).
 
   metadata:
     id: T016
     type: Other
-    value: 25
+    value: 15
     dev-stage: Alpha-0
     dev-name: Energetic
     order: 313

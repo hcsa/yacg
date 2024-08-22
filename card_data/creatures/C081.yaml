@@ -1,12 +1,13 @@
 creature:
   data:
-    name: 
+    name: Helck
     color: White
+    is-token: False
     cost-total: 4
     cost-color: 1
-    hp: 6
+    hp: 8
     atk: 2
-    spe: 3
+    spe: 2
     traits:
       - name: Avenger
         description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK).
@@ -14,7 +15,7 @@ creature:
 
   metadata:
     id: C081
-    value: -5
+    value: -10
     dev-stage: Alpha-0
     dev-name: 
     order: 415

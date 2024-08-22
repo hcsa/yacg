@@ -3,10 +3,10 @@ effect:
     name: Delay
     color: Pink
     type: Action
-    cost-total: 2
+    cost-total: 3
     cost-color: 2
     description: |
-      Counter target (ACTION), (AURA) or (FIELD), return it to their owner's hand instead of destroying it.
+      Put target effect ((ACTION), (AURA) or (FIELD)) in the effect stack on top of their owner's hand.
       Draw a card.
 
   metadata:
@@ -17,3 +17,4 @@ effect:
     summary: Counter, pink
     notes: |
       * [HS] Seems highly situational
+      * [HS] Changed from returning to hand to returning to top of the deck

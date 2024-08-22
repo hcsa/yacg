@@ -1,12 +1,12 @@
 trait:
   data:
-    name: Cold stare
+    name: Cold Stare
     description: In combat, opposing (CREATURE) gets -1 (SPE).
 
   metadata:
     id: T021
     type: Combat
-    value: 15
+    value: 10
     dev-stage: Alpha-0
     dev-name: Ice touch
     order: 302

@@ -1,12 +1,12 @@
 effect:
   data:
-    name: Weak bones
+    name: Weak Bones
     color: Purple
     type: Aura
     cost-total: 2
     cost-color: 2
     description: |
-      Target (CREATURE) gets (REF:T003).
+      Target (CREATURE) gets (REF:T003.NAME) ((REF:T003.DESCRIPTION)).
 
   metadata:
     id: E040

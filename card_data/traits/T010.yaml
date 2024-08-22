@@ -1,11 +1,11 @@
 trait:
   data:
-    name: Scapegoat
-    description: Can take combat damage targeted at other (CREATURE).
+    name: Bodyguard
+    description: Can take combat damage targeted at other ally (CREATURE)s.
 
   metadata:
     id: T010
-    type: Combat
+    type: Other
     value: 40
     dev-stage: Alpha-0
     dev-name: Defender

@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Essence drain
+    name: Essence Drain
     description: Whenever a (CREATURE) is killed, gain +1 (NOCOLOR) of the (CREATURE)'s color.
 
   metadata:

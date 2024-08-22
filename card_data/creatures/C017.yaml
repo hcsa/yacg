@@ -1,23 +1,24 @@
 creature:
   data:
-    name: 
+    name: Hot Bombot
     color: Yellow
+    is-token: False
     cost-total: 4
     cost-color: 2
-    hp: 2
+    hp: 3
     atk: 0
     spe: 2
     traits:
       - name: Self-destruct
         description: When this (CREATURE) attacks, kill this and the opposing (CREATURE).
         id: T033
-      - name: Hot-head
+      - name: Hot Head
         description: When played, fights opponent's last played (CREATURE).
         id: T020
 
   metadata:
     id: C017
-    value: -60
+    value: -55
     dev-stage: Alpha-0
     dev-name: Exploding bot V2.0
     order: 509

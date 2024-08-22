@@ -1,13 +1,13 @@
 effect:
   data:
-    name: One more day
+    name: One More Day
     color: Purple
     type: Aura
-    cost-total: 2
+    cost-total: 3
     cost-color: 2
     description: |
-      Choose target (CREATURE) in a trash and play it.
-      Target (CREATURE) gets (REF:T003).
+      Choose target (CREATURE) in any discard pile and play it.
+      Target (CREATURE) has (REF:T003.NAME) ((REF:T003.DESCRIPTION)).
 
   metadata:
     id: E037

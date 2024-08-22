@@ -1,7 +1,7 @@
 trait:
   data:
     name: Brute
-    description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s (if there are any).
+    description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
 
   metadata:
     id: T037

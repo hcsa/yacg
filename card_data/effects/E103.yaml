@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Action
+    cost-total: 
+    cost-color: 
+    description: |
+      Discard target (FIELD) in the field.
+
+  metadata:
+    id: E103
+    dev-stage: Discontinued
+    dev-name: 
+    order: 
+    summary: Destroy field
+    notes: |
+      * [HS] Became E105

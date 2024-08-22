@@ -1,16 +1,17 @@
 creature:
   data:
-    name: 
+    name: Nheboola
     color: White
+    is-token: False
     cost-total: 3
     cost-color: 1
-    hp: 2
+    hp: 5
     atk: 2
     spe: 3
 
   metadata:
     id: C077
-    value: -15
+    value: 0
     dev-stage: Alpha-0
     dev-name: 
     order: 411

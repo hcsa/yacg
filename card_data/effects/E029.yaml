@@ -1,12 +1,12 @@
 effect:
   data:
-    name: Explosive temper
+    name: Mind Blown
     color: Yellow
     type: Aura
     cost-total: 2
     cost-color: 2
     description: |
-      Target ally (CREATURE) gets (REF:T033).
+      Target ally (CREATURE) has (REF:T033.NAME) ((REF:T033.DESCRIPTION)).
 
   metadata:
     id: E029

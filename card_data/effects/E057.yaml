@@ -1,12 +1,12 @@
 effect:
   data:
-    name: Illegal search
+    name: Illegal Search
     color: Black
     type: Action
-    cost-total: 5
+    cost-total: 4
     cost-color: 3
     description: |
-      Discard 2 cards to play this card (can't be played if you can't discard 2 cards).
+      To play this card, you must discard 2 cards from your hand.
       Choose 2 cards from deck, put them in your hand, and shuffle the deck afterwards.
 
   metadata:

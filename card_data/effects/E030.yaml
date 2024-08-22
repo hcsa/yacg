@@ -4,9 +4,10 @@ effect:
     color: Yellow
     type: Field
     cost-total: 5
-    cost-color: 3
+    cost-color: 2
     description: |
-      Every (CREATURE) gets Self-destruct.
+      When playing this card, put 3 markers on it. After a fight, remove a marker from this card. If it has 0 markers, destroy this card.
+      Every (CREATURE) has (REF:T033.NAME) ((REF:T033.DESCRIPTION)).
 
   metadata:
     id: E030
@@ -16,3 +17,4 @@ effect:
     summary: All creatures have self-destruct
     notes: |
       * [HS] Changes battle dynamics, makes it so the side with the most creatures wins. Has to be very tested
+      * [HS] Added a limit to how many fights it lasts

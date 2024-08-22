@@ -1,20 +1,24 @@
 creature:
   data:
-    name: 
+    name: Volcano Dragon
     color: Orange
-    cost-total: 4
-    cost-color: 2
-    hp: 6
-    atk: 4
-    spe: 2
+    is-token: False
+    cost-total: 5
+    cost-color: 3
+    hp: 7
+    atk: 3
+    spe: 3
     traits:
-      - name: Drought warning
-        description: When played, if 3 (CREATURE) have (REF:T035), Sun is set for 2 rounds.
+      - name: Drought Warning
+        description: When played, if 3 (CREATURE)s have (REF:T035.NAME), Sun is set for 2 rounds.
         id: T035
+      - name: Power Up
+        description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
+        id: T027
 
   metadata:
     id: C029
-    value: 0
+    value: -10
     dev-stage: Alpha-0
     dev-name: Dragon
     order: 110

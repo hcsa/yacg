@@ -1,15 +1,16 @@
 creature:
   data:
-    name: 
+    name: Turtle
     color: Black
+    is-token: False
     cost-total: 3
     cost-color: 2
     hp: 2
     atk: 3
     spe: 0
     traits:
-      - name: Golf rules
-        description: (SPE) is reversed when deciding combat order (this trait stacks).
+      - name: Tortoise Rules
+        description: (SPE) is reversed when deciding combat order.
         id: T038
 
   metadata:

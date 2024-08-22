@@ -1,20 +1,21 @@
 creature:
   data:
-    name: 
+    name: Doc-Strain Ger
     color: White
+    is-token: False
     cost-total: 4
     cost-color: 2
-    hp: 8
+    hp: 7
     atk: 1
     spe: 3
     traits:
-      - name: Scapegoat
-        description: Can take combat damage targeted at other (CREATURE).
+      - name: Bodyguard
+        description: Can take combat damage targeted at other ally (CREATURE)s.
         id: T010
 
   metadata:
     id: C080
-    value: 25
+    value: 15
     dev-stage: Alpha-0
     dev-name: 
     order: 414

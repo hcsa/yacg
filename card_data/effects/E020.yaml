@@ -1,13 +1,13 @@
 effect:
   data:
-    name: Storm forecast
+    name: Storm Forecast
     color: Blue
     type: Field
     cost-total: 2
     cost-color: 2
     description: |
-      If 2 (CREATURE) have (REF:T029), Rain is set for 2 rounds.
-      When that happens, destroy this card.
+      If 2 (CREATURE)s have (REF:T029.NAME), Rain is set for 2 rounds.
+      If that happens, destroy this card.
 
   metadata:
     id: E020

@@ -1,9 +1,9 @@
 effect:
   data:
-    name: Mutually assured destruction
-    color: Yellow
+    name: Mutually Assured Destruction
+    color: White
     type: Action
-    cost-total: 3
+    cost-total: 4
     cost-color: 2
     description: |
       Destroy target ally (CREATURE) and target opposing (CREATURE).

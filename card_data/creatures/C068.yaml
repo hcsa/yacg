@@ -1,20 +1,21 @@
 creature:
   data:
-    name: 
+    name: Spear Fighter
     color: White
+    is-token: False
     cost-total: 1
     cost-color: 1
     hp: 2
-    atk: 1
-    spe: 1
+    atk: 2
+    spe: 2
     traits:
-      - name: Ahead of schedule
-        description: At the beginning of combat, its owner can decide to have this (CREATURE) attack first. Can only be used once (this trait stacks).
+      - name: First Take
+        description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
         id: T017
 
   metadata:
     id: C068
-    value: 5
+    value: 35
     dev-stage: Alpha-0
     dev-name: Slow warrior
     order: 402

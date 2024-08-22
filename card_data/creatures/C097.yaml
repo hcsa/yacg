@@ -1,15 +1,16 @@
 creature:
   data:
-    name: 
+    name: Skeleton
     color: Purple
+    is-token: False
     cost-total: 2
     cost-color: 1
     hp: 2
     atk: 4
     spe: 2
     traits:
-      - name: Brittle
-        description: After this (CREATURE) attacks, destroy it.
+      - name: Frail
+        description: After this (CREATURE) attacks, kill it.
         id: T003
 
   metadata:
@@ -18,6 +19,6 @@ creature:
     dev-stage: Alpha-0
     dev-name: Angry skeleton
     order: 604
-    summary: Creation of E078, while also being usable
+    summary: Simple Brittle creature
     notes: |
       

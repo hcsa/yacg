@@ -106,6 +106,7 @@ creature:
   data:
     name: The Fred
     color: Yellow
+    is-token: False
     cost-total: 4
     cost-color: 2
     hp: 3

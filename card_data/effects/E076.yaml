@@ -1,18 +1,19 @@
 effect:
   data:
-    name: Terrain advantage
-    color: Cyan
+    name: Terrain Advantage
+    color: Green
     type: Field
-    cost-total: 3
-    cost-color: 2
+    cost-total: 2
+    cost-color: 1
     description: |
-      In combat, if the two (CREATURE) have the same (SPE), own (CREATURE) attacks first.
+      In combat, if the (CREATURE)s have the same (SPE), your (CREATURE) attacks first.
 
   metadata:
     id: E076
     dev-stage: Alpha-0
     dev-name: 
-    order: 913
+    order: 914
     summary: Untie Spd ties
     notes: |
       * [HS] Maybe shouldn't be Cyan, so it doesn't have all speed control?
+      * [HS] Moved from Cyan to Green

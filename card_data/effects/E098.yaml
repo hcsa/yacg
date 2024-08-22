@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Action
+    cost-total: 
+    cost-color: 
+    description: |
+      If a player has 0 cards in your hand, they draw 4 cards.
+
+  metadata:
+    id: E098
+    dev-stage: Conception
+    dev-name: 
+    order: 
+    summary: 
+    notes: |
+      

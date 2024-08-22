@@ -1,19 +1,19 @@
 effect:
   data:
-    name: War of atrition
+    name: War of Atrition
     color: Cyan
     type: Action
     cost-total: 3
     cost-color: 2
     description: |
-      Discard a card to play this card (can't be played if you can't discard cards).
-      Banish the bottom 6 cards of opponent's deck.
+      To play this card, you must discard a card from your hand.
+      Banish the bottom 4 cards of opponent's deck.
 
   metadata:
     id: E073
     dev-stage: Alpha-0
     dev-name: Mill+
-    order: 911
+    order: 912
     summary: Mill, discard a card
     notes: |
       

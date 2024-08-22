@@ -1,15 +1,16 @@
 creature:
   data:
-    name: Skeleton
+    name: Mini-skeleton
     color: Purple
+    is-token: False
     cost-total: 0
     cost-color: 0
     hp: 1
     atk: 2
     spe: 2
     traits:
-      - name: Brittle
-        description: After this (CREATURE) attacks, destroy it.
+      - name: Frail
+        description: After this (CREATURE) attacks, kill it.
         id: T003
 
   metadata:

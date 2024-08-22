@@ -2,13 +2,14 @@ creature:
   data:
     name: Zombie
     color: Purple
+    is-token: False
     cost-total: 2
     cost-color: 1
     hp: 2
     atk: 1
     spe: 2
     traits:
-      - name: Recover
+      - name: Restless
         description: If this (CREATURE) is killed or destroyed, it goes into its owner's hand.
         id: T032
 

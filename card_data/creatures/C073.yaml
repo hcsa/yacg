@@ -1,15 +1,16 @@
 creature:
   data:
-    name: 
+    name: Greaut
     color: White
+    is-token: False
     cost-total: 3
     cost-color: 2
     hp: 5
     atk: 1
     spe: 2
     traits:
-      - name: Scapegoat
-        description: Can take combat damage targeted at other (CREATURE).
+      - name: Bodyguard
+        description: Can take combat damage targeted at other ally (CREATURE)s.
         id: T010
 
   metadata:

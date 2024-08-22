@@ -1,23 +1,24 @@
 creature:
   data:
-    name: 
+    name: Pessimistic Thief
     color: Black
+    is-token: False
     cost-total: 4
     cost-color: 2
-    hp: 8
+    hp: 7
     atk: 3
-    spe: 2
+    spe: 3
     traits:
-      - name: Arrogant
+      - name: Power Down
         description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
         id: T001
       - name: Defeatist
-        description: If an ally (CREATURE) is killed or destroyed, gain -1 (ATK).
+        description: If an ally (CREATURE) is killed or destroyed, get -1 (ATK).
         id: T009
 
   metadata:
     id: C007
-    value: -20
+    value: -10
     dev-stage: Alpha-0
     dev-name: Fred playing padel with children
     order: 807

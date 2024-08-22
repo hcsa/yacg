@@ -1,18 +1,18 @@
 effect:
   data:
-    name: Don't mind if I do
-    color: 
+    name: Extra Supplies
+    color: Cyan
     type: Field
-    cost-total: 
-    cost-color: 
+    cost-total: 3
+    cost-color: 2
     description: |
-      Whenever opponent draws a card, you may pay 1 (NOCOLOR). If you do, draw a card.
+      Whenever opponent draws a card, you can choose to pay 1 (NOCOLOR). If you do, draw a card as well.
 
   metadata:
     id: E085
-    dev-stage: Conception
+    dev-stage: Alpha-0
     dev-name: 
     order: 1007
-    summary: 
+    summary: Draw whenever opponent draws
     notes: |
       

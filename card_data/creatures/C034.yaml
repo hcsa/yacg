@@ -1,20 +1,21 @@
 creature:
   data:
-    name: Ghost hand
+    name: Witch
     color: Purple
+    is-token: False
     cost-total: 3
     cost-color: 2
-    hp: 2
-    atk: 1
+    hp: 4
+    atk: 2
     spe: 2
     traits:
-      - name: Spiteful
-        description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). When that happens, destroy this (CREATURE).
+      - name: Vindicative
+        description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). If that happens, destroy this (CREATURE).
         id: T011
 
   metadata:
     id: C034
-    value: 5
+    value: 25
     dev-stage: Alpha-0
     dev-name: Ghost hand
     order: 605

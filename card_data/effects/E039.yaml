@@ -1,13 +1,13 @@
 effect:
   data:
-    name: Cheating death
+    name: Cheating Death
     color: Purple
     type: Field
     cost-total: 3
     cost-color: 3
     description: |
-      Whenever a (CREATURE) with (REF:T003) is killed or destroyed, play it for 0 (NOCOLOR). Any cards targeting this (CREATURE) still target it.
-      When that happens, destroy this card.
+      Whenever a (CREATURE) with (REF:T003.NAME) is killed, play it for 0 (NOCOLOR). Any cards targeting that (CREATURE) still target it.
+      If that happens, destroy this card.
 
   metadata:
     id: E039

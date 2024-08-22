@@ -7,7 +7,7 @@ effect:
     cost-color: 3
     description: |
       At the beginning of next round, opponent draws 2 less cards.
-      Multiple copies of (REF:E064) don't stack.
+      Multiple copies of (REF:E064.NAME) don't stack.
 
   metadata:
     id: E064

@@ -1,12 +1,12 @@
 effect:
   data:
-    name: Action and reaction
+    name: Action and Reaction
     color: Pink
     type: Field
     cost-total: 3
     cost-color: 3
     description: |
-      (ACTION), (AURA) and (FIELD) cards can't be played if the effect stack has 2 or more cards.
+      Effects ((ACTION), (AURA) or (FIELD)) can't be played if the effect stack has 2 or more cards.
 
   metadata:
     id: E047
@@ -15,4 +15,5 @@ effect:
     order: 705
     summary: Limit effect stack to 2
     notes: |
+      * Parallel of E059 and E068
       * [HS] Lowered the cost

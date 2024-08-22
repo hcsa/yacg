@@ -1,7 +1,8 @@
 creature:
   data:
-    name: 
+    name: Droplet
     color: Blue
+    is-token: False
     cost-total: 1
     cost-color: 0
     hp: 2

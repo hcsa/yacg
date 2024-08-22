@@ -1,7 +1,7 @@
 trait:
   data:
-    name: Storm warning
-    description: When played, if 3 (CREATURE) have (REF:T029), Rain is set for 2 rounds.
+    name: Storm Warning
+    description: When played, if 3 (CREATURE)s have (REF:T029.NAME), Rain is set for 2 rounds.
 
   metadata:
     id: T029

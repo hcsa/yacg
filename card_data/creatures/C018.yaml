@@ -1,23 +1,24 @@
 creature:
   data:
-    name: Running conduit
+    name: Running Conduit
     color: Yellow
+    is-token: False
     cost-total: 4
     cost-color: 2
-    hp: 6
+    hp: 5
     atk: 0
     spe: 4
     traits:
-      - name: Energetic
-        description: If another ally (CREATURE) has (REF:T016), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:T016), every ally (CREATURE) gets +1 (SPE).
+      - name: Energetic Aura
+        description: If another ally (CREATURE) has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE).
         id: T016
-      - name: Tag team
+      - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
         id: T039
 
   metadata:
     id: C018
-    value: 10
+    value: -5
     dev-stage: Alpha-0
     dev-name: Running conduit
     order: 510

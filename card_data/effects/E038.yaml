@@ -1,12 +1,13 @@
 effect:
   data:
-    name: Life sap
+    name: Life Sap
     color: Purple
     type: Action
-    cost-total: 2
-    cost-color: 2
+    cost-total: 1
+    cost-color: 1
     description: |
-      Target (CREATURE) gets -2 (HP), other target (CREATURE) gets +2 (HP).
+      Target (CREATURE) gets -2 (HP).
+      Other target (CREATURE) gets +2 (HP).
 
   metadata:
     id: E038

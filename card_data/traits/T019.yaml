@@ -1,7 +1,7 @@
 trait:
   data:
-    name: Hail warning
-    description: When played, if 3 (CREATURE) have (REF:T019), Hail is set for 2 rounds.
+    name: Hail Warning
+    description: When played, if 3 (CREATURE)s have (REF:T019.NAME), Hail is set for 2 rounds.
 
   metadata:
     id: T019

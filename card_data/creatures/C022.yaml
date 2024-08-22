@@ -1,14 +1,15 @@
 creature:
   data:
-    name: Charging goblin
+    name: Immature Goblin
     color: Orange
+    is-token: False
     cost-total: 1
     cost-color: 1
     hp: 1
-    atk: 1
+    atk: 2
     spe: 3
     traits:
-      - name: Hot-head
+      - name: Hot Head
         description: When played, fights opponent's last played (CREATURE).
         id: T020
       - name: Reckless
@@ -17,7 +18,7 @@ creature:
 
   metadata:
     id: C022
-    value: 5
+    value: 15
     dev-stage: Alpha-0
     dev-name: 
     order: 103

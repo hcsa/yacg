@@ -1,14 +1,15 @@
 creature:
   data:
-    name: 
+    name: White Whale
     color: Blue
+    is-token: False
     cost-total: 4
     cost-color: 1
     hp: 8
     atk: 2
     spe: 2
     traits:
-      - name: Cold affinity
+      - name: Cold Affinity
         description: Benefits from Hail.
         id: T006
 

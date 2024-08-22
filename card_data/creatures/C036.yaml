@@ -1,20 +1,21 @@
 creature:
   data:
-    name: 
+    name: Double Skeleton
     color: Purple
+    is-token: False
     cost-total: 4
     cost-color: 2
     hp: 4
     atk: 6
-    spe: 3
+    spe: 2
     traits:
-      - name: Brittle
-        description: After this (CREATURE) attacks, destroy it.
+      - name: Frail
+        description: After this (CREATURE) attacks, kill it.
         id: T003
 
   metadata:
     id: C036
-    value: 10
+    value: -10
     dev-stage: Alpha-0
     dev-name: 
     order: 607

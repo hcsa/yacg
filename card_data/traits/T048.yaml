@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Stoic
+    description: In combat, traits have no effect.
+
+  metadata:
+    id: T048
+    type: Other
+    value: 25
+    dev-stage: Conception
+    dev-name: 
+    order: 907
+    summary: 
+    notes: |
+      

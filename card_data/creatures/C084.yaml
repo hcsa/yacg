@@ -1,15 +1,16 @@
 creature:
   data:
-    name: 
+    name: The Vijeans
     color: White
+    is-token: False
     cost-total: 5
     cost-color: 2
     hp: 6
     atk: 3
     spe: 2
     traits:
-      - name: Take two
-        description: At the end of combat, its owner can decide to have this (CREATURE) attack the same opposing (CREATURE) again. Can only be used once (this trait stacks).
+      - name: Take Two
+        description: At the end of combat, you can have this (CREATURE) attack the opposing (CREATURE) again. Can only be used once.
         id: T013
 
   metadata:

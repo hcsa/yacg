@@ -1,7 +1,8 @@
 creature:
   data:
-    name: 
+    name: Polar Bear
     color: Cyan
+    is-token: False
     cost-total: 2
     cost-color: 1
     hp: 2

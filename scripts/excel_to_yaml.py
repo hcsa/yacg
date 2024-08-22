@@ -49,7 +49,11 @@ def import_from_traits_sheet(traits_sheet: xw.Sheet):
             ),
             dev_stage=card_data.DevStage(row["dev-stage"].strip()),
             dev_name=row["dev-name"].strip(),
-            order=row["order"],
+            order=(
+                int(row["order"])
+                if not pd.isna(row["order"])
+                else None
+            ),
             summary=row["summary"].strip(),
             notes=row["notes"].strip(),
         )
@@ -113,6 +117,7 @@ def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
                 if not row["color"].strip() == ""
                 else None
             ),
+            is_token=row["is-token"],
             cost_total=(
                 int(row["cost-total"])
                 if not pd.isna(row["cost-total"])
@@ -149,7 +154,11 @@ def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
             ),
             dev_stage=card_data.DevStage(row["dev-stage"].strip()),
             dev_name=row["dev-name"].strip(),
-            order=row["order"],
+            order=(
+                int(row["order"])
+                if not pd.isna(row["order"])
+                else None
+            ),
             summary=row["summary"].strip(),
             notes=row["notes"].strip(),
         )
@@ -172,6 +181,7 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
         "atk": "Int64",
         "spe": "Int64",
         "value": "Int64",
+        "is-token": bool,
         "dev-stage": str,
         "dev-name": str,
         "summary": str,
@@ -185,7 +195,7 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
     excel_table_last_cell = creatures_sheet.range("TableCreature").last_cell
     df_raw: pd.DataFrame = creatures_sheet.range("A1", excel_table_last_cell).options(pd.DataFrame, index=False).value
     df_raw_cols_used = \
-        df_raw.columns[0:9].append(df_raw.columns[13:22])
+        df_raw.columns[0:9].append(df_raw.columns[13:23])
     df: pd.DataFrame = df_raw[df_raw_cols_used].copy()
     df = df.set_axis(
         list(df_types),
@@ -231,7 +241,11 @@ def import_from_effects_sheet(effects_sheet: xw.Sheet):
             id=row["id"].strip(),
             dev_stage=card_data.DevStage(row["dev-stage"].strip()),
             dev_name=row["dev-name"].strip(),
-            order=row["order"],
+            order=(
+                int(row["order"])
+                if not pd.isna(row["order"])
+                else None
+            ),
             summary=row["summary"].strip(),
             notes=row["notes"].strip(),
         )

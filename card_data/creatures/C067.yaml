@@ -1,7 +1,8 @@
 creature:
   data:
-    name: 
+    name: Old Warrior
     color: White
+    is-token: False
     cost-total: 0
     cost-color: 0
     hp: 1
@@ -9,7 +10,7 @@ creature:
     spe: 2
     traits:
       - name: Survivor
-        description: At the end of the round, this (CREATURE) returns to the deck.
+        description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
         id: T036
 
   metadata:

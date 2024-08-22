@@ -1,16 +1,17 @@
 creature:
   data:
-    name: 
+    name: Fire Elemental
     color: Orange
+    is-token: False
     cost-total: 4
-    cost-color: 1
+    cost-color: 2
     hp: 4
-    atk: 4
+    atk: 3
     spe: 3
 
   metadata:
     id: C028
-    value: 0
+    value: -15
     dev-stage: Alpha-0
     dev-name: 
     order: 109

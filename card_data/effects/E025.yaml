@@ -4,9 +4,9 @@ effect:
     color: White
     type: Action
     cost-total: 2
-    cost-color: 2
+    cost-color: 1
     description: |
-      Creature two (REF:C067).
+      Create two instances of (REF:C098.NAME).
 
   metadata:
     id: E025
@@ -16,3 +16,4 @@ effect:
     summary: Add 2 tokens, cheap, white
     notes: |
       * [HS] Nerfed the tokens, also made it cheaper
+      * [HS] SHOULD CREATE TOKENS, OTHERWISE IT'S CONFUSING WHAT HAPPENS ONCE THE CREATURE IS KILLED/RETURNS TO DECK

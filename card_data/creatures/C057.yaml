@@ -1,20 +1,21 @@
 creature:
   data:
-    name: 
+    name: Mammoth
     color: Cyan
+    is-token: False
     cost-total: 3
     cost-color: 2
-    hp: 2
-    atk: 1
+    hp: 4
+    atk: 3
     spe: 2
     traits:
-      - name: Lethargic
-        description: If another ally (CREATURE) has (REF:T007), every opposing (CREATURE) gets -1 (SPE). For each additional ally (CREATURE) that has (REF:T007), every opposing (CREATURE) gets -1 (SPE).
+      - name: Lethargic Aura
+        description: If another ally (CREATURE) has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE). For each additional ally that has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE).
         id: T007
 
   metadata:
     id: C057
-    value: -10
+    value: 10
     dev-stage: Alpha-0
     dev-name: Olaf
     order: 905

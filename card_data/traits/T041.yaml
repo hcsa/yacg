@@ -1,6 +1,6 @@
 trait:
   data:
-    name: Grudge
+    name: Grudger
     description: If this (CREATURE) is killed in combat, destroy opposing (CREATURE).
 
   metadata:

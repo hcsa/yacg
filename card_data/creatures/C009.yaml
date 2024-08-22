@@ -1,7 +1,8 @@
 creature:
   data:
-    name: 
+    name: Nano Bot
     color: Yellow
+    is-token: False
     cost-total: 0
     cost-color: 0
     hp: 1

@@ -1,23 +1,24 @@
 creature:
   data:
-    name: 
+    name: Ocean Dragon
     color: Blue
+    is-token: False
     cost-total: 5
     cost-color: 3
     hp: 10
-    atk: 3
+    atk: 2
     spe: 2
     traits:
-      - name: Storm warning
-        description: When played, if 3 (CREATURE) have (REF:T029), Rain is set for 2 rounds.
+      - name: Storm Warning
+        description: When played, if 3 (CREATURE)s have (REF:T029.NAME), Rain is set for 2 rounds.
         id: T029
-      - name: Immunity
-        description: Can't be targeted by any (ACTION) or (AURA).
+      - name: Mental Strength
+        description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
         id: T023
 
   metadata:
     id: C094
-    value: 5
+    value: -5
     dev-stage: Alpha-0
     dev-name: Whale
     order: 309

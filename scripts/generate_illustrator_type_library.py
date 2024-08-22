@@ -1,5 +1,5 @@
 """
-Generates type library to use with Adobe Illustrator
+Run this script to generate the type library for Adobe Illustrator
 
 Requires some work beforehand, check README for more details
 """

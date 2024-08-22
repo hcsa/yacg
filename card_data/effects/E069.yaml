@@ -1,6 +1,6 @@
 effect:
   data:
-    name: Cold charge
+    name: Cold Charge
     color: Cyan
     type: Action
     cost-total: 2
@@ -12,7 +12,7 @@ effect:
     id: E069
     dev-stage: Alpha-0
     dev-name: Charge, cyan
-    order: 906
+    order: 905
     summary: Charge, cyan
     notes: |
       

@@ -7,7 +7,7 @@ trait:
     id: T002
     type: Other
     value: 15
-    dev-stage: Alpha-1
+    dev-stage: Alpha-0
     dev-name: Avenger
     order: 103
     summary: +Atk when ally dies

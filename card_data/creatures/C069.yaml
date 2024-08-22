@@ -1,16 +1,17 @@
 creature:
   data:
-    name: 
+    name: Swordsman
     color: White
+    is-token: False
     cost-total: 1
     cost-color: 0
     hp: 2
     atk: 2
-    spe: 2
+    spe: 3
 
   metadata:
     id: C069
-    value: -5
+    value: 15
     dev-stage: Alpha-0
     dev-name: 
     order: 403

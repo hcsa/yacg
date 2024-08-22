@@ -1,18 +1,19 @@
 effect:
   data:
-    name: Ungranted authorization
+    name: Reaction Denied
     color: Black
     type: Field
     cost-total: 3
-    cost-color: 3
+    cost-color: 2
     description: |
-      (ACTION), (AURA) and (FIELD) cards can't be played if the effect stack has 1 or more cards.
+      Effects ((ACTION), (AURA) and (FIELD)) can't be played if the effect stack has 1 or more cards.
 
   metadata:
     id: E059
     dev-stage: Alpha-0
     dev-name: 
-    order: 805
+    order: 806
     summary: Limit effect stack to 1
     notes: |
+      * Parallel of E047 and E068
       * [HS] Lowered the cost

@@ -1,20 +1,21 @@
 creature:
   data:
-    name: 
+    name: Mini-skeletons in a trenchcoat
     color: Purple
+    is-token: False
     cost-total: 2
     cost-color: 0
     hp: 2
-    atk: 3
+    atk: 2
     spe: 3
     traits:
-      - name: Brittle
-        description: After this (CREATURE) attacks, destroy it.
+      - name: Frail
+        description: After this (CREATURE) attacks, kill it.
         id: T003
 
   metadata:
     id: C033
-    value: -5
+    value: -15
     dev-stage: Alpha-0
     dev-name: 
     order: 604

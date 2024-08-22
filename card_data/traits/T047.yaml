@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Field Animosity
+    description: In combat, if the opponent has (FIELD)s, get +1 (SPE).
+
+  metadata:
+    id: T047
+    type: Combat
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 905
+    summary: Combat buffs if opponent has fields
+    notes: |
+      

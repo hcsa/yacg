@@ -1,7 +1,8 @@
 creature:
   data:
-    name: 
+    name: Faceless Hunchback
     color: Green
+    is-token: False
     cost-total: 2
     cost-color: 0
     hp: 3
@@ -14,6 +15,6 @@ creature:
     dev-stage: Alpha-0
     dev-name: Gorilla
     order: 202
-    summary: Creation of E050, while also being usable
+    summary: No trait, 2 cost, Green
     notes: |
       

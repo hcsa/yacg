@@ -1,20 +1,21 @@
 creature:
   data:
-    name: 
+    name: Three Eyes
     color: Pink
-    cost-total: 3
-    cost-color: 2
-    hp: 6
+    is-token: False
+    cost-total: 4
+    cost-color: 3
+    hp: 4
     atk: 2
-    spe: 1
+    spe: 2
     traits:
-      - name: Immunity
-        description: Can't be targeted by any (ACTION) or (AURA).
-        id: T023
+      - name: Mindguard
+        description: If an ally (CREATURE) is the target of an effect ((ACTION), (AURA) or (FIELD)), you can choose for this (CREATURE) to be targetted instead. If that happens, get -2 (HP).
+        id: T045
 
   metadata:
     id: C064
-    value: 5
+    value: 30
     dev-stage: Alpha-0
     dev-name: 
     order: 703

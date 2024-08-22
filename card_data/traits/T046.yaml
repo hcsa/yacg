@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Spoils Scavenger
+    description: At the end of the round, if another (CREATURE) has (REF:T046.NAME), return all own (FIELD)s to the deck.
+
+  metadata:
+    id: T046
+    type: Other
+    value: 25
+    dev-stage: Conception
+    dev-name: 
+    order: 906
+    summary: 
+    notes: |
+      

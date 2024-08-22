@@ -1,7 +1,7 @@
 trait:
   data:
     name: Taxing
-    description: All (ACTION), (AURA) and (FIELD) cost +1 (NOCOLOR) to play.
+    description: All effects ((ACTION), (AURA) and (FIELD)) cost +1 (NOCOLOR) to play.
 
   metadata:
     id: T026

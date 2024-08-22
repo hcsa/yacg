@@ -1,23 +1,24 @@
 creature:
   data:
-    name: 
+    name: Troll
     color: Cyan
+    is-token: False
     cost-total: 4
     cost-color: 3
-    hp: 6
+    hp: 5
     atk: 4
     spe: 2
     traits:
-      - name: Lethargic
-        description: If another ally (CREATURE) has (REF:T007), every opposing (CREATURE) gets -1 (SPE). For each additional ally (CREATURE) that has (REF:T007), every opposing (CREATURE) gets -1 (SPE).
+      - name: Lethargic Aura
+        description: If another ally (CREATURE) has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE). For each additional ally that has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE).
         id: T007
-      - name: Cold stare
+      - name: Cold Stare
         description: In combat, opposing (CREATURE) gets -1 (SPE).
         id: T021
 
   metadata:
     id: C060
-    value: 35
+    value: 15
     dev-stage: Alpha-0
     dev-name: Elsa
     order: 908

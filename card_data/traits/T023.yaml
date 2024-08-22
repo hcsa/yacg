@@ -1,7 +1,7 @@
 trait:
   data:
-    name: Immunity
-    description: Can't be targeted by any (ACTION) or (AURA).
+    name: Mental Strength
+    description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
 
   metadata:
     id: T023

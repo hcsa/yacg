@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 0
     description: |
-      Counter target (ACTION), (AURA) or (FIELD).
+      Counter target effect ((ACTION), (AURA) or (FIELD)) on the effect stack.
       While this card is in the effect stack, opponent's cards cost -2 (NOCOLOR) to play.
 
   metadata:

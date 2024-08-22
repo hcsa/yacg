@@ -1,11 +1,12 @@
 creature:
   data:
-    name: 
+    name: Motorcycle
     color: Yellow
+    is-token: False
     cost-total: 3
     cost-color: 1
     hp: 2
-    atk: 4
+    atk: 3
     spe: 4
     traits:
       - name: Reckless
@@ -14,7 +15,7 @@ creature:
 
   metadata:
     id: C015
-    value: 5
+    value: -10
     dev-stage: Alpha-0
     dev-name: Driving Henrique
     order: 507

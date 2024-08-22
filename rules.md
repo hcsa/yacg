@@ -17,7 +17,7 @@ A.
 
 In this phase, effects cards are played. There are 3 types of effect cards:
 
-- **Actions** (marked with <img src="./card_design/icons/card_action.svg" height=12>) in the top-right corner)  have an
+- **Actions** (marked with <img src="./card_design/icons/card_action.svg" height=12>) in the top-right corner) have an
   immediate effect, then go
   to the
   discard pile.
@@ -104,9 +104,9 @@ the cards remaining on the deck.
 
 **To play a card, you need to pay energy**.
 
-- The total amount of energy to be paid is in the top-left corner of the card.
-- Some of the cost must be paid with energy of the same color as the card’s color. This is the number in the bottom-left
-  corner of the card.
+- The total amount of energy to be paid is the largest number in the top-right corner of the card.
+- Some of the cost must be paid with energy of the same color as the card’s color. This is the number near the total
+  cost, slightly above it.
 - The number in the bottom-right corner is the difference between the two. This cost can be paid with energy of any
   color.
 - Brown cards are colorless. There is no brown energy, and their cost can be paid with energy of any color.
@@ -126,8 +126,8 @@ You earn energy as follows:
 - Throughout the game, when a chosen plan’s condition applies, you get energy of the color attached to the plan.
 - In addition, whenever a card from the deck enters your hand whose color matches one attached to any of the methods,
   you get +1 energy of that color.
-    - This happens if you’re drawing the 8 cards at the start of a game, if you draw a card, if you search for a card
-      from the deck to put it in your hand, etc.
+    - This happens if you’re drawing the 8 cards at the start of a game or if you draw a card bya ny other method.
+    - Putting card in your hand, even if they come from the deck, (eg, using "Search") don't give energy.
 
 > **Note: Energy carries over between rounds!**
 

@@ -1,20 +1,21 @@
 creature:
   data:
-    name: 
+    name: Razor Plague
     color: Green
+    is-token: False
     cost-total: 3
     cost-color: 1
-    hp: 4
+    hp: 5
     atk: 3
     spe: 2
     traits:
-      - name: Arrogant
+      - name: Power Down
         description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
         id: T001
 
   metadata:
     id: C043
-    value: -25
+    value: -20
     dev-stage: Alpha-0
     dev-name: 
     order: 205

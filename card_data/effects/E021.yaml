@@ -1,10 +1,10 @@
 effect:
   data:
-    name: No bad vibes
+    name: No Bad Vibes
     color: Blue
     type: Action
-    cost-total: 4
-    cost-color: 2
+    cost-total: 3
+    cost-color: 1
     description: |
       Return target (CREATURE) to their owner's hand.
 
