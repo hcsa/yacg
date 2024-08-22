@@ -88,7 +88,7 @@ beforehand
 
 - Install `pywin32` module (run `pip install pywin32` or equivalent)
 - Go to `[path/to/Python3/or/venv]/Scripts`, there should be a `pywin32_postinstall.py` file there
-- Run `python pywin32_postinstall.py -install` with admin priviledges
+- Run `python pywin32_postinstall.py -install` with admin privileges
 
 After that, running [generate_illustrator_type_library.py](./scripts/generate_illustrator_type_library.py) will generate
 the type library.
