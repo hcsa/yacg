@@ -3,7 +3,7 @@
 venv/
 _pyinstaller_cache/
 __pycache__/
-card_design/card_arts/*/
+card_design/card_arts/
 print_output/
 ~$*
 /Cards.xlsx
