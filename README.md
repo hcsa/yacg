@@ -6,7 +6,6 @@ Requires
 
 - Python 3.12
 - Adobe Illustrator 2023 (v27.3)
-- [Git LFS](https://git-lfs.com/) for card arts
 - Installing fonts in the [fonts](/card_design/fonts) folder
 
 ### Compile executables
