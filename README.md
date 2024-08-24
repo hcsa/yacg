@@ -6,6 +6,7 @@ Requires
 
 - Python 3.12
 - Adobe Illustrator 2023 (v27.3)
+- [Git LFS](https://git-lfs.com/), used to store the cards' art files in the [card_design](card_design/card_arts) folder
 - Installing fonts in the [fonts](/card_design/fonts) folder
 
 ### Compile executables
