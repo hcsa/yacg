@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Power Down
+    description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
+
+  metadata:
+    id: T001
+    type: Combat
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: Arrogant
+    order: 102
+    summary: -Atk when kills
+    notes: |
+      * Main colors: Black, Green

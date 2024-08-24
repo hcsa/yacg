@@ -1,0 +1,19 @@
+effect:
+  data:
+    name: Big Boy
+    color: Green
+    type: Aura
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Target (CREATURE) gets +4 (HP) and +2 (ATK).
+      Target (CREATURE) has (REF:T034.NAME) ((REF:T034.DESCRIPTION)).
+
+  metadata:
+    id: E014
+    dev-stage: Alpha-0
+    dev-name: Gigantamax
+    order: 203
+    summary: Make creature beg
+    notes: |
+      

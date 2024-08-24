@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Aura Animosity
+    description: In combat, if the opposing (CREATURE) has (AURA)s, get +2 (ATK).
+
+  metadata:
+    id: T044
+    type: Combat
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 904
+    summary: Combat buffs if opponent has auras
+    notes: |
+      

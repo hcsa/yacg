@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Drought Warning
+    description: When played, if 3 (CREATURE)s have (REF:T035.NAME), Sun is set for 2 rounds.
+
+  metadata:
+    id: T035
+    type: Entry
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Sun setter
+    order: 201
+    summary: Sun setter
+    notes: |
+      * Main colors: Orange, Green

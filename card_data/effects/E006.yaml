@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Fireball
+    color: Orange
+    type: Action
+    cost-total: 1
+    cost-color: 1
+    description: |
+      Target (CREATURE) gets -2 (HP).
+
+  metadata:
+    id: E006
+    dev-stage: Alpha-0
+    dev-name: Fireball
+    order: 102
+    summary: Direct damage, cheap, orange
+    notes: |
+      * [HS] Made it cheaper and weaker

@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Bound Together
+    color: 
+    type: Action
+    cost-total: 
+    cost-color: 
+    description: |
+      Both players draw or discard cards until their hand size is equal to half (rounded down) the sum of both players' current hand size.
+
+  metadata:
+    id: E094
+    dev-stage: Conception
+    dev-name: 
+    order: 
+    summary: 
+    notes: |
+      

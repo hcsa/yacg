@@ -1,0 +1,24 @@
+creature:
+  data:
+    name: Crab
+    color: Blue
+    is-token: False
+    cost-total: 3
+    cost-color: 1
+    hp: 4
+    atk: 2
+    spe: 2
+    traits:
+      - name: Iron Will
+        description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
+        id: T005
+
+  metadata:
+    id: C091
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 306
+    summary: Clear body
+    notes: |
+      

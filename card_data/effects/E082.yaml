@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Colorblindness
+    color: 
+    type: Field
+    cost-total: 
+    cost-color: 
+    description: |
+      Whenever a card is played, its owner can choose to pay 1 (NOCOLOR) of a color using 2 (NOCOLOR) of another color. This can be done multiple times for paying the same card.
+
+  metadata:
+    id: E082
+    dev-stage: Conception
+    dev-name: 
+    order: 1004
+    summary: Ignore color payment
+    notes: |
+      

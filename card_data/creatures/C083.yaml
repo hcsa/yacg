@@ -1,0 +1,27 @@
+creature:
+  data:
+    name: Oudynsun
+    color: White
+    is-token: False
+    cost-total: 4
+    cost-color: 2
+    hp: 3
+    atk: 4
+    spe: 2
+    traits:
+      - name: First Take
+        description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
+        id: T017
+      - name: Tag Team
+        description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
+        id: T039
+
+  metadata:
+    id: C083
+    value: 25
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 417
+    summary: First strike, U-turn
+    notes: |
+      

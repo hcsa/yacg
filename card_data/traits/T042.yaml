@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Reaction
+    description: Whenever you play a (ACTION), draw a card.
+
+  metadata:
+    id: T042
+    type: Other
+    value: 15
+    dev-stage: Conception
+    dev-name: 
+    order: 902
+    summary: Action play, draw
+    notes: |
+      

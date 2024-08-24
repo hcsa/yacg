@@ -1,0 +1,27 @@
+creature:
+  data:
+    name: Lowky
+    color: White
+    is-token: False
+    cost-total: 4
+    cost-color: 1
+    hp: 6
+    atk: 2
+    spe: 3
+    traits:
+      - name: First Take
+        description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
+        id: T017
+      - name: Survivor
+        description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
+        id: T036
+
+  metadata:
+    id: C079
+    value: 30
+    dev-stage: Alpha-0
+    dev-name: War veteran
+    order: 413
+    summary: First strike, White
+    notes: |
+      

@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Sluggish
+    description: This (CREATURE) always attacks last.
+
+  metadata:
+    id: T034
+    type: Combat
+    value: -20
+    dev-stage: Alpha-0
+    dev-name: Slow movement
+    order: 503
+    summary: Attacks last
+    notes: |
+      * Main colors: Green

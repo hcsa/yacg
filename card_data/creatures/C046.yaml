@@ -1,0 +1,30 @@
+creature:
+  data:
+    name: Mountain Golem
+    color: Green
+    is-token: False
+    cost-total: 4
+    cost-color: 2
+    hp: 6
+    atk: 2
+    spe: 2
+    traits:
+      - name: Big Entrance
+        description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
+        id: T015
+      - name: Shields Up
+        description: First damage dealt to this (CREATURE) is nullified.
+        id: T028
+      - name: Sluggish
+        description: This (CREATURE) always attacks last.
+        id: T034
+
+  metadata:
+    id: C046
+    value: -30
+    dev-stage: Alpha-0
+    dev-name: Mountain
+    order: 208
+    summary: Medium creature, Slow movement, cheapest
+    notes: |
+      

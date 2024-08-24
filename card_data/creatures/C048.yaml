@@ -1,0 +1,27 @@
+creature:
+  data:
+    name: Weather Mage
+    color: Green
+    is-token: False
+    cost-total: 5
+    cost-color: 3
+    hp: 9
+    atk: 2
+    spe: 2
+    traits:
+      - name: Storm Warning
+        description: When played, if 3 (CREATURE)s have (REF:T029.NAME), Rain is set for 2 rounds.
+        id: T029
+      - name: Drought Warning
+        description: When played, if 3 (CREATURE)s have (REF:T035.NAME), Sun is set for 2 rounds.
+        id: T035
+
+  metadata:
+    id: C048
+    value: -30
+    dev-stage: Alpha-0
+    dev-name: Weather mage
+    order: 210
+    summary: Sun setter, Rain setter, Green
+    notes: |
+      

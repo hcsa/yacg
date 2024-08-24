@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Scary Stare
+    description: In combat, opposing (CREATURE) gets -1 (ATK).
+
+  metadata:
+    id: T024
+    type: Combat
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Intimidate
+    order: 301
+    summary: -Atk in combat
+    notes: |
+      * Main colors: Green, Black

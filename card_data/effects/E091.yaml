@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Illegal Double Up
+    color: Black
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      This card becomes a copy of target (ACTION) in the effect stack. You may choose new targets for it (restrictions to the targets still apply).
+
+  metadata:
+    id: E091
+    dev-stage: Alpha-0
+    dev-name: Double Up, black
+    order: 805
+    summary: Double Up, black
+    notes: |
+      

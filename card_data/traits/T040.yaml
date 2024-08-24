@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Actionable
+    description: This (CREATURE) can be played as an (ACTION). Resolve the (ACTION) by putting it in your side.
+
+  metadata:
+    id: T040
+    type: Other
+    value: 15
+    dev-stage: Conception
+    dev-name: Flash
+    order: 901
+    summary: Can be cast at any point
+    notes: |
+      

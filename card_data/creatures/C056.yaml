@@ -1,0 +1,24 @@
+creature:
+  data:
+    name: Yeti
+    color: Cyan
+    is-token: False
+    cost-total: 3
+    cost-color: 2
+    hp: 3
+    atk: 2
+    spe: 3
+    traits:
+      - name: Tag Team
+        description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
+        id: T039
+
+  metadata:
+    id: C056
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 904
+    summary: U-turn, high Spd, cheap
+    notes: |
+      

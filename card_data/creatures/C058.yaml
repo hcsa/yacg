@@ -1,0 +1,24 @@
+creature:
+  data:
+    name: Frost Queen
+    color: Cyan
+    is-token: False
+    cost-total: 4
+    cost-color: 3
+    hp: 5
+    atk: 2
+    spe: 3
+    traits:
+      - name: Taxing
+        description: All effects ((ACTION), (AURA) and (FIELD)) cost +1 (NOCOLOR) to play.
+        id: T026
+
+  metadata:
+    id: C058
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 906
+    summary: Mind freeze, Cyan
+    notes: |
+      

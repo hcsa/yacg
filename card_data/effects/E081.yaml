@@ -1,0 +1,19 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Field
+    cost-total: 
+    cost-color: 
+    description: |
+      Gain 2 (NOCOLOR) of a color of your choosing.
+      At the beginning of next round, opponent gains 4 (NOCOLOR) of a color of their choosing.
+
+  metadata:
+    id: E081
+    dev-stage: Conception
+    dev-name: 
+    order: 1003
+    summary: Charge, delayed opponent charge
+    notes: |
+      

@@ -1,0 +1,27 @@
+creature:
+  data:
+    name: Snow Spirit
+    color: Cyan
+    is-token: False
+    cost-total: 4
+    cost-color: 2
+    hp: 4
+    atk: 3
+    spe: 3
+    traits:
+      - name: Cold Stare
+        description: In combat, opposing (CREATURE) gets -1 (SPE).
+        id: T021
+      - name: Tag Team
+        description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
+        id: T039
+
+  metadata:
+    id: C059
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 907
+    summary: -Spd in combat, U-turn
+    notes: |
+      

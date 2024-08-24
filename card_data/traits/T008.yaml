@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Poisonous
+    description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
+
+  metadata:
+    id: T008
+    type: Combat
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: Death touch
+    order: 601
+    summary: Kills whenever gives damage
+    notes: |
+      * Main colors: Purple

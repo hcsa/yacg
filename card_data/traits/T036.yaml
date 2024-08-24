@@ -1,0 +1,16 @@
+trait:
+  data:
+    name: Survivor
+    description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
+
+  metadata:
+    id: T036
+    type: Other
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Survivor
+    order: 808
+    summary: If it's not killed, goes to deck at the end of the round
+    notes: |
+      * Main colors: Green, White
+      * [HS] Doesn't seem to be relevant

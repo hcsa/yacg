@@ -1,0 +1,24 @@
+creature:
+  data:
+    name: Capable Goblin
+    color: Orange
+    is-token: False
+    cost-total: 2
+    cost-color: 1
+    hp: 3
+    atk: 2
+    spe: 2
+    traits:
+      - name: Hot Head
+        description: When played, fights opponent's last played (CREATURE).
+        id: T020
+
+  metadata:
+    id: C023
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 104
+    summary: Haste, Orange, cheapest
+    notes: |
+      

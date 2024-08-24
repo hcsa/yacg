@@ -1,0 +1,27 @@
+creature:
+  data:
+    name: Survivalist
+    color: Green
+    is-token: False
+    cost-total: 5
+    cost-color: 2
+    hp: 7
+    atk: 3
+    spe: 2
+    traits:
+      - name: Heat Affinity
+        description: Benefits from Sun.
+        id: T004
+      - name: Aqua Affinity
+        description: Benefits from Rain.
+        id: T014
+
+  metadata:
+    id: C051
+    value: -40
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 211
+    summary: Sun buffed, Rain buffed, Green
+    notes: |
+      

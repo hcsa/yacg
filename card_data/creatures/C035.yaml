@@ -1,0 +1,24 @@
+creature:
+  data:
+    name: Mini-skeleton army
+    color: Purple
+    is-token: False
+    cost-total: 3
+    cost-color: 1
+    hp: 4
+    atk: 3
+    spe: 3
+    traits:
+      - name: Frail
+        description: After this (CREATURE) attacks, kill it.
+        id: T003
+
+  metadata:
+    id: C035
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: Bonehound
+    order: 606
+    summary: 3-cost, Purple
+    notes: |
+      

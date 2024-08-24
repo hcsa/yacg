@@ -1,0 +1,19 @@
+effect:
+  data:
+    name: Offensive Gear
+    color: Orange
+    type: Field
+    cost-total: 4
+    cost-color: 3
+    description: |
+      When playing this card, put 3 markers on it. After a fight, remove a marker from this card. If it has 0 markers, destroy this card.
+      In fights, (ATK) is used to decide fight order.
+
+  metadata:
+    id: E093
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 107
+    summary: Use Atk in place of Spe
+    notes: |
+      * [HS] Parallel of E033

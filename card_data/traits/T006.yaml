@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Cold Affinity
+    description: Benefits from Hail.
+
+  metadata:
+    id: T006
+    type: Other
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Cold blood
+    order: 213
+    summary: Hail buffed
+    notes: |
+      * Main colors: Blue

@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Mindfulness
+    color: Blue
+    type: Aura
+    cost-total: 2
+    cost-color: 1
+    description: |
+      Target (CREATURE) has (REF:T023.NAME) ((REF:T023.DESCRIPTION).
+
+  metadata:
+    id: E022
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 305
+    summary: Give Immunity
+    notes: |
+      

@@ -1,0 +1,24 @@
+creature:
+  data:
+    name: Witch
+    color: Purple
+    is-token: False
+    cost-total: 3
+    cost-color: 2
+    hp: 4
+    atk: 2
+    spe: 2
+    traits:
+      - name: Vindicative
+        description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). If that happens, destroy this (CREATURE).
+        id: T011
+
+  metadata:
+    id: C034
+    value: 25
+    dev-stage: Alpha-0
+    dev-name: Ghost hand
+    order: 605
+    summary: Destiny bond, cheapest
+    notes: |
+      

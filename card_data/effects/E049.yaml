@@ -1,0 +1,19 @@
+effect:
+  data:
+    name: Future Sight
+    color: Pink
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Look at the top 8 cards of your deck and put them back in any order.
+      Draw a card.
+
+  metadata:
+    id: E049
+    dev-stage: Alpha-0
+    dev-name: Search, pink
+    order: 707
+    summary: Search, pink
+    notes: |
+      * [HS] Doesn't feel very useful, made it cheaper

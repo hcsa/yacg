@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Mind Blown
+    color: Yellow
+    type: Aura
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Target ally (CREATURE) has (REF:T033.NAME) ((REF:T033.DESCRIPTION)).
+
+  metadata:
+    id: E029
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 502
+    summary: Give Self-destruct
+    notes: |
+      

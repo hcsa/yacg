@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Combat Proficiency
+    color: White
+    type: Aura
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Target (CREATURE) has (REF:T017.NAME) ((REF:T017.DESCRIPTION)).
+
+  metadata:
+    id: E027
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 404
+    summary: Give First strike
+    notes: |
+      

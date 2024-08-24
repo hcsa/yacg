@@ -1,0 +1,19 @@
+effect:
+  data:
+    name: Preserved in the Ice
+    color: Cyan
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Choose 1 card from your discard pile and put it in your hand.
+      Banish this card.
+
+  metadata:
+    id: E066
+    dev-stage: Alpha-0
+    dev-name: Search, cyan
+    order: 903
+    summary: Search, cyan
+    notes: |
+      

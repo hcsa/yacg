@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Merged Evolution
+    color: Green
+    type: Aura
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Destroy ally (CREATURE) and choose target (CREATURE).
+      Destroyed (CREATURE) becomes an aura of target (CREATURE). Target (CREATURE) gains (HP) and (ATK) equal to destroyed (CREATURE)'s (HP) and (ATK). Any cards targetting the destroyed (CREATURE) now target the new (CREATURE).
+      Target creature has (REF:T034.NAME) ((REF:T034.DESCRIPTION)).
+
+  metadata:
+    id: E017
+    dev-stage: Alpha-0
+    dev-name: Fusion
+    order: 206
+    summary: Join creatures
+    notes: |
+      

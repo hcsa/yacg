@@ -1,0 +1,30 @@
+creature:
+  data:
+    name: Absolutely Safe Capsule
+    color: Blue
+    is-token: False
+    cost-total: 6
+    cost-color: 3
+    hp: 16
+    atk: 2
+    spe: 1
+    traits:
+      - name: Iron Will
+        description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
+        id: T005
+      - name: Mental Strength
+        description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
+        id: T023
+      - name: Shields Up
+        description: First damage dealt to this (CREATURE) is nullified.
+        id: T028
+
+  metadata:
+    id: C095
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 310
+    summary: High HP, a bunch of defensive traits
+    notes: |
+      

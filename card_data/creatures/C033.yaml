@@ -1,0 +1,24 @@
+creature:
+  data:
+    name: Mini-skeletons in a trenchcoat
+    color: Purple
+    is-token: False
+    cost-total: 2
+    cost-color: 0
+    hp: 2
+    atk: 2
+    spe: 3
+    traits:
+      - name: Frail
+        description: After this (CREATURE) attacks, kill it.
+        id: T003
+
+  metadata:
+    id: C033
+    value: -15
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 604
+    summary: 2-cost, Brittle
+    notes: |
+      

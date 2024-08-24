@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Mental Reset
+    color: 
+    type: Action
+    cost-total: 
+    cost-color: 
+    description: |
+      Counter all cards in the effect stack.
+
+  metadata:
+    id: E099
+    dev-stage: Conception
+    dev-name: 
+    order: 
+    summary: 
+    notes: |
+      

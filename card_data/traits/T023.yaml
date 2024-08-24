@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Mental Strength
+    description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
+
+  metadata:
+    id: T023
+    type: Other
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: Immunity
+    order: 804
+    summary: Can't be targeted
+    notes: |
+      * Main colors: Blue, Pink

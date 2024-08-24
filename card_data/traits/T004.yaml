@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Heat Affinity
+    description: Benefits from Sun.
+
+  metadata:
+    id: T004
+    type: Other
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Chlorophyll
+    order: 211
+    summary: Sun buffed
+    notes: |
+      * Main colors: Green

@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Aqua Affinity
+    description: Benefits from Rain.
+
+  metadata:
+    id: T014
+    type: Other
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Dry skin
+    order: 212
+    summary: Rain buffed
+    notes: |
+      * Main colors: Green

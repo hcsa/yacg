@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Bodyguard
+    description: Can take combat damage targeted at other ally (CREATURE)s.
+
+  metadata:
+    id: T010
+    type: Other
+    value: 40
+    dev-stage: Alpha-0
+    dev-name: Defender
+    order: 401
+    summary: Takes damage from allies
+    notes: |
+      * Main colors: White, Green

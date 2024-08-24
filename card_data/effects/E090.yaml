@@ -1,0 +1,18 @@
+effect:
+  data:
+    name: Special Access
+    color: Pink
+    type: Field
+    cost-total: 5
+    cost-color: 3
+    description: |
+      Whenever you play an effect ((ACTION), (AURA) or (FIELD)) to the effect stack, you can play any number of additional effects on the same turn.
+
+  metadata:
+    id: E090
+    dev-stage: Alpha-0
+    dev-name: Double Up, pink
+    order: 713
+    summary: Double Up, pink
+    notes: |
+      

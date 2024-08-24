@@ -1,0 +1,15 @@
+trait:
+  data:
+    name: Avenger
+    description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK).
+
+  metadata:
+    id: T002
+    type: Other
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Avenger
+    order: 103
+    summary: +Atk when ally dies
+    notes: |
+      * Main colors: White

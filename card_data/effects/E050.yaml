@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Definitely on Purpose
+    color: Pink
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Destroy target (CREATURE).
+      Create an instance of (REF:C099.NAME) in their place. Any cards targeting the destroyed (CREATURE) now target the new (CREATURE).
+
+  metadata:
+    id: E050
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 708
+    summary: Kill creature, create creature in its place
+    notes: |
+      * [HS] MUST DECIDE IF EFFECTS FROM PAST CREATURE STILL APPLY. For now, we'll say YES, seems funnier that way
+      * [HS] SHOULD CREATE TOKENS, OTHERWISE IT'S CONFUSING WHAT HAPPENS ONCE THE CREATURE IS KILLED/RETURNS TO DECK

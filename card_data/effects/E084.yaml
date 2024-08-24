@@ -1,0 +1,19 @@
+effect:
+  data:
+    name: Chain Lightning
+    color: Yellow
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Target opposing (CREATURE) gets -2 (HP).
+      While this effect is being resolved, whenever a (CREATURE) gets -X (HP), its owner can choose to pay 1 (NOCOLOR). if they do, they choose target opposing (CREATURE) to get -(X+1) (HP).
+
+  metadata:
+    id: E084
+    dev-stage: Conception
+    dev-name: 
+    order: 1006
+    summary: Single damage, can bounce back and fourth indefinetly
+    notes: |
+      * [HS] This is confusing, if the damage were constant this would be simpler to describe

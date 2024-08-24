@@ -1,0 +1,24 @@
+creature:
+  data:
+    name: Charger
+    color: Yellow
+    is-token: False
+    cost-total: 3
+    cost-color: 1
+    hp: 3
+    atk: 2
+    spe: 3
+    traits:
+      - name: First Take
+        description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
+        id: T017
+
+  metadata:
+    id: C014
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Speedy bot
+    order: 506
+    summary: First strike, high Spd
+    notes: |
+      
