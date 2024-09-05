@@ -98,9 +98,7 @@ At the end of the round, **all cards on the field are put on they respective own
 players’ hands return to their respective decks**. The decks are shuffled, and the remainder of the game is played with
 the cards remaining on the deck.
 
----
-
-## Energy
+# Energy
 
 **To play a card, you need to pay energy**.
 
@@ -131,22 +129,20 @@ You earn energy as follows:
 
 > **Note: Energy carries over between rounds!**
 
----
+# Misc details
 
-## Misc details
-
-### Deck-building
+## Deck-building
 
 A deck has 50 cards, and there’s at most 3 copies of each card.
 
-### Mulligan
+## Mulligan
 
 When drawing the 8 cards at the start of a game, the player may choose to put their hand on the deck, shuffle again and
 draw 8 cards. They don’t get energy from drawing the first 8 cards.
 
 Every player can mulligan once per game.
 
-### Stat changes
+## Stat changes
 
 Effects and traits can influence a <img src="./card_design/icons/card_creature.svg" height=12>
 ’s <img src="./card_design/icons/stat_hp.svg" height=12>, <img src="./card_design/icons/stat_atk.svg" height=12>
@@ -168,18 +164,18 @@ No stat can go below 0; if that were to happen, the stat's value is considered t
 - If <img src="./card_design/icons/stat_atk.svg" height=12> is 0,
   the <img src="./card_design/icons/card_creature.svg" height=12>'s attacks don't do damage.
 
-### Standard speed
+## Standard speed
 
 As a rule of thumb, the “standard” value for <img src="./card_design/icons/stat_spe.svg" height=12> is 2.
 
-### Weather
+## Weather
 
 Some cards or <img src="./card_design/icons/card_creature.svg" height=12>'s traits may set up weather: sun, rain or
 hail.
 
 Weather lasts for 2 rounds (the one it’s set, plus the one after), or until weather is set up again.
 
-### Combat stall
+## Combat stall
 
 The combat phase has a max of 20 fights. If there are <img src="./card_design/icons/card_creature.svg" height=12> left
 after that, each player
@@ -187,7 +183,7 @@ adds up the <img src="./card_design/icons/stat_hp.svg" height=12> left on the cr
 winner is the one with the highest
 value; if the values are the same, the round ends in a tie.
 
-### Empty deck
+## Empty deck
 
 If a player’s deck runs out, they keep playing as normal.
 
@@ -197,7 +193,7 @@ If a player’s deck runs out, they keep playing as normal.
 If neither player has cards left at the beginning of a match, the game’s winner is the one that has won the most rounds
 so far. If both players have won the same number of rounds, the game ends in a tie.
 
-### Kill VS Destroy
+## Kill VS Destroy
 
 A <img src="./card_design/icons/card_creature.svg" height=12> is "killed" when its HP reaches 0, either by taking combat
 damage or due to
@@ -209,7 +205,7 @@ Almost all effects or traits destroy a <img src="./card_design/icons/card_creatu
 it. If it's not clear in
 which category it falls, assume it destroys.
 
-### Targets
+## Targets
 
 Some cards often refer to "targets". When a card is played, any targets it requires must be declared by whoever played
 it, following any restrictions on the targets.
