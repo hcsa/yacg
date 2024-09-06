@@ -6,7 +6,7 @@ creature:
     cost-total: 1
     cost-color: 1
     hp: 2
-    atk: 2
+    atk: 1
     spe: 2
     traits:
       - name: First Take
@@ -17,7 +17,7 @@ creature:
 
   metadata:
     id: C068
-    value: 35
+    value: 25
     dev-stage: Alpha-0
     dev-name: Slow warrior
     order: 402

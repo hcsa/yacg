@@ -7,13 +7,13 @@ creature:
     cost-color: 0
     hp: 2
     atk: 2
-    spe: 3
+    spe: 2
     flavor-text: |
       
 
   metadata:
     id: C069
-    value: 15
+    value: -5
     dev-stage: Alpha-0
     dev-name: 
     order: 403
