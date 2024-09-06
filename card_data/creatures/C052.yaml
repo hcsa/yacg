@@ -13,7 +13,7 @@ creature:
         description: In combat, opposing (CREATURE) gets -1 (ATK).
         id: T024
       - name: Brute
-        description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
+        description: If this (CREATURE) deals excessive damage, opponent choses opposing (CREATURE)s to take it.
         id: T037
       - name: Sluggish
         description: This (CREATURE) always attacks last.
