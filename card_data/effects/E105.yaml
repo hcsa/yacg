@@ -8,15 +8,13 @@ effect:
     description: |
       Destroy target (FIELD).
       Place this (FIELD) in its place. Any cards targeting the destroyed (FIELD) now target this (FIELD).
-      All (CREATURE)s get +1 (SPE).
-    flavor-text: |
-      
+      All ally (CREATURE)s get +1 (SPE).
 
   metadata:
     id: E105
     dev-stage: Alpha-0
     dev-name: Replace field
-    order: 
-    summary: 
+    order:
+    summary:
     notes: |
       * Parallel of E101
