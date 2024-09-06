@@ -1,6 +1,6 @@
 effect:
   data:
-    name: Law of the Strongest
+    name: Survival of the Fittest
     color: Cyan
     type: Field
     cost-total: 4
@@ -13,7 +13,7 @@ effect:
   metadata:
     id: E072
     dev-stage: Alpha-0
-    dev-name: 
+    dev-name:
     order: 910
     summary: Kill creature, spread
     notes: |
