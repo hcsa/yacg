@@ -131,14 +131,15 @@ def export_to_creatures_sheet(creatures_sheet: xw.Sheet):
     creatures_sheet["H3"].options(index=False, header=False).value = df["atk"]
     creatures_sheet["I3"].options(index=False, header=False).value = df["spe"]
     creatures_sheet["O3"].options(index=False, header=False).value = df["is-token"]
-    creatures_sheet["P3"].options(index=False, header=False).value = df["dev-stage"]
-    creatures_sheet["Q3"].options(index=False, header=False).value = df["dev-name"]
-    creatures_sheet["R3"].options(index=False, header=False).value = df["summary"]
-    creatures_sheet["S3"].options(index=False, header=False).value = df["notes"]
-    creatures_sheet["T3"].options(index=False, header=False).value = df["id-trait-1"]
-    creatures_sheet["U3"].options(index=False, header=False).value = df["id-trait-2"]
-    creatures_sheet["V3"].options(index=False, header=False).value = df["id-trait-3"]
-    creatures_sheet["W3"].options(index=False, header=False).value = df["id-trait-4"]
+    creatures_sheet["P3"].options(index=False, header=False).value = df["flavor-text"]
+    creatures_sheet["Q3"].options(index=False, header=False).value = df["dev-stage"]
+    creatures_sheet["R3"].options(index=False, header=False).value = df["dev-name"]
+    creatures_sheet["S3"].options(index=False, header=False).value = df["summary"]
+    creatures_sheet["T3"].options(index=False, header=False).value = df["notes"]
+    creatures_sheet["U3"].options(index=False, header=False).value = df["id-trait-1"]
+    creatures_sheet["V3"].options(index=False, header=False).value = df["id-trait-2"]
+    creatures_sheet["W3"].options(index=False, header=False).value = df["id-trait-3"]
+    creatures_sheet["X3"].options(index=False, header=False).value = df["id-trait-4"]
 
     # Delete template row
     creatures_sheet.range("2:2").delete(shift="up")
@@ -155,6 +156,7 @@ def get_creatures_df() -> pd.DataFrame:
             "name": creature.data.name,
             "color": (creature.data.color.name if creature.data.color is not None else None),
             "is-token": creature.data.is_token,
+            "flavor-text": creature.data.flavor_text,
             "cost-total": creature.data.cost_total,
             "cost-color": creature.data.cost_color,
             "hp": creature.data.hp,
@@ -177,6 +179,7 @@ def get_creatures_df() -> pd.DataFrame:
         "order",
         "name",
         "color",
+        "flavor-text",
         "is-token",
         "cost-total",
         "cost-color",
@@ -213,10 +216,11 @@ def export_to_effects_sheet(effects_sheet: xw.Sheet):
     effects_sheet["F3"].options(index=False, header=False).value = df["cost-total"]
     effects_sheet["G3"].options(index=False, header=False).value = df["cost-color"]
     effects_sheet["H3"].options(index=False, header=False).value = df["description"]
-    effects_sheet["I3"].options(index=False, header=False).value = df["dev-stage"]
-    effects_sheet["J3"].options(index=False, header=False).value = df["dev-name"]
-    effects_sheet["K3"].options(index=False, header=False).value = df["summary"]
-    effects_sheet["L3"].options(index=False, header=False).value = df["notes"]
+    effects_sheet["I3"].options(index=False, header=False).value = df["flavor-text"]
+    effects_sheet["J3"].options(index=False, header=False).value = df["dev-stage"]
+    effects_sheet["K3"].options(index=False, header=False).value = df["dev-name"]
+    effects_sheet["L3"].options(index=False, header=False).value = df["summary"]
+    effects_sheet["M3"].options(index=False, header=False).value = df["notes"]
 
     # Delete template row
     effects_sheet.range("2:2").delete(shift="up")
@@ -236,6 +240,7 @@ def get_effects_df() -> pd.DataFrame:
             "cost-total": effect.data.cost_total,
             "cost-color": effect.data.cost_color,
             "description": effect.data.description,
+            "flavor-text": effect.data.flavor_text,
             "dev-stage": effect.metadata.dev_stage.name,
             "dev-name": effect.metadata.dev_name,
             "summary": effect.metadata.summary,
@@ -254,6 +259,7 @@ def get_effects_df() -> pd.DataFrame:
         "cost-total",
         "cost-color",
         "description",
+        "flavor-text",
         "dev-stage",
         "dev-name",
         "summary",
