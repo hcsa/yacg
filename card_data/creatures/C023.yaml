@@ -12,6 +12,8 @@ creature:
       - name: Hot Head
         description: When played, fights opponent's last played (CREATURE).
         id: T020
+    flavor-text: |
+      The bar for being considered a "capable" goblin was being alive after 3 days
 
   metadata:
     id: C023

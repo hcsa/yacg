@@ -8,6 +8,8 @@ effect:
     description: |
       To play this card, you must discard 2 cards from your hand.
       Choose 2 cards from deck, put them in your hand, and shuffle the deck afterwards.
+    flavor-text: |
+      Forbidden knowledge exacts a heavy price
 
   metadata:
     id: E057

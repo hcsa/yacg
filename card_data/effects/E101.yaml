@@ -9,6 +9,8 @@ effect:
       Destroy target (AURA) attached to a (CREATURE).
       Place this (AURA) in its place. Any cards targeting the destroyed (AURA) now target this (AURA).
       Target (CREATURE) gets +1 (ATK).
+    flavor-text: |
+      
 
   metadata:
     id: E101

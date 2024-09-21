@@ -7,6 +7,8 @@ effect:
     cost-color: 3
     description: |
       Target (CREATURE) gets -(HP) equal to the (ATK) of all ally (CREATURE)s added up.
+    flavor-text: |
+      
 
   metadata:
     id: E026

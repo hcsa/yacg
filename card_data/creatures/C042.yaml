@@ -12,6 +12,8 @@ creature:
       - name: Heat Affinity
         description: Benefits from Sun.
         id: T004
+    flavor-text: |
+      
 
   metadata:
     id: C042

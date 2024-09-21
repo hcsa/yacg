@@ -7,6 +7,8 @@ effect:
     cost-color: 2
     description: |
       Each player's hand is revealed.
+    flavor-text: |
+      
 
   metadata:
     id: E023

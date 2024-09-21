@@ -8,6 +8,8 @@ creature:
     hp: 4
     atk: 3
     spe: 3
+    flavor-text: |
+      
 
   metadata:
     id: C028

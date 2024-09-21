@@ -7,6 +7,8 @@ effect:
     cost-color: 
     description: |
       Whenever a card enters your discard pile, you may pay (NOCOLOR) equal to half (rounded down) the total cost of the card. If you do, put the card on top of your deck instead.
+    flavor-text: |
+      
 
   metadata:
     id: E096

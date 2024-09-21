@@ -8,6 +8,8 @@ effect:
     description: |
       At the beginning of next round, opponent draws 2 less cards.
       Multiple copies of (REF:E064.NAME) don't stack.
+    flavor-text: |
+      
 
   metadata:
     id: E064

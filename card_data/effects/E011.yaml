@@ -8,6 +8,8 @@ effect:
     description: |
       If 2 (CREATURE)s have (REF:T035.NAME), Sun is set for 2 rounds.
       If that happens, destroy this card.
+    flavor-text: |
+      
 
   metadata:
     id: E011

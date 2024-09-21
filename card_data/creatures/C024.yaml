@@ -12,6 +12,8 @@ creature:
       - name: Power Up
         description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
         id: T027
+    flavor-text: |
+      
 
   metadata:
     id: C024

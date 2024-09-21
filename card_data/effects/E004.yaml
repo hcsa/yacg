@@ -7,6 +7,8 @@ effect:
     cost-color: 0
     description: |
       Discard your hand and draw 5 cards.
+    flavor-text: |
+      
 
   metadata:
     id: E004

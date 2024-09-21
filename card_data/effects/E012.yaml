@@ -7,6 +7,8 @@ effect:
     cost-color: 2
     description: |
       Combat phase lasts at most 5 fights.
+    flavor-text: |
+      "We know what's coming with it. Even if we won't be able to see it"
 
   metadata:
     id: E012

@@ -7,6 +7,8 @@ effect:
     cost-color: 
     description: |
       Discard target (FIELD) in the field.
+    flavor-text: |
+      
 
   metadata:
     id: E103

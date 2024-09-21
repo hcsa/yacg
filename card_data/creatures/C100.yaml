@@ -12,6 +12,8 @@ creature:
       - name: Frail
         description: After this (CREATURE) attacks, kill it.
         id: T003
+    flavor-text: |
+      In death, all are equal
 
   metadata:
     id: C100

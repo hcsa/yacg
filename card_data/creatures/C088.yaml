@@ -12,6 +12,8 @@ creature:
       - name: Cold Affinity
         description: Benefits from Hail.
         id: T006
+    flavor-text: |
+      
 
   metadata:
     id: C088

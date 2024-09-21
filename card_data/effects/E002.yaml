@@ -8,6 +8,8 @@ effect:
     description: |
       Counter target effect ((ACTION), (AURA) or (FIELD)) on the effect stack.
       While this card is in the effect stack, opponent's cards cost -2 (NOCOLOR) to play.
+    flavor-text: |
+      
 
   metadata:
     id: E002

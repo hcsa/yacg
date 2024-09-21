@@ -8,6 +8,8 @@ effect:
     description: |
       Opponent loses 1 (NOCOLOR) of the color of their choosing.
       You gain 1 (NOCOLOR) of the color of your choosing.
+    flavor-text: |
+      
 
   metadata:
     id: E080

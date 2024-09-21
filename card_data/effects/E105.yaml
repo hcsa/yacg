@@ -9,6 +9,8 @@ effect:
       Destroy target (FIELD).
       Place this (FIELD) in its place. Any cards targeting the destroyed (FIELD) now target this (FIELD).
       All (CREATURE)s get +1 (SPE).
+    flavor-text: |
+      
 
   metadata:
     id: E105

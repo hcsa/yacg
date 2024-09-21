@@ -8,6 +8,8 @@ effect:
     description: |
       Target (CREATURE) gets -2 (HP).
       Other target (CREATURE) gets +2 (HP).
+    flavor-text: |
+      
 
   metadata:
     id: E038

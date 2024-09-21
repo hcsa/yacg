@@ -12,6 +12,8 @@ creature:
       - name: Poisonous
         description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
         id: T008
+    flavor-text: |
+      
 
   metadata:
     id: C031

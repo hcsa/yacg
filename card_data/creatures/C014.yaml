@@ -12,6 +12,8 @@ creature:
       - name: First Take
         description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
         id: T017
+    flavor-text: |
+      
 
   metadata:
     id: C014

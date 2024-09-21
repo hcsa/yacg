@@ -7,6 +7,8 @@ effect:
     cost-color: 0
     description: |
       Choose 1 card from your deck, put it in your hand, and shuffle the deck afterwards.
+    flavor-text: |
+      
 
   metadata:
     id: E003

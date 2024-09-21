@@ -7,6 +7,8 @@ effect:
     cost-color: 
     description: |
       Both players draw or discard cards until their hand size is equal to half (rounded down) the sum of both players' current hand size.
+    flavor-text: |
+      
 
   metadata:
     id: E094

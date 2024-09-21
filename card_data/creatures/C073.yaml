@@ -12,6 +12,8 @@ creature:
       - name: Bodyguard
         description: Can take combat damage targeted at other ally (CREATURE)s.
         id: T010
+    flavor-text: |
+      
 
   metadata:
     id: C073

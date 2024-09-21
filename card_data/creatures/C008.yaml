@@ -15,6 +15,8 @@ creature:
       - name: Scary Stare
         description: In combat, opposing (CREATURE) gets -1 (ATK).
         id: T024
+    flavor-text: |
+      
 
   metadata:
     id: C008

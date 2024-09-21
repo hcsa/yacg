@@ -8,6 +8,8 @@ effect:
     description: |
       Choose 1 card from your discard pile and put it in your hand.
       Banish this card.
+    flavor-text: |
+      
 
   metadata:
     id: E066

@@ -7,6 +7,8 @@ effect:
     cost-color: 2
     description: |
       Whenever opponent draws a card, you can choose to pay 1 (NOCOLOR). If you do, draw a card as well.
+    flavor-text: |
+      
 
   metadata:
     id: E085

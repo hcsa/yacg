@@ -7,6 +7,8 @@ effect:
     cost-color: 1
     description: |
       Target (CREATURE) gets -2 (HP).
+    flavor-text: |
+      Amazing how no one every sees the giant flaming ball falling on top of their heads
 
   metadata:
     id: E006

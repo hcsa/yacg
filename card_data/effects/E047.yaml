@@ -7,6 +7,8 @@ effect:
     cost-color: 3
     description: |
       Effects ((ACTION), (AURA) or (FIELD)) can't be played if the effect stack has 2 or more cards.
+    flavor-text: |
+      
 
   metadata:
     id: E047

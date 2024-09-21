@@ -7,6 +7,8 @@ effect:
     cost-color: 3
     description: |
       All cards cost 0 (NOCOLOR) to play.
+    flavor-text: |
+      
 
   metadata:
     id: E054

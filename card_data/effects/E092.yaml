@@ -8,6 +8,8 @@ effect:
     description: |
       After playing this card, you must play another (ACTION).
       This card becomes a copy of that effect, with the same targets.
+    flavor-text: |
+      
 
   metadata:
     id: E092

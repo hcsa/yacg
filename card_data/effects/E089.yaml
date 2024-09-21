@@ -7,6 +7,8 @@ effect:
     cost-color: 0
     description: |
       After playing this card to the effect stack, you can play 2 additional effects ((ACTION), (AURA) or (FIELD)).
+    flavor-text: |
+      "...and one more thing!"
 
   metadata:
     id: E089

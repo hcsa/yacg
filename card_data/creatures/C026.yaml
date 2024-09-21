@@ -12,6 +12,8 @@ creature:
       - name: Self-destruct
         description: When this (CREATURE) attacks, kill this and the opposing (CREATURE).
         id: T033
+    flavor-text: |
+      
 
   metadata:
     id: C026

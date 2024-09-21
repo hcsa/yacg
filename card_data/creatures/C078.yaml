@@ -12,6 +12,8 @@ creature:
       - name: Take Two
         description: At the end of combat, you can have this (CREATURE) attack the opposing (CREATURE) again. Can only be used once.
         id: T013
+    flavor-text: |
+      
 
   metadata:
     id: C078

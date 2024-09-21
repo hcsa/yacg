@@ -7,6 +7,8 @@ effect:
     cost-color: 2
     description: |
       This card becomes a copy of target (ACTION) in the effect stack. You may choose new targets for it (restrictions to the targets still apply).
+    flavor-text: |
+      
 
   metadata:
     id: E091

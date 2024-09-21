@@ -8,6 +8,8 @@ effect:
     description: |
       Gain 3 (NOCOLOR) of a color of your choosing.
       Banish the bottom 5 cards of your deck.
+    flavor-text: |
+      
 
   metadata:
     id: E079

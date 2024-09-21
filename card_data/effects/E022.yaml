@@ -7,6 +7,8 @@ effect:
     cost-color: 1
     description: |
       Target (CREATURE) has (REF:T023.NAME) ((REF:T023.DESCRIPTION).
+    flavor-text: |
+      
 
   metadata:
     id: E022

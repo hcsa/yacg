@@ -12,6 +12,8 @@ creature:
       - name: Reckless
         description: When this (CREATURE) attacks, get -1 (HP).
         id: T031
+    flavor-text: |
+      
 
   metadata:
     id: C015

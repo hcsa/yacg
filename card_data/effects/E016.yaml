@@ -7,6 +7,8 @@ effect:
     cost-color: 2
     description: |
       Choose target ally (CREATURE) and target opposing (CREATURE). Each one gets -(HP) equal to the other one's (ATK).
+    flavor-text: |
+      
 
   metadata:
     id: E016

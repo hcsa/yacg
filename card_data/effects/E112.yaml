@@ -9,6 +9,8 @@ effect:
       [Item (AURA)] Play this card when you play a (CREATURE) from your hand, attached to it but turned face down. The first time the (CREATURE) enters a fight, turn this card face up.
       
       If target (CREATURE) takes combat damage that leaves it with 2 (HP) or less, target (CREATURE) gets +3 (HP). If that happens, destroy this card.
+    flavor-text: |
+      
 
   metadata:
     id: E112

@@ -8,6 +8,8 @@ effect:
     description: |
       Whenever a (CREATURE) with (REF:T003.NAME) is killed, play it for 0 (NOCOLOR). Any cards targeting that (CREATURE) still target it.
       If that happens, destroy this card.
+    flavor-text: |
+      "That's just a bruise, don't worry too much"
 
   metadata:
     id: E039

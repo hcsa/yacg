@@ -8,6 +8,9 @@ effect:
     description: |
       Target (CREATURE) gets +4 (HP) and +2 (ATK).
       Target (CREATURE) has (REF:T034.NAME) ((REF:T034.DESCRIPTION)).
+    flavor-text: |
+      Sometimes the enemy is hiding in front of you.
+      Sometimes they're lumbering over you
 
   metadata:
     id: E014
