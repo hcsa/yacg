@@ -14,7 +14,7 @@ effect:
     id: E105
     dev-stage: Alpha-0
     dev-name: Replace field
-    order:
-    summary:
+    order: 
+    summary: 
     notes: |
       * Parallel of E101

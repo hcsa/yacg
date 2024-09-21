@@ -13,7 +13,7 @@ effect:
   metadata:
     id: E072
     dev-stage: Alpha-0
-    dev-name:
+    dev-name: 
     order: 910
     summary: Kill creature, spread
     notes: |
