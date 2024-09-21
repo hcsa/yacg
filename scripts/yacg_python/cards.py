@@ -597,14 +597,14 @@ class Creature(Card):
         notes_str = self.metadata.notes.strip().replace("\n", "\n      ")
         traits_str = ""
         if len(self.data.traits) > 0:
-            traits_str += "    traits:\n"
+            traits_str += "traits:\n"
             for trait in self.data.traits:
                 trait_str = f"""
       - name: {trait.data.name}
         description: {trait.data.description}
         id: {trait.metadata.id}"""[1:]
                 traits_str += trait_str + "\n"
-            traits_str = traits_str[:-1]
+            traits_str = traits_str + "    "
 
         yaml_content = f"""
 creature:
@@ -617,8 +617,7 @@ creature:
     hp: {self.data.hp if self.data.hp is not None else ""}
     atk: {self.data.atk if self.data.atk is not None else ""}
     spe: {self.data.spe if self.data.spe is not None else ""}
-{traits_str}
-    flavor-text: |
+    {traits_str}flavor-text: |
       {flavor_text_str}
 
   metadata:
