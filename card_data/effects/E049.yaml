@@ -8,6 +8,8 @@ effect:
     description: |
       Look at the top 8 cards of your deck and put them back in any order.
       Draw a card.
+    flavor-text: |
+      The Krethians' deep knowledge of the Universe's inner workings gave them insight over what was to come
 
   metadata:
     id: E049

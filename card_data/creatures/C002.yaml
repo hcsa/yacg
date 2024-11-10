@@ -12,6 +12,8 @@ creature:
       - name: Illegal Charge
         description: When played, this (CREATURE) is placed on the opponent's side. You gain 4 (NOCOLOR) of a color of your choosing.
         id: T022
+    flavor-text: |
+      
 
   metadata:
     id: C002

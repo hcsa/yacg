@@ -7,6 +7,8 @@ effect:
     cost-color: 2
     description: |
       Target ally (CREATURE) has (REF:T033.NAME) ((REF:T033.DESCRIPTION)).
+    flavor-text: |
+      
 
   metadata:
     id: E029

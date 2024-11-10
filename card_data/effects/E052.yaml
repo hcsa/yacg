@@ -7,6 +7,8 @@ effect:
     cost-color: 2
     description: |
       Choose target (CREATURE) in your hand and play it. You must pay its usual cost.
+    flavor-text: |
+      
 
   metadata:
     id: E052

@@ -7,6 +7,8 @@ effect:
     cost-color: 
     description: |
       Both players discard all but 1 card.
+    flavor-text: |
+      
 
   metadata:
     id: E097

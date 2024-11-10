@@ -10,6 +10,8 @@ effect:
       
       When playing this card, put 5 markers on it. After a fight, remove a marker from this card. If it has 0 markers, destroy this card.
       Target (CREATURE) gets +1 (HP) after a fight.
+    flavor-text: |
+      
 
   metadata:
     id: E110

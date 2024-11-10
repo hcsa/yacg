@@ -8,6 +8,8 @@ effect:
     description: |
       Gain 2 (NOCOLOR) of a color of your choosing.
       At the beginning of next round, opponent gains 4 (NOCOLOR) of a color of their choosing.
+    flavor-text: |
+      
 
   metadata:
     id: E081

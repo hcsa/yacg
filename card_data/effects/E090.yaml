@@ -7,6 +7,8 @@ effect:
     cost-color: 3
     description: |
       Whenever you play an effect ((ACTION), (AURA) or (FIELD)) to the effect stack, you can play any number of additional effects on the same turn.
+    flavor-text: |
+      Simply mentioning Lops Dasilva's name would open a number of doors in the city
 
   metadata:
     id: E090

@@ -7,6 +7,8 @@ effect:
     cost-color: 0
     description: |
       Draw 2 cards.
+    flavor-text: |
+      Alaric would always stress how new ideas flourish in discussions with others
 
   metadata:
     id: E001

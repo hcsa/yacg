@@ -12,6 +12,8 @@ creature:
       - name: Energetic Aura
         description: If another ally (CREATURE) has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE).
         id: T016
+    flavor-text: |
+      
 
   metadata:
     id: C012

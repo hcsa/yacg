@@ -7,6 +7,8 @@ effect:
     cost-color: 2
     description: |
       Every ally (CREATURE) gets +1 (ATK).
+    flavor-text: |
+      
 
   metadata:
     id: E024

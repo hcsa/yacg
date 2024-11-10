@@ -18,6 +18,8 @@ creature:
       - name: Sluggish
         description: This (CREATURE) always attacks last.
         id: T034
+    flavor-text: |
+      
 
   metadata:
     id: C052

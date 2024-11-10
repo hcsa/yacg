@@ -8,6 +8,8 @@ effect:
     description: |
       When playing this card, put 3 markers on it. After a fight, remove a marker from this card. If it has 0 markers, destroy this card.
       In fights, (SPE) is used to decide damage dealt.
+    flavor-text: |
+      
 
   metadata:
     id: E033

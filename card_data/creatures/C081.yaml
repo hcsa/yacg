@@ -12,6 +12,8 @@ creature:
       - name: Avenger
         description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK).
         id: T002
+    flavor-text: |
+      
 
   metadata:
     id: C081

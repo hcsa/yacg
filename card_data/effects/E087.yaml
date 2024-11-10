@@ -7,6 +7,8 @@ effect:
     cost-color: 
     description: |
       Whenever opponent draws a card, they must pay (NOCOLOR). If they don't, they can't draw that card.
+    flavor-text: |
+      
 
   metadata:
     id: E087

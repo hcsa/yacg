@@ -7,6 +7,8 @@ effect:
     cost-color: 
     description: |
       If a player has 0 cards in your hand, they draw 4 cards.
+    flavor-text: |
+      
 
   metadata:
     id: E098

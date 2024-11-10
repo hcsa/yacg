@@ -12,6 +12,8 @@ creature:
       - name: Mindguard
         description: If an ally (CREATURE) is the target of an effect ((ACTION), (AURA) or (FIELD)), you can choose for this (CREATURE) to be targetted instead. If that happens, get -2 (HP).
         id: T045
+    flavor-text: |
+      
 
   metadata:
     id: C064

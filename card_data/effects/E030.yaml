@@ -8,6 +8,8 @@ effect:
     description: |
       When playing this card, put 3 markers on it. After a fight, remove a marker from this card. If it has 0 markers, destroy this card.
       Every (CREATURE) has (REF:T033.NAME) ((REF:T033.DESCRIPTION)).
+    flavor-text: |
+      
 
   metadata:
     id: E030

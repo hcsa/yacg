@@ -8,6 +8,8 @@ effect:
     description: |
       Destroy target (CREATURE).
       Create an instance of (REF:C099.NAME) in their place. Any cards targeting the destroyed (CREATURE) now target the new (CREATURE).
+    flavor-text: |
+      
 
   metadata:
     id: E050

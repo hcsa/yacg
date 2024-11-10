@@ -120,6 +120,8 @@ creature:
       - name: Subtle
         description: Can be cast at any point while the opponent isn't looking
         id: TXXX
+    flavor-text: |
+      An optional text that has no impact on gameplay
 
   # All fields that have no gameplay influence
   metadata:
@@ -161,6 +163,8 @@ effect:
     cost-color: 3
     description: |
       Propose a new mechanic. That mechanic is valid for this game.
+    flavor-text: |
+      "Sometimes you talk in the flavor text"
 
   # All fields that have no gameplay influence
   metadata:

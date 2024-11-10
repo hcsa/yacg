@@ -7,6 +7,8 @@ effect:
     cost-color: 2
     description: |
       Target (CREATURE) gets -2 (HP) per trait they have.
+    flavor-text: |
+      
 
   metadata:
     id: E100

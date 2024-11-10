@@ -428,6 +428,7 @@ class CreatureData:
     atk: Optional[int]
     spe: Optional[int]
     traits: List[Trait] = field(default_factory=list)
+    flavor_text: str = ""
 
 
 @dataclass(frozen=True)
@@ -554,6 +555,7 @@ class Creature(Card):
                 else None
             ),
             traits=traits_list,
+            flavor_text=str(yaml_data["data"]["flavor-text"]).strip()
         )
         creature_metadata = CreatureMetadata(
             id=str(yaml_data["metadata"]["id"]),
@@ -591,16 +593,18 @@ class Creature(Card):
         Writes the creature data to the corresponding YAML file.
         """
 
+        flavor_text_str = self.data.flavor_text.strip().replace("\n", "\n      ")
         notes_str = self.metadata.notes.strip().replace("\n", "\n      ")
         traits_str = ""
         if len(self.data.traits) > 0:
-            traits_str += "    traits:\n"
+            traits_str += "traits:\n"
             for trait in self.data.traits:
                 trait_str = f"""
       - name: {trait.data.name}
         description: {trait.data.description}
         id: {trait.metadata.id}"""[1:]
                 traits_str += trait_str + "\n"
+            traits_str = traits_str + "    "
 
         yaml_content = f"""
 creature:
@@ -613,7 +617,9 @@ creature:
     hp: {self.data.hp if self.data.hp is not None else ""}
     atk: {self.data.atk if self.data.atk is not None else ""}
     spe: {self.data.spe if self.data.spe is not None else ""}
-{traits_str}
+    {traits_str}flavor-text: |
+      {flavor_text_str}
+
   metadata:
     id: {self.metadata.id}
     value: {self.metadata.value if self.metadata.value is not None else ""}
@@ -656,6 +662,7 @@ class EffectData:
     cost_total: Optional[int]
     cost_color: Optional[int]
     description: str = ""
+    flavor_text: str = ""
 
 
 @dataclass(frozen=True)
@@ -753,7 +760,8 @@ class Effect(Card):
                 if yaml_data["data"]["cost-color"] is not None
                 else None
             ),
-            description=str(yaml_data["data"]["description"]).strip()
+            description=str(yaml_data["data"]["description"]).strip(),
+            flavor_text=str(yaml_data["data"]["flavor-text"]).strip()
         )
         effect_metadata = EffectMetadata(
             id=str(yaml_data["metadata"]["id"]),
@@ -787,6 +795,7 @@ class Effect(Card):
         """
 
         description_str = self.data.description.strip().replace("\n", "\n      ")
+        flavor_text_str = self.data.flavor_text.strip().replace("\n", "\n      ")
         notes_str = self.metadata.notes.strip().replace("\n", "\n      ")
 
         yaml_content = f"""
@@ -799,6 +808,8 @@ effect:
     cost-color: {self.data.cost_color if self.data.cost_color is not None else ""}
     description: |
       {description_str}
+    flavor-text: |
+      {flavor_text_str}
 
   metadata:
     id: {self.metadata.id}

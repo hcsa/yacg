@@ -8,6 +8,8 @@ effect:
     description: |
       When playing this card, put 5 markers on it. Whenever this card has 0 markers, destroy this card.
       For every point of combat damage an ally (CREATURE) would take, remove a marker from this card and nullify that point of damage.
+    flavor-text: |
+      
 
   metadata:
     id: E107

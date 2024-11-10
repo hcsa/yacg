@@ -12,6 +12,8 @@ creature:
       - name: Restless
         description: If this (CREATURE) is killed or destroyed, it goes into its owner's hand.
         id: T032
+    flavor-text: |
+      
 
   metadata:
     id: C032

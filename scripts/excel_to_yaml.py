@@ -143,7 +143,8 @@ def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
                 if not pd.isna(row["spe"])
                 else None
             ),
-            traits=traits
+            traits=traits,
+            flavor_text=row["flavor-text"].strip()
         )
         creature_metadata = card_data.CreatureMetadata(
             id=row["id"].strip(),
@@ -182,6 +183,7 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
         "spe": "Int64",
         "value": "Int64",
         "is-token": bool,
+        "flavor-text": str,
         "dev-stage": str,
         "dev-name": str,
         "summary": str,
@@ -195,7 +197,7 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
     excel_table_last_cell = creatures_sheet.range("TableCreature").last_cell
     df_raw: pd.DataFrame = creatures_sheet.range("A1", excel_table_last_cell).options(pd.DataFrame, index=False).value
     df_raw_cols_used = \
-        df_raw.columns[0:9].append(df_raw.columns[13:23])
+        df_raw.columns[0:9].append(df_raw.columns[13:24])
     df: pd.DataFrame = df_raw[df_raw_cols_used].copy()
     df = df.set_axis(
         list(df_types),
@@ -236,6 +238,7 @@ def import_from_effects_sheet(effects_sheet: xw.Sheet):
                 else None
             ),
             description=row["description"].strip(),
+            flavor_text=row["flavor-text"].strip()
         )
         effect_metadata = card_data.EffectMetadata(
             id=row["id"].strip(),
@@ -266,6 +269,7 @@ def import_effects_sheet_to_df(effects_sheet: xw.Sheet) -> pd.DataFrame:
         "cost-total": "Int64",
         "cost-color": "Int64",
         "description": str,
+        "flavor-text": str,
         "dev-stage": str,
         "dev-name": str,
         "summary": str,

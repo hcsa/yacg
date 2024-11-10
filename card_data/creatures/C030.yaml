@@ -12,6 +12,8 @@ creature:
       - name: Frail
         description: After this (CREATURE) attacks, kill it.
         id: T003
+    flavor-text: |
+      Old enough to drink, not tall enough to ride the ferris wheel
 
   metadata:
     id: C030

@@ -12,6 +12,8 @@ creature:
       - name: Shields Up
         description: First damage dealt to this (CREATURE) is nullified.
         id: T028
+    flavor-text: |
+      
 
   metadata:
     id: C087

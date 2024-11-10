@@ -15,6 +15,8 @@ creature:
       - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
         id: T039
+    flavor-text: |
+      
 
   metadata:
     id: C061

@@ -18,6 +18,8 @@ creature:
       - name: Brute
         description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
         id: T037
+    flavor-text: |
+      
 
   metadata:
     id: C049

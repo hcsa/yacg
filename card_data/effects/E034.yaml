@@ -7,6 +7,8 @@ effect:
     cost-color: 4
     description: |
       Destroy every (CREATURE).
+    flavor-text: |
+      
 
   metadata:
     id: E034

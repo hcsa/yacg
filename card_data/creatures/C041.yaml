@@ -12,6 +12,8 @@ creature:
       - name: Aqua Affinity
         description: Benefits from Rain.
         id: T014
+    flavor-text: |
+      
 
   metadata:
     id: C041

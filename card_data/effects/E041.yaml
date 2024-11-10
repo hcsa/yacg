@@ -7,6 +7,8 @@ effect:
     cost-color: 1
     description: |
       Choose 1 (CREATURE) from your deck, put it in your discard pile, and shuffle the deck afterwards.
+    flavor-text: |
+      "...who put the banana peel there?"
 
   metadata:
     id: E041

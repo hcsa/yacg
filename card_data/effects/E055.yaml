@@ -8,6 +8,8 @@ effect:
     description: |
       Draw 3 cards.
       Opponent draws 1 card.
+    flavor-text: |
+      The expression "give and take" hides how much one of the parts takes more than gives
 
   metadata:
     id: E055
