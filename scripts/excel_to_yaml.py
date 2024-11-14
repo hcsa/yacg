@@ -10,14 +10,14 @@ import numpy as np
 import pandas as pd
 import xlwings as xw
 
-import scripts.yacg_python.cards as card_data
-from scripts.yacg_python.common_vars import EXCEL_PATH
+import src.cards as cards
+from src.utils import EXCEL_PATH
 
 
 def main():
     print(f"Exporting card data from '{EXCEL_PATH.name}' to YAML files...")
     import_from_excel()
-    card_data.export_all_data()
+    cards.export_all_data()
     print("Done!")
 
 
@@ -35,19 +35,19 @@ def import_from_traits_sheet(traits_sheet: xw.Sheet):
     populate_id_row(df)
 
     for _, row in df.iterrows():
-        trait_data = card_data.TraitData(
+        trait_data = cards.TraitData(
             name=row["name"].strip(),
             description=row["description"].strip(),
         )
-        trait_metadata = card_data.TraitMetadata(
+        trait_metadata = cards.TraitMetadata(
             id=row["id"].strip(),
-            type=card_data.TraitType(row["type"].strip()),
+            type=cards.TraitType(row["type"].strip()),
             value=(
                 int(row["value"])
                 if not pd.isna(row["value"])
                 else None
             ),
-            dev_stage=card_data.DevStage(row["dev-stage"].strip()),
+            dev_stage=cards.DevStage(row["dev-stage"].strip()),
             dev_name=row["dev-name"].strip(),
             order=(
                 int(row["order"])
@@ -57,7 +57,7 @@ def import_from_traits_sheet(traits_sheet: xw.Sheet):
             summary=row["summary"].strip(),
             notes=row["notes"].strip(),
         )
-        _ = card_data.Trait(
+        _ = cards.Trait(
             data=trait_data,
             metadata=trait_metadata,
         )
@@ -106,14 +106,14 @@ def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
 
     for _, row in df.iterrows():
         traits = [
-            card_data.Trait.get_trait(row[f"id-trait-{i}"].strip())
+            cards.Trait.get_trait(row[f"id-trait-{i}"].strip())
             for i in range(1, 5)
             if not row[f"id-trait-{i}"].strip() == ""
         ]
-        creature_data = card_data.CreatureData(
+        creature_data = cards.CreatureData(
             name=row["name"],
             color=(
-                card_data.Color(row["color"].strip())
+                cards.Color(row["color"].strip())
                 if not row["color"].strip() == ""
                 else None
             ),
@@ -146,14 +146,14 @@ def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
             traits=traits,
             flavor_text=row["flavor-text"].strip()
         )
-        creature_metadata = card_data.CreatureMetadata(
+        creature_metadata = cards.CreatureMetadata(
             id=row["id"].strip(),
             value=(
                 int(row["value"])
                 if not pd.isna(row["value"])
                 else None
             ),
-            dev_stage=card_data.DevStage(row["dev-stage"].strip()),
+            dev_stage=cards.DevStage(row["dev-stage"].strip()),
             dev_name=row["dev-name"].strip(),
             order=(
                 int(row["order"])
@@ -163,7 +163,7 @@ def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
             summary=row["summary"].strip(),
             notes=row["notes"].strip(),
         )
-        _ = card_data.Creature(
+        _ = cards.Creature(
             data=creature_data,
             metadata=creature_metadata,
         )
@@ -219,14 +219,14 @@ def import_from_effects_sheet(effects_sheet: xw.Sheet):
     df = import_effects_sheet_to_df(effects_sheet)
 
     for _, row in df.iterrows():
-        effect_data = card_data.EffectData(
+        effect_data = cards.EffectData(
             name=row["name"].strip(),
             color=(
-                card_data.Color(row["color"].strip())
+                cards.Color(row["color"].strip())
                 if not row["color"].strip() == ""
                 else None
             ),
-            type=card_data.EffectType(row["type"].strip()),
+            type=cards.EffectType(row["type"].strip()),
             cost_total=(
                 int(row["cost-total"])
                 if not pd.isna(row["cost-total"])
@@ -240,9 +240,9 @@ def import_from_effects_sheet(effects_sheet: xw.Sheet):
             description=row["description"].strip(),
             flavor_text=row["flavor-text"].strip()
         )
-        effect_metadata = card_data.EffectMetadata(
+        effect_metadata = cards.EffectMetadata(
             id=row["id"].strip(),
-            dev_stage=card_data.DevStage(row["dev-stage"].strip()),
+            dev_stage=cards.DevStage(row["dev-stage"].strip()),
             dev_name=row["dev-name"].strip(),
             order=(
                 int(row["order"])
@@ -252,7 +252,7 @@ def import_from_effects_sheet(effects_sheet: xw.Sheet):
             summary=row["summary"].strip(),
             notes=row["notes"].strip(),
         )
-        _ = card_data.Effect(
+        _ = cards.Effect(
             data=effect_data,
             metadata=effect_metadata,
         )
