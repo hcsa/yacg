@@ -9,6 +9,14 @@ Requires
 - [Git LFS](https://git-lfs.com/), used to store the cards' art files in the [card_design](card_design/card_arts)
   folder. To see these, run `git lfs pull`.
 - Installing fonts in the [fonts](/card_design/fonts) folder
+- Adding this project's root to PYTHONPATH. Your IDE may do this for you; if it doesn't, you'll get ModuleNotFoundError
+  when running scripts. You can do this in multiple ways,
+  check [this StackOverflow thread](https://stackoverflow.com/questions/53653083/how-to-correctly-set-pythonpath-for-visual-studio-code)
+  for more info. For Windows, you can add an .env file at the project's root with the content
+
+```
+PYTHONPATH=./;${PYTHONPATH}
+```
 
 ### Compile executables
 

@@ -9,3 +9,4 @@ print_output/
 /Cards.xlsx
 /Cards (backup).xlsx
 jsconfig.json
+.env
