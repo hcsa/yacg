@@ -1,7 +1,7 @@
 # -*- coding: mbcs -*-
 # Created by makepy.py version 0.5.01
 # By python version 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]
-# On Mon May  6 00:43:00 2024
+# On Thu Nov 14 18:53:54 2024
 'Adobe Illustrator 27 Type Library'
 makepy_version = '0.5.01'
 python_version = 0x30c00f0

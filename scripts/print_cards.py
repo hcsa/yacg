@@ -1,11 +1,12 @@
 """
 Run this script to print all playable cards
 """
+
 import os
 
-import scripts.yacg_python.card_printing as card_printing
-import scripts.yacg_python.cards as cards
-from scripts.yacg_python.common_vars import BASE_DIR
+import src.cards as cards
+import src.print_cards as print_cards
+from src.utils import BASE_DIR
 
 OUTPUT_DIR = BASE_DIR / "print_output"
 
@@ -65,8 +66,28 @@ os.makedirs(output_dir_fronts, exist_ok=True)
 os.makedirs(output_dir_backs, exist_ok=True)
 
 print_index = 1
-for card in card_printing.get_all_cards_to_print():
-    card_id = card.get_id()
+
+for color in EMPTY_CARDS:
+    for copy_index in range(1, EMPTY_CARDS[color] + 1):
+        file_name = f"{print_index:03d}_{str(color)}-{copy_index}"
+        if len(list(output_dir_fronts.glob(f"{file_name}*"))) == 0:
+            print_cards.print_blank_card(
+                color,
+                output_dir_fronts,
+                front_file_name=f"{file_name}_front",
+                skip_back=True
+            )
+        if len(list(output_dir_backs.glob(f"{file_name}*"))) == 0:
+            print_cards.print_blank_card(
+                color,
+                output_dir_backs,
+                back_file_name=f"{file_name}_back",
+                skip_front=True
+            )
+        print_index += 1
+
+for main in print_cards.get_all_printable_cards():
+    card_id = main.get_id()
     if card_id in DUPLICATE_CARDS:
         card_number_copies = DUPLICATE_CARDS[card_id]
     else:
@@ -75,34 +96,15 @@ for card in card_printing.get_all_cards_to_print():
     for copy_index in range(1, card_number_copies + 1):
         file_name = f"{print_index:03d}_{card_id}-{copy_index}"
         if len(list(output_dir_fronts.glob(f"{file_name}*"))) == 0:
-            card_printing.print_card(
-                card,
+            print_cards.print_card(
+                main,
                 output_dir_fronts,
                 front_file_name=f"{file_name}_front",
                 skip_back=True
             )
         if len(list(output_dir_backs.glob(f"{file_name}*"))) == 0:
-            card_printing.print_card(
-                card,
-                output_dir_backs,
-                back_file_name=f"{file_name}_back",
-                skip_front=True
-            )
-        print_index += 1
-
-for color in EMPTY_CARDS:
-    for copy_index in range(1, EMPTY_CARDS[color] + 1):
-        file_name = f"{print_index:03d}_{str(color)}-{copy_index}"
-        if len(list(output_dir_fronts.glob(f"{file_name}*"))) == 0:
-            card_printing.print_blank_card(
-                color,
-                output_dir_fronts,
-                front_file_name=f"{file_name}_front",
-                skip_back=True
-            )
-        if len(list(output_dir_backs.glob(f"{file_name}*"))) == 0:
-            card_printing.print_blank_card(
-                color,
+            print_cards.print_card(
+                main,
                 output_dir_backs,
                 back_file_name=f"{file_name}_back",
                 skip_front=True

@@ -2,7 +2,6 @@ import os
 import sys
 from pathlib import Path
 from typing import Optional
-
 from git import Repo
 
 
@@ -15,14 +14,16 @@ def _get_base_dir() -> Path:
         try:
             base_dir = Path(os.path.realpath(__file__)).parent.parent.parent
             # If this doesn't return NameError, then we're running in non-interactive mode
-            # This file is located in [BASE_DIR] / scripts / yacg_python / common_vars.py
+            # This file is located in [BASE_DIR] / scripts / utils / common_vars.py
         except NameError:
             # We're running in interactive mode
-            # This file is located in [BASE_DIR] / scripts / yacg_python / common_vars.py
+            # This file is located in [BASE_DIR] / scripts / utils / common_vars.py
             base_dir = Path(os.getcwd()).parent
 
     return base_dir
 
+
+# Paths to multiple files - START
 
 BASE_DIR = _get_base_dir()
 
@@ -39,6 +40,8 @@ EFFECT_DATA_PATH = CARD_DATA_PATH / "effects"
 TRAIT_DATA_PATH = CARD_DATA_PATH / "traits"
 
 VALUES_DATA_PATH = BASE_DIR / "dev_data" / "values.yaml"
+
+# Paths to multiple files - END
 
 
 def _get_git_tag() -> Optional[str]:

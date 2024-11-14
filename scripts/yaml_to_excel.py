@@ -11,8 +11,8 @@ import pandas as pd
 import xlwings as xw
 import yaml
 
-from scripts.yacg_python import cards
-from scripts.yacg_python.common_vars import EXCEL_PATH, EXCEL_BACKUP_PATH, EXCEL_TEMPLATE_PATH, VALUES_DATA_PATH
+import src.cards as cards
+from src.utils import EXCEL_PATH, EXCEL_BACKUP_PATH, EXCEL_TEMPLATE_PATH, VALUES_DATA_PATH
 
 
 def main():
