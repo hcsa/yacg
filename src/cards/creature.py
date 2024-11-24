@@ -4,7 +4,7 @@ from typing import Optional, Self, ClassVar, Dict, List
 import yaml
 
 from src.cards.abstract_classes import Card
-from src.cards.enums import Color, DevStage, _MechanicIdPrefix
+from src.cards.enums import Color, DevStage, _GameElementIdPrefix
 from src.cards.trait import Trait
 from src.utils import CREATURE_DATA_PATH
 
@@ -36,15 +36,16 @@ class CreatureMetadata:
 
 @dataclass(frozen=True)
 class Creature(Card):
-    _id_prefix: ClassVar[str] = _MechanicIdPrefix.CREATURE
     _creature_dict: ClassVar[Dict[str, Self]] = {}
 
     data: CreatureData
     metadata: CreatureMetadata
 
     def __post_init__(self):
-        if not self.metadata.id.startswith(self._id_prefix):
-            raise ValueError(f"Creature's ID '{self.metadata.id}' doesn't start with prefix '{self._id_prefix}'")
+        if not self.metadata.id.startswith(_GameElementIdPrefix.CREATURE):
+            raise ValueError(
+                f"Creature's ID '{self.metadata.id}' doesn't start with prefix '{_GameElementIdPrefix.CREATURE}'"
+            )
         if self.metadata.id in self._creature_dict:
             raise ValueError(f"Creature with ID '{self.metadata.id}' already exists")
         self._creature_dict[self.metadata.id] = self
