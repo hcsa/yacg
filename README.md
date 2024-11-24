@@ -106,7 +106,7 @@ the type library.
 The documentation for type library generation can be
 found [here](https://timgolden.me.uk/pywin32-docs/html/com/win32com/HTML/QuickStartClientCom.html).
 
-## Cards YAML structure
+## Card data YAML structure
 
 ### Creature
 
