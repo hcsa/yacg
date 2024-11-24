@@ -28,6 +28,7 @@ def import_from_excel():
         import_from_traits_sheet(excel_book.sheets["Traits"])
         import_from_creatures_sheet(excel_book.sheets["Creatures"])
         import_from_effects_sheet(excel_book.sheets["Effects"])
+        import_from_mechanics_sheet(excel_book.sheets["Mechanics"])
 
 
 def import_from_traits_sheet(traits_sheet: xw.Sheet):
@@ -278,6 +279,97 @@ def import_effects_sheet_to_df(effects_sheet: xw.Sheet) -> pd.DataFrame:
 
     excel_table_last_cell = effects_sheet.range("TableEffect").last_cell
     df_raw: pd.DataFrame = effects_sheet.range("A1", excel_table_last_cell).options(pd.DataFrame, index=False).value
+    df_raw_cols_used = df_raw.columns[0:-1]
+    df: pd.DataFrame = df_raw[df_raw_cols_used].copy()
+    df = df.set_axis(
+        list(df_types),
+        axis=1,
+    )
+    for col, col_type in df_types.items():
+        if col_type == str:
+            df[col].fillna("", inplace=True)
+        if col_type == "Int64":
+            df[col].fillna(np.nan, inplace=True)
+    df = df.astype(df_types)
+
+    populate_id_row(df)
+
+    return df
+
+
+def import_from_mechanics_sheet(mechanics_sheet: xw.Sheet):
+    df = import_mechanics_sheet_to_df(mechanics_sheet)
+    df_colors = pd.melt(
+        df,
+        id_vars=["id"],
+        value_vars=[
+            cards.Color.ORANGE.name,
+            cards.Color.GREEN.name,
+            cards.Color.BLUE.name,
+            cards.Color.WHITE.name,
+            cards.Color.YELLOW.name,
+            cards.Color.PURPLE.name,
+            cards.Color.PINK.name,
+            cards.Color.BLACK.name,
+            cards.Color.CYAN.name,
+        ],
+        var_name="color",
+        value_name="value"
+    )
+    df_colors = df_colors[df_colors["value"] != ""]
+
+    for _, row in df.iterrows():
+        df_row_colors = df_colors[df_colors["id"] == row["id"].strip()]
+
+        mechanic_colors = cards.MechanicColors(
+            primary=[
+                cards.Color(color_name)
+                for color_name in df_row_colors[df_row_colors["value"] == "XXX"]["color"]
+            ],
+            secondary=[
+                cards.Color(color_name)
+                for color_name in df_row_colors[df_row_colors["value"] == "XX"]["color"]
+            ],
+            tertiary=[
+                cards.Color(color_name)
+                for color_name in df_row_colors[df_row_colors["value"] == "X"]["color"]
+            ]
+        )
+        _ = cards.Mechanic(
+            name=row["name"].strip(),
+            colors=mechanic_colors,
+            id=row["id"].strip(),
+            dev_stage=cards.DevStage(row["dev-stage"].strip()),
+            order=(
+                int(row["order"])
+                if not pd.isna(row["order"])
+                else None
+            ),
+            notes=row["notes"].strip(),
+        )
+
+
+def import_mechanics_sheet_to_df(mechanics_sheet: xw.Sheet) -> pd.DataFrame:
+    # Int64 is used here instead of int because it's nullable
+    df_types = {
+        "id": str,
+        "order": "Int64",
+        "name": str,
+        cards.Color.ORANGE.name: str,
+        cards.Color.GREEN.name: str,
+        cards.Color.BLUE.name: str,
+        cards.Color.WHITE.name: str,
+        cards.Color.YELLOW.name: str,
+        cards.Color.PURPLE.name: str,
+        cards.Color.PINK.name: str,
+        cards.Color.BLACK.name: str,
+        cards.Color.CYAN.name: str,
+        "dev-stage": str,
+        "notes": str,
+    }
+
+    excel_table_last_cell = mechanics_sheet.range("TableMechanic").last_cell
+    df_raw: pd.DataFrame = mechanics_sheet.range("A1", excel_table_last_cell).options(pd.DataFrame, index=False).value
     df_raw_cols_used = df_raw.columns[0:-1]
     df: pd.DataFrame = df_raw[df_raw_cols_used].copy()
     df = df.set_axis(
