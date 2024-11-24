@@ -108,6 +108,41 @@ found [here](https://timgolden.me.uk/pywin32-docs/html/com/win32com/HTML/QuickSt
 
 ## Card data YAML structure
 
+### Trait
+
+```yaml
+trait:
+  # All fields that have gameplay influence
+  data:
+    name: Subtle
+    description: |
+      Can be cast at any point while the opponent isn't looking
+
+  # All fields that have no gameplay influence
+  metadata:
+    id: TXXX
+    # Either "Cast" (has effect when creature's cast), "Combat" (has effect when creature is in battle) or "Other".
+    type: Other
+    # How much it's worth for a card to have this. Bad traits have negative value
+    value: 35
+    # Check Excel for what these mean.
+    dev-stage: Discontinued
+    # While card has no serious name.
+    dev-name: Template trait
+    # Used to order cards in Excel.
+    order: 0
+    # The creature's main idea.
+    # Eg: "+Atk if kills creature", "-Spd in the rain".
+    summary: Showcase trait YAML
+    # Notes during card development.
+    # Fill this with notes on usage, balancing, etc.
+    # Eg: "creatures with this must cost at least 3", "rejected due to having no counter-play", "can't be paired with arrogance".
+    notes: |
+      * This is a template trait. Exists purely as a template. Will never be used. Isn't that so sad?
+      * Grouped the fields in "data" and "metadata" groups.
+        This way it's obvious what fields have gameplay influence and what fields don't.
+```
+
 ### Creature
 
 ```yaml
@@ -191,41 +226,6 @@ effect:
     # Eg: "any cost less than 3 makes this busted", "rejected due to having no counter-play", "changed colors, fits blue more").
     notes: |
       * This is a template effect card. Exists purely as a template. Will never be printed. Isn't that so sad?
-      * Grouped the fields in "data" and "metadata" groups.
-        This way it's obvious what fields have gameplay influence and what fields don't.
-```
-
-### Trait
-
-```yaml
-trait:
-  # All fields that have gameplay influence
-  data:
-    name: Subtle
-    description: |
-      Can be cast at any point while the opponent isn't looking
-
-  # All fields that have no gameplay influence
-  metadata:
-    id: TXXX
-    # Either "Cast" (has effect when creature's cast), "Combat" (has effect when creature is in battle) or "Other".
-    type: Other
-    # How much it's worth for a card to have this. Bad traits have negative value
-    value: 35
-    # Check Excel for what these mean.
-    dev-stage: Discontinued
-    # While card has no serious name.
-    dev-name: Template trait
-    # Used to order cards in Excel.
-    order: 0
-    # The creature's main idea.
-    # Eg: "+Atk if kills creature", "-Spd in the rain".
-    summary: Showcase trait YAML
-    # Notes during card development.
-    # Fill this with notes on usage, balancing, etc.
-    # Eg: "creatures with this must cost at least 3", "rejected due to having no counter-play", "can't be paired with arrogance".
-    notes: |
-      * This is a template trait. Exists purely as a template. Will never be used. Isn't that so sad?
       * Grouped the fields in "data" and "metadata" groups.
         This way it's obvious what fields have gameplay influence and what fields don't.
 ```
