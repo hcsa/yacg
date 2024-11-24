@@ -1,6 +1,6 @@
 from typing import List, Callable, Any
 
-from src.cards.abstract_classes import Card, Mechanic
+from src.cards.abstract_classes import Card, GameElement
 from src.cards.creature import Creature
 from src.cards.effect import Effect
 from src.cards.enums import _MechanicIdPrefix
@@ -22,7 +22,7 @@ def export_all_data() -> None:
     Effect.export_all_to_yaml()
 
 
-def get_mechanic(mechanic_id: str) -> Mechanic:
+def get_mechanic(mechanic_id: str) -> GameElement:
     if mechanic_id.startswith(_MechanicIdPrefix.TRAIT):
         return Trait.get_trait(mechanic_id)
     if mechanic_id.startswith(_MechanicIdPrefix.CREATURE):

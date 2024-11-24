@@ -1,4 +1,4 @@
-from src.cards.abstract_classes import Mechanic, Card
+from src.cards.abstract_classes import GameElement, Card
 from src.cards.creature import CreatureData, CreatureMetadata, Creature
 from src.cards.effect import EffectData, EffectMetadata, Effect
 from src.cards.enums import Color, EffectType, DevStage, TraitType

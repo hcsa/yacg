@@ -3,7 +3,7 @@ from typing import Optional, Self, ClassVar, Dict
 
 import yaml
 
-from src.cards.abstract_classes import Mechanic
+from src.cards.abstract_classes import GameElement
 from src.cards.enums import DevStage, TraitType, _MechanicIdPrefix
 from src.utils import TRAIT_DATA_PATH
 
@@ -27,7 +27,7 @@ class TraitMetadata:
 
 
 @dataclass(frozen=True)
-class Trait(Mechanic):
+class Trait(GameElement):
     _trait_dict: ClassVar[Dict[str, Self]] = {}
 
     data: TraitData
