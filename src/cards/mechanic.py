@@ -129,8 +129,8 @@ class Mechanic(GameElement):
 mechanic:
   data:
   name: {self.name}
-  colors:{colors_str}
   id: {self.id}
+  colors:{colors_str}
   dev-stage: {self.dev_stage.name}
   order: {self.order if self.order is not None else ""}
   notes: |
