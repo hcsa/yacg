@@ -72,18 +72,19 @@ class Mechanic(GameElement):
         primary_colors_list = []
         secondary_colors_list = []
         tertiary_colors_list = []
-        if "primary" in yaml_data["colors"]:
-            for color_id in yaml_data["colors"]["primary"]:
-                color = Color(str(color_id))
-                primary_colors_list.append(color)
-        if "secondary" in yaml_data["colors"]:
-            for color_id in yaml_data["colors"]["secondary"]:
-                color = Color(str(color_id))
-                secondary_colors_list.append(color)
-        if "tertiary" in yaml_data["colors"]:
-            for color_id in yaml_data["colors"]["tertiary"]:
-                color = Color(str(color_id))
-                tertiary_colors_list.append(color)
+        if yaml_data["colors"] is not None:
+            if "primary" in yaml_data["colors"]:
+                for color_id in yaml_data["colors"]["primary"]:
+                    color = Color(str(color_id))
+                    primary_colors_list.append(color)
+            if "secondary" in yaml_data["colors"]:
+                for color_id in yaml_data["colors"]["secondary"]:
+                    color = Color(str(color_id))
+                    secondary_colors_list.append(color)
+            if "tertiary" in yaml_data["colors"]:
+                for color_id in yaml_data["colors"]["tertiary"]:
+                    color = Color(str(color_id))
+                    tertiary_colors_list.append(color)
 
         mechanic_colors = MechanicColors(
             primary=primary_colors_list,

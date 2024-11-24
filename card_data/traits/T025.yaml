@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T025
     type: Other
+    colors:
     value: 25
     dev-stage: Alpha-0
     dev-name: Martyr

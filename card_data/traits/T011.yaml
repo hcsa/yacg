@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T011
     type: Other
+    colors:
     value: 45
     dev-stage: Alpha-0
     dev-name: Destiny bond

@@ -329,6 +329,34 @@ def get_mechanics_df() -> pd.DataFrame:
 
         df_data.append(df_row)
 
+    trait_list = cards.Trait.get_trait_dict().values()
+    for trait in trait_list:
+        df_row = {
+            "id": trait.metadata.id,
+            "order": 10000 + trait.metadata.order,
+            "name": f"{trait.data.name}\n{trait.data.description}",
+            cards.Color.ORANGE.name: None,
+            cards.Color.GREEN.name: None,
+            cards.Color.BLUE.name: None,
+            cards.Color.WHITE.name: None,
+            cards.Color.YELLOW.name: None,
+            cards.Color.PURPLE.name: None,
+            cards.Color.PINK.name: None,
+            cards.Color.BLACK.name: None,
+            cards.Color.CYAN.name: None,
+            "dev-stage": trait.metadata.dev_stage.name,
+            "notes": trait.metadata.notes,
+        }
+
+        for color in trait.metadata.colors.primary:
+            df_row[color.name] = "XXX"
+        for color in trait.metadata.colors.secondary:
+            df_row[color.name] = "XX"
+        for color in trait.metadata.colors.tertiary:
+            df_row[color.name] = "X"
+
+        df_data.append(df_row)
+
     # noinspection PyTypeChecker
     df = pd.DataFrame(data=df_data, dtype=object, columns=[
         "id",

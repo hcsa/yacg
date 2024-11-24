@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T009
     type: Other
+    colors:
     value: -10
     dev-stage: Alpha-0
     dev-name: Defeatist

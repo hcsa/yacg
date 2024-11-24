@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T026
     type: Other
+    colors:
     value: 30
     dev-stage: Alpha-0
     dev-name: Mind freeze

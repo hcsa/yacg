@@ -118,7 +118,7 @@ mechanic:
     # The colors that use the mechanic the most, when compared to other colors.
     # Matches the identity or gameplay strategy of the color.
     # These are also the colors where the effect is stronger.
-    # Obligatory field, there's always at least one primary color.
+      # Optional field, but for developed mechanics there's always at least one primary color.
     primary:
       - Orange
     # The colors where the mechanic appears somewhat often.
@@ -156,6 +156,25 @@ trait:
     id: TXXX
     # Either "Cast" (has effect when creature's cast), "Combat" (has effect when creature is in battle) or "Other".
     type: Other
+    colors:  # Color assignment is based off of https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+      # The colors that use the mechanic the most, when compared to other colors.
+      # Matches the identity or gameplay strategy of the color.
+      # These are also the colors where the effect is stronger.
+      # Optional field, but for developed mechanics there's always at least one primary color.
+      primary:
+        - Orange
+      # The colors where the mechanic appears somewhat often.
+      # The effect is restricted to more cards, which may fit a theme.
+      # Optional field.
+      secondary:
+        - Green
+      # The colors where the mechanic rarely appears.
+      # Optional field.
+      tertiary:
+        - Black
+      # Notes on why the 
+      notes: |
+        * These are the same colors as the mechanic up above, did you notice that?
     # How much it's worth for a card to have this. Bad traits have negative value
     value: 35
     # Check Excel for what these mean.

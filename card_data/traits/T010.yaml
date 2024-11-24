@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T010
     type: Other
+    colors:
     value: 40
     dev-stage: Alpha-0
     dev-name: Defender

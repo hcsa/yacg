@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T031
     type: Combat
+    colors:
     value: -15
     dev-stage: Alpha-0
     dev-name: Reckless

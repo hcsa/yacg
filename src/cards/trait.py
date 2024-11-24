@@ -1,10 +1,10 @@
-from dataclasses import dataclass
-from typing import Optional, Self, ClassVar, Dict
+from dataclasses import dataclass, field
+from typing import Optional, Self, ClassVar, Dict, List
 
 import yaml
 
 from src.cards.abstract_classes import GameElement
-from src.cards.enums import DevStage, TraitType, _GameElementIdPrefix
+from src.cards.enums import Color, DevStage, TraitType, _GameElementIdPrefix
 from src.utils import TRAIT_DATA_PATH
 
 
@@ -15,9 +15,17 @@ class TraitData:
 
 
 @dataclass(frozen=True)
+class TraitColors:
+    primary: List[Color] = field(default_factory=list)
+    secondary: List[Color] = field(default_factory=list)
+    tertiary: List[Color] = field(default_factory=list)
+
+
+@dataclass(frozen=True)
 class TraitMetadata:
     id: str
     type: TraitType
+    colors: TraitColors
     value: Optional[int] = None
     dev_stage: DevStage = DevStage.CONCEPTION
     dev_name: str = ""
@@ -80,6 +88,23 @@ class Trait(GameElement):
         with open(yaml_path, "r") as f:
             yaml_data = yaml.safe_load(f)["trait"]
 
+        primary_colors_list = []
+        secondary_colors_list = []
+        tertiary_colors_list = []
+        if yaml_data["metadata"]["colors"] is not None:
+            if "primary" in yaml_data["metadata"]["colors"]:
+                for color_id in yaml_data["metadata"]["colors"]["primary"]:
+                    color = Color(str(color_id))
+                    primary_colors_list.append(color)
+            if "secondary" in yaml_data["metadata"]["colors"]:
+                for color_id in yaml_data["colors"]["secondary"]:
+                    color = Color(str(color_id))
+                    secondary_colors_list.append(color)
+            if "tertiary" in yaml_data["metadata"]["colors"]:
+                for color_id in yaml_data["colors"]["tertiary"]:
+                    color = Color(str(color_id))
+                    tertiary_colors_list.append(color)
+
         trait_data = TraitData(
             name=(
                 str(yaml_data["data"]["name"])
@@ -88,9 +113,15 @@ class Trait(GameElement):
             ),
             description=str(yaml_data["data"]["description"]).strip()
         )
+        trait_colors = TraitColors(
+            primary=primary_colors_list,
+            secondary=secondary_colors_list,
+            tertiary=tertiary_colors_list,
+        )
         trait_metadata = TraitMetadata(
             id=str(yaml_data["metadata"]["id"]),
             type=TraitType(str(yaml_data["metadata"]["type"])),
+            colors=trait_colors,
             value=(
                 int(yaml_data["metadata"]["value"])
                 if yaml_data["metadata"]["value"] is not None
@@ -127,6 +158,21 @@ class Trait(GameElement):
 
         notes_str = self.metadata.notes.strip().replace("\n", "\n      ")
 
+        colors_str = "\n"
+        if len(self.metadata.colors.primary) > 0:
+            colors_str += "      primary:\n"
+            for color in self.metadata.colors.primary:
+                colors_str += f"        - {color.name}\n"
+        if len(self.metadata.colors.secondary) > 0:
+            colors_str += "      secondary:\n"
+            for color in self.metadata.colors.secondary:
+                colors_str += f"        - {color.name}\n"
+        if len(self.metadata.colors.tertiary) > 0:
+            colors_str += "      tertiary:\n"
+            for color in self.metadata.colors.tertiary:
+                colors_str += f"        - {color.name}\n"
+        colors_str = colors_str[:-1]
+
         yaml_content = f"""
 trait:
   data:
@@ -136,6 +182,7 @@ trait:
   metadata:
     id: {self.metadata.id}
     type: {self.metadata.type.name}
+    colors:{colors_str}
     value: {self.metadata.value if self.metadata.value is not None else ""}
     dev-stage: {self.metadata.dev_stage.name}
     dev-name: {self.metadata.dev_name}

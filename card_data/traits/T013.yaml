@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T013
     type: Combat
+    colors:
     value: 60
     dev-stage: Alpha-0
     dev-name: Double strike

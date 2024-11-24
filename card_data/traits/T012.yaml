@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T012
     type: Entry
+    colors:
     value: 10
     dev-stage: Alpha-0
     dev-name: Disable

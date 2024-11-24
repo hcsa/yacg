@@ -6,12 +6,14 @@ import sys
 import traceback
 from typing import Iterator
 
+import yaml
+
 import numpy as np
 import pandas as pd
 import xlwings as xw
 
 import src.cards as cards
-from src.utils import EXCEL_PATH
+from src.utils import EXCEL_PATH, TRAIT_DATA_PATH
 
 
 def main():
@@ -25,24 +27,61 @@ def import_from_excel():
     with xw.App(visible=False) as app:
         excel_book = app.books.open(str(EXCEL_PATH))
 
-        import_from_traits_sheet(excel_book.sheets["Traits"])
+        import_from_traits_sheet(excel_book.sheets["Traits"], excel_book.sheets["Mechanics"])
         import_from_creatures_sheet(excel_book.sheets["Creatures"])
         import_from_effects_sheet(excel_book.sheets["Effects"])
         import_from_mechanics_sheet(excel_book.sheets["Mechanics"])
 
 
-def import_from_traits_sheet(traits_sheet: xw.Sheet):
+def import_from_traits_sheet(traits_sheet: xw.Sheet, mechanics_sheet: xw.Sheet):
     df = import_traits_sheet_to_df(traits_sheet)
     populate_id_row(df)
 
+    df_mechanics = import_mechanics_sheet_to_df(mechanics_sheet)
+    df_mechanics_colors = pd.melt(
+        df_mechanics,
+        id_vars=["id"],
+        value_vars=[
+            cards.Color.ORANGE.name,
+            cards.Color.GREEN.name,
+            cards.Color.BLUE.name,
+            cards.Color.WHITE.name,
+            cards.Color.YELLOW.name,
+            cards.Color.PURPLE.name,
+            cards.Color.PINK.name,
+            cards.Color.BLACK.name,
+            cards.Color.CYAN.name,
+        ],
+        var_name="color",
+        value_name="value"
+    )
+    df_mechanics_colors = df_mechanics_colors[df_mechanics_colors["value"] != ""]
+
     for _, row in df.iterrows():
+        df_row_colors = df_mechanics_colors[df_mechanics_colors["id"] == row["id"].strip()]
+
         trait_data = cards.TraitData(
             name=row["name"].strip(),
             description=row["description"].strip(),
         )
+        trait_colors = cards.TraitColors(
+            primary=[
+                cards.Color(color_name)
+                for color_name in df_row_colors[df_row_colors["value"] == "XXX"]["color"]
+            ],
+            secondary=[
+                cards.Color(color_name)
+                for color_name in df_row_colors[df_row_colors["value"] == "XX"]["color"]
+            ],
+            tertiary=[
+                cards.Color(color_name)
+                for color_name in df_row_colors[df_row_colors["value"] == "X"]["color"]
+            ]
+        )
         trait_metadata = cards.TraitMetadata(
             id=row["id"].strip(),
             type=cards.TraitType(row["type"].strip()),
+            colors=trait_colors,
             value=(
                 int(row["value"])
                 if not pd.isna(row["value"])
@@ -335,18 +374,23 @@ def import_from_mechanics_sheet(mechanics_sheet: xw.Sheet):
                 for color_name in df_row_colors[df_row_colors["value"] == "X"]["color"]
             ]
         )
-        _ = cards.Mechanic(
-            name=row["name"].strip(),
-            colors=mechanic_colors,
-            id=row["id"].strip(),
-            dev_stage=cards.DevStage(row["dev-stage"].strip()),
-            order=(
-                int(row["order"])
-                if not pd.isna(row["order"])
-                else None
-            ),
-            notes=row["notes"].strip(),
-        )
+
+        # This may be a trait. If it is, creation will give error, and we'll just ignore it
+        try:
+            _ = cards.Mechanic(
+                name=row["name"].strip(),
+                colors=mechanic_colors,
+                id=row["id"].strip(),
+                dev_stage=cards.DevStage(row["dev-stage"].strip()),
+                order=(
+                    int(row["order"])
+                    if not pd.isna(row["order"])
+                    else None
+                ),
+                notes=row["notes"].strip(),
+            )
+        except ValueError:
+            continue
 
 
 def import_mechanics_sheet_to_df(mechanics_sheet: xw.Sheet) -> pd.DataFrame:

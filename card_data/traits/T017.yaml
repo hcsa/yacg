@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T017
     type: Combat
+    colors:
     value: 40
     dev-stage: Alpha-0
     dev-name: First strike

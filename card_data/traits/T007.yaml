@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T007
     type: Other
+    colors:
     value: 15
     dev-stage: Alpha-0
     dev-name: Cold personality

@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T003
     type: Combat
+    colors:
     value: -20
     dev-stage: Alpha-0
     dev-name: Brittle

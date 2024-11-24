@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T021
     type: Combat
+    colors:
     value: 10
     dev-stage: Alpha-0
     dev-name: Ice touch

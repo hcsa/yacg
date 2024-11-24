@@ -6,6 +6,7 @@ trait:
   metadata:
     id: T023
     type: Other
+    colors:
     value: 20
     dev-stage: Alpha-0
     dev-name: Immunity
