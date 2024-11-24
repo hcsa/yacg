@@ -114,19 +114,20 @@ found [here](https://timgolden.me.uk/pywin32-docs/html/com/win32com/HTML/QuickSt
 mechanic:
   name: +Atk (token)
   id: MXXX
-  # Color assignment is based off of https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
-  colors:
+  colors:  # Color assignment is based off of https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
     # The colors that use the mechanic the most, when compared to other colors.
     # Matches the identity or gameplay strategy of the color.
     # These are also the colors where the effect is stronger.
-    # There's always at least one primary color.
+    # Obligatory field, there's always at least one primary color.
     primary:
       - Orange
     # The colors where the mechanic appears somewhat often.
     # The effect is restricted to more cards, which may fit a theme.
+    # Optional field.
     secondary:
       - Green
     # The colors where the mechanic rarely appears.
+    # Optional field.
     tertiary:
       - Black
   # Check Excel for what these mean.
