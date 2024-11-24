@@ -108,6 +108,38 @@ found [here](https://timgolden.me.uk/pywin32-docs/html/com/win32com/HTML/QuickSt
 
 ## Card data YAML structure
 
+### Mechanic
+
+```yaml
+mechanic:
+  name: +Atk (token)
+  # Color assignment is based off of https://magic.wizards.com/en/news/making-magic/mechanical-color-pie-2021
+  colors:
+    # The colors that use the mechanic the most, when compared to other colors.
+    # Matches the identity or gameplay strategy of the color.
+    # These are also the colors where the effect is stronger.
+    # There's always at least one primary color.
+    primary:
+      - Orange
+    # The colors where the mechanic appears somewhat often.
+    # The effect is restricted to more cards, which may fit a theme.
+    secondary:
+      - Green
+    # The colors where the mechanic rarely appears.
+    tertiary:
+      - Black
+  id: MXXX
+  # Check Excel for what these mean.
+  dev-stage: Discontinued
+  # Used to order mechanics in Excel.
+  order: 0
+  # Notes during card development.
+  # Fill this with notes on usage, balancing, etc.
+  # Eg: "creatures with this must cost at least 3", "rejected due to having no counter-play", "can't be paired with arrogance".
+  notes: |
+    * This is a template mechanic. Exists purely as a template. Will never be used. Isn't that so sad?
+```
+
 ### Trait
 
 ```yaml
