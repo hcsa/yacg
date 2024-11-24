@@ -3,7 +3,7 @@ from typing import List, Callable, Any
 from src.cards.abstract_classes import Card, GameElement
 from src.cards.creature import Creature
 from src.cards.effect import Effect
-from src.cards.enums import _MechanicIdPrefix
+from src.cards.enums import _GameElementIdPrefix
 from src.cards.filter_methods import FilterMethod
 from src.cards.sort_methods import SortMethod
 from src.cards.trait import Trait
@@ -23,19 +23,19 @@ def export_all_data() -> None:
 
 
 def get_mechanic(mechanic_id: str) -> GameElement:
-    if mechanic_id.startswith(_MechanicIdPrefix.TRAIT):
+    if mechanic_id.startswith(_GameElementIdPrefix.TRAIT):
         return Trait.get_trait(mechanic_id)
-    if mechanic_id.startswith(_MechanicIdPrefix.CREATURE):
+    if mechanic_id.startswith(_GameElementIdPrefix.CREATURE):
         return Creature.get_creature(mechanic_id)
-    if mechanic_id.startswith(_MechanicIdPrefix.EFFECT):
+    if mechanic_id.startswith(_GameElementIdPrefix.EFFECT):
         return Effect.get_effect(mechanic_id)
     raise ValueError(f"Mechanic id '{mechanic_id}' has an unexpected prefix")
 
 
 def get_card(card_id: str) -> Card:
-    if card_id.startswith(_MechanicIdPrefix.CREATURE):
+    if card_id.startswith(_GameElementIdPrefix.CREATURE):
         return Creature.get_creature(card_id)
-    if card_id.startswith(_MechanicIdPrefix.EFFECT):
+    if card_id.startswith(_GameElementIdPrefix.EFFECT):
         return Effect.get_effect(card_id)
     raise ValueError(f"Card id '{card_id}' has an unexpected prefix")
 

@@ -4,7 +4,7 @@ from typing import Optional, Self, ClassVar, Dict
 import yaml
 
 from src.cards.abstract_classes import GameElement
-from src.cards.enums import DevStage, TraitType, _MechanicIdPrefix
+from src.cards.enums import DevStage, TraitType, _GameElementIdPrefix
 from src.utils import TRAIT_DATA_PATH
 
 
@@ -34,8 +34,10 @@ class Trait(GameElement):
     metadata: TraitMetadata
 
     def __post_init__(self):
-        if not self.metadata.id.startswith(_MechanicIdPrefix.TRAIT):
-            raise ValueError(f"Trait's ID '{self.metadata.id}' doesn't start with prefix '{_MechanicIdPrefix.TRAIT}'")
+        if not self.metadata.id.startswith(_GameElementIdPrefix.TRAIT):
+            raise ValueError(
+                f"Trait's ID '{self.metadata.id}' doesn't start with prefix '{_GameElementIdPrefix.TRAIT}'"
+            )
         if self.metadata.id in self._trait_dict:
             raise ValueError(f"Trait with ID '{self.metadata.id}' already exists")
         self._trait_dict[self.metadata.id] = self

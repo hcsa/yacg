@@ -1,15 +1,16 @@
 from enum import Enum, StrEnum
 
 
-class _MechanicIdPrefix(StrEnum):
+class _GameElementIdPrefix(StrEnum):
     """
-    A prefix, added before all ids of mechanics/card types
+    A prefix, added before all ids of game elements/card types
 
-    Differs for different types of mechanics/card types
+    Differs for different types of game elements/card types
 
-    If you change this, you'll have to change all ids of mechanics
+    If you change this, you'll have to change all ids of game elements
     """
 
+    MECHANIC = "M"
     TRAIT = "T"
     EFFECT = "E"
     CREATURE = "C"
