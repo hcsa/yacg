@@ -7,10 +7,15 @@ trait:
     id: T021
     type: Combat
     colors:
+      primary:
+        - Blue
+        - Cyan
+      secondary:
+        - Green
     value: 10
     dev-stage: Alpha-0
     dev-name: Ice touch
     order: 302
     summary: -Spd in combat
     notes: |
-      * Main colors: Cyan
+      

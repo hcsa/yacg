@@ -7,10 +7,14 @@ trait:
     id: T006
     type: Other
     colors:
+      primary:
+        - Blue
+      tertiary:
+        - White
     value: 10
     dev-stage: Alpha-0
     dev-name: Cold blood
     order: 213
     summary: Hail buffed
     notes: |
-      * Main colors: Blue
+      

@@ -7,10 +7,14 @@ trait:
     id: T037
     type: Combat
     colors:
+      primary:
+        - Green
+      secondary:
+        - Orange
     value: 15
     dev-stage: Alpha-0
     dev-name: Trample
     order: 606
     summary: Deals excess combat damage to another creature
     notes: |
-      * Main colors: Green
+      

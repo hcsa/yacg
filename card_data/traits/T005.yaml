@@ -7,10 +7,15 @@ trait:
     id: T005
     type: Other
     colors:
+      primary:
+        - Blue
+      secondary:
+        - White
+        - Pink
     value: 10
     dev-stage: Alpha-0
     dev-name: Clear body
     order: 802
     summary: Stats can't be lowered
     notes: |
-      * Main colors: Blue, Pink
+      

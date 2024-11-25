@@ -7,10 +7,14 @@ trait:
     id: T039
     type: Combat
     colors:
+      primary:
+        - Yellow
+      secondary:
+        - White
     value: 15
     dev-stage: Alpha-0
     dev-name: U-turn
     order: 608
     summary: Can switch out in combat
     notes: |
-      * Main colors: Yellow, Cyan
+      

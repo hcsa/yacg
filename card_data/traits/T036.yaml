@@ -7,11 +7,14 @@ trait:
     id: T036
     type: Other
     colors:
+      primary:
+        - White
+      secondary:
+        - Green
     value: 10
     dev-stage: Alpha-0
     dev-name: Survivor
     order: 808
     summary: If it's not killed, goes to deck at the end of the round
     notes: |
-      * Main colors: Green, White
       * [HS] Doesn't seem to be relevant

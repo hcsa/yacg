@@ -7,10 +7,14 @@ trait:
     id: T019
     type: Entry
     colors:
+      primary:
+        - Cyan
+      tertiary:
+        - Blue
     value: 10
     dev-stage: Alpha-0
     dev-name: Hail setter
     order: 203
     summary: Hail setter
     notes: |
-      * Main colors: Cyan
+      

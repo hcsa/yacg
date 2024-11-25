@@ -7,6 +7,11 @@ trait:
     id: T046
     type: Other
     colors:
+      primary:
+        - White
+      secondary:
+        - Orange
+        - Green
     value: 25
     dev-stage: Conception
     dev-name: 

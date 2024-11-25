@@ -7,10 +7,16 @@ trait:
     id: T015
     type: Entry
     colors:
+      primary:
+        - Green
+      secondary:
+        - Orange
+      tertiary:
+        - Yellow
     value: 15
     dev-stage: Alpha-0
     dev-name: Earthquake
     order: 701
     summary: Spead damage when it's cast
     notes: |
-      * Main colors: Green
+      

@@ -7,6 +7,12 @@ trait:
     id: T048
     type: Other
     colors:
+      primary:
+        - Blue
+      secondary:
+        - Pink
+      tertiary:
+        - Green
     value: 25
     dev-stage: Conception
     dev-name: 

@@ -7,6 +7,12 @@ trait:
     id: T043
     type: Other
     colors:
+      primary:
+        - Purple
+      secondary:
+        - Cyan
+      tertiary:
+        - Green
     value: 25
     dev-stage: Conception
     dev-name: 

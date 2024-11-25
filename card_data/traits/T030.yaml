@@ -7,11 +7,14 @@ trait:
     id: T030
     type: Other
     colors:
+      primary:
+        - White
+      tertiary:
+        - Orange
     value: 25
     dev-stage: Alpha-0
     dev-name: Rally
     order: 311
     summary: +Atk w/ friends
     notes: |
-      * Main colors: White
       * [HS] Nerfed friends abilities

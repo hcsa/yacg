@@ -7,6 +7,10 @@ trait:
     id: T044
     type: Combat
     colors:
+      primary:
+        - Orange
+      secondary:
+        - White
     value: 20
     dev-stage: Alpha-0
     dev-name: 

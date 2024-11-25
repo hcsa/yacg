@@ -7,10 +7,14 @@ trait:
     id: T004
     type: Other
     colors:
+      primary:
+        - Green
+      tertiary:
+        - Yellow
     value: 10
     dev-stage: Alpha-0
     dev-name: Chlorophyll
     order: 211
     summary: Sun buffed
     notes: |
-      * Main colors: Green
+      

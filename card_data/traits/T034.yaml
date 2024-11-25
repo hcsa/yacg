@@ -7,10 +7,15 @@ trait:
     id: T034
     type: Combat
     colors:
+      primary:
+        - Green
+      secondary:
+        - Orange
+        - Blue
     value: -20
     dev-stage: Alpha-0
     dev-name: Slow movement
     order: 503
     summary: Attacks last
     notes: |
-      * Main colors: Green
+      

@@ -7,10 +7,16 @@ trait:
     id: T024
     type: Combat
     colors:
+      primary:
+        - Green
+        - Cyan
+      secondary:
+        - Orange
+        - Purple
     value: 15
     dev-stage: Alpha-0
     dev-name: Intimidate
     order: 301
     summary: -Atk in combat
     notes: |
-      * Main colors: Green, Black
+      

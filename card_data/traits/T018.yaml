@@ -7,11 +7,14 @@ trait:
     id: T018
     type: Other
     colors:
+      primary:
+        - Cyan
+      tertiary:
+        - Purple
     value: 35
     dev-stage: Alpha-0
     dev-name: Gang up
     order: 312
     summary: -Atk w/ friends
     notes: |
-      * Main colors: Black
       * [HS] Nerfed friends abilities

@@ -7,10 +7,14 @@ trait:
     id: T003
     type: Combat
     colors:
+      primary:
+        - Purple
+      secondary:
+        - Green
     value: -20
     dev-stage: Alpha-0
     dev-name: Brittle
     order: 603
     summary: Dies after attacking
     notes: |
-      * Main colors: Purple, Green
+      

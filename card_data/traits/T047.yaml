@@ -7,6 +7,12 @@ trait:
     id: T047
     type: Combat
     colors:
+      primary:
+        - Yellow
+      secondary:
+        - Purple
+      tertiary:
+        - Blue
     value: 20
     dev-stage: Alpha-0
     dev-name: 

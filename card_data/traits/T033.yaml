@@ -7,10 +7,14 @@ trait:
     id: T033
     type: Combat
     colors:
+      primary:
+        - Yellow
+      secondary:
+        - Orange
     value: 20
     dev-stage: Alpha-0
     dev-name: Self-destruct
     order: 604
     summary: Its attack kills both itself and opponent
     notes: |
-      * Main colors: Yellow, Orange
+      

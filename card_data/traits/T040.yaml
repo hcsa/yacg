@@ -7,6 +7,12 @@ trait:
     id: T040
     type: Other
     colors:
+      primary:
+        - Pink
+      secondary:
+        - Black
+      tertiary:
+        - Orange
     value: 15
     dev-stage: Conception
     dev-name: Flash
