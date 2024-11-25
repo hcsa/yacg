@@ -345,7 +345,7 @@ def get_mechanics_df() -> pd.DataFrame:
             cards.Color.BLACK.name: None,
             cards.Color.CYAN.name: None,
             "dev-stage": trait.metadata.dev_stage.name,
-            "notes": trait.metadata.notes,
+            "notes": "[Notes for traits must be updated in the 'Traits' sheet]",
         }
 
         for color in trait.metadata.colors.primary:
