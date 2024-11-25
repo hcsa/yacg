@@ -1,0 +1,16 @@
+mechanic:
+  data:
+  name: +Atk tokens
+  id: M001
+  colors:
+    primary:
+      - Orange
+    secondary:
+      - Green
+    tertiary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 1
+  notes: |
+    
