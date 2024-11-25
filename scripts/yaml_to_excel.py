@@ -297,6 +297,14 @@ def export_to_mechanics_sheet(mechanics_sheet: xw.Sheet):
     # Delete template row
     mechanics_sheet.range("2:2").delete(shift="up")
 
+    mechanics_sheet["A1"].expand("table").api.Sort(
+        Key1=mechanics_sheet.range("O:O").api,
+        Order1=2,
+        Key2=mechanics_sheet.range("B:B").api,
+        Header=1,
+        Orientation=1,
+    )
+
 
 def get_mechanics_df() -> pd.DataFrame:
     df_data = []
