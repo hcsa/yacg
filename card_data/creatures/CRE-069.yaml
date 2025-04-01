@@ -1,0 +1,22 @@
+creature:
+  data:
+    name: Swordsman
+    color: White
+    is-token: False
+    cost-total: 1
+    cost-color: 0
+    hp: 2
+    atk: 2
+    spe: 3
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-069
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 403
+    summary: 1-cost, White, no traits
+    notes: |
+      

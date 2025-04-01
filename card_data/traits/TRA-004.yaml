@@ -1,0 +1,21 @@
+trait:
+  data:
+    name: Heat Affinity
+    description: Benefits from Sun.
+
+  metadata:
+    id: TRA-004
+    type: Other
+    colors:
+      primary:
+        - Orange
+        - Green
+      tertiary:
+        - Yellow
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Chlorophyll
+    order: 211
+    summary: Sun buffed
+    notes: |
+      

@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    Spe working opposite
+  id: MEC-064
+  colors:
+    primary:
+      - Black
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

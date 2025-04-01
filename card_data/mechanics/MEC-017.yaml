@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    +HP (aura, ongoing)
+  id: MEC-017
+  colors:
+    primary:
+      - Blue
+    secondary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 103
+  notes: |
+    

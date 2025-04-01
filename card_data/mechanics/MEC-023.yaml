@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    Inflict poison
+  id: MEC-023
+  colors:
+    primary:
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 502
+  notes: |
+    

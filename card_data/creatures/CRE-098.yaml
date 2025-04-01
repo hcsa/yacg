@@ -1,0 +1,22 @@
+creature:
+  data:
+    name: Novice Recruit
+    color: White
+    is-token: True
+    cost-total: 
+    cost-color: 
+    hp: 2
+    atk: 2
+    spe: 2
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-098
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Creation of E025
+    order: 9902
+    summary: 
+    notes: |
+      

@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Entangled Swamper
+    color: Green
+    is-token: False
+    cost-total: 2
+    cost-color: 1
+    hp: 4
+    atk: 1
+    spe: 2
+    traits:
+      - name: Aqua Affinity
+        description: Benefits from Rain.
+        id: TRA-014
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-041
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 203
+    summary: Cheap, Rain buffed, Green
+    notes: |
+      

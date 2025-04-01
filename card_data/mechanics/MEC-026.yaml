@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    Duplicate actions
+  id: MEC-026
+  colors:
+    primary:
+      - Black
+    secondary:
+      - Pink
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

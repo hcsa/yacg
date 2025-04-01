@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Motorcycle
+    color: Yellow
+    is-token: False
+    cost-total: 3
+    cost-color: 1
+    hp: 2
+    atk: 3
+    spe: 4
+    traits:
+      - name: Reckless
+        description: When this (CREATURE) attacks, get -1 (HP).
+        id: TRA-031
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-015
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: Driving Henrique
+    order: 507
+    summary: Reckless, high Spd
+    notes: |
+      Boobs

@@ -1,0 +1,22 @@
+trait:
+  data:
+    name: Reaction
+    description: Whenever you play a (ACTION), draw a card.
+
+  metadata:
+    id: TRA-042
+    type: Other
+    colors:
+      primary:
+        - Pink
+      secondary:
+        - Black
+      tertiary:
+        - Cyan
+    value: 0
+    dev-stage: Conception
+    dev-name: 
+    order: 902
+    summary: Action play, draw
+    notes: |
+      

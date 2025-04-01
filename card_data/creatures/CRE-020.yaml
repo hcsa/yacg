@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: To Not Touch
+    color: Orange
+    is-token: False
+    cost-total: 0
+    cost-color: 0
+    hp: 1
+    atk: 0
+    spe: 1
+    traits:
+      - name: Self-destruct
+        description: When this (CREATURE) attacks, kill this and the opposing (CREATURE).
+        id: TRA-033
+    flavor-text: |
+      Worst. Joke. Ever.
+
+  metadata:
+    id: CRE-020
+    value: -15
+    dev-stage: Alpha-0
+    dev-name: TNT
+    order: 101
+    summary: 0-cost, Self-destruct, Orange
+    notes: |
+      * [HS] Best joke ever

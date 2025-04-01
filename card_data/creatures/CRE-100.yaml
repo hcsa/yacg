@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Skeletonified
+    color: Purple
+    is-token: True
+    cost-total: 
+    cost-color: 
+    hp: 2
+    atk: 4
+    spe: 2
+    traits:
+      - name: Frail
+        description: After this (CREATURE) attacks, kill it.
+        id: TRA-003
+    flavor-text: |
+      In death, all are equal
+
+  metadata:
+    id: CRE-100
+    value: 20
+    dev-stage: Alpha-0
+    dev-name: Creation of E078
+    order: 9903
+    summary: 
+    notes: |
+      

@@ -1,0 +1,22 @@
+trait:
+  data:
+    name: Essence Drain
+    description: Whenever a (CREATURE) is killed, gain +1 (NOCOLOR) of the (CREATURE)'s color.
+
+  metadata:
+    id: TRA-043
+    type: Other
+    colors:
+      primary:
+        - Purple
+        - Black
+      tertiary:
+        - Green
+        - Blue
+    value: 0
+    dev-stage: Conception
+    dev-name: 
+    order: 903
+    summary: +Energy on kills
+    notes: |
+      

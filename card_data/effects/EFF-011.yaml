@@ -1,0 +1,21 @@
+effect:
+  data:
+    name: Drought Forecast
+    color: Orange
+    type: Field
+    cost-total: 2
+    cost-color: 2
+    description: |
+      If 2 (CREATURE)s have (REF:TRA-035.NAME), Sun is set for 2 rounds.
+      If that happens, destroy this card.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-011
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 106
+    summary: Sun setter as an effect
+    notes: |
+      

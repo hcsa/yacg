@@ -1,0 +1,21 @@
+effect:
+  data:
+    name: Interference
+    color: Cyan
+    type: Field
+    cost-total: 4
+    cost-color: 3
+    description: |
+      At the beginning of next round, opponent draws 2 less cards.
+      Multiple copies of (REF:EFF-064.NAME) don't stack.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-064
+    dev-stage: Alpha-0
+    dev-name: Draw, cyan
+    order: 901
+    summary: Draw, cyan
+    notes: |
+      * [HS] I like this one very much, it's a good example of investing now for a return at a later round. And it may seem like an obvious choice for any Cyan deck, but it is useless in the 3rd game or if you're losing

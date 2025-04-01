@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Strength in Numbers
+    color: White
+    type: Aura
+    cost-total: 4
+    cost-color: 2
+    description: |
+      Target (CREATURE) gets +1 (ATK) per ally (CREATURE) other than themselves.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-109
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 
+    summary: +ATK per ally
+    notes: |
+      

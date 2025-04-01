@@ -1,0 +1,21 @@
+effect:
+  data:
+    name: Cheating Death
+    color: Purple
+    type: Field
+    cost-total: 3
+    cost-color: 3
+    description: |
+      Whenever a (CREATURE) with (REF:TRA-003.NAME) is killed, play it for 0 (NOCOLOR). Any cards targeting that (CREATURE) still target it.
+      If that happens, destroy this card.
+    flavor-text: |
+      "That's just a bruise, don't worry too much"
+
+  metadata:
+    id: EFF-039
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 604
+    summary: Cast creature that dies with Brittle
+    notes: |
+      * [HS] Combos with E040 to steal a creature from the oponnent. Maybe should give Brittle to the creature?

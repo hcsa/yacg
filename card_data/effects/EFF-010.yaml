@@ -1,0 +1,21 @@
+effect:
+  data:
+    name: Go Nuts
+    color: Orange
+    type: Aura
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Target ally (CREATURE) gets +3 (ATK) and has (REF:TRA-031.NAME) ((REF:TRA-031.DESCRIPTION)).
+      Opponent fights it until target (CREATURE) is killed or opponent has no more (CREATURE)s left.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-010
+    dev-stage: Alpha-0
+    dev-name: Outrage
+    order: 105
+    summary: +Atk, suicidal, force fights
+    notes: |
+      * [HS] Doesn't seem terribly relevant, lowered its cost

@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    Play creatures to opponent's side
+  id: MEC-063
+  colors:
+    primary:
+      - Black
+    secondary:
+      - Orange
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    As a side effect of another thing happening

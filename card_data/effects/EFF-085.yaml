@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Extra Supplies
+    color: Cyan
+    type: Field
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Whenever opponent draws a card, you can choose to pay 1 (NOCOLOR). If you do, draw a card as well.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-085
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 1007
+    summary: Draw whenever opponent draws
+    notes: |
+      

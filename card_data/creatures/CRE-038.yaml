@@ -1,0 +1,29 @@
+creature:
+  data:
+    name: Neverending Curse
+    color: Purple
+    is-token: False
+    cost-total: 5
+    cost-color: 3
+    hp: 6
+    atk: 2
+    spe: 3
+    traits:
+      - name: Vindicative
+        description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). If that happens, destroy this (CREATURE).
+        id: TRA-011
+      - name: Restless
+        description: If this (CREATURE) is killed or destroyed, it goes into its owner's hand.
+        id: TRA-032
+    flavor-text: |
+      "I always come back"
+
+  metadata:
+    id: CRE-038
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Neverending curse
+    order: 609
+    summary: Destiny bond, Restless
+    notes: |
+      

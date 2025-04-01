@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Fight Club
+    color: Green
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Target ally (CREATURE) fights target opposing (CREATURE).
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-015
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 204
+    summary: Force fight
+    notes: |
+      

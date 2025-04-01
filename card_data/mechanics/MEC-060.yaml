@@ -1,0 +1,15 @@
+mechanic:
+  name: |
+    Lower cost of playing creatures
+  id: MEC-060
+  colors:
+    primary:
+      - Green
+    secondary:
+      - White
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 1502
+  notes: |
+    

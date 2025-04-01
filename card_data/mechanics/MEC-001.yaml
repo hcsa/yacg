@@ -1,0 +1,16 @@
+mechanic:
+  name: |
+    +Atk (effect, single target)
+  id: MEC-001
+  colors:
+    primary:
+      - Orange
+    secondary:
+      - Green
+    tertiary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 201
+  notes: |
+    Green has this with -Spe

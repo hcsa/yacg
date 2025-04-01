@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    Use Spe as Atk
+  id: MEC-054
+  colors:
+    primary:
+      - Yellow
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

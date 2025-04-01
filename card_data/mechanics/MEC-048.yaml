@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    Buff self/ally on opponent creature death
+  id: MEC-048
+  colors:
+    primary:
+      - Orange
+    secondary:
+      - Black
+
+  dev-stage: Alpha-0
+  order: 1402
+  notes: |
+    

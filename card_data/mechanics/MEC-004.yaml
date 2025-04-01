@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    -Atk (effect, single target)
+  id: MEC-004
+  colors:
+    primary:
+      - Cyan
+    secondary:
+      - Blue
+
+  dev-stage: Alpha-0
+  order: 211
+  notes: |
+    

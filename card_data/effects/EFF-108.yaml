@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Sunset Drinks
+    color: Blue
+    type: Field
+    cost-total: 4
+    cost-color: 3
+    description: |
+      After a fight, any surviving creatures get +1 (HP).
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-108
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 
+    summary: Recovery after fight
+    notes: |
+      

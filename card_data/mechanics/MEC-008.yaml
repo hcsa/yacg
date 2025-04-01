@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    +Spe (effect, single target)
+  id: MEC-008
+  colors:
+    primary:
+      - Yellow
+
+  dev-stage: Alpha-0
+  order: 301
+  notes: |
+    

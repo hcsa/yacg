@@ -1,0 +1,21 @@
+effect:
+  data:
+    name: Forced Confessions
+    color: Purple
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Look at opponent's hand, select 1 card and discard it.
+      Opponent looks at your hand, selects 1 card and discards it.
+    flavor-text: |
+      "To see the depths of another, you must be willing to show your own"
+
+  metadata:
+    id: EFF-042
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 608
+    summary: Discard a card from opponent's hand
+    notes: |
+      

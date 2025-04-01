@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Mammoth
+    color: Cyan
+    is-token: False
+    cost-total: 3
+    cost-color: 2
+    hp: 4
+    atk: 3
+    spe: 2
+    traits:
+      - name: Lethargic Aura
+        description: If another ally (CREATURE) has (REF:TRA-007.NAME), every opposing (CREATURE) gets -1 (SPE). For each additional ally that has (REF:TRA-007.NAME), every opposing (CREATURE) gets -1 (SPE).
+        id: TRA-007
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-057
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Olaf
+    order: 905
+    summary: -Spd w/ friends Cyan, cheapest
+    notes: |
+      

@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Double Up
+    color: None
+    type: Action
+    cost-total: 1
+    cost-color: 0
+    description: |
+      After playing this card to the effect stack, you can play 2 additional effects ((ACTION), (AURA) or (FIELD)).
+    flavor-text: |
+      "...and one more thing!"
+
+  metadata:
+    id: EFF-089
+    dev-stage: Alpha-0
+    dev-name: Double Up
+    order: 6
+    summary: Double Up, colorless
+    notes: |
+      

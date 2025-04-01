@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Scout
+    color: Black
+    is-token: False
+    cost-total: 2
+    cost-color: 2
+    hp: 4
+    atk: 3
+    spe: 2
+    traits:
+      - name: Illegal Charge
+        description: When played, this (CREATURE) is placed on the opponent's side. You gain 4 (NOCOLOR) of a color of your choosing.
+        id: TRA-022
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-002
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: Energy spy
+    order: 802
+    summary: Charge, black
+    notes: |
+      

@@ -1,0 +1,29 @@
+creature:
+  data:
+    name: Master Mage
+    color: Pink
+    is-token: False
+    cost-total: 5
+    cost-color: 2
+    hp: 8
+    atk: 3
+    spe: 2
+    traits:
+      - name: Iron Will
+        description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
+        id: TRA-005
+      - name: Mental Strength
+        description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
+        id: TRA-023
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-066
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 705
+    summary: Defensive traits, good stats, Pink
+    notes: |
+      

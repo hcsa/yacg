@@ -1,0 +1,23 @@
+trait:
+  data:
+    name: Shields Up
+    description: First damage dealt to this (CREATURE) is nullified.
+
+  metadata:
+    id: TRA-028
+    type: Other
+    colors:
+      primary:
+        - Blue
+      secondary:
+        - Green
+        - White
+      tertiary:
+        - Purple
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Protect
+    order: 806
+    summary: Nullifies damage once
+    notes: |
+      

@@ -1,0 +1,20 @@
+trait:
+  data:
+    name: Tag Team
+    description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
+
+  metadata:
+    id: TRA-039
+    type: Combat
+    colors:
+      primary:
+        - Yellow
+      secondary:
+        - White
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: U-turn
+    order: 608
+    summary: Can switch out in combat
+    notes: |
+      

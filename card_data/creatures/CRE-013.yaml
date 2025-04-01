@@ -1,0 +1,22 @@
+creature:
+  data:
+    name: Future Best Friend
+    color: Yellow
+    is-token: False
+    cost-total: 2
+    cost-color: 0
+    hp: 2
+    atk: 1
+    spe: 4
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-013
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 504
+    summary: 2-cost, Yellow, no traits
+    notes: |
+      

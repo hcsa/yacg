@@ -1,0 +1,16 @@
+mechanic:
+  name: |
+    See opponent's hand
+  id: MEC-039
+  colors:
+    primary:
+      - Blue
+    secondary:
+      - Pink
+    tertiary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    Is balanced by showing your hand to the opponent as well (symmetrical effect)

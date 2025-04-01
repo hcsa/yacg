@@ -1,0 +1,22 @@
+creature:
+  data:
+    name: Wolf Rat Cub
+    color: Green
+    is-token: False
+    cost-total: 2
+    cost-color: 1
+    hp: 4
+    atk: 2
+    spe: 2
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-040
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 202
+    summary: Cheap, no traits, Green
+    notes: |
+      

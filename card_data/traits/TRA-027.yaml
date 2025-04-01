@@ -1,0 +1,20 @@
+trait:
+  data:
+    name: Power Up
+    description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
+
+  metadata:
+    id: TRA-027
+    type: Combat
+    colors:
+      primary:
+        - Orange
+      secondary:
+        - White
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Moxie
+    order: 101
+    summary: +Atk when kills
+    notes: |
+      

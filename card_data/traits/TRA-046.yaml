@@ -1,0 +1,18 @@
+trait:
+  data:
+    name: Spoils Scavenger
+    description: At the end of the round, if another (CREATURE) has (REF:TRA-046.NAME), return all own (FIELD)s to the deck.
+
+  metadata:
+    id: TRA-046
+    type: Other
+    colors:
+      primary:
+        - Green
+    value: 0
+    dev-stage: Conception
+    dev-name: 
+    order: 906
+    summary: 
+    notes: |
+      

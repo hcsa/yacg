@@ -1,0 +1,20 @@
+trait:
+  data:
+    name: Hail Warning
+    description: When played, if 3 (CREATURE)s have (REF:TRA-019.NAME), Hail is set for 2 rounds.
+
+  metadata:
+    id: TRA-019
+    type: Entry
+    colors:
+      primary:
+        - Cyan
+      tertiary:
+        - Blue
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Hail setter
+    order: 203
+    summary: Hail setter
+    notes: |
+      

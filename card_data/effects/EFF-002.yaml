@@ -1,0 +1,21 @@
+effect:
+  data:
+    name: Counter
+    color: None
+    type: Action
+    cost-total: 2
+    cost-color: 0
+    description: |
+      Counter target effect ((ACTION), (AURA) or (FIELD)) on the effect stack.
+      While this card is in the effect stack, opponent's cards cost -2 (NOCOLOR) to play.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-002
+    dev-stage: Alpha-0
+    dev-name: Counter
+    order: 2
+    summary: Counter, colorless
+    notes: |
+      

@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Neeck-Fury
+    color: White
+    is-token: False
+    cost-total: 3
+    cost-color: 1
+    hp: 4
+    atk: 2
+    spe: 2
+    traits:
+      - name: First Take
+        description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
+        id: TRA-017
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-074
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Slow big warrior
+    order: 409
+    summary: First strike, White
+    notes: |
+      

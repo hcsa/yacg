@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Desolation
+    color: Cyan
+    type: Action
+    cost-total: 6
+    cost-color: 4
+    description: |
+      Destroy every (CREATURE).
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-034
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 915
+    summary: Board clear
+    notes: |
+      

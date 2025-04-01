@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    Debuff opponent on ally creature death
+  id: MEC-049
+  colors:
+    primary:
+      - Cyan
+    secondary:
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 1411
+  notes: |
+    

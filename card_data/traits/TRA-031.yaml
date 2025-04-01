@@ -1,0 +1,20 @@
+trait:
+  data:
+    name: Reckless
+    description: When this (CREATURE) attacks, get -1 (HP).
+
+  metadata:
+    id: TRA-031
+    type: Combat
+    colors:
+      primary:
+        - Orange
+      secondary:
+        - Purple
+    value: -15
+    dev-stage: Alpha-0
+    dev-name: Reckless
+    order: 605
+    summary: Hurts itself when it attacks
+    notes: |
+      

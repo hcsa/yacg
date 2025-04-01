@@ -1,0 +1,22 @@
+trait:
+  data:
+    name: Stoic
+    description: In combat, traits have no effect.
+
+  metadata:
+    id: TRA-048
+    type: Other
+    colors:
+      primary:
+        - Blue
+      secondary:
+        - Purple
+      tertiary:
+        - Green
+    value: 0
+    dev-stage: Conception
+    dev-name: 
+    order: 907
+    summary: 
+    notes: |
+      

@@ -1,0 +1,22 @@
+creature:
+  data:
+    name: Cavalry
+    color: White
+    is-token: False
+    cost-total: 2
+    cost-color: 1
+    hp: 2
+    atk: 2
+    spe: 3
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-072
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 406
+    summary: 2-cost, White, no traits
+    notes: |
+      

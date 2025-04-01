@@ -1,0 +1,22 @@
+creature:
+  data:
+    name: Droplet
+    color: Blue
+    is-token: False
+    cost-total: 1
+    cost-color: 0
+    hp: 2
+    atk: 1
+    spe: 2
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-086
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 301
+    summary: 1-cost, Blue, no traits
+    notes: |
+      

@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Weak Bones
+    color: Purple
+    type: Aura
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Target (CREATURE) gets (REF:TRA-003.NAME) ((REF:TRA-003.DESCRIPTION)).
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-040
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 605
+    summary: Give Brittle
+    notes: |
+      

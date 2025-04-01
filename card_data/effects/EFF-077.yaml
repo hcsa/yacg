@@ -1,0 +1,21 @@
+effect:
+  data:
+    name: Only the Beginning
+    color: Purple
+    type: Action
+    cost-total: 6
+    cost-color: 4
+    description: |
+      Destroy every (CREATURE).
+      For every (CREATURE) destroyed, their owner gains (NOCOLOR) of the (CREATURE)'s color equal to (CREATURE)'s total cost.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-077
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 607
+    summary: Board clear + energy
+    notes: |
+      

@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    -HP (aura, ongoing)
+  id: MEC-020
+  colors:
+    primary:
+      - Orange
+
+  dev-stage: Alpha-0
+  order: 113
+  notes: |
+    

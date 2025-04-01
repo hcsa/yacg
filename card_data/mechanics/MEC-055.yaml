@@ -1,0 +1,15 @@
+mechanic:
+  name: |
+    Switch speed and attack
+  id: MEC-055
+  colors:
+    primary:
+      - Cyan
+    secondary:
+      - Orange
+      - Yellow
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    Anti-field, destroy field (trait or effect)
+  id: MEC-032
+  colors:
+    primary:
+      - Yellow
+    secondary:
+      - Cyan
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

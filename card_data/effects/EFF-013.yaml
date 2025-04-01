@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Growth Spur
+    color: Green
+    type: Aura
+    cost-total: 2
+    cost-color: 0
+    description: |
+      Target (CREATURE) gets +1 (HP) and +1 (ATK).
+    flavor-text: |
+      They grow up so fast!
+
+  metadata:
+    id: EFF-013
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 202
+    summary: Buff, cheap, green
+    notes: |
+      

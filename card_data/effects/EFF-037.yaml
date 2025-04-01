@@ -1,0 +1,21 @@
+effect:
+  data:
+    name: One More Day
+    color: Purple
+    type: Aura
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Choose target (CREATURE) in any discard pile and play it.
+      Target (CREATURE) has (REF:TRA-003.NAME) ((REF:TRA-003.DESCRIPTION)).
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-037
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 603
+    summary: Cast from own trash, gets Brittle
+    notes: |
+      

@@ -1,0 +1,21 @@
+trait:
+  data:
+    name: Cold Stare
+    description: In combat, opposing (CREATURE) gets -1 (SPE).
+
+  metadata:
+    id: TRA-021
+    type: Combat
+    colors:
+      primary:
+        - Blue
+        - Cyan
+      secondary:
+        - Green
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Ice touch
+    order: 302
+    summary: -Spd in combat
+    notes: |
+      

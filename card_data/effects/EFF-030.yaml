@@ -1,0 +1,22 @@
+effect:
+  data:
+    name: Explosions!
+    color: Yellow
+    type: Field
+    cost-total: 5
+    cost-color: 2
+    description: |
+      When playing this card, put 3 markers on it. After a fight, remove a marker from this card. If it has 0 markers, destroy this card.
+      Every (CREATURE) has (REF:TRA-033.NAME) ((REF:TRA-033.DESCRIPTION)).
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-030
+    dev-stage: Alpha-0
+    dev-name: Explosions!
+    order: 504
+    summary: All creatures have self-destruct
+    notes: |
+      * [HS] Changes battle dynamics, makes it so the side with the most creatures wins. Has to be very tested
+      * [HS] Added a limit to how many fights it lasts

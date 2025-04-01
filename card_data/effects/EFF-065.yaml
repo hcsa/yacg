@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Deterrence
+    color: Cyan
+    type: Field
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Next time an opponent's effect ((ACTION), (AURA) or (FIELD)) enters the effect stack, destroy it and this card.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-065
+    dev-stage: Alpha-0
+    dev-name: Counter, cyan
+    order: 902
+    summary: Counter, cyan
+    notes: |
+      

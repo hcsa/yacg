@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: The Vijeans
+    color: White
+    is-token: False
+    cost-total: 5
+    cost-color: 2
+    hp: 6
+    atk: 3
+    spe: 2
+    traits:
+      - name: Take Two
+        description: At the end of combat, you can have this (CREATURE) attack the opposing (CREATURE) again. Can only be used once.
+        id: TRA-013
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-084
+    value: -5
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 418
+    summary: Double strike, White, good stats
+    notes: |
+      

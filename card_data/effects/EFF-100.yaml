@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Talent to Burn
+    color: Orange
+    type: Action
+    cost-total: 3
+    cost-color: 2
+    description: |
+      Target (CREATURE) gets -2 (HP) per trait they have.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-100
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 
+    summary: 
+    notes: |
+      

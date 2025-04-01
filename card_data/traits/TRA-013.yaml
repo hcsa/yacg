@@ -1,0 +1,18 @@
+trait:
+  data:
+    name: Take Two
+    description: At the end of combat, you can have this (CREATURE) attack the opposing (CREATURE) again. Can only be used once.
+
+  metadata:
+    id: TRA-013
+    type: Combat
+    colors:
+      primary:
+        - White
+    value: 60
+    dev-stage: Alpha-0
+    dev-name: Double strike
+    order: 502
+    summary: Attacks twice
+    notes: |
+      

@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Bad Temperament
+    color: Orange
+    type: Aura
+    cost-total: 1
+    cost-color: 1
+    description: |
+      Target (CREATURE) gets +2 (ATK) and -1 (SPE).
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-009
+    dev-stage: Alpha-0
+    dev-name: Swords dance
+    order: 101
+    summary: Buff, cheap, orange
+    notes: |
+      

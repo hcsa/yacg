@@ -1,0 +1,22 @@
+creature:
+  data:
+    name: Nano Bot
+    color: Yellow
+    is-token: False
+    cost-total: 0
+    cost-color: 0
+    hp: 1
+    atk: 1
+    spe: 3
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-009
+    value: -5
+    dev-stage: Alpha-0
+    dev-name: Nano bot
+    order: 501
+    summary: 0-cost, Yellow
+    notes: |
+      

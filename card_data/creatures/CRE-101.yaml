@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Fair Fighter
+    color: Orange
+    is-token: False
+    cost-total: 4
+    cost-color: 2
+    hp: 5
+    atk: 3
+    spe: 2
+    traits:
+      - name: Aura Animosity
+        description: In combat, if the opposing (CREATURE) has (AURA)s, get +2 (ATK).
+        id: TRA-044
+    flavor-text: |
+      "I have no patience for cheap tricks. Show me what you've got!"
+
+  metadata:
+    id: CRE-101
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 
+    summary: 
+    notes: |
+      

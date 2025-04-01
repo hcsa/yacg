@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Mutually Assured Destruction
+    color: White
+    type: Action
+    cost-total: 4
+    cost-color: 2
+    description: |
+      Destroy target ally (CREATURE) and target opposing (CREATURE).
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-035
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 503
+    summary: Kill creature, sacrifice ally
+    notes: |
+      

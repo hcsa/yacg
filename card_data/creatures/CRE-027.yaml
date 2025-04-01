@@ -1,0 +1,29 @@
+creature:
+  data:
+    name: Seasoned Goblin
+    color: Orange
+    is-token: False
+    cost-total: 4
+    cost-color: 2
+    hp: 2
+    atk: 3
+    spe: 3
+    traits:
+      - name: Hot Head
+        description: When played, fights opponent's last played (CREATURE).
+        id: TRA-020
+      - name: Power Up
+        description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
+        id: TRA-027
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-027
+    value: 5
+    dev-stage: Alpha-0
+    dev-name: Flint & Steel
+    order: 108
+    summary: Haste, +Atk when kills, decent stats
+    notes: |
+      

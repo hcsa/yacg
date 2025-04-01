@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: 
+    color: 
+    type: Field
+    cost-total: 
+    cost-color: 
+    description: |
+      Whenever you draw a card, you gain 1 (NOCOLOR) of the card's color.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-088
+    dev-stage: Conception
+    dev-name: 
+    order: 1010
+    summary: Extra energy on draws
+    notes: |
+      

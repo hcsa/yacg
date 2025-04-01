@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: White Whale
+    color: Blue
+    is-token: False
+    cost-total: 4
+    cost-color: 1
+    hp: 8
+    atk: 2
+    spe: 2
+    traits:
+      - name: Cold Affinity
+        description: Benefits from Hail.
+        id: TRA-006
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-093
+    value: -10
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 308
+    summary: Hail buffed, Blue, good stats
+    notes: |
+      

@@ -1,0 +1,20 @@
+trait:
+  data:
+    name: Big Entrance
+    description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
+
+  metadata:
+    id: TRA-015
+    type: Entry
+    colors:
+      primary:
+        - Green
+      secondary:
+        - Orange
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Earthquake
+    order: 701
+    summary: Spead damage when it's cast
+    notes: |
+      

@@ -1,0 +1,15 @@
+mechanic:
+  name: |
+    Force combat
+  id: MEC-033
+  colors:
+    primary:
+      - Orange
+    secondary:
+      - Green
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

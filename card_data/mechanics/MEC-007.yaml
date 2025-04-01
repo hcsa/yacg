@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    Atk ally drain (+Atk for an ally, -Atk for another ally)
+  id: MEC-007
+  colors:
+    primary:
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 204
+  notes: |
+    

@@ -1,0 +1,15 @@
+mechanic:
+  name: |
+    Creature protection against effects (self/others)
+  id: MEC-038
+  colors:
+    primary:
+      - Pink
+      - Cyan
+    secondary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

@@ -1,0 +1,20 @@
+trait:
+  data:
+    name: Vindicative
+    description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). If that happens, destroy this (CREATURE).
+
+  metadata:
+    id: TRA-011
+    type: Other
+    colors:
+      primary:
+        - Purple
+      secondary:
+        - Black
+    value: 45
+    dev-stage: Alpha-0
+    dev-name: Destiny bond
+    order: 803
+    summary: Kill next cast creature
+    notes: |
+      

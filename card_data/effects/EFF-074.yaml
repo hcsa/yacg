@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Fatigue
+    color: Cyan
+    type: Action
+    cost-total: 2
+    cost-color: 2
+    description: |
+      Banish the bottom 2 cards of opponent's deck.
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-074
+    dev-stage: Alpha-0
+    dev-name: Mill
+    order: 911
+    summary: Mill, cheap
+    notes: |
+      

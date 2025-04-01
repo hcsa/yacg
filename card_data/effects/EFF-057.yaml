@@ -1,0 +1,21 @@
+effect:
+  data:
+    name: Illegal Search
+    color: Black
+    type: Action
+    cost-total: 4
+    cost-color: 3
+    description: |
+      To play this card, you must discard 2 cards from your hand.
+      Choose 2 cards from deck, put them in your hand, and shuffle the deck afterwards.
+    flavor-text: |
+      Forbidden knowledge exacts a heavy price
+
+  metadata:
+    id: EFF-057
+    dev-stage: Alpha-0
+    dev-name: Search, black
+    order: 803
+    summary: Search, black
+    notes: |
+      * [HS] Increased cost

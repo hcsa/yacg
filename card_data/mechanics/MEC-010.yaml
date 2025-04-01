@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    +Spe (aura)
+  id: MEC-010
+  colors:
+    primary:
+      - Yellow
+
+  dev-stage: Alpha-0
+  order: 303
+  notes: |
+    

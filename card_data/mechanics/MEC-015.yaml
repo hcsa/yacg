@@ -1,0 +1,15 @@
+mechanic:
+  name: |
+    +HP (effect, single target)
+  id: MEC-015
+  colors:
+    primary:
+      - Green
+      - Blue
+    tertiary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 101
+  notes: |
+    Green has this with -Spe

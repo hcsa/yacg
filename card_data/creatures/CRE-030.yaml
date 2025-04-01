@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Mini-skeleton
+    color: Purple
+    is-token: False
+    cost-total: 0
+    cost-color: 0
+    hp: 1
+    atk: 2
+    spe: 2
+    traits:
+      - name: Frail
+        description: After this (CREATURE) attacks, kill it.
+        id: TRA-003
+    flavor-text: |
+      Old enough to drink, not tall enough to ride the ferris wheel
+
+  metadata:
+    id: CRE-030
+    value: -20
+    dev-stage: Alpha-0
+    dev-name: Skeleton
+    order: 601
+    summary: 0-cost, Brittle, Purple
+    notes: |
+      

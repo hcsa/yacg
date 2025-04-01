@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Old Warrior
+    color: White
+    is-token: False
+    cost-total: 0
+    cost-color: 0
+    hp: 1
+    atk: 1
+    spe: 2
+    traits:
+      - name: Survivor
+        description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
+        id: TRA-036
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-067
+    value: 0
+    dev-stage: Alpha-0
+    dev-name: Old warrior
+    order: 401
+    summary: 0-cost, White
+    notes: |
+      

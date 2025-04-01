@@ -1,0 +1,13 @@
+mechanic:
+  name: |
+    Raise cost of playing effects
+  id: MEC-061
+  colors:
+    primary:
+      - Black
+      - Cyan
+
+  dev-stage: Alpha-0
+  order: 1511
+  notes: |
+    

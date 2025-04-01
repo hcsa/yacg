@@ -1,0 +1,21 @@
+trait:
+  data:
+    name: Iron Will
+    description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
+
+  metadata:
+    id: TRA-005
+    type: Other
+    colors:
+      primary:
+        - Blue
+      secondary:
+        - White
+        - Cyan
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Clear body
+    order: 802
+    summary: Stats can't be lowered
+    notes: |
+      

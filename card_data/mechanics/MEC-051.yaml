@@ -1,0 +1,13 @@
+mechanic:
+  name: |
+    Token creature production
+  id: MEC-051
+  colors:
+    primary:
+      - White
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    Can be an immediate or ongoing effect

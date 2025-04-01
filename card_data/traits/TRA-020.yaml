@@ -1,0 +1,22 @@
+trait:
+  data:
+    name: Hot Head
+    description: When played, fights opponent's last played (CREATURE).
+
+  metadata:
+    id: TRA-020
+    type: Entry
+    colors:
+      primary:
+        - Orange
+      secondary:
+        - Yellow
+      tertiary:
+        - Purple
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Haste
+    order: 703
+    summary: Attacks on cast
+    notes: |
+      

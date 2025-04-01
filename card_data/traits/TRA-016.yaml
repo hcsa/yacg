@@ -1,0 +1,18 @@
+trait:
+  data:
+    name: Energetic Aura
+    description: If another ally (CREATURE) has (REF:TRA-016.NAME), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:TRA-016.NAME), every ally (CREATURE) gets +1 (SPE).
+
+  metadata:
+    id: TRA-016
+    type: Other
+    colors:
+      primary:
+        - Yellow
+    value: 15
+    dev-stage: Alpha-0
+    dev-name: Energetic
+    order: 313
+    summary: +Spd w/ friends
+    notes: |
+      * [HS] Nerfed friends abilities

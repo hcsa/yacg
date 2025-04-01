@@ -1,0 +1,20 @@
+trait:
+  data:
+    name: Bully Aura
+    description: If another ally (CREATURE) has (REF:TRA-018.NAME), every opposing (CREATURE) gets -1 (ATK). For each additional ally that has (REF:TRA-018.NAME), every opposing (CREATURE) gets -1 (ATK).
+
+  metadata:
+    id: TRA-018
+    type: Other
+    colors:
+      primary:
+        - Cyan
+      secondary:
+        - Purple
+    value: 35
+    dev-stage: Alpha-0
+    dev-name: Gang up
+    order: 312
+    summary: -Atk w/ friends
+    notes: |
+      * [HS] Nerfed friends abilities

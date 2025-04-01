@@ -1,0 +1,20 @@
+effect:
+  data:
+    name: Escalation
+    color: Yellow
+    type: Action
+    cost-total: 3
+    cost-color: 3
+    description: |
+      Every (CREATURE) gets 1 (HP).
+    flavor-text: |
+      
+
+  metadata:
+    id: EFF-031
+    dev-stage: Alpha-0
+    dev-name: 
+    order: 505
+    summary: High spread damage
+    notes: |
+      

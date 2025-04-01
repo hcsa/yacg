@@ -1,0 +1,15 @@
+mechanic:
+  name: |
+    -Atk (aura)
+  id: MEC-006
+  colors:
+    primary:
+      - Blue
+      - Cyan
+    secondary:
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 213
+  notes: |
+    

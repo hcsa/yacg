@@ -1,0 +1,15 @@
+mechanic:
+  name: |
+    Creature protection against Atk/Spe reduction (self/others)
+  id: MEC-037
+  colors:
+    primary:
+      - White
+    secondary:
+      - Blue
+      - Cyan
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

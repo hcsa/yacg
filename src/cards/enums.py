@@ -10,10 +10,10 @@ class _GameElementIdPrefix(StrEnum):
     If you change this, you'll have to change all ids of game elements
     """
 
-    MECHANIC = "M"
-    TRAIT = "T"
-    EFFECT = "E"
-    CREATURE = "C"
+    MECHANIC = "MEC-"
+    TRAIT = "TRA-"
+    EFFECT = "EFF-"
+    CREATURE = "CRE-"
 
 
 class Color(Enum):

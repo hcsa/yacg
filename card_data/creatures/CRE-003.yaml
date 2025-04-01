@@ -1,0 +1,26 @@
+creature:
+  data:
+    name: Inflated Ego
+    color: Black
+    is-token: False
+    cost-total: 2
+    cost-color: 1
+    hp: 4
+    atk: 3
+    spe: 2
+    traits:
+      - name: Power Down
+        description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
+        id: TRA-001
+    flavor-text: |
+      
+
+  metadata:
+    id: CRE-003
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Ego
+    order: 803
+    summary: 2-cost, Arrogant, Black
+    notes: |
+      

@@ -1,0 +1,18 @@
+trait:
+  data:
+    name: Illegal Charge
+    description: When played, this (CREATURE) is placed on the opponent's side. You gain 4 (NOCOLOR) of a color of your choosing.
+
+  metadata:
+    id: TRA-022
+    type: Entry
+    colors:
+      primary:
+        - Black
+    value: -30
+    dev-stage: Alpha-0
+    dev-name: Illegal charge
+    order: 801
+    summary: Charge, black
+    notes: |
+      
