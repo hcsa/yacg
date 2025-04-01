@@ -6,8 +6,6 @@ creature:
     cost-total: 6
     cost-color: 4
     hp: 9
-    atk-strong: 1
-    atk-technical: 1
     spe: 2
     traits:
       - name: Bodyguard
@@ -19,6 +17,8 @@ creature:
       - name: Survivor
         description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
         id: TRA-036
+    atk-strong: 1
+    atk-technical: 1
     flavor-text: |
       
 

@@ -6,13 +6,13 @@ creature:
     cost-total: 3
     cost-color: 1
     hp: 4
-    atk-strong: 3
-    atk-technical: 1
     spe: 3
     traits:
       - name: Frail
         description: After this (CREATURE) attacks, kill it.
         id: TRA-003
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       
 

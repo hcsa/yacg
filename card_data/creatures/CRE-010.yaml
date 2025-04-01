@@ -6,13 +6,13 @@ creature:
     cost-total: 2
     cost-color: 1
     hp: 1
-    atk-strong: 1
-    atk-technical: 1
     spe: 3
     traits:
       - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
         id: TRA-039
+    atk-strong: 1
+    atk-technical: 1
     flavor-text: |
       
 

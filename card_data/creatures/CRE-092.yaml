@@ -6,8 +6,6 @@ creature:
     cost-total: 4
     cost-color: 1
     hp: 8
-    atk-strong: 2
-    atk-technical: 1
     spe: 2
     traits:
       - name: Shields Up
@@ -16,6 +14,8 @@ creature:
       - name: Mental Strength
         description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
         id: TRA-023
+    atk-strong: 2
+    atk-technical: 1
     flavor-text: |
       
 

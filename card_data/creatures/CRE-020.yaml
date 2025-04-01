@@ -6,13 +6,13 @@ creature:
     cost-total: 0
     cost-color: 0
     hp: 1
-    atk-strong: 0
-    atk-technical: 1
     spe: 1
     traits:
       - name: Self-destruct
         description: When this (CREATURE) attacks, kill this and the opposing (CREATURE).
         id: TRA-033
+    atk-strong: 0
+    atk-technical: 1
     flavor-text: |
       Worst. Joke. Ever.
 

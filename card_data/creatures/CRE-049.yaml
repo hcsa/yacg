@@ -6,8 +6,6 @@ creature:
     cost-total: 7
     cost-color: 5
     hp: 10
-    atk-strong: 5
-    atk-technical: 1
     spe: 1
     traits:
       - name: Big Entrance
@@ -19,6 +17,8 @@ creature:
       - name: Brute
         description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
         id: TRA-037
+    atk-strong: 5
+    atk-technical: 1
     flavor-text: |
       
 

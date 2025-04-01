@@ -6,8 +6,6 @@ creature:
     cost-total: 4
     cost-color: 2
     hp: 6
-    atk-strong: 2
-    atk-technical: 1
     spe: 3
     traits:
       - name: Power Down
@@ -16,6 +14,8 @@ creature:
       - name: Scary Stare
         description: In combat, opposing (CREATURE) gets -1 (ATK).
         id: TRA-024
+    atk-strong: 2
+    atk-technical: 1
     flavor-text: |
       
 

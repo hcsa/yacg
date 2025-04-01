@@ -6,13 +6,13 @@ creature:
     cost-total: 3
     cost-color: 2
     hp: 3
-    atk-strong: 1
-    atk-technical: 1
     spe: 3
     traits:
       - name: Energetic Aura
         description: If another ally (CREATURE) has (REF:TRA-016.NAME), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:TRA-016.NAME), every ally (CREATURE) gets +1 (SPE).
         id: TRA-016
+    atk-strong: 1
+    atk-technical: 1
     flavor-text: |
       
 

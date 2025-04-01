@@ -6,13 +6,13 @@ creature:
     cost-total: 3
     cost-color: 2
     hp: 4
-    atk-strong: 1
-    atk-technical: 1
     spe: 3
     traits:
       - name: Hail Warning
         description: When played, if 3 (CREATURE)s have (REF:TRA-019.NAME), Hail is set for 2 rounds.
         id: TRA-019
+    atk-strong: 1
+    atk-technical: 1
     flavor-text: |
       
 

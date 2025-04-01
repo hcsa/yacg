@@ -6,13 +6,13 @@ creature:
     cost-total: 3
     cost-color: 2
     hp: 4
-    atk-strong: 3
-    atk-technical: 1
     spe: 2
     traits:
       - name: Field Animosity
         description: In combat, if the opponent has (FIELD)s, get +1 (SPE).
         id: TRA-047
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       It's programmed to tender the field every day. Make its life harder at your own risk
 

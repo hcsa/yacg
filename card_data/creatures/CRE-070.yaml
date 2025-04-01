@@ -6,13 +6,13 @@ creature:
     cost-total: 2
     cost-color: 0
     hp: 2
-    atk-strong: 1
-    atk-technical: 1
     spe: 2
     traits:
       - name: Avenger
         description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK).
         id: TRA-002
+    atk-strong: 1
+    atk-technical: 1
     flavor-text: |
       
 

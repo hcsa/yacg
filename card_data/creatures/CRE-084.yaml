@@ -6,13 +6,13 @@ creature:
     cost-total: 5
     cost-color: 2
     hp: 6
-    atk-strong: 3
-    atk-technical: 1
     spe: 2
     traits:
       - name: Take Two
         description: At the end of combat, you can have this (CREATURE) attack the opposing (CREATURE) again. Can only be used once.
         id: TRA-013
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       
 

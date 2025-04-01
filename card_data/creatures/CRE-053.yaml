@@ -6,13 +6,13 @@ creature:
     cost-total: 1
     cost-color: 0
     hp: 1
-    atk-strong: 1
-    atk-technical: 1
     spe: 2
     traits:
       - name: Cold Stare
         description: In combat, opposing (CREATURE) gets -1 (SPE).
         id: TRA-021
+    atk-strong: 1
+    atk-technical: 1
     flavor-text: |
       
 

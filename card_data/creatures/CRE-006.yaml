@@ -6,13 +6,13 @@ creature:
     cost-total: 3
     cost-color: 2
     hp: 2
-    atk-strong: 3
-    atk-technical: 1
     spe: 0
     traits:
       - name: Tortoise Rules
         description: (SPE) is reversed when deciding combat order.
         id: TRA-038
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       
 

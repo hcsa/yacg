@@ -6,13 +6,13 @@ creature:
     cost-total: 2
     cost-color: 2
     hp: 4
-    atk-strong: 3
-    atk-technical: 1
     spe: 2
     traits:
       - name: Illegal Charge
         description: When played, this (CREATURE) is placed on the opponent's side. You gain 4 (NOCOLOR) of a color of your choosing.
         id: TRA-022
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       
 

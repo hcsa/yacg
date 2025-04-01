@@ -6,8 +6,6 @@ creature:
     cost-total: 9
     cost-color: 6
     hp: 18
-    atk-strong: 6
-    atk-technical: 1
     spe: 0
     traits:
       - name: Scary Stare
@@ -19,6 +17,8 @@ creature:
       - name: Sluggish
         description: This (CREATURE) always attacks last.
         id: TRA-034
+    atk-strong: 6
+    atk-technical: 1
     flavor-text: |
       
 
