@@ -97,11 +97,11 @@ class Trait(GameElement):
                     color = Color(str(color_id))
                     primary_colors_list.append(color)
             if "secondary" in yaml_data["metadata"]["colors"]:
-                for color_id in yaml_data["colors"]["secondary"]:
+                for color_id in yaml_data["metadata"]["colors"]["secondary"]:
                     color = Color(str(color_id))
                     secondary_colors_list.append(color)
             if "tertiary" in yaml_data["metadata"]["colors"]:
-                for color_id in yaml_data["colors"]["tertiary"]:
+                for color_id in yaml_data["metadata"]["colors"]["tertiary"]:
                     color = Color(str(color_id))
                     tertiary_colors_list.append(color)
 
