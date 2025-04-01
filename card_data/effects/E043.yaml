@@ -7,7 +7,7 @@ effect:
     cost-color: 3
     description: |
       At the beginning of next round, draw 2 extra cards.
-      Multiple copies of (REF:E043.NAME) don't stack.
+      Multiple copies of (REF:EFF-043.NAME) don't stack.
     flavor-text: |
       
 

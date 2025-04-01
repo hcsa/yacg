@@ -10,7 +10,7 @@ creature:
     spe: 2
     traits:
       - name: Hail Warning
-        description: When played, if 3 (CREATURE)s have (REF:T019.NAME), Hail is set for 2 rounds.
+        description: When played, if 3 (CREATURE)s have (REF:TRA-019.NAME), Hail is set for 2 rounds.
         id: TRA-019
       - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).

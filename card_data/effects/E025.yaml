@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 1
     description: |
-      Create two instances of (REF:C098.NAME).
+      Create two instances of (REF:CRE-098.NAME).
     flavor-text: |
       
 

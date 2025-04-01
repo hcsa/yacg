@@ -10,7 +10,7 @@ creature:
     spe: 3
     traits:
       - name: Drought Warning
-        description: When played, if 3 (CREATURE)s have (REF:T035.NAME), Sun is set for 2 rounds.
+        description: When played, if 3 (CREATURE)s have (REF:TRA-035.NAME), Sun is set for 2 rounds.
         id: TRA-035
       - name: Power Up
         description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).

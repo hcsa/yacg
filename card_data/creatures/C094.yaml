@@ -10,7 +10,7 @@ creature:
     spe: 2
     traits:
       - name: Storm Warning
-        description: When played, if 3 (CREATURE)s have (REF:T029.NAME), Rain is set for 2 rounds.
+        description: When played, if 3 (CREATURE)s have (REF:TRA-029.NAME), Rain is set for 2 rounds.
         id: TRA-029
       - name: Mental Strength
         description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).

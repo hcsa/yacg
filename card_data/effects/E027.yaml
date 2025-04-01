@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Target (CREATURE) has (REF:T017.NAME) ((REF:T017.DESCRIPTION)).
+      Target (CREATURE) has (REF:TRA-017.NAME) ((REF:TRA-017.DESCRIPTION)).
     flavor-text: |
       
 

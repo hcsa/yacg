@@ -7,7 +7,7 @@ effect:
     cost-color: 2
     description: |
       Destroy target (CREATURE).
-      Create an instance of (REF:C100.NAME) in their place. Any cards targetting the destroyed (CREATURE) now target the new (CREATURE).
+      Create an instance of (REF:CRE-100.NAME) in their place. Any cards targetting the destroyed (CREATURE) now target the new (CREATURE).
     flavor-text: |
       
 

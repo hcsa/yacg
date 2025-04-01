@@ -10,7 +10,7 @@ creature:
     spe: 4
     traits:
       - name: Energetic Aura
-        description: If another ally (CREATURE) has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE).
+        description: If another ally (CREATURE) has (REF:TRA-016.NAME), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:TRA-016.NAME), every ally (CREATURE) gets +1 (SPE).
         id: TRA-016
       - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).

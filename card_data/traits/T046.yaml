@@ -1,7 +1,7 @@
 trait:
   data:
     name: Spoils Scavenger
-    description: At the end of the round, if another (CREATURE) has (REF:T046.NAME), return all own (FIELD)s to the deck.
+    description: At the end of the round, if another (CREATURE) has (REF:TRA-046.NAME), return all own (FIELD)s to the deck.
 
   metadata:
     id: TRA-046

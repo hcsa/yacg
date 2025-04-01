@@ -7,7 +7,7 @@ effect:
     cost-color: 2
     description: |
       Choose target (CREATURE) in any discard pile and play it.
-      Target (CREATURE) has (REF:T003.NAME) ((REF:T003.DESCRIPTION)).
+      Target (CREATURE) has (REF:TRA-003.NAME) ((REF:TRA-003.DESCRIPTION)).
     flavor-text: |
       
 

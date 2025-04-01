@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Target ally (CREATURE) gets +3 (ATK) and has (REF:T031.NAME) ((REF:T031.DESCRIPTION)).
+      Target ally (CREATURE) gets +3 (ATK) and has (REF:TRA-031.NAME) ((REF:TRA-031.DESCRIPTION)).
       Opponent fights it until target (CREATURE) is killed or opponent has no more (CREATURE)s left.
     flavor-text: |
       

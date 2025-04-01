@@ -1,7 +1,7 @@
 trait:
   data:
     name: Valor Aura
-    description: If another ally (CREATURE) has (REF:T030.NAME), every ally (CREATURE) gets +1 (ATK). For each additional ally that has (REF:T030.NAME), every ally (CREATURE) gets +1 (ATK).
+    description: If another ally (CREATURE) has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (ATK). For each additional ally that has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (ATK).
 
   metadata:
     id: TRA-030

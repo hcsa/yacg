@@ -1,7 +1,7 @@
 trait:
   data:
     name: Lethargic Aura
-    description: If another ally (CREATURE) has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE). For each additional ally that has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE).
+    description: If another ally (CREATURE) has (REF:TRA-007.NAME), every opposing (CREATURE) gets -1 (SPE). For each additional ally that has (REF:TRA-007.NAME), every opposing (CREATURE) gets -1 (SPE).
 
   metadata:
     id: TRA-007

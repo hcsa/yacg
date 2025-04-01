@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Target ally (CREATURE) has (REF:T033.NAME) ((REF:T033.DESCRIPTION)).
+      Target ally (CREATURE) has (REF:TRA-033.NAME) ((REF:TRA-033.DESCRIPTION)).
     flavor-text: |
       
 
