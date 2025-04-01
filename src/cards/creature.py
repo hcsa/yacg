@@ -26,7 +26,6 @@ class CreatureData:
     atk_technical_effect_value: Optional[int]
     spe: Optional[int]
     traits: List[Trait] = field(default_factory=list)
-    atk_technical_effect: Optional[Attack] = None
     flavor_text: str = ""
 
 
@@ -163,14 +162,14 @@ class Creature(Card):
             ),
             atk_strong=(
                 int(yaml_data["data"]["atk-strong"])
-                if yaml_data["data"]["atk"] is not None
+                if yaml_data["data"]["atk-strong"] is not None
                 else None
             ),
             atk_strong_effect=atk_strong_effect,
             atk_strong_effect_value=atk_strong_effect_value,
             atk_technical=(
                 int(yaml_data["data"]["atk-technical"])
-                if yaml_data["data"]["atk"] is not None
+                if yaml_data["data"]["atk-technical"] is not None
                 else None
             ),
             atk_technical_effect=atk_technical_effect,
