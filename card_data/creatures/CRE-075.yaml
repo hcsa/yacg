@@ -13,7 +13,7 @@ creature:
         id: TRA-030
     atk-strong: 1
     atk-technical: 0
-    atk-strong-effect:
+    atk-technical-effect:
       name: Longshot
       variable: 1
       description: This (CREATURE) deals (REF:VARIABLE) damage to another (CREATURE).
