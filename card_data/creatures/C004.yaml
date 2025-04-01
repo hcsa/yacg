@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Scary Stare
         description: In combat, opposing (CREATURE) gets -1 (ATK).
-        id: TRA024
+        id: TRA-024
     flavor-text: |
       
 
   metadata:
-    id: CRE004
+    id: CRE-004
     value: 5
     dev-stage: Alpha-0
     dev-name: Bloodhound

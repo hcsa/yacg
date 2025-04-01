@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Frail
         description: After this (CREATURE) attacks, kill it.
-        id: TRA003
+        id: TRA-003
     flavor-text: |
       
 
   metadata:
-    id: CRE035
+    id: CRE-035
     value: -10
     dev-stage: Alpha-0
     dev-name: Bonehound

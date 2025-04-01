@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Inflict poison
-  id: MEC023
+  id: MEC-023
   colors:
     primary:
       - Purple

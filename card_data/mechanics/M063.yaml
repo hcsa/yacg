@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Play creatures to opponent's side
-  id: MEC063
+  id: MEC-063
   colors:
     primary:
       - Black

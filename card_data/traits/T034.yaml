@@ -4,7 +4,7 @@ trait:
     description: This (CREATURE) always attacks last.
 
   metadata:
-    id: TRA034
+    id: TRA-034
     type: Combat
     colors:
       primary:

@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Debuff opponent on ally creature death
-  id: MEC049
+  id: MEC-049
   colors:
     primary:
       - Cyan

@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Cold Affinity
         description: Benefits from Hail.
-        id: TRA006
+        id: TRA-006
     flavor-text: |
       
 
   metadata:
-    id: CRE093
+    id: CRE-093
     value: -10
     dev-stage: Alpha-0
     dev-name: 

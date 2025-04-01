@@ -11,18 +11,18 @@ creature:
     traits:
       - name: Scary Stare
         description: In combat, opposing (CREATURE) gets -1 (ATK).
-        id: TRA024
+        id: TRA-024
       - name: Brute
         description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
-        id: TRA037
+        id: TRA-037
       - name: Sluggish
         description: This (CREATURE) always attacks last.
-        id: TRA034
+        id: TRA-034
     flavor-text: |
       
 
   metadata:
-    id: CRE052
+    id: CRE-052
     value: -125
     dev-stage: Alpha-0
     dev-name: Titanic beast

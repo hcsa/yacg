@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Atk ally drain (+Atk for an ally, -Atk for another ally)
-  id: MEC007
+  id: MEC-007
   colors:
     primary:
       - Purple

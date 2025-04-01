@@ -1,7 +1,7 @@
 mechanic:
   name: |
     See opponent's hand
-  id: MEC039
+  id: MEC-039
   colors:
     primary:
       - Blue

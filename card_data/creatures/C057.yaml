@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Lethargic Aura
         description: If another ally (CREATURE) has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE). For each additional ally that has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE).
-        id: TRA007
+        id: TRA-007
     flavor-text: |
       
 
   metadata:
-    id: CRE057
+    id: CRE-057
     value: 10
     dev-stage: Alpha-0
     dev-name: Olaf

@@ -4,7 +4,7 @@ trait:
     description: If an ally (CREATURE) is the target of an effect ((ACTION), (AURA) or (FIELD)), you can choose for this (CREATURE) to be targetted instead. If that happens, get -2 (HP).
 
   metadata:
-    id: TRA045
+    id: TRA-045
     type: Other
     colors:
       primary:

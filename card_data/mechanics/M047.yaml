@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Buff self/ally on ally creature death
-  id: MEC047
+  id: MEC-047
   colors:
     primary:
       - White

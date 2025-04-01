@@ -11,12 +11,12 @@ creature:
     traits:
       - name: First Take
         description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
-        id: TRA017
+        id: TRA-017
     flavor-text: |
       
 
   metadata:
-    id: CRE074
+    id: CRE-074
     value: 15
     dev-stage: Alpha-0
     dev-name: Slow big warrior

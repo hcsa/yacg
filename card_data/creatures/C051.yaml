@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Heat Affinity
         description: Benefits from Sun.
-        id: TRA004
+        id: TRA-004
       - name: Aqua Affinity
         description: Benefits from Rain.
-        id: TRA014
+        id: TRA-014
     flavor-text: |
       
 
   metadata:
-    id: CRE051
+    id: CRE-051
     value: -40
     dev-stage: Alpha-0
     dev-name: 

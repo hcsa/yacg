@@ -1,7 +1,7 @@
 mechanic:
   name: |
     "Freeze" combat fields
-  id: MEC052
+  id: MEC-052
   colors:
     primary:
       - Black

@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Taxing
         description: All effects ((ACTION), (AURA) and (FIELD)) cost +1 (NOCOLOR) to play.
-        id: TRA026
+        id: TRA-026
     flavor-text: |
       
 
   metadata:
-    id: CRE058
+    id: CRE-058
     value: 15
     dev-stage: Alpha-0
     dev-name: 

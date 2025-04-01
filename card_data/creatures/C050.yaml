@@ -11,18 +11,18 @@ creature:
     traits:
       - name: Bodyguard
         description: Can take combat damage targeted at other ally (CREATURE)s.
-        id: TRA010
+        id: TRA-010
       - name: Shields Up
         description: First damage dealt to this (CREATURE) is nullified.
-        id: TRA028
+        id: TRA-028
       - name: Survivor
         description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
-        id: TRA036
+        id: TRA-036
     flavor-text: |
       
 
   metadata:
-    id: CRE050
+    id: CRE-050
     value: -50
     dev-stage: Alpha-0
     dev-name: Forest guardian

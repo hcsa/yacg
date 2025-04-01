@@ -1,7 +1,7 @@
 mechanic:
   name: |
     -Atk (aura)
-  id: MEC006
+  id: MEC-006
   colors:
     primary:
       - Blue

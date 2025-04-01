@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Self-destruct
         description: When this (CREATURE) attacks, kill this and the opposing (CREATURE).
-        id: TRA033
+        id: TRA-033
     flavor-text: |
       
 
   metadata:
-    id: CRE026
+    id: CRE-026
     value: 15
     dev-stage: Alpha-0
     dev-name: 

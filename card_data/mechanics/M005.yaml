@@ -1,7 +1,7 @@
 mechanic:
   name: |
     -Atk (effect, multi target)
-  id: MEC005
+  id: MEC-005
   colors:
     primary:
       - Blue

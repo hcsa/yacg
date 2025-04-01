@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Self mill
-  id: MEC057
+  id: MEC-057
   colors:
     primary:
       - Purple

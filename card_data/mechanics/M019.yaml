@@ -1,7 +1,7 @@
 mechanic:
   name: |
     -HP (effect, multi target)
-  id: MEC019
+  id: MEC-019
   colors:
     primary:
       - Yellow

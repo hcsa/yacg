@@ -1,7 +1,7 @@
 mechanic:
   name: |
     +HP (aura, ongoing)
-  id: MEC017
+  id: MEC-017
   colors:
     primary:
       - Blue

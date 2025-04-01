@@ -4,7 +4,7 @@ trait:
     description: If this (CREATURE) is killed in combat, destroy opposing (CREATURE).
 
   metadata:
-    id: TRA041
+    id: TRA-041
     type: Combat
     colors:
       primary:

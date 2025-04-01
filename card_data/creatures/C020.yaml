@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Self-destruct
         description: When this (CREATURE) attacks, kill this and the opposing (CREATURE).
-        id: TRA033
+        id: TRA-033
     flavor-text: |
       Worst. Joke. Ever.
 
   metadata:
-    id: CRE020
+    id: CRE-020
     value: -15
     dev-stage: Alpha-0
     dev-name: TNT

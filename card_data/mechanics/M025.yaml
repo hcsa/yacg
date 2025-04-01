@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Discard hard, draw cards
-  id: MEC025
+  id: MEC-025
   colors:
     primary:
       - Pink

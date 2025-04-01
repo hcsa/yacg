@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Token creature production
-  id: MEC051
+  id: MEC-051
   colors:
     primary:
       - White

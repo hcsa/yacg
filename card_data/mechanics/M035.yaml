@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Creatures joining other creatures
-  id: MEC035
+  id: MEC-035
   colors:
     primary:
       - White

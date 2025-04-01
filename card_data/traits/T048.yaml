@@ -4,7 +4,7 @@ trait:
     description: In combat, traits have no effect.
 
   metadata:
-    id: TRA048
+    id: TRA-048
     type: Other
     colors:
       primary:

@@ -4,7 +4,7 @@ trait:
     description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
 
   metadata:
-    id: TRA008
+    id: TRA-008
     type: Combat
     colors:
       primary:

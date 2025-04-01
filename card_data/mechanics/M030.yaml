@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Search
-  id: MEC030
+  id: MEC-030
   colors:
     primary:
       - Pink

@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Can't be countered
-  id: MEC029
+  id: MEC-029
   colors:
     primary:
       - Blue

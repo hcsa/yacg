@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Use Spe as Atk
-  id: MEC054
+  id: MEC-054
   colors:
     primary:
       - Yellow

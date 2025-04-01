@@ -4,7 +4,7 @@ trait:
     description: When this (CREATURE) attacks, kill this and the opposing (CREATURE).
 
   metadata:
-    id: TRA033
+    id: TRA-033
     type: Combat
     colors:
       primary:

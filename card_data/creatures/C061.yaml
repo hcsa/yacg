@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Hail Warning
         description: When played, if 3 (CREATURE)s have (REF:T019.NAME), Hail is set for 2 rounds.
-        id: TRA019
+        id: TRA-019
       - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
-        id: TRA039
+        id: TRA-039
     flavor-text: |
       
 
   metadata:
-    id: CRE061
+    id: CRE-061
     value: -15
     dev-stage: Alpha-0
     dev-name: 

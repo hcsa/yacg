@@ -1,7 +1,7 @@
 mechanic:
   name: |
     +Spe (aura)
-  id: MEC010
+  id: MEC-010
   colors:
     primary:
       - Yellow

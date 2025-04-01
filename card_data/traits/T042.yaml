@@ -4,7 +4,7 @@ trait:
     description: Whenever you play a (ACTION), draw a card.
 
   metadata:
-    id: TRA042
+    id: TRA-042
     type: Other
     colors:
       primary:

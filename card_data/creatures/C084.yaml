@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Take Two
         description: At the end of combat, you can have this (CREATURE) attack the opposing (CREATURE) again. Can only be used once.
-        id: TRA013
+        id: TRA-013
     flavor-text: |
       
 
   metadata:
-    id: CRE084
+    id: CRE-084
     value: -5
     dev-stage: Alpha-0
     dev-name: 

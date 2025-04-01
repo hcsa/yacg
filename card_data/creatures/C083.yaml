@@ -11,15 +11,15 @@ creature:
     traits:
       - name: First Take
         description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
-        id: TRA017
+        id: TRA-017
       - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
-        id: TRA039
+        id: TRA-039
     flavor-text: |
       
 
   metadata:
-    id: CRE083
+    id: CRE-083
     value: 25
     dev-stage: Alpha-0
     dev-name: 

@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Restless
         description: If this (CREATURE) is killed or destroyed, it goes into its owner's hand.
-        id: TRA032
+        id: TRA-032
     flavor-text: |
       
 
   metadata:
-    id: CRE032
+    id: CRE-032
     value: -5
     dev-stage: Alpha-0
     dev-name: Zombie

@@ -11,19 +11,19 @@ creature:
     traits:
       - name: Iron Will
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
-        id: TRA005
+        id: TRA-005
       - name: Mental Strength
         description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
-        id: TRA023
+        id: TRA-023
       - name: Shields Up
         description: First damage dealt to this (CREATURE) is nullified.
-        id: TRA028
+        id: TRA-028
     flavor-text: |
       "Once you enter it, you can never exit it"
       "So is it the inside that's absolutely safe, or the outside?"
 
   metadata:
-    id: CRE095
+    id: CRE-095
     value: 10
     dev-stage: Alpha-0
     dev-name: 

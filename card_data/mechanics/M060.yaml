@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Lower cost of playing creatures
-  id: MEC060
+  id: MEC-060
   colors:
     primary:
       - Green

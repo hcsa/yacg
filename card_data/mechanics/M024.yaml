@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Draw cards
-  id: MEC024
+  id: MEC-024
   colors:
     primary:
       - Pink

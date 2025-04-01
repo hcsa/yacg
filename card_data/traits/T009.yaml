@@ -4,7 +4,7 @@ trait:
     description: If an ally (CREATURE) is killed or destroyed, get -1 (ATK).
 
   metadata:
-    id: TRA009
+    id: TRA-009
     type: Other
     colors:
       primary:

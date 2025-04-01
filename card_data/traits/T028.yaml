@@ -4,7 +4,7 @@ trait:
     description: First damage dealt to this (CREATURE) is nullified.
 
   metadata:
-    id: TRA028
+    id: TRA-028
     type: Other
     colors:
       primary:

@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Traits that buff attacking creatures (first creature chosen in combat)
-  id: MEC066
+  id: MEC-066
   colors:
 
   dev-stage: Alpha-0

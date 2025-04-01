@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Raise cost of playing effects
-  id: MEC061
+  id: MEC-061
   colors:
     primary:
       - Black

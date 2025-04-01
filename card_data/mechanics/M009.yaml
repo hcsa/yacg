@@ -1,7 +1,7 @@
 mechanic:
   name: |
     +Spe (effect, multi target)
-  id: MEC009
+  id: MEC-009
   colors:
     primary:
       - Yellow

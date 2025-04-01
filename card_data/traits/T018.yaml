@@ -4,7 +4,7 @@ trait:
     description: If another ally (CREATURE) has (REF:T018.NAME), every opposing (CREATURE) gets -1 (ATK). For each additional ally that has (REF:T018.NAME), every opposing (CREATURE) gets -1 (ATK).
 
   metadata:
-    id: TRA018
+    id: TRA-018
     type: Other
     colors:
       primary:

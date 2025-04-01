@@ -13,7 +13,7 @@ effect:
       
 
   metadata:
-    id: EFF101
+    id: EFF-101
     dev-stage: Alpha-0
     dev-name: Replace aura
     order: 

@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Aqua Affinity
         description: Benefits from Rain.
-        id: TRA014
+        id: TRA-014
     flavor-text: |
       
 
   metadata:
-    id: CRE041
+    id: CRE-041
     value: 0
     dev-stage: Alpha-0
     dev-name: 

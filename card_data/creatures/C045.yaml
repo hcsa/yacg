@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Bodyguard
         description: Can take combat damage targeted at other ally (CREATURE)s.
-        id: TRA010
+        id: TRA-010
     flavor-text: |
       
 
   metadata:
-    id: CRE045
+    id: CRE-045
     value: -15
     dev-stage: Alpha-0
     dev-name: 

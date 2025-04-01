@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Cast creature from hand
-  id: MEC045
+  id: MEC-045
   colors:
     primary:
       - Pink

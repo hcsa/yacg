@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Creature removal (return to hand/deck)
-  id: MEC040
+  id: MEC-040
   colors:
     primary:
       - Cyan

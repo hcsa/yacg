@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Mill
-  id: MEC058
+  id: MEC-058
   colors:
     primary:
       - Cyan

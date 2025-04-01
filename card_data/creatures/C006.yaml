@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Tortoise Rules
         description: (SPE) is reversed when deciding combat order.
-        id: TRA038
+        id: TRA-038
     flavor-text: |
       
 
   metadata:
-    id: CRE006
+    id: CRE-006
     value: -15
     dev-stage: Alpha-0
     dev-name: 

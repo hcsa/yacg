@@ -4,7 +4,7 @@ trait:
     description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
 
   metadata:
-    id: TRA017
+    id: TRA-017
     type: Combat
     colors:
       primary:

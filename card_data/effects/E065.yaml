@@ -11,7 +11,7 @@ effect:
       
 
   metadata:
-    id: EFF065
+    id: EFF-065
     dev-stage: Alpha-0
     dev-name: Counter, cyan
     order: 902

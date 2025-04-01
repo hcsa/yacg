@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Debuff opponent on opponent creature death
-  id: MEC050
+  id: MEC-050
   colors:
     primary:
       - Cyan

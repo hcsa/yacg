@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
-        id: TRA039
+        id: TRA-039
     flavor-text: |
       
 
   metadata:
-    id: CRE056
+    id: CRE-056
     value: 15
     dev-stage: Alpha-0
     dev-name: 

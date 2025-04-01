@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Storm Warning
         description: When played, if 3 (CREATURE)s have (REF:T029.NAME), Rain is set for 2 rounds.
-        id: TRA029
+        id: TRA-029
       - name: Mental Strength
         description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
-        id: TRA023
+        id: TRA-023
     flavor-text: |
       
 
   metadata:
-    id: CRE094
+    id: CRE-094
     value: -5
     dev-stage: Alpha-0
     dev-name: Whale

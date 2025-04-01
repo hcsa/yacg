@@ -11,7 +11,7 @@ effect:
       
 
   metadata:
-    id: EFF003
+    id: EFF-003
     dev-stage: Alpha-0
     dev-name: Search
     order: 3

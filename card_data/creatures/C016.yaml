@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Hot Head
         description: When played, fights opponent's last played (CREATURE).
-        id: TRA020
+        id: TRA-020
       - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
-        id: TRA039
+        id: TRA-039
     flavor-text: |
       
 
   metadata:
-    id: CRE016
+    id: CRE-016
     value: 5
     dev-stage: Alpha-0
     dev-name: Hit & run

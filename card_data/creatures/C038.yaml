@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Vindicative
         description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). If that happens, destroy this (CREATURE).
-        id: TRA011
+        id: TRA-011
       - name: Restless
         description: If this (CREATURE) is killed or destroyed, it goes into its owner's hand.
-        id: TRA032
+        id: TRA-032
     flavor-text: |
       "I always come back"
 
   metadata:
-    id: CRE038
+    id: CRE-038
     value: 15
     dev-stage: Alpha-0
     dev-name: Neverending curse

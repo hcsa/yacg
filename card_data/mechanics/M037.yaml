@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Creature protection against Atk/Spe reduction (self/others)
-  id: MEC037
+  id: MEC-037
   colors:
     primary:
       - White

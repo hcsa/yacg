@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Heat Affinity
         description: Benefits from Sun.
-        id: TRA004
+        id: TRA-004
     flavor-text: |
       
 
   metadata:
-    id: CRE042
+    id: CRE-042
     value: 0
     dev-stage: Alpha-0
     dev-name: 

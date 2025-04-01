@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Defeatist
         description: If an ally (CREATURE) is killed or destroyed, get -1 (ATK).
-        id: TRA009
+        id: TRA-009
     flavor-text: |
       
 
   metadata:
-    id: CRE001
+    id: CRE-001
     value: 5
     dev-stage: Alpha-0
     dev-name: 

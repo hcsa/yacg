@@ -4,7 +4,7 @@ trait:
     description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
 
   metadata:
-    id: TRA015
+    id: TRA-015
     type: Entry
     colors:
       primary:

@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Nullify damage to self/both
-  id: MEC036
+  id: MEC-036
   colors:
     primary:
       - Blue

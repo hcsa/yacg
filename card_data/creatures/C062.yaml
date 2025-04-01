@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Negate
         description: The next (CREATURE) opponent plays can't share traits with their last played (CREATURE).
-        id: TRA012
+        id: TRA-012
     flavor-text: |
       
 
   metadata:
-    id: CRE062
+    id: CRE-062
     value: 10
     dev-stage: Alpha-0
     dev-name: 

@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Anti-aura, destroy aura (trait or effect)
-  id: MEC031
+  id: MEC-031
   colors:
     primary:
       - Orange

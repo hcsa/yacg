@@ -4,7 +4,7 @@ trait:
     description: Benefits from Rain.
 
   metadata:
-    id: TRA014
+    id: TRA-014
     type: Other
     colors:
       primary:

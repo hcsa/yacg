@@ -4,7 +4,7 @@ trait:
     description: Benefits from Hail.
 
   metadata:
-    id: TRA006
+    id: TRA-006
     type: Other
     colors:
       primary:

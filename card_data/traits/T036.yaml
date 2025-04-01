@@ -4,7 +4,7 @@ trait:
     description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
 
   metadata:
-    id: TRA036
+    id: TRA-036
     type: Other
     colors:
       primary:

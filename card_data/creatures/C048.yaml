@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Storm Warning
         description: When played, if 3 (CREATURE)s have (REF:T029.NAME), Rain is set for 2 rounds.
-        id: TRA029
+        id: TRA-029
       - name: Drought Warning
         description: When played, if 3 (CREATURE)s have (REF:T035.NAME), Sun is set for 2 rounds.
-        id: TRA035
+        id: TRA-035
     flavor-text: |
       
 
   metadata:
-    id: CRE048
+    id: CRE-048
     value: -30
     dev-stage: Alpha-0
     dev-name: Weather mage

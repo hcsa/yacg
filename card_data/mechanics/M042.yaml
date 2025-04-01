@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Creature removal (creature moves to your side)
-  id: MEC042
+  id: MEC-042
   colors:
     primary:
       - Black

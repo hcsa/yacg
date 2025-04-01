@@ -1,7 +1,7 @@
 mechanic:
   name: |
     -Atk (effect, single target)
-  id: MEC004
+  id: MEC-004
   colors:
     primary:
       - Cyan

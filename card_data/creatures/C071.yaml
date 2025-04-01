@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Shields Up
         description: First damage dealt to this (CREATURE) is nullified.
-        id: TRA028
+        id: TRA-028
     flavor-text: |
       
 
   metadata:
-    id: CRE071
+    id: CRE-071
     value: 0
     dev-stage: Alpha-0
     dev-name: 

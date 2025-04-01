@@ -4,7 +4,7 @@ trait:
     description: Whenever a (CREATURE) is killed, gain +1 (NOCOLOR) of the (CREATURE)'s color.
 
   metadata:
-    id: TRA043
+    id: TRA-043
     type: Other
     colors:
       primary:

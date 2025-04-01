@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Frail
         description: After this (CREATURE) attacks, kill it.
-        id: TRA003
+        id: TRA-003
     flavor-text: |
       Old enough to drink, not tall enough to ride the ferris wheel
 
   metadata:
-    id: CRE030
+    id: CRE-030
     value: -20
     dev-stage: Alpha-0
     dev-name: Skeleton

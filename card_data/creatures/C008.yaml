@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Bully Aura
         description: If another ally (CREATURE) has (REF:T018.NAME), every opposing (CREATURE) gets -1 (ATK). For each additional ally that has (REF:T018.NAME), every opposing (CREATURE) gets -1 (ATK).
-        id: TRA018
+        id: TRA-018
       - name: Scary Stare
         description: In combat, opposing (CREATURE) gets -1 (ATK).
-        id: TRA024
+        id: TRA-024
     flavor-text: |
       
 
   metadata:
-    id: CRE008
+    id: CRE-008
     value: -20
     dev-stage: Alpha-0
     dev-name: Mobster

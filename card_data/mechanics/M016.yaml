@@ -1,7 +1,7 @@
 mechanic:
   name: |
     +HP (effect, multi target)
-  id: MEC016
+  id: MEC-016
   colors:
     primary:
       - Blue

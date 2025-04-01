@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Hot Head
         description: When played, fights opponent's last played (CREATURE).
-        id: TRA020
+        id: TRA-020
     flavor-text: |
       The bar for being considered a "capable" goblin was being alive after 3 days
 
   metadata:
-    id: CRE023
+    id: CRE-023
     value: 10
     dev-stage: Alpha-0
     dev-name: 

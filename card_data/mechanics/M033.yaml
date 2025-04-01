@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Force combat
-  id: MEC033
+  id: MEC-033
   colors:
     primary:
       - Orange

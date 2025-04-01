@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Time manipulation (new phases happening, or happening out of order)
-  id: MEC065
+  id: MEC-065
   colors:
     primary:
       - Black

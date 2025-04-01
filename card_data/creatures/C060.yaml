@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Lethargic Aura
         description: If another ally (CREATURE) has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE). For each additional ally that has (REF:T007.NAME), every opposing (CREATURE) gets -1 (SPE).
-        id: TRA007
+        id: TRA-007
       - name: Cold Stare
         description: In combat, opposing (CREATURE) gets -1 (SPE).
-        id: TRA021
+        id: TRA-021
     flavor-text: |
       
 
   metadata:
-    id: CRE060
+    id: CRE-060
     value: 15
     dev-stage: Alpha-0
     dev-name: Elsa

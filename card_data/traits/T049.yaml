@@ -4,7 +4,7 @@ trait:
     description: When this (CREATURE) is killed, its owner can pay 1 (NOCOLOR). If they do, put it at the bottom of their owner's deck
 
   metadata:
-    id: TRA049
+    id: TRA-049
     type: Other
     colors:
     value: 0

@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Lower cost of playing effects
-  id: MEC059
+  id: MEC-059
   colors:
     primary:
       - Pink

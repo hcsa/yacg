@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Cast creature from discard pile
-  id: MEC046
+  id: MEC-046
   colors:
     primary:
       - Purple
