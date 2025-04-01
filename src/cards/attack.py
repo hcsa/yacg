@@ -15,7 +15,7 @@ class AttackData:
 
 
 @dataclass(frozen=True)
-class AttackSideEffectColors:
+class AttackColors:
     primary: List[Color] = field(default_factory=list)
     secondary: List[Color] = field(default_factory=list)
     tertiary: List[Color] = field(default_factory=list)
@@ -24,7 +24,7 @@ class AttackSideEffectColors:
 @dataclass(frozen=True)
 class AttackMetadata:
     id: str
-    colors: AttackSideEffectColors
+    colors: AttackColors
     value: Optional[int] = None
     dev_stage: DevStage = DevStage.CONCEPTION
     dev_name: str = ""
@@ -113,7 +113,7 @@ class Attack(GameElement):
             ),
             description=str(yaml_data["data"]["description"]).strip()
         )
-        attack_colors = AttackSideEffectColors(
+        attack_colors = AttackColors(
             primary=primary_colors_list,
             secondary=secondary_colors_list,
             tertiary=tertiary_colors_list,
