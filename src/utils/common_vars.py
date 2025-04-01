@@ -35,7 +35,7 @@ CARD_TEMPLATE_PATH = BASE_DIR / "card_design" / "card_template.ai"
 CARD_ARTS_DIR = BASE_DIR / "card_design" / "card_arts"
 
 CARD_DATA_PATH = BASE_DIR / "card_data"
-ATTACK_PATH = CARD_DATA_PATH / "attack"
+ATTACK_PATH = CARD_DATA_PATH / "attacks"
 CREATURE_DATA_PATH = CARD_DATA_PATH / "creatures"
 EFFECT_DATA_PATH = CARD_DATA_PATH / "effects"
 TRAIT_DATA_PATH = CARD_DATA_PATH / "traits"
