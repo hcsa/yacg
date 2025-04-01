@@ -6,14 +6,12 @@ import sys
 import traceback
 from typing import Iterator
 
-import yaml
-
 import numpy as np
 import pandas as pd
 import xlwings as xw
 
 import src.cards as cards
-from src.utils import EXCEL_PATH, TRAIT_DATA_PATH
+from src.utils import EXCEL_PATH
 
 
 def main():
