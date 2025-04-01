@@ -4,7 +4,7 @@ trait:
     description: When played, this (CREATURE) is placed on the opponent's side. You gain 4 (NOCOLOR) of a color of your choosing.
 
   metadata:
-    id: T022
+    id: TRA022
     type: Entry
     colors:
       primary:

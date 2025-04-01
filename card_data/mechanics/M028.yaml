@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Counter
-  id: M028
+  id: MEC028
   colors:
     primary:
       - Pink

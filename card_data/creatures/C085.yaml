@@ -11,15 +11,15 @@ creature:
     traits:
       - name: First Take
         description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
-        id: T017
+        id: TRA017
       - name: Avenger
         description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK).
-        id: T002
+        id: TRA002
     flavor-text: |
       
 
   metadata:
-    id: C085
+    id: CRE085
     value: 5
     dev-stage: Alpha-0
     dev-name: 

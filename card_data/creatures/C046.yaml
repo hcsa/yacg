@@ -11,18 +11,18 @@ creature:
     traits:
       - name: Big Entrance
         description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
-        id: T015
+        id: TRA015
       - name: Shields Up
         description: First damage dealt to this (CREATURE) is nullified.
-        id: T028
+        id: TRA028
       - name: Sluggish
         description: This (CREATURE) always attacks last.
-        id: T034
+        id: TRA034
     flavor-text: |
       
 
   metadata:
-    id: C046
+    id: CRE046
     value: -30
     dev-stage: Alpha-0
     dev-name: Mountain

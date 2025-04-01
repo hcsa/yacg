@@ -4,7 +4,7 @@ trait:
     description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
 
   metadata:
-    id: T037
+    id: TRA037
     type: Combat
     colors:
       primary:

@@ -4,7 +4,7 @@ trait:
     description: When played, fights opponent's last played (CREATURE).
 
   metadata:
-    id: T020
+    id: TRA020
     type: Entry
     colors:
       primary:

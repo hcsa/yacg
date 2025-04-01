@@ -4,7 +4,7 @@ trait:
     description: This (CREATURE) can be played as an (ACTION). Resolve the (ACTION) by putting it in your side.
 
   metadata:
-    id: T040
+    id: TRA040
     type: Other
     colors:
       primary:

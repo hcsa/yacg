@@ -4,7 +4,7 @@ trait:
     description: All effects ((ACTION), (AURA) and (FIELD)) cost +1 (NOCOLOR) to play.
 
   metadata:
-    id: T026
+    id: TRA026
     type: Other
     colors:
       primary:

@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Energetic Aura
         description: If another ally (CREATURE) has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE).
-        id: T016
+        id: TRA016
       - name: Tag Team
         description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
-        id: T039
+        id: TRA039
     flavor-text: |
       
 
   metadata:
-    id: C018
+    id: CRE018
     value: -5
     dev-stage: Alpha-0
     dev-name: Running conduit

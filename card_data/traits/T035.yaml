@@ -4,7 +4,7 @@ trait:
     description: When played, if 3 (CREATURE)s have (REF:T035.NAME), Sun is set for 2 rounds.
 
   metadata:
-    id: T035
+    id: TRA035
     type: Entry
     colors:
       primary:

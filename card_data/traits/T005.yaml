@@ -4,7 +4,7 @@ trait:
     description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
 
   metadata:
-    id: T005
+    id: TRA005
     type: Other
     colors:
       primary:

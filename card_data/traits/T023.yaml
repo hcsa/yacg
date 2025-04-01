@@ -4,7 +4,7 @@ trait:
     description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
 
   metadata:
-    id: T023
+    id: TRA023
     type: Other
     colors:
       primary:

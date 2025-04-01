@@ -4,7 +4,7 @@ trait:
     description: In combat, after this (CREATURE) attacks, you can switch it for another (CREATURE).
 
   metadata:
-    id: T039
+    id: TRA039
     type: Combat
     colors:
       primary:

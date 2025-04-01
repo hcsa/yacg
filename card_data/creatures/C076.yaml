@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Martyr
         description: If another (CREATURE) were to take combat damage that would kill it, you can choose to kill this (CREATURE). If so, combat damage is nullified.
-        id: T025
+        id: TRA025
     flavor-text: |
       
 
   metadata:
-    id: C076
+    id: CRE076
     value: 20
     dev-stage: Alpha-0
     dev-name: 

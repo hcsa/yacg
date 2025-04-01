@@ -1,7 +1,7 @@
 mechanic:
   name: |
     +HP (effect, single target)
-  id: M015
+  id: MEC015
   colors:
     primary:
       - Green

@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Power Down
         description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
-        id: T001
+        id: TRA001
       - name: Defeatist
         description: If an ally (CREATURE) is killed or destroyed, get -1 (ATK).
-        id: T009
+        id: TRA009
     flavor-text: |
       
 
   metadata:
-    id: C007
+    id: CRE007
     value: -10
     dev-stage: Alpha-0
     dev-name: Fred playing padel with children

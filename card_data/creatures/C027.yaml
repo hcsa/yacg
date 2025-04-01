@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Hot Head
         description: When played, fights opponent's last played (CREATURE).
-        id: T020
+        id: TRA020
       - name: Power Up
         description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
-        id: T027
+        id: TRA027
     flavor-text: |
       
 
   metadata:
-    id: C027
+    id: CRE027
     value: 5
     dev-stage: Alpha-0
     dev-name: Flint & Steel

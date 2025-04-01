@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Inflict burn
-  id: M022
+  id: MEC022
   colors:
     primary:
       - Orange

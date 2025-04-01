@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Field Animosity
         description: In combat, if the opponent has (FIELD)s, get +1 (SPE).
-        id: T047
+        id: TRA047
     flavor-text: |
       It's programmed to tender the field every day. Make its life harder at your own risk
 
   metadata:
-    id: C102
+    id: CRE102
     value: -10
     dev-stage: Alpha-0
     dev-name: 

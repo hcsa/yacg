@@ -11,12 +11,12 @@ creature:
     traits:
       - name: First Take
         description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
-        id: T017
+        id: TRA017
     flavor-text: |
       
 
   metadata:
-    id: C014
+    id: CRE014
     value: 15
     dev-stage: Alpha-0
     dev-name: Speedy bot

@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Aura Animosity
         description: In combat, if the opposing (CREATURE) has (AURA)s, get +2 (ATK).
-        id: T044
+        id: TRA044
     flavor-text: |
       "I have no patience for cheap tricks. Show me what you've got!"
 
   metadata:
-    id: C101
+    id: CRE101
     value: -10
     dev-stage: Alpha-0
     dev-name: 

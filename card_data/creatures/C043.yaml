@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Power Down
         description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
-        id: T001
+        id: TRA001
     flavor-text: |
       
 
   metadata:
-    id: C043
+    id: CRE043
     value: -20
     dev-stage: Alpha-0
     dev-name: 

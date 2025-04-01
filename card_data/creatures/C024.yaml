@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Power Up
         description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
-        id: T027
+        id: TRA027
     flavor-text: |
       
 
   metadata:
-    id: C024
+    id: CRE024
     value: 5
     dev-stage: Alpha-0
     dev-name: Spark

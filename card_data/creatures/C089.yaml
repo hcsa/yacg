@@ -12,7 +12,7 @@ creature:
       
 
   metadata:
-    id: C089
+    id: CRE089
     value: -10
     dev-stage: Alpha-0
     dev-name: Drizzle

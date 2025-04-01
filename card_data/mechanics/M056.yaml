@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Limit size of effect stack
-  id: M056
+  id: MEC056
   colors:
     primary:
       - Pink

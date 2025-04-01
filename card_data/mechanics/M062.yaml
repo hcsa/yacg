@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Raise cost of playing creatures
-  id: M062
+  id: MEC062
   colors:
     primary:
       - Cyan

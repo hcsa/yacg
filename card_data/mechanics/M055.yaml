@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Switch speed and attack
-  id: M055
+  id: MEC055
   colors:
     primary:
       - Cyan

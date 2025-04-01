@@ -4,7 +4,7 @@ trait:
     description: In combat, if the opposing (CREATURE) has (AURA)s, get +2 (ATK).
 
   metadata:
-    id: T044
+    id: TRA044
     type: Combat
     colors:
       primary:

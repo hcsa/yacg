@@ -4,7 +4,7 @@ trait:
     description: In combat, opposing (CREATURE) gets -1 (SPE).
 
   metadata:
-    id: T021
+    id: TRA021
     type: Combat
     colors:
       primary:

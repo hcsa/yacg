@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Duplicate actions
-  id: M026
+  id: MEC026
   colors:
     primary:
       - Black

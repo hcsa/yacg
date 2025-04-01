@@ -1,7 +1,7 @@
 mechanic:
   name: |
     +Atk (aura)
-  id: M003
+  id: MEC003
   colors:
     primary:
       - Orange

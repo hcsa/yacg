@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Creature protection against effects (self/others)
-  id: M038
+  id: MEC038
   colors:
     primary:
       - Pink

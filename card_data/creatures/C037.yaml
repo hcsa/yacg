@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Poisonous
         description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
-        id: T008
+        id: TRA008
     flavor-text: |
       
 
   metadata:
-    id: C037
+    id: CRE037
     value: -25
     dev-stage: Alpha-0
     dev-name: Vengeful mage

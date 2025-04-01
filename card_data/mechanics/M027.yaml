@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Energy generation
-  id: M027
+  id: MEC027
   colors:
     primary:
       - Pink

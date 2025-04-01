@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Shields Up
         description: First damage dealt to this (CREATURE) is nullified.
-        id: T028
+        id: TRA028
       - name: Mental Strength
         description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
-        id: T023
+        id: TRA023
     flavor-text: |
       
 
   metadata:
-    id: C092
+    id: CRE092
     value: 15
     dev-stage: Alpha-0
     dev-name: Nemo

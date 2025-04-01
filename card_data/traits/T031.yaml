@@ -4,7 +4,7 @@ trait:
     description: When this (CREATURE) attacks, get -1 (HP).
 
   metadata:
-    id: T031
+    id: TRA031
     type: Combat
     colors:
       primary:

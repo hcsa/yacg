@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Avenger
         description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK).
-        id: T002
+        id: TRA002
     flavor-text: |
       
 
   metadata:
-    id: C081
+    id: CRE081
     value: -10
     dev-stage: Alpha-0
     dev-name: 

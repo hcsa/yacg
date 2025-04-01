@@ -4,7 +4,7 @@ trait:
     description: (SPE) is reversed when deciding combat order.
 
   metadata:
-    id: T038
+    id: TRA038
     type: Combat
     colors:
       primary:

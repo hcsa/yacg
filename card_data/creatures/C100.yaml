@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Frail
         description: After this (CREATURE) attacks, kill it.
-        id: T003
+        id: TRA003
     flavor-text: |
       In death, all are equal
 
   metadata:
-    id: C100
+    id: CRE100
     value: 20
     dev-stage: Alpha-0
     dev-name: Creation of E078

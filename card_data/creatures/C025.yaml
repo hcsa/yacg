@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Drought Warning
         description: When played, if 3 (CREATURE)s have (REF:T035.NAME), Sun is set for 2 rounds.
-        id: T035
+        id: TRA035
     flavor-text: |
       
 
   metadata:
-    id: C025
+    id: CRE025
     value: 5
     dev-stage: Alpha-0
     dev-name: 

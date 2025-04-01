@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Cold Stare
         description: In combat, opposing (CREATURE) gets -1 (SPE).
-        id: T021
+        id: TRA021
     flavor-text: |
       
 
   metadata:
-    id: C053
+    id: CRE053
     value: 0
     dev-stage: Alpha-0
     dev-name: 

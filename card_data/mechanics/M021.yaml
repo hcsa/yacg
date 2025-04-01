@@ -1,7 +1,7 @@
 mechanic:
   name: |
     HP ally drain (+HP for an ally, -HP for another ally)
-  id: M021
+  id: MEC021
   colors:
     primary:
       - Purple

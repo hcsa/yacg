@@ -1,7 +1,7 @@
 mechanic:
   name: |
     -HP (aura, ongoing)
-  id: M020
+  id: MEC020
   colors:
     primary:
       - Orange

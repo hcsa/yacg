@@ -4,7 +4,7 @@ trait:
     description: When played, if 3 (CREATURE)s have (REF:T019.NAME), Hail is set for 2 rounds.
 
   metadata:
-    id: T019
+    id: TRA019
     type: Entry
     colors:
       primary:

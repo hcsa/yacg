@@ -1,7 +1,7 @@
 mechanic:
   name: |
     -Spe (aura)
-  id: M013
+  id: MEC013
   colors:
     primary:
       - Cyan

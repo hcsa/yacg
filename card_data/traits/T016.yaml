@@ -4,7 +4,7 @@ trait:
     description: If another ally (CREATURE) has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE). For each additional ally that has (REF:T016.NAME), every ally (CREATURE) gets +1 (SPE).
 
   metadata:
-    id: T016
+    id: TRA016
     type: Other
     colors:
       primary:

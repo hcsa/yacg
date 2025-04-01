@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Hot Head
         description: When played, fights opponent's last played (CREATURE).
-        id: T020
+        id: TRA020
       - name: Reckless
         description: When this (CREATURE) attacks, get -1 (HP).
-        id: T031
+        id: TRA031
     flavor-text: |
       Him making it to the battlefiled as already considered a success
 
   metadata:
-    id: C022
+    id: CRE022
     value: 15
     dev-stage: Alpha-0
     dev-name: 

@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Survivor
         description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
-        id: T036
+        id: TRA036
     flavor-text: |
       
 
   metadata:
-    id: C067
+    id: CRE067
     value: 0
     dev-stage: Alpha-0
     dev-name: Old warrior

@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Vindicative
         description: If the next (CREATURE) played during the current round doesn't belong to you, destroy that (CREATURE). If that happens, destroy this (CREATURE).
-        id: T011
+        id: TRA011
     flavor-text: |
       
 
   metadata:
-    id: C034
+    id: CRE034
     value: 25
     dev-stage: Alpha-0
     dev-name: Ghost hand

@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Scary Stare
         description: In combat, opposing (CREATURE) gets -1 (ATK).
-        id: T024
+        id: TRA024
       - name: Brute
         description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
-        id: T037
+        id: TRA037
     flavor-text: |
       
 
   metadata:
-    id: C047
+    id: CRE047
     value: -70
     dev-stage: Alpha-0
     dev-name: Elephant

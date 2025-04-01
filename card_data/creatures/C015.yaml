@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Reckless
         description: When this (CREATURE) attacks, get -1 (HP).
-        id: T031
+        id: TRA031
     flavor-text: |
       
 
   metadata:
-    id: C015
+    id: CRE015
     value: -10
     dev-stage: Alpha-0
     dev-name: Driving Henrique

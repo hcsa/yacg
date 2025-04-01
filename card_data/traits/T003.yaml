@@ -4,7 +4,7 @@ trait:
     description: After this (CREATURE) attacks, kill it.
 
   metadata:
-    id: T003
+    id: TRA003
     type: Combat
     colors:
       primary:

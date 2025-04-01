@@ -1,7 +1,7 @@
 mechanic:
   name: |
     +Atk (effect, single target)
-  id: M001
+  id: MEC001
   colors:
     primary:
       - Orange

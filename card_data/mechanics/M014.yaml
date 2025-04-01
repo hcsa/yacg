@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Spe ally drain (+Spe for an ally, -Spe for another ally)
-  id: M014
+  id: MEC014
   colors:
     primary:
       - Purple

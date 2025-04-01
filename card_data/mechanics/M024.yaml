@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Draw cards
-  id: M024
+  id: MEC024
   colors:
     primary:
       - Pink
@@ -10,4 +10,4 @@ mechanic:
   dev-stage: Alpha-0
   order: 1001
   notes: |
-    o preto dá draw ao branco
+    o preto dï¿½ draw ao branco

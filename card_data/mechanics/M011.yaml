@@ -1,7 +1,7 @@
 mechanic:
   name: |
     -Spe (effect, single target)
-  id: M011
+  id: MEC011
   colors:
     primary:
       - Cyan

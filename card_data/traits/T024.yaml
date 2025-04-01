@@ -4,7 +4,7 @@ trait:
     description: In combat, opposing (CREATURE) gets -1 (ATK).
 
   metadata:
-    id: T024
+    id: TRA024
     type: Combat
     colors:
       primary:

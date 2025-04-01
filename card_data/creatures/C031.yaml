@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Poisonous
         description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
-        id: T008
+        id: TRA008
     flavor-text: |
       
 
   metadata:
-    id: C031
+    id: CRE031
     value: -30
     dev-stage: Alpha-0
     dev-name: Rat

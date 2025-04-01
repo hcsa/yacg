@@ -1,7 +1,7 @@
 mechanic:
   name: |
     -HP (effect, single target)
-  id: M018
+  id: MEC018
   colors:
     primary:
       - Orange

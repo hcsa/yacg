@@ -12,7 +12,7 @@ effect:
       
 
   metadata:
-    id: E002
+    id: EFF002
     dev-stage: Alpha-0
     dev-name: Counter
     order: 2

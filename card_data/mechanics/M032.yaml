@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Anti-field, destroy field (trait or effect)
-  id: M032
+  id: MEC032
   colors:
     primary:
       - Yellow

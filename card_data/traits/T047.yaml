@@ -4,7 +4,7 @@ trait:
     description: In combat, if the opponent has (FIELD)s, get +1 (SPE).
 
   metadata:
-    id: T047
+    id: TRA047
     type: Combat
     colors:
       primary:

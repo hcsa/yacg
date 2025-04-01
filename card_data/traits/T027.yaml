@@ -4,7 +4,7 @@ trait:
     description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
 
   metadata:
-    id: T027
+    id: TRA027
     type: Combat
     colors:
       primary:

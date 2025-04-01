@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Iron Will
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
-        id: T005
+        id: TRA005
     flavor-text: |
       
 
   metadata:
-    id: C063
+    id: CRE063
     value: -5
     dev-stage: Alpha-0
     dev-name: 

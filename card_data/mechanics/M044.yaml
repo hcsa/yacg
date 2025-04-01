@@ -1,7 +1,7 @@
 mechanic:
   name: |
     Creature removal (destroy all creatures)
-  id: M044
+  id: MEC044
   colors:
     primary:
       - Purple

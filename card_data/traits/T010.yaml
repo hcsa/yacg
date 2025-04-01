@@ -4,7 +4,7 @@ trait:
     description: Can take combat damage targeted at other ally (CREATURE)s.
 
   metadata:
-    id: T010
+    id: TRA010
     type: Other
     colors:
       primary:

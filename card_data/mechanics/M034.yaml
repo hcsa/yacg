@@ -1,7 +1,7 @@
 mechanic:
   name: |
     "Combining" creatures
-  id: M034
+  id: MEC034
   colors:
     primary:
       - Green

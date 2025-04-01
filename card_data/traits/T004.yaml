@@ -4,7 +4,7 @@ trait:
     description: Benefits from Sun.
 
   metadata:
-    id: T004
+    id: TRA004
     type: Other
     colors:
       primary:

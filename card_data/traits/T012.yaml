@@ -4,7 +4,7 @@ trait:
     description: The next (CREATURE) opponent plays can't share traits with their last played (CREATURE).
 
   metadata:
-    id: T012
+    id: TRA012
     type: Entry
     colors:
       primary:

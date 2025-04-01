@@ -11,15 +11,15 @@ creature:
     traits:
       - name: Iron Will
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
-        id: T005
+        id: TRA005
       - name: Mental Strength
         description: This (CREATURE) can't be the target of an effect ((ACTION), (AURA) or (FIELD)).
-        id: T023
+        id: TRA023
     flavor-text: |
       
 
   metadata:
-    id: C066
+    id: CRE066
     value: 0
     dev-stage: Alpha-0
     dev-name: 

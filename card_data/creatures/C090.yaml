@@ -11,12 +11,12 @@ creature:
     traits:
       - name: Storm Warning
         description: When played, if 3 (CREATURE)s have (REF:T029.NAME), Rain is set for 2 rounds.
-        id: T029
+        id: TRA029
     flavor-text: |
       
 
   metadata:
-    id: C090
+    id: CRE090
     value: 0
     dev-stage: Alpha-0
     dev-name: Cloud
