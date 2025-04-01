@@ -12,7 +12,12 @@ creature:
         description: If another ally (CREATURE) has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (ATK). For each additional ally that has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (ATK).
         id: TRA-030
     atk-strong: 1
-    atk-technical: 1
+    atk-technical: 0
+    atk-strong-effect:
+      - name: Longshot
+        variable: 1
+        description: This (CREATURE) deals (REF:VARIABLE) damage to another (CREATURE).
+        id: ATT-001
     flavor-text: |
       
 

@@ -1,0 +1,15 @@
+attack:
+  data:
+    name: Longshot
+    description: This (CREATURE) deals (REF:VARIABLE) damage to another (CREATURE).
+
+  metadata:
+    id: ATT-001
+    colors:
+    value: 10
+    dev-stage: Alpha-0
+    dev-name: Longshot
+    order: 1
+    summary: Deal damage to any creature
+    notes: |
+      
