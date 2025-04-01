@@ -462,6 +462,34 @@ def get_colors_overview_df() -> pd.DataFrame:
 
         df_data.append(df_row)
 
+    attack_list = cards.Attack.get_attack_dict().values()
+    for attack in attack_list:
+        df_row = {
+            "id": attack.metadata.id,
+            "order": 20000 + attack.metadata.order,
+            "name": f"{attack.data.name}\n{attack.data.description}",
+            cards.Color.ORANGE.name: None,
+            cards.Color.GREEN.name: None,
+            cards.Color.BLUE.name: None,
+            cards.Color.WHITE.name: None,
+            cards.Color.YELLOW.name: None,
+            cards.Color.PURPLE.name: None,
+            cards.Color.PINK.name: None,
+            cards.Color.BLACK.name: None,
+            cards.Color.CYAN.name: None,
+            "dev-stage": attack.metadata.dev_stage.name,
+            "notes": "[Use 'Attacks' sheet]",
+        }
+
+        for color in attack.metadata.colors.primary:
+            df_row[color.name] = "XXX"
+        for color in attack.metadata.colors.secondary:
+            df_row[color.name] = "XX"
+        for color in attack.metadata.colors.tertiary:
+            df_row[color.name] = "X"
+
+        df_data.append(df_row)
+
     # noinspection PyTypeChecker
     df = pd.DataFrame(data=df_data, dtype=object, columns=[
         "id",
