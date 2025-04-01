@@ -35,7 +35,7 @@ def import_from_excel():
 
 def import_from_traits_sheet(traits_sheet: xw.Sheet, mechanics_sheet: xw.Sheet):
     df = import_traits_sheet_to_df(traits_sheet)
-    populate_id_row(df)
+    populate_id_row(df, "T")
 
     df_mechanics = import_mechanics_sheet_to_df(mechanics_sheet)
     df_mechanics_colors = pd.melt(
@@ -250,7 +250,7 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
             df[col].fillna(np.nan, inplace=True)
     df = df.astype(df_types)
 
-    populate_id_row(df)
+    populate_id_row(df, "C")
 
     return df
 
@@ -331,7 +331,7 @@ def import_effects_sheet_to_df(effects_sheet: xw.Sheet) -> pd.DataFrame:
             df[col].fillna(np.nan, inplace=True)
     df = df.astype(df_types)
 
-    populate_id_row(df)
+    populate_id_row(df, "E")
 
     return df
 
@@ -427,29 +427,26 @@ def import_mechanics_sheet_to_df(mechanics_sheet: xw.Sheet) -> pd.DataFrame:
             df[col].fillna(np.nan, inplace=True)
     df = df.astype(df_types)
 
-    populate_id_row(df)
+    populate_id_row(df, "M")
 
     return df
 
 
-def populate_id_row(df: pd.DataFrame):
-    id_generator = new_id_generator(df["id"])
+def populate_id_row(df: pd.DataFrame, id_prefix: str):
+    id_generator = new_id_generator(df["id"], id_prefix)
 
     number_missing_ids = len(df.loc[df["id"] == ""])
     new_ids = [x for x, _ in zip(id_generator, range(number_missing_ids))]
     df.loc[df["id"] == "", "id"] = new_ids
 
 
-def new_id_generator(id_row: pd.Series) -> Iterator[str]:
+def new_id_generator(id_row: pd.Series, prefix: str) -> Iterator[str]:
     """
     Yields IDs that don't clash with the ones in the given ID row
     """
 
-    first_id = id_row[id_row != ""].iloc[0]
-    id_initial_letter: str = first_id[0]
-
     for i in range(1, 1000):
-        new_id = f"{id_initial_letter}{i:03d}"
+        new_id = f"{prefix}{i:03d}"
         new_id_exists = id_row.isin([new_id]).any()
         if not new_id_exists:
             yield new_id
