@@ -6,7 +6,7 @@ from src.cards.enums import Color, DevStage
 
 class GameElement(ABC):
     """
-    Implements a game element relevant enough to be sorted and version-controlled
+    Implements a game element relevant enough to be indexed and version-controlled
     """
 
     @abstractmethod
