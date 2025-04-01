@@ -1,0 +1,12 @@
+mechanic:
+  name: Creatures joining other creatures
+  id: M035
+  colors:
+    primary:
+      - White
+      - Yellow
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    Can be traits that allow creatures to particiapate in allies' combat, or actions that depend on multiple creatures

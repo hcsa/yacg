@@ -1,0 +1,15 @@
+mechanic:
+  name: Limit size of effect stack
+  id: M056
+  colors:
+    primary:
+      - Pink
+      - Black
+    tertiary:
+      - Blue
+      - Cyan
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

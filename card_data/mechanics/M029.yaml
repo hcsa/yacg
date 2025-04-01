@@ -1,0 +1,14 @@
+mechanic:
+  name: Can't be countered
+  id: M029
+  colors:
+    primary:
+      - Blue
+    secondary:
+      - Orange
+      - Cyan
+
+  dev-stage: Alpha-0
+  order: 1102
+  notes: |
+    Orange gets because it's convenient, lorewise "can't mindgame the mindless"

@@ -1,0 +1,14 @@
+mechanic:
+  name: "Freeze" combat fields
+  id: M052
+  colors:
+    primary:
+      - Black
+    secondary:
+      - Pink
+      - Cyan
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    Eg: delay (E060)

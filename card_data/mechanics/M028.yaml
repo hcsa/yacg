@@ -1,0 +1,13 @@
+mechanic:
+  name: Counter
+  id: M028
+  colors:
+    primary:
+      - Pink
+    secondary:
+      - Black
+
+  dev-stage: Alpha-0
+  order: 1101
+  notes: |
+    

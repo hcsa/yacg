@@ -1,0 +1,13 @@
+mechanic:
+  name: Discard hard, draw cards
+  id: M025
+  colors:
+    primary:
+      - Pink
+    secondary:
+      - Black
+
+  dev-stage: Alpha-0
+  order: 1002
+  notes: |
+    

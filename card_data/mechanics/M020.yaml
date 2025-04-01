@@ -1,0 +1,11 @@
+mechanic:
+  name: -HP (aura, ongoing)
+  id: M020
+  colors:
+    primary:
+      - Orange
+
+  dev-stage: Alpha-0
+  order: 113
+  notes: |
+    

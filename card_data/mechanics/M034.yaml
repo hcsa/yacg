@@ -1,0 +1,13 @@
+mechanic:
+  name: "Combining" creatures
+  id: M034
+  colors:
+    primary:
+      - Green
+    secondary:
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

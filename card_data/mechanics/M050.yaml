@@ -1,0 +1,13 @@
+mechanic:
+  name: Debuff opponent on opponent creature death
+  id: M050
+  colors:
+    primary:
+      - Cyan
+    secondary:
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 1412
+  notes: |
+    

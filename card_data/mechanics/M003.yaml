@@ -1,0 +1,13 @@
+mechanic:
+  name: +Atk (aura)
+  id: M003
+  colors:
+    primary:
+      - Orange
+    tertiary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 203
+  notes: |
+    

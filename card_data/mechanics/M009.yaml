@@ -1,0 +1,11 @@
+mechanic:
+  name: +Spe (effect, multi target)
+  id: M009
+  colors:
+    primary:
+      - Yellow
+
+  dev-stage: Alpha-0
+  order: 302
+  notes: |
+    When it's an ongoing effect, amount can be fixed or dynamic
