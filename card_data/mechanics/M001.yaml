@@ -1,6 +1,5 @@
 mechanic:
-  data:
-  name: +Atk tokens
+  name: +Atk (effect, single target)
   id: M001
   colors:
     primary:
@@ -11,6 +10,6 @@ mechanic:
       - White
 
   dev-stage: Alpha-0
-  order: 1
+  order: 201
   notes: |
-    
+    Green has this with -Spe
