@@ -6,7 +6,6 @@ creature:
     cost-total: 5
     cost-color: 3
     hp: 6
-    atk: 2
     spe: 3
     traits:
       - name: Vindicative
@@ -15,6 +14,8 @@ creature:
       - name: Restless
         description: If this (CREATURE) is killed or destroyed, it goes into its owner's hand.
         id: TRA-032
+    atk-strong: 2
+    atk-technical: 1
     flavor-text: |
       "I always come back"
 

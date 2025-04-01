@@ -6,12 +6,13 @@ creature:
     cost-total: 4
     cost-color: 2
     hp: 6
-    atk: 3
     spe: 1
     traits:
       - name: Poisonous
         description: Any damage dealt by this (CREATURE) destroys opposing (CREATURE).
         id: TRA-008
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       
 

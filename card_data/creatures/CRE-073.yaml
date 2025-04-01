@@ -6,12 +6,13 @@ creature:
     cost-total: 3
     cost-color: 2
     hp: 5
-    atk: 1
     spe: 2
     traits:
       - name: Bodyguard
         description: Can take combat damage targeted at other ally (CREATURE)s.
         id: TRA-010
+    atk-strong: 1
+    atk-technical: 1
     flavor-text: |
       
 

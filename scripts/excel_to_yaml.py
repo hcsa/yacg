@@ -25,13 +25,14 @@ def import_from_excel():
     with xw.App(visible=False) as app:
         excel_book = app.books.open(str(EXCEL_PATH))
 
-        import_from_traits_sheet(excel_book.sheets["Traits"], excel_book.sheets["Colors Overview"])
-        import_from_creatures_sheet(excel_book.sheets["Creatures"])
-        import_from_effects_sheet(excel_book.sheets["Effects"])
-        import_from_colors_overview_sheet(excel_book.sheets["Colors Overview"])
+        import_traits(excel_book.sheets["Traits"], excel_book.sheets["Colors Overview"])
+        import_attacks(excel_book.sheets["Attacks"], excel_book.sheets["Colors Overview"])
+        import_creatures(excel_book.sheets["Creatures"])
+        import_effects(excel_book.sheets["Effects"])
+        import_mechanics(excel_book.sheets["Colors Overview"])
 
 
-def import_from_traits_sheet(traits_sheet: xw.Sheet, colors_overview_sheet: xw.Sheet):
+def import_traits(traits_sheet: xw.Sheet, colors_overview_sheet: xw.Sheet):
     df = import_traits_sheet_to_df(traits_sheet)
     populate_id_row(df, cards.Trait.id_prefix)
 
@@ -139,11 +140,127 @@ def import_traits_sheet_to_df(traits_sheet: xw.Sheet) -> pd.DataFrame:
     return df
 
 
-def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
+def import_attacks(attacks_sheet: xw.Sheet, colors_overview_sheet: xw.Sheet):
+    df = import_attacks_sheet_to_df(attacks_sheet)
+    populate_id_row(df, cards.Attack.id_prefix)
+
+    df_colors_overview = import_colors_overview_sheet_to_df(colors_overview_sheet)
+    df_colors = pd.melt(
+        df_colors_overview,
+        id_vars=["id"],
+        value_vars=[
+            cards.Color.ORANGE.name,
+            cards.Color.GREEN.name,
+            cards.Color.BLUE.name,
+            cards.Color.WHITE.name,
+            cards.Color.YELLOW.name,
+            cards.Color.PURPLE.name,
+            cards.Color.PINK.name,
+            cards.Color.BLACK.name,
+            cards.Color.CYAN.name,
+        ],
+        var_name="color",
+        value_name="value"
+    )
+    df_colors = df_colors[df_colors["value"] != ""]
+
+    for _, row in df.iterrows():
+        df_row_colors = df_colors[df_colors["id"] == row["id"].strip()]
+
+        attack_data = cards.AttackData(
+            name=row["name"].strip(),
+            description=row["description"].strip(),
+        )
+        attack_colors = cards.AttackColors(
+            primary=[
+                cards.Color(color_name)
+                for color_name in df_row_colors[df_row_colors["value"] == "XXX"]["color"]
+            ],
+            secondary=[
+                cards.Color(color_name)
+                for color_name in df_row_colors[df_row_colors["value"] == "XX"]["color"]
+            ],
+            tertiary=[
+                cards.Color(color_name)
+                for color_name in df_row_colors[df_row_colors["value"] == "X"]["color"]
+            ]
+        )
+        attack_metadata = cards.AttackMetadata(
+            id=row["id"].strip(),
+            colors=attack_colors,
+            value=(
+                int(row["value"])
+                if not pd.isna(row["value"])
+                else None
+            ),
+            dev_stage=cards.DevStage(row["dev-stage"].strip()),
+            dev_name=row["dev-name"].strip(),
+            order=(
+                int(row["order"])
+                if not pd.isna(row["order"])
+                else None
+            ),
+            summary=row["summary"].strip(),
+            notes=row["notes"].strip(),
+        )
+        _ = cards.Attack(
+            data=attack_data,
+            metadata=attack_metadata,
+        )
+
+
+def import_attacks_sheet_to_df(attacks_sheet: xw.Sheet) -> pd.DataFrame:
+    # Int64 is used here instead of int because it's nullable
+    df_types = {
+        "id": str,
+        "order": "Int64",
+        "name": str,
+        "description": str,
+        "value": "Int64",
+        "dev-stage": str,
+        "dev-name": str,
+        "summary": str,
+        "notes": str,
+    }
+
+    excel_table_last_cell = attacks_sheet.range("TableAttack").last_cell
+    df_raw: pd.DataFrame = attacks_sheet.range("A1", excel_table_last_cell).options(pd.DataFrame, index=False).value
+    df_raw_cols_used = df_raw.columns[0:-1]
+    df: pd.DataFrame = df_raw[df_raw_cols_used].copy()
+    df = df.set_axis(
+        list(df_types),
+        axis=1,
+    )
+    for col, col_type in df_types.items():
+        if col_type == str:
+            df[col].fillna("", inplace=True)
+        if col_type == "Int64":
+            df[col].fillna(np.nan, inplace=True)
+    df = df.astype(df_types)
+
+    # At this point, the df has the expected types
+    # But missing values in int columns are going to be written as "<NA>" in the YAML
+    # So we replace them as the empty string
+    df = df.astype(object).fillna("")
+
+    return df
+
+
+def import_creatures(creatures_sheet: xw.Sheet):
     df = import_creatures_sheet_to_df(creatures_sheet)
     populate_id_row(df, cards.Creature.id_prefix)
 
     for _, row in df.iterrows():
+        atk_strong_effect = (
+            cards.Attack.get_attack(row["atk-strong-effect-id"].strip())
+            if not row["atk-strong-effect-id"].strip() == ""
+            else None
+        )
+        atk_technical_effect = (
+            cards.Attack.get_attack(row["atk-technical-effect-id"].strip())
+            if not row["atk-technical-effect-id"].strip() == ""
+            else None
+        )
         traits = [
             cards.Trait.get_trait(row[f"id-trait-{i}"].strip())
             for i in range(1, 5)
@@ -172,9 +289,26 @@ def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
                 if not pd.isna(row["hp"])
                 else None
             ),
-            atk=(
-                int(row["atk"])
-                if not pd.isna(row["atk"])
+            atk_strong=(
+                int(row["atk-strong"])
+                if not pd.isna(row["atk-strong"])
+                else None
+            ),
+            atk_strong_effect=atk_strong_effect,
+            atk_strong_effect_variable=(
+                int(row["atk-strong-effect-variable"])
+                if not pd.isna(row["atk-strong-effect-variable"])
+                else None
+            ),
+            atk_technical=(
+                int(row["atk-technical"])
+                if not pd.isna(row["atk-technical"])
+                else None
+            ),
+            atk_technical_effect=atk_technical_effect,
+            atk_technical_effect_variable=(
+                int(row["atk-technical-effect-variable"])
+                if not pd.isna(row["atk-technical-effect-variable"])
                 else None
             ),
             spe=(
@@ -218,10 +352,13 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
         "cost-total": "Int64",
         "cost-color": "Int64",
         "hp": "Int64",
-        "atk": "Int64",
         "spe": "Int64",
-        "value": "Int64",
+        "atk-strong": "Int64",
+        "atk-strong-effect-variable": "Int64",
+        "atk-technical": "Int64",
+        "atk-technical-effect-variable": "Int64",
         "is-token": bool,
+        "value": "Int64",
         "flavor-text": str,
         "dev-stage": str,
         "dev-name": str,
@@ -231,12 +368,18 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
         "id-trait-2": str,
         "id-trait-3": str,
         "id-trait-4": str,
+        "atk-strong-effect-id": str,
+        "atk-technical-effect-id": str,
     }
 
     excel_table_last_cell = creatures_sheet.range("TableCreature").last_cell
     df_raw: pd.DataFrame = creatures_sheet.range("A1", excel_table_last_cell).options(pd.DataFrame, index=False).value
-    df_raw_cols_used = \
-        df_raw.columns[0:9].append(df_raw.columns[13:24])
+
+    df_raw_cols_used = df_raw.columns[0:8]
+    df_raw_cols_used = df_raw_cols_used.append(df_raw.columns[12:13])
+    df_raw_cols_used = df_raw_cols_used.append(df_raw.columns[14:16])
+    df_raw_cols_used = df_raw_cols_used.append(df_raw.columns[17:31])
+
     df: pd.DataFrame = df_raw[df_raw_cols_used].copy()
     df = df.set_axis(
         list(df_types),
@@ -252,7 +395,7 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
     return df
 
 
-def import_from_effects_sheet(effects_sheet: xw.Sheet):
+def import_effects(effects_sheet: xw.Sheet):
     df = import_effects_sheet_to_df(effects_sheet)
     populate_id_row(df, cards.Effect.id_prefix)
 
@@ -332,7 +475,7 @@ def import_effects_sheet_to_df(effects_sheet: xw.Sheet) -> pd.DataFrame:
     return df
 
 
-def import_from_colors_overview_sheet(colors_overview_sheet: xw.Sheet):
+def import_mechanics(colors_overview_sheet: xw.Sheet):
     df = import_colors_overview_sheet_to_df(colors_overview_sheet)
 
     # This df has mechanics and traits

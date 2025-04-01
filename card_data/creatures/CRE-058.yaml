@@ -6,12 +6,13 @@ creature:
     cost-total: 4
     cost-color: 3
     hp: 5
-    atk: 2
     spe: 3
     traits:
       - name: Taxing
         description: All effects ((ACTION), (AURA) and (FIELD)) cost +1 (NOCOLOR) to play.
         id: TRA-026
+    atk-strong: 2
+    atk-technical: 1
     flavor-text: |
       
 

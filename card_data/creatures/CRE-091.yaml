@@ -6,12 +6,13 @@ creature:
     cost-total: 3
     cost-color: 1
     hp: 4
-    atk: 2
     spe: 2
     traits:
       - name: Iron Will
         description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
         id: TRA-005
+    atk-strong: 2
+    atk-technical: 1
     flavor-text: |
       
 

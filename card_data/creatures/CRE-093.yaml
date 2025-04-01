@@ -6,12 +6,13 @@ creature:
     cost-total: 4
     cost-color: 1
     hp: 8
-    atk: 2
     spe: 2
     traits:
       - name: Cold Affinity
         description: Benefits from Hail.
         id: TRA-006
+    atk-strong: 2
+    atk-technical: 1
     flavor-text: |
       
 

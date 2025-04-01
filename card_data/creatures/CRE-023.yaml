@@ -6,12 +6,13 @@ creature:
     cost-total: 2
     cost-color: 1
     hp: 3
-    atk: 2
     spe: 2
     traits:
       - name: Hot Head
         description: When played, fights opponent's last played (CREATURE).
         id: TRA-020
+    atk-strong: 2
+    atk-technical: 1
     flavor-text: |
       The bar for being considered a "capable" goblin was being alive after 3 days
 

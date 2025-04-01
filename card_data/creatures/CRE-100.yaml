@@ -6,12 +6,13 @@ creature:
     cost-total: 
     cost-color: 
     hp: 2
-    atk: 4
     spe: 2
     traits:
       - name: Frail
         description: After this (CREATURE) attacks, kill it.
         id: TRA-003
+    atk-strong: 4
+    atk-technical: 1
     flavor-text: |
       In death, all are equal
 

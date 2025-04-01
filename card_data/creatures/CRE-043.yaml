@@ -6,12 +6,13 @@ creature:
     cost-total: 3
     cost-color: 1
     hp: 5
-    atk: 3
     spe: 2
     traits:
       - name: Power Down
         description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
         id: TRA-001
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       
 

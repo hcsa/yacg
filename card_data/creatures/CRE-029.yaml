@@ -6,7 +6,6 @@ creature:
     cost-total: 5
     cost-color: 3
     hp: 7
-    atk: 3
     spe: 3
     traits:
       - name: Drought Warning
@@ -15,6 +14,8 @@ creature:
       - name: Power Up
         description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
         id: TRA-027
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       
 

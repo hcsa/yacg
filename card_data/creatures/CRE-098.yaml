@@ -6,8 +6,9 @@ creature:
     cost-total: 
     cost-color: 
     hp: 2
-    atk: 2
     spe: 2
+    atk-strong: 2
+    atk-technical: 1
     flavor-text: |
       
 

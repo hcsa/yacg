@@ -6,7 +6,6 @@ creature:
     cost-total: 5
     cost-color: 2
     hp: 7
-    atk: 3
     spe: 2
     traits:
       - name: Heat Affinity
@@ -15,6 +14,8 @@ creature:
       - name: Aqua Affinity
         description: Benefits from Rain.
         id: TRA-014
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       
 

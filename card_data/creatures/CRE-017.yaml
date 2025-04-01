@@ -6,7 +6,6 @@ creature:
     cost-total: 4
     cost-color: 2
     hp: 3
-    atk: 0
     spe: 2
     traits:
       - name: Self-destruct
@@ -15,6 +14,8 @@ creature:
       - name: Hot Head
         description: When played, fights opponent's last played (CREATURE).
         id: TRA-020
+    atk-strong: 0
+    atk-technical: 1
     flavor-text: |
       Sometimes you need years of hindsight to realize how designs were fundamentally flawed. Sometimes it only takes a minute
 

@@ -99,7 +99,7 @@ def _generate_creature_layer_stat_group(card: cards.Creature, stat_group: illust
     if stat_group_name == "Health":
         stat_text_frame.Contents = str(card.data.hp)
     elif stat_group_name == "Attack":
-        stat_text_frame.Contents = str(card.data.atk)
+        stat_text_frame.Contents = str(card.data.atk_strong)
     elif stat_group_name == "Speed":
         stat_text_frame.Contents = str(card.data.spe)
 

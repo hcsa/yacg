@@ -6,7 +6,6 @@ creature:
     cost-total: 4
     cost-color: 1
     hp: 6
-    atk: 2
     spe: 3
     traits:
       - name: First Take
@@ -15,6 +14,8 @@ creature:
       - name: Survivor
         description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
         id: TRA-036
+    atk-strong: 2
+    atk-technical: 1
     flavor-text: |
       
 

@@ -6,12 +6,13 @@ creature:
     cost-total: 0
     cost-color: 0
     hp: 1
-    atk: 1
     spe: 2
     traits:
       - name: Survivor
         description: At the end of the round, this (CREATURE) and any (AURA)s attached to it return to the deck.
         id: TRA-036
+    atk-strong: 1
+    atk-technical: 1
     flavor-text: |
       
 

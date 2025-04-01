@@ -6,7 +6,6 @@ creature:
     cost-total: 5
     cost-color: 2
     hp: 7
-    atk: 3
     spe: 0
     traits:
       - name: Scary Stare
@@ -15,6 +14,8 @@ creature:
       - name: Brute
         description: Excessive damage this (CREATURE) deals is taken by other opposing (CREATURE)s.
         id: TRA-037
+    atk-strong: 3
+    atk-technical: 1
     flavor-text: |
       
 
