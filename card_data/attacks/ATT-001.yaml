@@ -6,6 +6,10 @@ attack:
   metadata:
     id: ATT-001
     colors:
+      primary:
+        - Yellow
+      secondary:
+        - White
     value: 10
     dev-stage: Alpha-0
     dev-name: Longshot
