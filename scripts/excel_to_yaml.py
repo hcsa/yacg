@@ -33,7 +33,7 @@ def import_from_excel():
 
 def import_from_traits_sheet(traits_sheet: xw.Sheet, colors_overview_sheet: xw.Sheet):
     df = import_traits_sheet_to_df(traits_sheet)
-    populate_id_row(df, "T")
+    populate_id_row(df, cards.Trait.id_prefix)
 
     df_colors_overview = import_colors_overview_sheet_to_df(colors_overview_sheet)
     df_colors = pd.melt(
@@ -141,7 +141,7 @@ def import_traits_sheet_to_df(traits_sheet: xw.Sheet) -> pd.DataFrame:
 
 def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
     df = import_creatures_sheet_to_df(creatures_sheet)
-    populate_id_row(df, "C")
+    populate_id_row(df, cards.Creature.id_prefix)
 
     for _, row in df.iterrows():
         traits = [
@@ -254,7 +254,7 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
 
 def import_from_effects_sheet(effects_sheet: xw.Sheet):
     df = import_effects_sheet_to_df(effects_sheet)
-    populate_id_row(df, "E")
+    populate_id_row(df, cards.Effect.id_prefix)
 
     for _, row in df.iterrows():
         effect_data = cards.EffectData(
@@ -337,7 +337,7 @@ def import_from_colors_overview_sheet(colors_overview_sheet: xw.Sheet):
 
     # This df has mechanics and traits
     # Assume rows without id are mechanics (traits are added through their sheet)
-    populate_id_row(df, "M")
+    populate_id_row(df, cards.Mechanic.id_prefix)
 
     df_colors = pd.melt(
         df,

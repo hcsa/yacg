@@ -17,7 +17,7 @@ class MechanicColors:
 
 @dataclass(frozen=True)
 class Mechanic(GameElement):
-    _id_prefix: ClassVar[str] = _GameElementIdPrefix.MECHANIC
+    id_prefix: ClassVar[str] = _GameElementIdPrefix.MECHANIC
     _mechanic_dict: ClassVar[Dict[str, Self]] = {}
 
     name: str
@@ -28,8 +28,8 @@ class Mechanic(GameElement):
     notes: str = ""
 
     def __post_init__(self):
-        if not self.id.startswith(_GameElementIdPrefix.MECHANIC):
-            raise ValueError(f"Mechanic's ID '{self.id}' doesn't start with prefix '{_GameElementIdPrefix.MECHANIC}'")
+        if not self.id.startswith(self.id_prefix):
+            raise ValueError(f"Mechanic's ID '{self.id}' doesn't start with prefix '{self.id_prefix}'")
         if self.id in self._mechanic_dict:
             raise ValueError(f"Mechanic with ID '{self.id}' already exists")
         self._mechanic_dict[self.id] = self

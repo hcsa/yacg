@@ -32,15 +32,16 @@ class EffectMetadata:
 
 @dataclass(frozen=True)
 class Effect(Card):
+    id_prefix: ClassVar[str] = _GameElementIdPrefix.EFFECT
     _effect_dict: ClassVar[Dict[str, Self]] = {}
 
     data: EffectData
     metadata: EffectMetadata
 
     def __post_init__(self):
-        if not self.metadata.id.startswith(_GameElementIdPrefix.EFFECT):
+        if not self.metadata.id.startswith(self.id_prefix):
             raise ValueError(
-                f"Effect's ID '{self.metadata.id}' doesn't start with prefix '{_GameElementIdPrefix.EFFECT}'"
+                f"Effect's ID '{self.metadata.id}' doesn't start with prefix '{self.id_prefix}'"
             )
         if self.metadata.id in self._effect_dict:
             raise ValueError(f"Effect with ID '{self.metadata.id}' already exists")

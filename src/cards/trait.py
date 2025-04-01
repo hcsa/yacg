@@ -36,15 +36,16 @@ class TraitMetadata:
 
 @dataclass(frozen=True)
 class Trait(GameElement):
+    id_prefix: ClassVar[str] = _GameElementIdPrefix.TRAIT
     _trait_dict: ClassVar[Dict[str, Self]] = {}
 
     data: TraitData
     metadata: TraitMetadata
 
     def __post_init__(self):
-        if not self.metadata.id.startswith(_GameElementIdPrefix.TRAIT):
+        if not self.metadata.id.startswith(self.id_prefix):
             raise ValueError(
-                f"Trait's ID '{self.metadata.id}' doesn't start with prefix '{_GameElementIdPrefix.TRAIT}'"
+                f"Trait's ID '{self.metadata.id}' doesn't start with prefix '{self.id_prefix}'"
             )
         if self.metadata.id in self._trait_dict:
             raise ValueError(f"Trait with ID '{self.metadata.id}' already exists")

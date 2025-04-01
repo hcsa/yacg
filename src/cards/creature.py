@@ -36,15 +36,16 @@ class CreatureMetadata:
 
 @dataclass(frozen=True)
 class Creature(Card):
+    id_prefix: ClassVar[str] = _GameElementIdPrefix.CREATURE
     _creature_dict: ClassVar[Dict[str, Self]] = {}
 
     data: CreatureData
     metadata: CreatureMetadata
 
     def __post_init__(self):
-        if not self.metadata.id.startswith(_GameElementIdPrefix.CREATURE):
+        if not self.metadata.id.startswith(self.id_prefix):
             raise ValueError(
-                f"Creature's ID '{self.metadata.id}' doesn't start with prefix '{_GameElementIdPrefix.CREATURE}'"
+                f"Creature's ID '{self.metadata.id}' doesn't start with prefix '{self.id_prefix}'"
             )
         if self.metadata.id in self._creature_dict:
             raise ValueError(f"Creature with ID '{self.metadata.id}' already exists")
