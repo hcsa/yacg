@@ -6,6 +6,7 @@ import yaml
 from src.cards.abstract_classes import Card
 from src.cards.enums import Color, DevStage, _GameElementIdPrefix
 from src.cards.trait import Trait
+from src.cards.attack import Attack
 from src.utils import CREATURE_DATA_PATH
 
 
@@ -17,9 +18,15 @@ class CreatureData:
     cost_total: Optional[int]
     cost_color: Optional[int]
     hp: Optional[int]
-    atk: Optional[int]
+    atk_strong: Optional[int]
+    atk_strong_effect: Optional[Attack]
+    atk_strong_effect_value: Optional[int]
+    atk_technical: Optional[int]
+    atk_technical_effect: Optional[Attack]
+    atk_technical_effect_value: Optional[int]
     spe: Optional[int]
     traits: List[Trait] = field(default_factory=list)
+    atk_technical_effect: Optional[Attack] = None
     flavor_text: str = ""
 
 
@@ -98,6 +105,22 @@ class Creature(Card):
         with open(yaml_path, "r") as f:
             yaml_data = yaml.safe_load(f)["creature"]
 
+        atk_strong_effect = None
+        atk_strong_effect_value = None
+        if "atk-strong-effect" in yaml_data["data"]:
+            atk_strong_effect_id = str(yaml_data["data"]["atk-strong-effect"]["id"])
+            atk_strong_effect = Attack.get_attack(atk_strong_effect_id)
+            if "value" in yaml_data["data"]["atk-strong-effect"]:
+                atk_strong_effect_value = int(yaml_data["data"]["atk-strong-effect"]["value"])
+
+        atk_technical_effect = None
+        atk_technical_effect_value = None
+        if "atk-technical-effect" in yaml_data["data"]:
+            atk_technical_effect_id = str(yaml_data["data"]["atk-technical-effect"]["id"])
+            atk_technical_effect = Attack.get_attack(atk_technical_effect_id)
+            if "value" in yaml_data["data"]["atk-technical-effect"]:
+                atk_strong_effect_value = int(yaml_data["data"]["atk-technical-effect"]["value"])
+
         traits_list = []
         if "traits" in yaml_data["data"]:
             trait_dict = Trait.get_trait_dict()
@@ -138,11 +161,20 @@ class Creature(Card):
                 if yaml_data["data"]["hp"] is not None
                 else None
             ),
-            atk=(
-                int(yaml_data["data"]["atk"])
+            atk_strong=(
+                int(yaml_data["data"]["atk-strong"])
                 if yaml_data["data"]["atk"] is not None
                 else None
             ),
+            atk_strong_effect=atk_strong_effect,
+            atk_strong_effect_value=atk_strong_effect_value,
+            atk_technical=(
+                int(yaml_data["data"]["atk-technical"])
+                if yaml_data["data"]["atk"] is not None
+                else None
+            ),
+            atk_technical_effect=atk_technical_effect,
+            atk_technical_effect_value=atk_technical_effect_value,
             spe=(
                 int(yaml_data["data"]["spe"])
                 if yaml_data["data"]["spe"] is not None
@@ -189,6 +221,7 @@ class Creature(Card):
 
         flavor_text_str = self.data.flavor_text.strip().replace("\n", "\n      ")
         notes_str = self.metadata.notes.strip().replace("\n", "\n      ")
+
         traits_str = ""
         if len(self.data.traits) > 0:
             traits_str += "traits:\n"
@@ -200,6 +233,30 @@ class Creature(Card):
                 traits_str += trait_str + "\n"
             traits_str = traits_str + "    "
 
+        atk_strong_str = str(self.data.atk_strong) if self.data.atk_strong is not None else ""
+        atk_strong_effect_str = ""
+        if self.data.atk_strong_effect is not None:
+            atk_strong_effect = self.data.atk_strong_effect
+            value_str = ""
+            if self.data.atk_strong_effect_value is not None:
+                value_str = f"\n        value: {self.data.atk_strong_effect_value}"
+            atk_strong_effect_str = f"""atk-strong-effect:
+      - name: {atk_strong_effect.data.name}{value_str}
+        description: {atk_strong_effect.data.description}
+        id: {atk_strong_effect.metadata.id}"""
+
+        atk_technical_str = str(self.data.atk_technical) if self.data.atk_technical is not None else ""
+        atk_technical_effect_str = ""
+        if self.data.atk_technical_effect is not None:
+            atk_technical_effect = self.data.atk_technical_effect
+            value_str = ""
+            if self.data.atk_technical_effect_value is not None:
+                value_str = f"\n        value: {self.data.atk_technical_effect_value}"
+            atk_technical_effect_str = f"""atk-strong-effect:
+      - name: {atk_technical_effect.data.name}{value_str}
+        description: {atk_technical_effect.data.description}
+        id: {atk_technical_effect.metadata.id}"""
+
         yaml_content = f"""
 creature:
   data:
@@ -209,9 +266,10 @@ creature:
     cost-total: {self.data.cost_total if self.data.cost_total is not None else ""}
     cost-color: {self.data.cost_color if self.data.cost_color is not None else ""}
     hp: {self.data.hp if self.data.hp is not None else ""}
-    atk: {self.data.atk if self.data.atk is not None else ""}
     spe: {self.data.spe if self.data.spe is not None else ""}
-    {traits_str}flavor-text: |
+    {traits_str}atk-strong: {atk_strong_str}
+    {atk_strong_effect_str}atk-technical: {atk_technical_str}
+    {atk_technical_effect_str}flavor-text: |
       {flavor_text_str}
 
   metadata:
