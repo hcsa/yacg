@@ -6,7 +6,8 @@ creature:
     cost-total: 3
     cost-color: 2
     hp: 4
-    atk: 3
+    atk-strong: 3
+    atk-technical: 1
     spe: 2
     traits:
       - name: Field Animosity

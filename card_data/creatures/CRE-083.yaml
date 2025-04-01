@@ -6,7 +6,8 @@ creature:
     cost-total: 4
     cost-color: 2
     hp: 3
-    atk: 4
+    atk-strong: 4
+    atk-technical: 1
     spe: 2
     traits:
       - name: First Take

@@ -6,7 +6,8 @@ creature:
     cost-total: 9
     cost-color: 6
     hp: 18
-    atk: 6
+    atk-strong: 6
+    atk-technical: 1
     spe: 0
     traits:
       - name: Scary Stare

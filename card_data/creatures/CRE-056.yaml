@@ -6,7 +6,8 @@ creature:
     cost-total: 3
     cost-color: 2
     hp: 3
-    atk: 2
+    atk-strong: 2
+    atk-technical: 1
     spe: 3
     traits:
       - name: Tag Team

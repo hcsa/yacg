@@ -6,7 +6,8 @@ creature:
     cost-total: 3
     cost-color: 1
     hp: 2
-    atk: 3
+    atk-strong: 3
+    atk-technical: 1
     spe: 4
     traits:
       - name: Reckless

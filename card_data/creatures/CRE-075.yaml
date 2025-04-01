@@ -6,7 +6,8 @@ creature:
     cost-total: 3
     cost-color: 2
     hp: 2
-    atk: 1
+    atk-strong: 1
+    atk-technical: 1
     spe: 2
     traits:
       - name: Valor Aura

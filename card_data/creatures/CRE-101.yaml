@@ -6,7 +6,8 @@ creature:
     cost-total: 4
     cost-color: 2
     hp: 5
-    atk: 3
+    atk-strong: 3
+    atk-technical: 1
     spe: 2
     traits:
       - name: Aura Animosity
