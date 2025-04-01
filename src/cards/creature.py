@@ -20,10 +20,10 @@ class CreatureData:
     hp: Optional[int]
     atk_strong: Optional[int]
     atk_strong_effect: Optional[Attack]
-    atk_strong_effect_value: Optional[int]
+    atk_strong_effect_variable: Optional[int]
     atk_technical: Optional[int]
     atk_technical_effect: Optional[Attack]
-    atk_technical_effect_value: Optional[int]
+    atk_technical_effect_variable: Optional[int]
     spe: Optional[int]
     traits: List[Trait] = field(default_factory=list)
     flavor_text: str = ""
@@ -105,20 +105,20 @@ class Creature(Card):
             yaml_data = yaml.safe_load(f)["creature"]
 
         atk_strong_effect = None
-        atk_strong_effect_value = None
+        atk_strong_effect_variable = None
         if "atk-strong-effect" in yaml_data["data"]:
             atk_strong_effect_id = str(yaml_data["data"]["atk-strong-effect"]["id"])
             atk_strong_effect = Attack.get_attack(atk_strong_effect_id)
-            if "value" in yaml_data["data"]["atk-strong-effect"]:
-                atk_strong_effect_value = int(yaml_data["data"]["atk-strong-effect"]["value"])
+            if "variable" in yaml_data["data"]["atk-strong-effect"]:
+                atk_strong_effect_variable = int(yaml_data["data"]["atk-strong-effect"]["variable"])
 
         atk_technical_effect = None
-        atk_technical_effect_value = None
+        atk_technical_effect_variable = None
         if "atk-technical-effect" in yaml_data["data"]:
             atk_technical_effect_id = str(yaml_data["data"]["atk-technical-effect"]["id"])
             atk_technical_effect = Attack.get_attack(atk_technical_effect_id)
-            if "value" in yaml_data["data"]["atk-technical-effect"]:
-                atk_strong_effect_value = int(yaml_data["data"]["atk-technical-effect"]["value"])
+            if "variable" in yaml_data["data"]["atk-technical-effect"]:
+                atk_strong_effect_variable = int(yaml_data["data"]["atk-technical-effect"]["variable"])
 
         traits_list = []
         if "traits" in yaml_data["data"]:
@@ -166,14 +166,14 @@ class Creature(Card):
                 else None
             ),
             atk_strong_effect=atk_strong_effect,
-            atk_strong_effect_value=atk_strong_effect_value,
+            atk_strong_effect_variable=atk_strong_effect_variable,
             atk_technical=(
                 int(yaml_data["data"]["atk-technical"])
                 if yaml_data["data"]["atk-technical"] is not None
                 else None
             ),
             atk_technical_effect=atk_technical_effect,
-            atk_technical_effect_value=atk_technical_effect_value,
+            atk_technical_effect_variable=atk_technical_effect_variable,
             spe=(
                 int(yaml_data["data"]["spe"])
                 if yaml_data["data"]["spe"] is not None
@@ -236,11 +236,11 @@ class Creature(Card):
         atk_strong_effect_str = ""
         if self.data.atk_strong_effect is not None:
             atk_strong_effect = self.data.atk_strong_effect
-            value_str = ""
-            if self.data.atk_strong_effect_value is not None:
-                value_str = f"\n        value: {self.data.atk_strong_effect_value}"
+            variable_str = ""
+            if self.data.atk_strong_effect_variable is not None:
+                variable_str = f"\n        variable: {self.data.atk_strong_effect_variable}"
             atk_strong_effect_str = f"""atk-strong-effect:
-      - name: {atk_strong_effect.data.name}{value_str}
+      - name: {atk_strong_effect.data.name}{variable_str}
         description: {atk_strong_effect.data.description}
         id: {atk_strong_effect.metadata.id}"""
 
@@ -248,11 +248,11 @@ class Creature(Card):
         atk_technical_effect_str = ""
         if self.data.atk_technical_effect is not None:
             atk_technical_effect = self.data.atk_technical_effect
-            value_str = ""
-            if self.data.atk_technical_effect_value is not None:
-                value_str = f"\n        value: {self.data.atk_technical_effect_value}"
+            variable_str = ""
+            if self.data.atk_technical_effect_variable is not None:
+                variable_str = f"\n        variable: {self.data.atk_technical_effect_variable}"
             atk_technical_effect_str = f"""atk-strong-effect:
-      - name: {atk_technical_effect.data.name}{value_str}
+      - name: {atk_technical_effect.data.name}{variable_str}
         description: {atk_technical_effect.data.description}
         id: {atk_technical_effect.metadata.id}"""
 
