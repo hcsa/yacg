@@ -118,7 +118,7 @@ class Creature(Card):
             atk_technical_effect_id = str(yaml_data["data"]["atk-technical-effect"]["id"])
             atk_technical_effect = Attack.get_attack(atk_technical_effect_id)
             if "variable" in yaml_data["data"]["atk-technical-effect"]:
-                atk_strong_effect_variable = int(yaml_data["data"]["atk-technical-effect"]["variable"])
+                atk_technical_effect_variable = int(yaml_data["data"]["atk-technical-effect"]["variable"])
 
         traits_list = []
         if "traits" in yaml_data["data"]:
