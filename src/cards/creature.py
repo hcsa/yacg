@@ -242,7 +242,7 @@ class Creature(Card):
             atk_strong_effect_str = f"""atk-strong-effect:
       - name: {atk_strong_effect.data.name}{variable_str}
         description: {atk_strong_effect.data.description}
-        id: {atk_strong_effect.metadata.id}"""
+        id: {atk_strong_effect.metadata.id}\n"""
 
         atk_technical_str = str(self.data.atk_technical) if self.data.atk_technical is not None else ""
         atk_technical_effect_str = ""
@@ -254,7 +254,7 @@ class Creature(Card):
             atk_technical_effect_str = f"""atk-strong-effect:
       - name: {atk_technical_effect.data.name}{variable_str}
         description: {atk_technical_effect.data.description}
-        id: {atk_technical_effect.metadata.id}"""
+        id: {atk_technical_effect.metadata.id}\n    """
 
         yaml_content = f"""
 creature:
