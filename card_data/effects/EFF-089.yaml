@@ -3,7 +3,7 @@ effect:
     name: Double Up
     color: None
     type: Action
-    cost-total: 1
+    cost-total: 0
     cost-color: 0
     description: |
       After playing this card to the effect stack, you can play 2 additional effects ((ACTION), (AURA) or (FIELD)).

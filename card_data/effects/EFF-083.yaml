@@ -9,7 +9,7 @@ effect:
       All ally (CREATURE)s have 0 (ATK) (applies after all other buffs and debuffs).
       If you win this round, you win the game.
     flavor-text: |
-      
+      All Hail Mary
 
   metadata:
     id: EFF-083

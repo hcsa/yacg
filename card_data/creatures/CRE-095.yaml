@@ -20,8 +20,7 @@ creature:
     atk-strong: 2
     atk-technical: 1
     flavor-text: |
-      "Once you enter it, you can never exit it"
-      "So is it the inside that's absolutely safe, or the outside?"
+      Legends say once you enter it, you can never exit. Is it meant to keep the inside absolutely safe, or the outside?
 
   metadata:
     id: CRE-095

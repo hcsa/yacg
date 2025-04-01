@@ -9,7 +9,7 @@ effect:
       Look at opponent's hand, select 1 card and discard it.
       Opponent looks at your hand, selects 1 card and discards it.
     flavor-text: |
-      "To see the depths of another, you must be willing to show your own"
+      To see the depths of another, you must be willing to show your own
 
   metadata:
     id: EFF-042

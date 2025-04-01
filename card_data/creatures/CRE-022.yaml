@@ -17,7 +17,7 @@ creature:
     atk-strong: 2
     atk-technical: 1
     flavor-text: |
-      Him making it to the battlefiled as already considered a success
+      Him making it to the battlefield is already considered a success
 
   metadata:
     id: CRE-022
