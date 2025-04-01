@@ -14,10 +14,10 @@ creature:
     atk-strong: 1
     atk-technical: 0
     atk-strong-effect:
-      - name: Longshot
-        variable: 1
-        description: This (CREATURE) deals (REF:VARIABLE) damage to another (CREATURE).
-        id: ATT-001
+      name: Longshot
+      variable: 1
+      description: This (CREATURE) deals (REF:VARIABLE) damage to another (CREATURE).
+      id: ATT-001
     flavor-text: |
       
 

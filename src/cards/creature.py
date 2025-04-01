@@ -238,11 +238,11 @@ class Creature(Card):
             atk_strong_effect = self.data.atk_strong_effect
             variable_str = ""
             if self.data.atk_strong_effect_variable is not None:
-                variable_str = f"\n        variable: {self.data.atk_strong_effect_variable}"
+                variable_str = f"\n      variable: {self.data.atk_strong_effect_variable}"
             atk_strong_effect_str = f"""atk-strong-effect:
-      - name: {atk_strong_effect.data.name}{variable_str}
-        description: {atk_strong_effect.data.description}
-        id: {atk_strong_effect.metadata.id}\n"""
+      name: {atk_strong_effect.data.name}{variable_str}
+      description: {atk_strong_effect.data.description}
+      id: {atk_strong_effect.metadata.id}\n"""
 
         atk_technical_str = str(self.data.atk_technical) if self.data.atk_technical is not None else ""
         atk_technical_effect_str = ""
@@ -250,11 +250,11 @@ class Creature(Card):
             atk_technical_effect = self.data.atk_technical_effect
             variable_str = ""
             if self.data.atk_technical_effect_variable is not None:
-                variable_str = f"\n        variable: {self.data.atk_technical_effect_variable}"
+                variable_str = f"\n      variable: {self.data.atk_technical_effect_variable}"
             atk_technical_effect_str = f"""atk-strong-effect:
-      - name: {atk_technical_effect.data.name}{variable_str}
-        description: {atk_technical_effect.data.description}
-        id: {atk_technical_effect.metadata.id}\n    """
+      name: {atk_technical_effect.data.name}{variable_str}
+      description: {atk_technical_effect.data.description}
+      id: {atk_technical_effect.metadata.id}\n    """
 
         yaml_content = f"""
 creature:
