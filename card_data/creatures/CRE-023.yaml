@@ -14,7 +14,7 @@ creature:
     atk-strong: 2
     atk-technical: 1
     flavor-text: |
-      The bar for being considered a "capable" goblin was being alive after 3 days
+      The bar for being considered "capable" is surviving for 3 days
 
   metadata:
     id: CRE-023

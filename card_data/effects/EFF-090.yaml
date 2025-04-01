@@ -8,7 +8,9 @@ effect:
     description: |
       Whenever you play an effect ((ACTION), (AURA) or (FIELD)) to the effect stack, you can play any number of additional effects on the same turn.
     flavor-text: |
-      Simply mentioning Lops Dasilva's name would open a number of doors in the city
+      "You're not allowed here!"
+      "But see, I know Lops Dasilva"
+      "My deepest apologies good sir, right this way"
 
   metadata:
     id: EFF-090

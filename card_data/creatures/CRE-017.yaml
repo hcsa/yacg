@@ -17,7 +17,7 @@ creature:
     atk-strong: 0
     atk-technical: 1
     flavor-text: |
-      Sometimes you need years of hindsight to realize how designs were fundamentally flawed. Sometimes it only takes a minute
+      Sometimes you need years of hindsight to realize how a design is fundamentally flawed. Sometimes it only takes 10 seconds
 
   metadata:
     id: CRE-017

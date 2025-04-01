@@ -6,10 +6,10 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Put target effect ((ACTION), (AURA) or (FIELD)) in the effect stack on top of their owner's hand.
+      Put target effect ((ACTION), (AURA) or (FIELD)) in the effect stack on top of their owner's deck.
       Draw a card.
     flavor-text: |
-      "You understimate what you can get away with once you master saying 'I'll take care of it later'"
+      It's amazing what you can get away with once you master saying "I'll take care of it later"
 
   metadata:
     id: EFF-044

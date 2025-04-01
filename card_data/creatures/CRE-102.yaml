@@ -14,7 +14,7 @@ creature:
     atk-strong: 3
     atk-technical: 1
     flavor-text: |
-      It's programmed to tender the field every day. Make its life harder at your own risk
+      Programmed to tender the field every day. Interfere with its routine at your own risk
 
   metadata:
     id: CRE-102
