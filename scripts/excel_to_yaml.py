@@ -352,10 +352,10 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
         "cost-total": "Int64",
         "cost-color": "Int64",
         "hp": "Int64",
-        "atk-strong": "Int64",
-        "atk-technical": "Int64",
         "spe": "Int64",
+        "atk-strong": "Int64",
         "atk-strong-effect-variable": "Int64",
+        "atk-technical": "Int64",
         "atk-technical-effect-variable": "Int64",
         "is-token": bool,
         "value": "Int64",
@@ -375,8 +375,9 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
     excel_table_last_cell = creatures_sheet.range("TableCreature").last_cell
     df_raw: pd.DataFrame = creatures_sheet.range("A1", excel_table_last_cell).options(pd.DataFrame, index=False).value
 
-    df_raw_cols_used = df_raw.columns[0:10]
-    df_raw_cols_used = df_raw_cols_used.append(df_raw.columns[15:16])
+    df_raw_cols_used = df_raw.columns[0:8]
+    df_raw_cols_used = df_raw_cols_used.append(df_raw.columns[12:13])
+    df_raw_cols_used = df_raw_cols_used.append(df_raw.columns[14:16])
     df_raw_cols_used = df_raw_cols_used.append(df_raw.columns[17:31])
 
     df: pd.DataFrame = df_raw[df_raw_cols_used].copy()
