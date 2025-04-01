@@ -38,6 +38,7 @@ def export_to_excel():
         export_to_traits_sheet(excel_book.sheets["Traits"])
         export_to_creatures_sheet(excel_book.sheets["Creatures"])
         export_to_effects_sheet(excel_book.sheets["Effects"])
+        export_to_attacks_sheet(excel_book.sheets["Attacks"])
         export_to_colors_overview_sheet(excel_book.sheets["Colors Overview"])
         export_to_creature_values_sheet(excel_book.sheets["Creatures - Value"])
 
@@ -129,18 +130,23 @@ def export_to_creatures_sheet(creatures_sheet: xw.Sheet):
     creatures_sheet["E3"].options(index=False, header=False).value = df["cost-total"]
     creatures_sheet["F3"].options(index=False, header=False).value = df["cost-color"]
     creatures_sheet["G3"].options(index=False, header=False).value = df["hp"]
-    creatures_sheet["H3"].options(index=False, header=False).value = df["atk"]
-    creatures_sheet["I3"].options(index=False, header=False).value = df["spe"]
-    creatures_sheet["O3"].options(index=False, header=False).value = df["is-token"]
-    creatures_sheet["P3"].options(index=False, header=False).value = df["flavor-text"]
-    creatures_sheet["Q3"].options(index=False, header=False).value = df["dev-stage"]
-    creatures_sheet["R3"].options(index=False, header=False).value = df["dev-name"]
-    creatures_sheet["S3"].options(index=False, header=False).value = df["summary"]
-    creatures_sheet["T3"].options(index=False, header=False).value = df["notes"]
-    creatures_sheet["U3"].options(index=False, header=False).value = df["id-trait-1"]
-    creatures_sheet["V3"].options(index=False, header=False).value = df["id-trait-2"]
-    creatures_sheet["W3"].options(index=False, header=False).value = df["id-trait-3"]
-    creatures_sheet["X3"].options(index=False, header=False).value = df["id-trait-4"]
+    creatures_sheet["H3"].options(index=False, header=False).value = df["atk-strong"]
+    creatures_sheet["I3"].options(index=False, header=False).value = df["atk-technical"]
+    creatures_sheet["J3"].options(index=False, header=False).value = df["spe"]
+    creatures_sheet["P3"].options(index=False, header=False).value = df["atk-strong-effect-variable"]
+    creatures_sheet["R3"].options(index=False, header=False).value = df["atk-technical-effect-variable"]
+    creatures_sheet["S3"].options(index=False, header=False).value = df["is-token"]
+    creatures_sheet["U3"].options(index=False, header=False).value = df["flavor-text"]
+    creatures_sheet["V3"].options(index=False, header=False).value = df["dev-stage"]
+    creatures_sheet["W3"].options(index=False, header=False).value = df["dev-name"]
+    creatures_sheet["X3"].options(index=False, header=False).value = df["summary"]
+    creatures_sheet["Y3"].options(index=False, header=False).value = df["notes"]
+    creatures_sheet["Z3"].options(index=False, header=False).value = df["id-trait-1"]
+    creatures_sheet["AA3"].options(index=False, header=False).value = df["id-trait-2"]
+    creatures_sheet["AB3"].options(index=False, header=False).value = df["id-trait-3"]
+    creatures_sheet["AC3"].options(index=False, header=False).value = df["id-trait-4"]
+    creatures_sheet["AD3"].options(index=False, header=False).value = df["atk-strong-effect-id"]
+    creatures_sheet["AE3"].options(index=False, header=False).value = df["atk-technical-effect-id"]
 
     # Delete template row
     creatures_sheet.range("2:2").delete(shift="up")
@@ -161,7 +167,28 @@ def get_creatures_df() -> pd.DataFrame:
             "cost-total": creature.data.cost_total,
             "cost-color": creature.data.cost_color,
             "hp": creature.data.hp,
-            "atk": creature.data.atk,
+            "atk-strong": creature.data.atk_strong,
+            "atk-strong-effect-id": (
+                creature.data.atk_strong_effect.get_id()
+                if creature.data.atk_strong_effect is not None
+                else None
+            ),
+            "atk-strong-effect-variable": (
+                creature.data.atk_strong_effect_variable
+                if creature.data.atk_strong_effect_variable is not None
+                else None
+            ),
+            "atk-technical": creature.data.atk_technical,
+            "atk-technical-effect-id": (
+                creature.data.atk_technical_effect.get_id()
+                if creature.data.atk_technical_effect is not None
+                else None
+            ),
+            "atk-technical-effect-variable": (
+                creature.data.atk_technical_effect_variable
+                if creature.data.atk_technical_effect_variable is not None
+                else None
+            ),
             "spe": creature.data.spe,
             "dev-stage": creature.metadata.dev_stage.name,
             "dev-name": creature.metadata.dev_name,
@@ -170,7 +197,7 @@ def get_creatures_df() -> pd.DataFrame:
         }
 
         for i, trait in enumerate(creature.data.traits, start=1):
-            df_row[f"id-trait-{i}"] = trait.metadata.id
+            df_row[f"id-trait-{i}"] = trait.get_id()
 
         df_data.append(df_row)
 
@@ -185,7 +212,12 @@ def get_creatures_df() -> pd.DataFrame:
         "cost-total",
         "cost-color",
         "hp",
-        "atk",
+        "atk-strong",
+        "atk-strong-effect-id",
+        "atk-strong-effect-variable",
+        "atk-technical",
+        "atk-technical-effect-id",
+        "atk-technical-effect-variable",
         "spe",
         "dev-stage",
         "dev-name",
@@ -261,6 +293,71 @@ def get_effects_df() -> pd.DataFrame:
         "cost-color",
         "description",
         "flavor-text",
+        "dev-stage",
+        "dev-name",
+        "summary",
+        "notes"
+    ])
+    return df
+
+
+def export_to_attacks_sheet(attacks_sheet: xw.Sheet):
+    df = get_attacks_df()
+
+    # Copy formatting from template row
+    for _ in range(len(df)):
+        attacks_sheet.range("3:3").insert(
+            shift="down",
+            copy_origin="format_from_left_or_above"
+        )
+
+    attacks_sheet["A3"].options(index=False, header=False).value = df["id"]
+    attacks_sheet["B3"].options(index=False, header=False).value = df["order"]
+    attacks_sheet["C3"].options(index=False, header=False).value = df["name"]
+    attacks_sheet["D3"].options(index=False, header=False).value = df["description"]
+    attacks_sheet["E3"].options(index=False, header=False).value = df["value"]
+    attacks_sheet["F3"].options(index=False, header=False).value = df["dev-stage"]
+    attacks_sheet["G3"].options(index=False, header=False).value = df["dev-name"]
+    attacks_sheet["H3"].options(index=False, header=False).value = df["summary"]
+    attacks_sheet["I3"].options(index=False, header=False).value = df["notes"]
+
+    # Delete template row
+    attacks_sheet.range("2:2").delete(shift="up")
+
+    attacks_sheet["A1"].expand("table").api.Sort(
+        Key1=attacks_sheet.range("J:J").api,
+        Order1=2,
+        Key2=attacks_sheet.range("B:B").api,
+        Header=1,
+        Orientation=1,
+    )
+
+
+def get_attacks_df() -> pd.DataFrame:
+    df_data = []
+
+    for attack in cards.Attack.get_attack_dict().values():
+        df_row = {
+            "id": attack.metadata.id,
+            "order": attack.metadata.order,
+            "name": attack.data.name,
+            "description": attack.data.description,
+            "value": attack.metadata.value,
+            "dev-stage": attack.metadata.dev_stage.name,
+            "dev-name": attack.metadata.dev_name,
+            "summary": attack.metadata.summary,
+            "notes": attack.metadata.notes,
+        }
+
+        df_data.append(df_row)
+
+    # noinspection PyTypeChecker
+    df = pd.DataFrame(data=df_data, dtype=object, columns=[
+        "id",
+        "order",
+        "name",
+        "description",
+        "value",
         "dev-stage",
         "dev-name",
         "summary",
