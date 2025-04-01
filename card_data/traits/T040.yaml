@@ -8,12 +8,14 @@ trait:
     type: Other
     colors:
       primary:
-        - Pink
+        - Purple
       secondary:
-        - Black
+        - Yellow
+        - Cyan
       tertiary:
         - Orange
-    value: 15
+        - Black
+    value: 0
     dev-stage: Conception
     dev-name: Flash
     order: 901

@@ -9,6 +9,7 @@ trait:
     colors:
       primary:
         - Blue
+        - Cyan
       tertiary:
         - White
     value: 10

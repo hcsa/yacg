@@ -11,7 +11,7 @@ trait:
         - Blue
       secondary:
         - White
-        - Pink
+        - Cyan
     value: 10
     dev-stage: Alpha-0
     dev-name: Clear body

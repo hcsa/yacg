@@ -9,11 +9,11 @@ trait:
     colors:
       primary:
         - Purple
-      secondary:
-        - Cyan
+        - Black
       tertiary:
         - Green
-    value: 25
+        - Blue
+    value: 0
     dev-stage: Conception
     dev-name: 
     order: 903

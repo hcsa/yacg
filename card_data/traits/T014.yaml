@@ -9,6 +9,7 @@ trait:
     colors:
       primary:
         - Green
+        - Blue
       tertiary:
         - Purple
     value: 10

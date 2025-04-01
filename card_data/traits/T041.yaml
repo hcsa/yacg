@@ -9,7 +9,7 @@ trait:
     colors:
       primary:
         - Purple
-      tertiary:
+      secondary:
         - Black
     value: 20
     dev-stage: Alpha-0

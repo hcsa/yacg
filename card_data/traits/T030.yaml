@@ -9,7 +9,7 @@ trait:
     colors:
       primary:
         - White
-      tertiary:
+      secondary:
         - Orange
     value: 25
     dev-stage: Alpha-0

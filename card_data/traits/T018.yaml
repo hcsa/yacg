@@ -9,7 +9,7 @@ trait:
     colors:
       primary:
         - Cyan
-      tertiary:
+      secondary:
         - Purple
     value: 35
     dev-stage: Alpha-0

@@ -8,6 +8,7 @@ trait:
     type: Other
     colors:
       primary:
+        - Orange
         - Green
       tertiary:
         - Yellow

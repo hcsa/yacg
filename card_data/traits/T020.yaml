@@ -11,6 +11,8 @@ trait:
         - Orange
       secondary:
         - Yellow
+      tertiary:
+        - Purple
     value: 15
     dev-stage: Alpha-0
     dev-name: Haste

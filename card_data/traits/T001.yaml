@@ -12,9 +12,6 @@ trait:
       secondary:
         - Blue
         - Purple
-      tertiary:
-        - Green
-        - Yellow
     value: -10
     dev-stage: Alpha-0
     dev-name: Arrogant

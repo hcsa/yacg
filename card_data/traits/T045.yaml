@@ -9,7 +9,7 @@ trait:
     colors:
       primary:
         - Pink
-      tertiary:
+      secondary:
         - Black
     value: 60
     dev-stage: Alpha-0

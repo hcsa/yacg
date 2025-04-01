@@ -9,8 +9,6 @@ trait:
     colors:
       primary:
         - Yellow
-      secondary:
-        - Orange
     value: 20
     dev-stage: Alpha-0
     dev-name: Self-destruct

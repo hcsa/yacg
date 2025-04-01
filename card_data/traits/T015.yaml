@@ -11,8 +11,6 @@ trait:
         - Green
       secondary:
         - Orange
-      tertiary:
-        - Yellow
     value: 15
     dev-stage: Alpha-0
     dev-name: Earthquake

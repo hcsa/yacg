@@ -10,7 +10,7 @@ trait:
       primary:
         - Orange
       secondary:
-        - Yellow
+        - Purple
     value: -15
     dev-stage: Alpha-0
     dev-name: Reckless

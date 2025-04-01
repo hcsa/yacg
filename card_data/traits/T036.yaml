@@ -11,6 +11,8 @@ trait:
         - White
       secondary:
         - Green
+      tertiary:
+        - Black
     value: 10
     dev-stage: Alpha-0
     dev-name: Survivor

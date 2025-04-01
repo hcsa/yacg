@@ -9,8 +9,11 @@ trait:
     colors:
       primary:
         - Orange
-      secondary:
         - White
+      secondary:
+        - Cyan
+      tertiary:
+        - Green
     value: 20
     dev-stage: Alpha-0
     dev-name: 

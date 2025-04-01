@@ -9,8 +9,6 @@ trait:
     colors:
       primary:
         - Yellow
-      tertiary:
-        - White
     value: 15
     dev-stage: Alpha-0
     dev-name: Energetic

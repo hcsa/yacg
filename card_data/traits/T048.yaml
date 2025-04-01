@@ -10,10 +10,10 @@ trait:
       primary:
         - Blue
       secondary:
-        - Pink
+        - Purple
       tertiary:
         - Green
-    value: 25
+    value: 0
     dev-stage: Conception
     dev-name: 
     order: 907

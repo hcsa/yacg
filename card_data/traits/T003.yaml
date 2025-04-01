@@ -10,7 +10,7 @@ trait:
       primary:
         - Purple
       secondary:
-        - Green
+        - Cyan
     value: -20
     dev-stage: Alpha-0
     dev-name: Brittle
