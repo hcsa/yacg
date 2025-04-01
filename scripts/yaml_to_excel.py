@@ -38,7 +38,7 @@ def export_to_excel():
         export_to_traits_sheet(excel_book.sheets["Traits"])
         export_to_creatures_sheet(excel_book.sheets["Creatures"])
         export_to_effects_sheet(excel_book.sheets["Effects"])
-        export_to_mechanics_sheet(excel_book.sheets["Mechanics"])
+        export_to_colors_overview_sheet(excel_book.sheets["Colors Overview"])
         export_to_creature_values_sheet(excel_book.sheets["Creatures - Value"])
 
         excel_book.save()
@@ -269,44 +269,44 @@ def get_effects_df() -> pd.DataFrame:
     return df
 
 
-def export_to_mechanics_sheet(mechanics_sheet: xw.Sheet):
-    df = get_mechanics_df()
+def export_to_colors_overview_sheet(colors_overview_sheet: xw.Sheet):
+    df = get_colors_overview_df()
 
     # Copy formatting from template row
     for _ in range(len(df)):
-        mechanics_sheet.range("3:3").insert(
+        colors_overview_sheet.range("3:3").insert(
             shift="down",
             copy_origin="format_from_left_or_above"
         )
 
-    mechanics_sheet["A3"].options(index=False, header=False).value = df["id"]
-    mechanics_sheet["B3"].options(index=False, header=False).value = df["order"]
-    mechanics_sheet["C3"].options(index=False, header=False).value = df["name"]
-    mechanics_sheet["D3"].options(index=False, header=False).value = df[cards.Color.ORANGE.name]
-    mechanics_sheet["E3"].options(index=False, header=False).value = df[cards.Color.GREEN.name]
-    mechanics_sheet["F3"].options(index=False, header=False).value = df[cards.Color.BLUE.name]
-    mechanics_sheet["G3"].options(index=False, header=False).value = df[cards.Color.WHITE.name]
-    mechanics_sheet["H3"].options(index=False, header=False).value = df[cards.Color.YELLOW.name]
-    mechanics_sheet["I3"].options(index=False, header=False).value = df[cards.Color.PURPLE.name]
-    mechanics_sheet["J3"].options(index=False, header=False).value = df[cards.Color.PINK.name]
-    mechanics_sheet["K3"].options(index=False, header=False).value = df[cards.Color.BLACK.name]
-    mechanics_sheet["L3"].options(index=False, header=False).value = df[cards.Color.CYAN.name]
-    mechanics_sheet["M3"].options(index=False, header=False).value = df["dev-stage"]
-    mechanics_sheet["N3"].options(index=False, header=False).value = df["notes"]
+    colors_overview_sheet["A3"].options(index=False, header=False).value = df["id"]
+    colors_overview_sheet["B3"].options(index=False, header=False).value = df["order"]
+    colors_overview_sheet["C3"].options(index=False, header=False).value = df["name"]
+    colors_overview_sheet["D3"].options(index=False, header=False).value = df[cards.Color.ORANGE.name]
+    colors_overview_sheet["E3"].options(index=False, header=False).value = df[cards.Color.GREEN.name]
+    colors_overview_sheet["F3"].options(index=False, header=False).value = df[cards.Color.BLUE.name]
+    colors_overview_sheet["G3"].options(index=False, header=False).value = df[cards.Color.WHITE.name]
+    colors_overview_sheet["H3"].options(index=False, header=False).value = df[cards.Color.YELLOW.name]
+    colors_overview_sheet["I3"].options(index=False, header=False).value = df[cards.Color.PURPLE.name]
+    colors_overview_sheet["J3"].options(index=False, header=False).value = df[cards.Color.PINK.name]
+    colors_overview_sheet["K3"].options(index=False, header=False).value = df[cards.Color.BLACK.name]
+    colors_overview_sheet["L3"].options(index=False, header=False).value = df[cards.Color.CYAN.name]
+    colors_overview_sheet["M3"].options(index=False, header=False).value = df["dev-stage"]
+    colors_overview_sheet["N3"].options(index=False, header=False).value = df["notes"]
 
     # Delete template row
-    mechanics_sheet.range("2:2").delete(shift="up")
+    colors_overview_sheet.range("2:2").delete(shift="up")
 
-    mechanics_sheet["A1"].expand("table").api.Sort(
-        Key1=mechanics_sheet.range("O:O").api,
+    colors_overview_sheet["A1"].expand("table").api.Sort(
+        Key1=colors_overview_sheet.range("O:O").api,
         Order1=2,
-        Key2=mechanics_sheet.range("B:B").api,
+        Key2=colors_overview_sheet.range("B:B").api,
         Header=1,
         Orientation=1,
     )
 
 
-def get_mechanics_df() -> pd.DataFrame:
+def get_colors_overview_df() -> pd.DataFrame:
     df_data = []
 
     mechanic_list = cards.Mechanic.get_mechanic_dict().values()
@@ -353,7 +353,7 @@ def get_mechanics_df() -> pd.DataFrame:
             cards.Color.BLACK.name: None,
             cards.Color.CYAN.name: None,
             "dev-stage": trait.metadata.dev_stage.name,
-            "notes": "[Notes for traits must be updated in the 'Traits' sheet]",
+            "notes": "[Use 'Traits' sheet]",
         }
 
         for color in trait.metadata.colors.primary:

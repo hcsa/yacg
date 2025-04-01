@@ -27,19 +27,19 @@ def import_from_excel():
     with xw.App(visible=False) as app:
         excel_book = app.books.open(str(EXCEL_PATH))
 
-        import_from_traits_sheet(excel_book.sheets["Traits"], excel_book.sheets["Mechanics"])
+        import_from_traits_sheet(excel_book.sheets["Traits"], excel_book.sheets["Colors Overview"])
         import_from_creatures_sheet(excel_book.sheets["Creatures"])
         import_from_effects_sheet(excel_book.sheets["Effects"])
-        import_from_mechanics_sheet(excel_book.sheets["Mechanics"])
+        import_from_colors_overview_sheet(excel_book.sheets["Colors Overview"])
 
 
-def import_from_traits_sheet(traits_sheet: xw.Sheet, mechanics_sheet: xw.Sheet):
+def import_from_traits_sheet(traits_sheet: xw.Sheet, colors_overview_sheet: xw.Sheet):
     df = import_traits_sheet_to_df(traits_sheet)
     populate_id_row(df, "T")
 
-    df_mechanics = import_mechanics_sheet_to_df(mechanics_sheet)
-    df_mechanics_colors = pd.melt(
-        df_mechanics,
+    df_colors_overview = import_colors_overview_sheet_to_df(colors_overview_sheet)
+    df_colors = pd.melt(
+        df_colors_overview,
         id_vars=["id"],
         value_vars=[
             cards.Color.ORANGE.name,
@@ -55,10 +55,10 @@ def import_from_traits_sheet(traits_sheet: xw.Sheet, mechanics_sheet: xw.Sheet):
         var_name="color",
         value_name="value"
     )
-    df_mechanics_colors = df_mechanics_colors[df_mechanics_colors["value"] != ""]
+    df_colors = df_colors[df_colors["value"] != ""]
 
     for _, row in df.iterrows():
-        df_row_colors = df_mechanics_colors[df_mechanics_colors["id"] == row["id"].strip()]
+        df_row_colors = df_colors[df_colors["id"] == row["id"].strip()]
 
         trait_data = cards.TraitData(
             name=row["name"].strip(),
@@ -143,6 +143,7 @@ def import_traits_sheet_to_df(traits_sheet: xw.Sheet) -> pd.DataFrame:
 
 def import_from_creatures_sheet(creatures_sheet: xw.Sheet):
     df = import_creatures_sheet_to_df(creatures_sheet)
+    populate_id_row(df, "C")
 
     for _, row in df.iterrows():
         traits = [
@@ -250,13 +251,12 @@ def import_creatures_sheet_to_df(creatures_sheet: xw.Sheet) -> pd.DataFrame:
             df[col].fillna(np.nan, inplace=True)
     df = df.astype(df_types)
 
-    populate_id_row(df, "C")
-
     return df
 
 
 def import_from_effects_sheet(effects_sheet: xw.Sheet):
     df = import_effects_sheet_to_df(effects_sheet)
+    populate_id_row(df, "E")
 
     for _, row in df.iterrows():
         effect_data = cards.EffectData(
@@ -331,13 +331,16 @@ def import_effects_sheet_to_df(effects_sheet: xw.Sheet) -> pd.DataFrame:
             df[col].fillna(np.nan, inplace=True)
     df = df.astype(df_types)
 
-    populate_id_row(df, "E")
-
     return df
 
 
-def import_from_mechanics_sheet(mechanics_sheet: xw.Sheet):
-    df = import_mechanics_sheet_to_df(mechanics_sheet)
+def import_from_colors_overview_sheet(colors_overview_sheet: xw.Sheet):
+    df = import_colors_overview_sheet_to_df(colors_overview_sheet)
+
+    # This df has mechanics and traits
+    # Assume rows without id are mechanics (traits are added through their sheet)
+    populate_id_row(df, "M")
+
     df_colors = pd.melt(
         df,
         id_vars=["id"],
@@ -393,7 +396,7 @@ def import_from_mechanics_sheet(mechanics_sheet: xw.Sheet):
             continue
 
 
-def import_mechanics_sheet_to_df(mechanics_sheet: xw.Sheet) -> pd.DataFrame:
+def import_colors_overview_sheet_to_df(colors_overview: xw.Sheet) -> pd.DataFrame:
     # Int64 is used here instead of int because it's nullable
     df_types = {
         "id": str,
@@ -412,8 +415,8 @@ def import_mechanics_sheet_to_df(mechanics_sheet: xw.Sheet) -> pd.DataFrame:
         "notes": str,
     }
 
-    excel_table_last_cell = mechanics_sheet.range("TableMechanic").last_cell
-    df_raw: pd.DataFrame = mechanics_sheet.range("A1", excel_table_last_cell).options(pd.DataFrame, index=False).value
+    excel_table_last_cell = colors_overview.range("TableMechanic").last_cell
+    df_raw: pd.DataFrame = colors_overview.range("A1", excel_table_last_cell).options(pd.DataFrame, index=False).value
     df_raw_cols_used = df_raw.columns[0:-1]
     df: pd.DataFrame = df_raw[df_raw_cols_used].copy()
     df = df.set_axis(
@@ -426,8 +429,6 @@ def import_mechanics_sheet_to_df(mechanics_sheet: xw.Sheet) -> pd.DataFrame:
         if col_type == "Int64":
             df[col].fillna(np.nan, inplace=True)
     df = df.astype(df_types)
-
-    populate_id_row(df, "M")
 
     return df
 
