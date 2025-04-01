@@ -1,5 +1,6 @@
 mechanic:
-  name: Search
+  name: |
+    Search
   id: M030
   colors:
     primary:

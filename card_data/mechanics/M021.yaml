@@ -1,5 +1,6 @@
 mechanic:
-  name: HP ally drain (+HP for an ally, -HP for another ally)
+  name: |
+    HP ally drain (+HP for an ally, -HP for another ally)
   id: M021
   colors:
     primary:

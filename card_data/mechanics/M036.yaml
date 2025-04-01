@@ -1,5 +1,6 @@
 mechanic:
-  name: Nullify damage to self/both
+  name: |
+    Nullify damage to self/both
   id: M036
   colors:
     primary:

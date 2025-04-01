@@ -1,5 +1,6 @@
 mechanic:
-  name: "Freeze" combat fields
+  name: |
+    "Freeze" combat fields
   id: M052
   colors:
     primary:

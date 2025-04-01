@@ -1,5 +1,6 @@
 mechanic:
-  name: -HP (effect, multi target)
+  name: |
+    -HP (effect, multi target)
   id: M019
   colors:
     primary:

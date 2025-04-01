@@ -1,5 +1,6 @@
 mechanic:
-  name: See opponent's hand
+  name: |
+    See opponent's hand
   id: M039
   colors:
     primary:

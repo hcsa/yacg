@@ -1,5 +1,6 @@
 mechanic:
-  name: Discard hard, draw cards
+  name: |
+    Discard hard, draw cards
   id: M025
   colors:
     primary:

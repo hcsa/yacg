@@ -1,5 +1,6 @@
 mechanic:
-  name: Cast creature from hand
+  name: |
+    Cast creature from hand
   id: M045
   colors:
     primary:

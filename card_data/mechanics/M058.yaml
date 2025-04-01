@@ -1,5 +1,6 @@
 mechanic:
-  name: Mill
+  name: |
+    Mill
   id: M058
   colors:
     primary:

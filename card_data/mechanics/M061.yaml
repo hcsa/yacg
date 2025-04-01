@@ -1,5 +1,6 @@
 mechanic:
-  name: Raise cost of playing effects
+  name: |
+    Raise cost of playing effects
   id: M061
   colors:
     primary:

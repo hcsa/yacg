@@ -1,5 +1,6 @@
 mechanic:
-  name: Creature removal (destroy all creatures)
+  name: |
+    Creature removal (destroy all creatures)
   id: M044
   colors:
     primary:

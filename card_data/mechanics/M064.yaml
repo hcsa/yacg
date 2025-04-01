@@ -1,5 +1,6 @@
 mechanic:
-  name: Spe working opposite
+  name: |
+    Spe working opposite
   id: M064
   colors:
     primary:

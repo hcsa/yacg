@@ -1,5 +1,6 @@
 mechanic:
-  name: Cast creature from discard pile
+  name: |
+    Cast creature from discard pile
   id: M046
   colors:
     primary:

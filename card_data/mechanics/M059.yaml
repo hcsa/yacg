@@ -1,5 +1,6 @@
 mechanic:
-  name: Lower cost of playing effects
+  name: |
+    Lower cost of playing effects
   id: M059
   colors:
     primary:

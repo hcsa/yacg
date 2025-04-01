@@ -1,5 +1,6 @@
 mechanic:
-  name: Can't be countered
+  name: |
+    Can't be countered
   id: M029
   colors:
     primary:

@@ -1,5 +1,6 @@
 mechanic:
-  name: Counter
+  name: |
+    Counter
   id: M028
   colors:
     primary:

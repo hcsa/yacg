@@ -1,5 +1,6 @@
 mechanic:
-  name: +Atk (effect, multi target)
+  name: |
+    +Atk (effect, multi target)
   id: M002
   colors:
     primary:

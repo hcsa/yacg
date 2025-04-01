@@ -1,5 +1,6 @@
 mechanic:
-  name: Time manipulation (new phases happening, or happening out of order)
+  name: |
+    Time manipulation (new phases happening, or happening out of order)
   id: M065
   colors:
     primary:

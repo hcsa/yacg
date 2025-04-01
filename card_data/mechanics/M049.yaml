@@ -1,5 +1,6 @@
 mechanic:
-  name: Debuff opponent on ally creature death
+  name: |
+    Debuff opponent on ally creature death
   id: M049
   colors:
     primary:

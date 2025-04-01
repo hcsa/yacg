@@ -1,5 +1,6 @@
 mechanic:
-  name: Creature removal (return to hand/deck)
+  name: |
+    Creature removal (return to hand/deck)
   id: M040
   colors:
     primary:

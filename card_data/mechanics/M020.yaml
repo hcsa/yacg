@@ -1,5 +1,6 @@
 mechanic:
-  name: -HP (aura, ongoing)
+  name: |
+    -HP (aura, ongoing)
   id: M020
   colors:
     primary:

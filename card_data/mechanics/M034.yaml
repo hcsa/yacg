@@ -1,5 +1,6 @@
 mechanic:
-  name: "Combining" creatures
+  name: |
+    "Combining" creatures
   id: M034
   colors:
     primary:

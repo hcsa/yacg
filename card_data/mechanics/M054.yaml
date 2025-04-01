@@ -1,5 +1,6 @@
 mechanic:
-  name: Use Spe as Atk
+  name: |
+    Use Spe as Atk
   id: M054
   colors:
     primary:

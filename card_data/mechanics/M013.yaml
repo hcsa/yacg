@@ -1,5 +1,6 @@
 mechanic:
-  name: -Spe (aura)
+  name: |
+    -Spe (aura)
   id: M013
   colors:
     primary:

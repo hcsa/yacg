@@ -1,5 +1,6 @@
 mechanic:
-  name: Creature protection against Atk/Spe reduction (self/others)
+  name: |
+    Creature protection against Atk/Spe reduction (self/others)
   id: M037
   colors:
     primary:

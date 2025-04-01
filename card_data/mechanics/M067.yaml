@@ -1,5 +1,6 @@
 mechanic:
-  name: Traits that buff defending creatures (second creature chosen in combat)
+  name: |
+    Traits that buff defending creatures (second creature chosen in combat)
   id: M067
   colors:
 

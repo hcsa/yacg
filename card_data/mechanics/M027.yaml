@@ -1,5 +1,6 @@
 mechanic:
-  name: Energy generation
+  name: |
+    Energy generation
   id: M027
   colors:
     primary:

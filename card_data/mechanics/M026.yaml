@@ -1,5 +1,6 @@
 mechanic:
-  name: Duplicate actions
+  name: |
+    Duplicate actions
   id: M026
   colors:
     primary:

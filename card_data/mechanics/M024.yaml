@@ -1,5 +1,6 @@
 mechanic:
-  name: Draw cards
+  name: |
+    Draw cards
   id: M024
   colors:
     primary:

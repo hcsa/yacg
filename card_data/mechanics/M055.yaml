@@ -1,5 +1,6 @@
 mechanic:
-  name: Switch speed and attack
+  name: |
+    Switch speed and attack
   id: M055
   colors:
     primary:

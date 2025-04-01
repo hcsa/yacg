@@ -1,5 +1,6 @@
 mechanic:
-  name: Traits that buff attacking creatures (first creature chosen in combat)
+  name: |
+    Traits that buff attacking creatures (first creature chosen in combat)
   id: M066
   colors:
 

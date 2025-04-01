@@ -1,5 +1,6 @@
 mechanic:
-  name: Creatures joining other creatures
+  name: |
+    Creatures joining other creatures
   id: M035
   colors:
     primary:

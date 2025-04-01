@@ -1,5 +1,6 @@
 mechanic:
-  name: -Spe (effect, single target)
+  name: |
+    -Spe (effect, single target)
   id: M011
   colors:
     primary:

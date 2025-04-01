@@ -1,5 +1,6 @@
 mechanic:
-  name: Token creature production
+  name: |
+    Token creature production
   id: M051
   colors:
     primary:

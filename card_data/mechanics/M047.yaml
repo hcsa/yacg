@@ -1,5 +1,6 @@
 mechanic:
-  name: Buff self/ally on ally creature death
+  name: |
+    Buff self/ally on ally creature death
   id: M047
   colors:
     primary:

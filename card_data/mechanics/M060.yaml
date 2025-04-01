@@ -1,5 +1,6 @@
 mechanic:
-  name: Lower cost of playing creatures
+  name: |
+    Lower cost of playing creatures
   id: M060
   colors:
     primary:

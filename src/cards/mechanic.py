@@ -125,9 +125,11 @@ class Mechanic(GameElement):
 
         notes_str = self.notes.strip().replace("\n", "\n    ")
 
+        # -- Name below has a newline because mechanics' names may have quotes
         yaml_content = f"""
 mechanic:
-  name: {self.name}
+  name: |
+    {self.name}
   id: {self.id}
   colors:{colors_str}
   dev-stage: {self.dev_stage.name}

@@ -1,5 +1,6 @@
 mechanic:
-  name: Anti-field, destroy field (trait or effect)
+  name: |
+    Anti-field, destroy field (trait or effect)
   id: M032
   colors:
     primary:

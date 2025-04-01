@@ -1,5 +1,6 @@
 mechanic:
-  name: Raise cost of playing creatures
+  name: |
+    Raise cost of playing creatures
   id: M062
   colors:
     primary:

@@ -1,5 +1,6 @@
 mechanic:
-  name: Self mill
+  name: |
+    Self mill
   id: M057
   colors:
     primary:

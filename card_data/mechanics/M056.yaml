@@ -1,5 +1,6 @@
 mechanic:
-  name: Limit size of effect stack
+  name: |
+    Limit size of effect stack
   id: M056
   colors:
     primary:

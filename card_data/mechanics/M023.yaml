@@ -1,5 +1,6 @@
 mechanic:
-  name: Inflict poison
+  name: |
+    Inflict poison
   id: M023
   colors:
     primary:

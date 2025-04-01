@@ -1,5 +1,6 @@
 mechanic:
-  name: Debuff opponent on opponent creature death
+  name: |
+    Debuff opponent on opponent creature death
   id: M050
   colors:
     primary:

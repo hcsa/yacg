@@ -1,5 +1,6 @@
 mechanic:
-  name: Force combat
+  name: |
+    Force combat
   id: M033
   colors:
     primary:

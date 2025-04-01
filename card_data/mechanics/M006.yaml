@@ -1,5 +1,6 @@
 mechanic:
-  name: -Atk (aura)
+  name: |
+    -Atk (aura)
   id: M006
   colors:
     primary:

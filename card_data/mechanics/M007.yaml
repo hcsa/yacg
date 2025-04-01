@@ -1,5 +1,6 @@
 mechanic:
-  name: Atk ally drain (+Atk for an ally, -Atk for another ally)
+  name: |
+    Atk ally drain (+Atk for an ally, -Atk for another ally)
   id: M007
   colors:
     primary:

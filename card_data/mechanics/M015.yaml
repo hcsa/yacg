@@ -1,5 +1,6 @@
 mechanic:
-  name: +HP (effect, single target)
+  name: |
+    +HP (effect, single target)
   id: M015
   colors:
     primary:
