@@ -1,0 +1,10 @@
+mechanic:
+  name: |
+    Traits that buff defending creatures (second creature chosen in combat)
+  id: M067
+  colors:
+
+  dev-stage: Alpha-0
+  order: 1404
+  notes: |
+    

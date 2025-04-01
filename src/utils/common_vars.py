@@ -38,6 +38,7 @@ CARD_DATA_PATH = BASE_DIR / "card_data"
 CREATURE_DATA_PATH = CARD_DATA_PATH / "creatures"
 EFFECT_DATA_PATH = CARD_DATA_PATH / "effects"
 TRAIT_DATA_PATH = CARD_DATA_PATH / "traits"
+MECHANIC_DATA_PATH = CARD_DATA_PATH / "mechanics"
 
 VALUES_DATA_PATH = BASE_DIR / "dev_data" / "values.yaml"
 

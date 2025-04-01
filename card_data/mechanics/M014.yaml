@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    Spe ally drain (+Spe for an ally, -Spe for another ally)
+  id: M014
+  colors:
+    primary:
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 304
+  notes: |
+    

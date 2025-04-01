@@ -6,10 +6,13 @@ trait:
   metadata:
     id: T013
     type: Combat
+    colors:
+      primary:
+        - White
     value: 60
     dev-stage: Alpha-0
     dev-name: Double strike
     order: 502
     summary: Attacks twice
     notes: |
-      * Main colors: White
+      

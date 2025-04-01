@@ -6,10 +6,15 @@ trait:
   metadata:
     id: T032
     type: Other
+    colors:
+      primary:
+        - Purple
+      secondary:
+        - Yellow
     value: 20
     dev-stage: Alpha-0
     dev-name: Restless
     order: 807
     summary: When put it trash, goes back to hand
     notes: |
-      * Main colors: Purple
+      

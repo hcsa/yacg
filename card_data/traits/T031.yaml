@@ -6,10 +6,15 @@ trait:
   metadata:
     id: T031
     type: Combat
+    colors:
+      primary:
+        - Orange
+      secondary:
+        - Purple
     value: -15
     dev-stage: Alpha-0
     dev-name: Reckless
     order: 605
     summary: Hurts itself when it attacks
     notes: |
-      * Main colors: Orange
+      

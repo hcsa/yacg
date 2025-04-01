@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    -Spe (effect, multi target)
+  id: M012
+  colors:
+    primary:
+      - Cyan
+
+  dev-stage: Alpha-0
+  order: 312
+  notes: |
+    When it's an ongoing effect, amount can be fixed or dynamic

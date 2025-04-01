@@ -6,10 +6,14 @@ trait:
   metadata:
     id: T029
     type: Entry
+    colors:
+      primary:
+        - Green
+        - Blue
     value: 10
     dev-stage: Alpha-0
     dev-name: Rain setter
     order: 202
     summary: Rain setter
     notes: |
-      * Main colors: Blue, Green
+      

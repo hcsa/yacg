@@ -6,10 +6,13 @@ trait:
   metadata:
     id: T016
     type: Other
+    colors:
+      primary:
+        - Yellow
     value: 15
     dev-stage: Alpha-0
     dev-name: Energetic
     order: 313
     summary: +Spd w/ friends
     notes: |
-      * Main colors: Yellow
+      * [HS] Nerfed friends abilities

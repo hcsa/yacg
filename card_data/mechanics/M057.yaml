@@ -1,0 +1,13 @@
+mechanic:
+  name: |
+    Self mill
+  id: M057
+  colors:
+    primary:
+      - Purple
+      - Black
+
+  dev-stage: Alpha-0
+  order: 1011
+  notes: |
+    As a side effect of another thing happening

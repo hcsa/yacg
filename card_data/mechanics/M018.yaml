@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    -HP (effect, single target)
+  id: M018
+  colors:
+    primary:
+      - Orange
+    secondary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 111
+  notes: |
+    

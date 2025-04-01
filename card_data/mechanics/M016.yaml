@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    +HP (effect, multi target)
+  id: M016
+  colors:
+    primary:
+      - Blue
+    tertiary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 102
+  notes: |
+    When it's an ongoing effect, amount can be fixed or dynamic

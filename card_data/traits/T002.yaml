@@ -6,10 +6,15 @@ trait:
   metadata:
     id: T002
     type: Other
+    colors:
+      primary:
+        - White
+      tertiary:
+        - Orange
     value: 15
     dev-stage: Alpha-0
     dev-name: Avenger
     order: 103
     summary: +Atk when ally dies
     notes: |
-      * Main colors: White
+      

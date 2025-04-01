@@ -6,10 +6,15 @@ trait:
   metadata:
     id: T023
     type: Other
+    colors:
+      primary:
+        - Blue
+      secondary:
+        - White
     value: 20
     dev-stage: Alpha-0
     dev-name: Immunity
     order: 804
     summary: Can't be targeted
     notes: |
-      * Main colors: Blue, Pink
+      

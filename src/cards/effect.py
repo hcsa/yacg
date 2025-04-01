@@ -4,7 +4,7 @@ from typing import Optional, Self, ClassVar, Dict
 import yaml
 
 from src.cards.abstract_classes import Card
-from src.cards.enums import Color, DevStage, EffectType, _MechanicIdPrefix
+from src.cards.enums import Color, DevStage, EffectType, _GameElementIdPrefix
 from src.utils import EFFECT_DATA_PATH
 
 
@@ -32,14 +32,17 @@ class EffectMetadata:
 
 @dataclass(frozen=True)
 class Effect(Card):
+    id_prefix: ClassVar[str] = _GameElementIdPrefix.EFFECT
     _effect_dict: ClassVar[Dict[str, Self]] = {}
 
     data: EffectData
     metadata: EffectMetadata
 
     def __post_init__(self):
-        if not self.metadata.id.startswith(_MechanicIdPrefix.EFFECT):
-            raise ValueError(f"Effect's ID '{self.metadata.id}' doesn't start with prefix '{_MechanicIdPrefix.EFFECT}'")
+        if not self.metadata.id.startswith(self.id_prefix):
+            raise ValueError(
+                f"Effect's ID '{self.metadata.id}' doesn't start with prefix '{self.id_prefix}'"
+            )
         if self.metadata.id in self._effect_dict:
             raise ValueError(f"Effect with ID '{self.metadata.id}' already exists")
         self._effect_dict[self.metadata.id] = self

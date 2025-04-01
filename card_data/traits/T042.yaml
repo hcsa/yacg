@@ -6,7 +6,14 @@ trait:
   metadata:
     id: T042
     type: Other
-    value: 15
+    colors:
+      primary:
+        - Pink
+      secondary:
+        - Black
+      tertiary:
+        - Cyan
+    value: 0
     dev-stage: Conception
     dev-name: 
     order: 902

@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    HP ally drain (+HP for an ally, -HP for another ally)
+  id: M021
+  colors:
+    primary:
+      - Purple
+
+  dev-stage: Alpha-0
+  order: 104
+  notes: |
+    

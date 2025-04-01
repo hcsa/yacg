@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    Inflict burn
+  id: M022
+  colors:
+    primary:
+      - Orange
+
+  dev-stage: Alpha-0
+  order: 501
+  notes: |
+    

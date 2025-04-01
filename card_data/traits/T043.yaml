@@ -6,7 +6,14 @@ trait:
   metadata:
     id: T043
     type: Other
-    value: 25
+    colors:
+      primary:
+        - Purple
+        - Black
+      tertiary:
+        - Green
+        - Blue
+    value: 0
     dev-stage: Conception
     dev-name: 
     order: 903

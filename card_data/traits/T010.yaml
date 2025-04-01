@@ -6,10 +6,16 @@ trait:
   metadata:
     id: T010
     type: Other
+    colors:
+      primary:
+        - White
+      tertiary:
+        - Green
+        - Blue
     value: 40
     dev-stage: Alpha-0
     dev-name: Defender
     order: 401
     summary: Takes damage from allies
     notes: |
-      * Main colors: White, Green
+      

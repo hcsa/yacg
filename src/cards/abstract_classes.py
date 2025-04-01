@@ -4,9 +4,9 @@ from typing import Optional
 from src.cards.enums import Color, DevStage
 
 
-class Mechanic(ABC):
+class GameElement(ABC):
     """
-    Implements a game mechanic relevant enough to be sorted and version-controlled
+    Implements a game element relevant enough to be indexed and version-controlled
     """
 
     @abstractmethod
@@ -22,7 +22,7 @@ class Mechanic(ABC):
         pass
 
 
-class Card(Mechanic):
+class Card(GameElement):
     """
     Implements a playable card
     """

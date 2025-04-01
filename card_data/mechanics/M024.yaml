@@ -1,0 +1,13 @@
+mechanic:
+  name: |
+    Draw cards
+  id: M024
+  colors:
+    primary:
+      - Pink
+      - Black
+
+  dev-stage: Alpha-0
+  order: 1001
+  notes: |
+    o preto dá draw ao branco

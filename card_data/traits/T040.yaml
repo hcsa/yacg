@@ -6,7 +6,16 @@ trait:
   metadata:
     id: T040
     type: Other
-    value: 15
+    colors:
+      primary:
+        - Purple
+      secondary:
+        - Yellow
+        - Cyan
+      tertiary:
+        - Orange
+        - Black
+    value: 0
     dev-stage: Conception
     dev-name: Flash
     order: 901

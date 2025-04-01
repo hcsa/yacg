@@ -6,10 +6,18 @@ trait:
   metadata:
     id: T038
     type: Combat
+    colors:
+      primary:
+        - Black
+      secondary:
+        - Cyan
+      tertiary:
+        - Green
+        - Pink
     value: 35
     dev-stage: Alpha-0
     dev-name: Trickster
     order: 607
     summary: Reverses speed order in combat
     notes: |
-      * Main colors: Black
+      

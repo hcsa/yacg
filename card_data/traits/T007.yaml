@@ -6,11 +6,15 @@ trait:
   metadata:
     id: T007
     type: Other
+    colors:
+      primary:
+        - Cyan
+      tertiary:
+        - Purple
     value: 15
     dev-stage: Alpha-0
     dev-name: Cold personality
     order: 314
     summary: -Spd w/ friends
     notes: |
-      * Main colors: Cyan
       * [HS] Nerfed friends abilities

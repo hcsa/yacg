@@ -6,10 +6,15 @@ trait:
   metadata:
     id: T008
     type: Combat
+    colors:
+      primary:
+        - Purple
+      secondary:
+        - Green
     value: 20
     dev-stage: Alpha-0
     dev-name: Death touch
     order: 601
     summary: Kills whenever gives damage
     notes: |
-      * Main colors: Purple
+      

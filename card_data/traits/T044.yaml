@@ -6,6 +6,14 @@ trait:
   metadata:
     id: T044
     type: Combat
+    colors:
+      primary:
+        - Orange
+        - White
+      secondary:
+        - Cyan
+      tertiary:
+        - Green
     value: 20
     dev-stage: Alpha-0
     dev-name: 

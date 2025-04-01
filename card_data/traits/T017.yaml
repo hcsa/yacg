@@ -6,10 +6,14 @@ trait:
   metadata:
     id: T017
     type: Combat
+    colors:
+      primary:
+        - White
+        - Yellow
     value: 40
     dev-stage: Alpha-0
     dev-name: First strike
     order: 501
     summary: Attacks first
     notes: |
-      * Main colors: White, Yellow
+      

@@ -6,6 +6,11 @@ trait:
   metadata:
     id: T041
     type: Combat
+    colors:
+      primary:
+        - Purple
+      secondary:
+        - Black
     value: 20
     dev-stage: Alpha-0
     dev-name: Vindicative

@@ -6,10 +6,14 @@ trait:
   metadata:
     id: T035
     type: Entry
+    colors:
+      primary:
+        - Orange
+        - Green
     value: 10
     dev-stage: Alpha-0
     dev-name: Sun setter
     order: 201
     summary: Sun setter
     notes: |
-      * Main colors: Orange, Green
+      

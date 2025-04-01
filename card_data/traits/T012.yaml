@@ -6,12 +6,16 @@ trait:
   metadata:
     id: T012
     type: Entry
+    colors:
+      primary:
+        - Pink
+      tertiary:
+        - Black
     value: 10
     dev-stage: Alpha-0
     dev-name: Disable
     order: 702
     summary: Stop casting copies of a creature
     notes: |
-      * Main colors: Pink
       * [HS] Seemed more useful when there were 4 copies of the same card. Now seems very situational, only useful against ally traits and weather setting traits. Maybe could be replaced by disabling the traits of a creature?
       * [HS] Buffed to disable creatures that share a trait (instead of name)

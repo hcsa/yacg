@@ -38,6 +38,7 @@ def export_to_excel():
         export_to_traits_sheet(excel_book.sheets["Traits"])
         export_to_creatures_sheet(excel_book.sheets["Creatures"])
         export_to_effects_sheet(excel_book.sheets["Effects"])
+        export_to_colors_overview_sheet(excel_book.sheets["Colors Overview"])
         export_to_creature_values_sheet(excel_book.sheets["Creatures - Value"])
 
         excel_book.save()
@@ -260,6 +261,124 @@ def get_effects_df() -> pd.DataFrame:
         "cost-color",
         "description",
         "flavor-text",
+        "dev-stage",
+        "dev-name",
+        "summary",
+        "notes"
+    ])
+    return df
+
+
+def export_to_colors_overview_sheet(colors_overview_sheet: xw.Sheet):
+    df = get_colors_overview_df()
+
+    # Copy formatting from template row
+    for _ in range(len(df)):
+        colors_overview_sheet.range("3:3").insert(
+            shift="down",
+            copy_origin="format_from_left_or_above"
+        )
+
+    colors_overview_sheet["A3"].options(index=False, header=False).value = df["id"]
+    colors_overview_sheet["B3"].options(index=False, header=False).value = df["order"]
+    colors_overview_sheet["C3"].options(index=False, header=False).value = df["name"]
+    colors_overview_sheet["D3"].options(index=False, header=False).value = df[cards.Color.ORANGE.name]
+    colors_overview_sheet["E3"].options(index=False, header=False).value = df[cards.Color.GREEN.name]
+    colors_overview_sheet["F3"].options(index=False, header=False).value = df[cards.Color.BLUE.name]
+    colors_overview_sheet["G3"].options(index=False, header=False).value = df[cards.Color.WHITE.name]
+    colors_overview_sheet["H3"].options(index=False, header=False).value = df[cards.Color.YELLOW.name]
+    colors_overview_sheet["I3"].options(index=False, header=False).value = df[cards.Color.PURPLE.name]
+    colors_overview_sheet["J3"].options(index=False, header=False).value = df[cards.Color.PINK.name]
+    colors_overview_sheet["K3"].options(index=False, header=False).value = df[cards.Color.BLACK.name]
+    colors_overview_sheet["L3"].options(index=False, header=False).value = df[cards.Color.CYAN.name]
+    colors_overview_sheet["M3"].options(index=False, header=False).value = df["dev-stage"]
+    colors_overview_sheet["N3"].options(index=False, header=False).value = df["notes"]
+
+    # Delete template row
+    colors_overview_sheet.range("2:2").delete(shift="up")
+
+    colors_overview_sheet["A1"].expand("table").api.Sort(
+        Key1=colors_overview_sheet.range("O:O").api,
+        Order1=2,
+        Key2=colors_overview_sheet.range("B:B").api,
+        Header=1,
+        Orientation=1,
+    )
+
+
+def get_colors_overview_df() -> pd.DataFrame:
+    df_data = []
+
+    mechanic_list = cards.Mechanic.get_mechanic_dict().values()
+    for mechanic in mechanic_list:
+        df_row = {
+            "id": mechanic.id,
+            "order": mechanic.order,
+            "name": mechanic.name,
+            cards.Color.ORANGE.name: None,
+            cards.Color.GREEN.name: None,
+            cards.Color.BLUE.name: None,
+            cards.Color.WHITE.name: None,
+            cards.Color.YELLOW.name: None,
+            cards.Color.PURPLE.name: None,
+            cards.Color.PINK.name: None,
+            cards.Color.BLACK.name: None,
+            cards.Color.CYAN.name: None,
+            "dev-stage": mechanic.dev_stage.name,
+            "notes": mechanic.notes,
+        }
+
+        for color in mechanic.colors.primary:
+            df_row[color.name] = "XXX"
+        for color in mechanic.colors.secondary:
+            df_row[color.name] = "XX"
+        for color in mechanic.colors.tertiary:
+            df_row[color.name] = "X"
+
+        df_data.append(df_row)
+
+    trait_list = cards.Trait.get_trait_dict().values()
+    for trait in trait_list:
+        df_row = {
+            "id": trait.metadata.id,
+            "order": 10000 + trait.metadata.order,
+            "name": f"{trait.data.name}\n{trait.data.description}",
+            cards.Color.ORANGE.name: None,
+            cards.Color.GREEN.name: None,
+            cards.Color.BLUE.name: None,
+            cards.Color.WHITE.name: None,
+            cards.Color.YELLOW.name: None,
+            cards.Color.PURPLE.name: None,
+            cards.Color.PINK.name: None,
+            cards.Color.BLACK.name: None,
+            cards.Color.CYAN.name: None,
+            "dev-stage": trait.metadata.dev_stage.name,
+            "notes": "[Use 'Traits' sheet]",
+        }
+
+        for color in trait.metadata.colors.primary:
+            df_row[color.name] = "XXX"
+        for color in trait.metadata.colors.secondary:
+            df_row[color.name] = "XX"
+        for color in trait.metadata.colors.tertiary:
+            df_row[color.name] = "X"
+
+        df_data.append(df_row)
+
+    # noinspection PyTypeChecker
+    df = pd.DataFrame(data=df_data, dtype=object, columns=[
+        "id",
+        "order",
+        "name",
+        cards.Color.ORANGE.name,
+        cards.Color.GREEN.name,
+        cards.Color.BLUE.name,
+        cards.Color.WHITE.name,
+        cards.Color.YELLOW.name,
+        cards.Color.PURPLE.name,
+        cards.Color.PINK.name,
+        cards.Color.BLACK.name,
+        cards.Color.CYAN.name,
         "dev-stage",
         "dev-name",
         "summary",

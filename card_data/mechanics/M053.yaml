@@ -1,0 +1,12 @@
+mechanic:
+  name: |
+    Use Atk as Spe
+  id: M053
+  colors:
+    primary:
+      - Orange
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

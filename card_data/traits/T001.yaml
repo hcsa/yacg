@@ -6,10 +6,16 @@ trait:
   metadata:
     id: T001
     type: Combat
+    colors:
+      primary:
+        - Black
+      secondary:
+        - Blue
+        - Purple
     value: -10
     dev-stage: Alpha-0
     dev-name: Arrogant
     order: 102
     summary: -Atk when kills
     notes: |
-      * Main colors: Black, Green
+      

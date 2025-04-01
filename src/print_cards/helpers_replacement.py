@@ -43,7 +43,7 @@ def _replace_descriptions(text_frame: illustrator_com.TextFrame):
 
 def _get_replacement_text_for_description_match(match: re.Match) -> str:
     trait_id = str(match["id"])
-    trait = cards.get_mechanic(trait_id)
+    trait = cards.get_game_element(trait_id)
     if not isinstance(trait, cards.Trait):
         raise errors.CardPrintError(f"Found reference '{match.group(0)}', but '{trait_id}' isn't a trait ID")
 
@@ -96,7 +96,7 @@ def _replace_keywords_and_names(text_frame: illustrator_com.TextFrame) -> Tuple[
 
 def _get_replacement_text_for_name_match(match: re.match) -> str:
     mechanic_id = str(match["id"])
-    mechanic = cards.get_mechanic(mechanic_id)
+    mechanic = cards.get_game_element(mechanic_id)
 
     replacement = mechanic.get_name()
     if replacement == "" and isinstance(mechanic, cards.Card):

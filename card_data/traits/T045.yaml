@@ -6,6 +6,11 @@ trait:
   metadata:
     id: T045
     type: Other
+    colors:
+      primary:
+        - Pink
+      secondary:
+        - Black
     value: 60
     dev-stage: Alpha-0
     dev-name: Mind Defender

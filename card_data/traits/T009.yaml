@@ -6,6 +6,14 @@ trait:
   metadata:
     id: T009
     type: Other
+    colors:
+      primary:
+        - Purple
+      secondary:
+        - Black
+      tertiary:
+        - Green
+        - Yellow
     value: -10
     dev-stage: Alpha-0
     dev-name: Defeatist

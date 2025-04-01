@@ -1,0 +1,15 @@
+mechanic:
+  name: |
+    Nullify damage to self/both
+  id: M036
+  colors:
+    primary:
+      - Blue
+      - Cyan
+    secondary:
+      - White
+
+  dev-stage: Alpha-0
+  order: 1999
+  notes: |
+    

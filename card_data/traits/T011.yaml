@@ -6,10 +6,15 @@ trait:
   metadata:
     id: T011
     type: Other
+    colors:
+      primary:
+        - Purple
+      secondary:
+        - Black
     value: 45
     dev-stage: Alpha-0
     dev-name: Destiny bond
     order: 803
     summary: Kill next cast creature
     notes: |
-      * Main colors: Purple
+      

@@ -1,0 +1,14 @@
+mechanic:
+  name: |
+    Creature removal (return to hand/deck)
+  id: M040
+  colors:
+    primary:
+      - Cyan
+    tertiary:
+      - Blue
+
+  dev-stage: Alpha-0
+  order: 1201
+  notes: |
+    Must be based on creature's stats (Atk/Spe less than X)

@@ -1,0 +1,15 @@
+mechanic:
+  name: |
+    Cast creature from hand
+  id: M045
+  colors:
+    primary:
+      - Pink
+    secondary:
+      - Blue
+      - Cyan
+
+  dev-stage: Alpha-0
+  order: 1301
+  notes: |
+    Must be based on creature's stats (HP/Atk/Spe less than X) or for specific traits (eg: Purple with Frail)
