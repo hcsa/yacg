@@ -27,7 +27,6 @@ class Mechanic(GameElement):
     order: Optional[int] = None
     notes: str = ""
 
-
     def __post_init__(self):
         if not self.id.startswith(_GameElementIdPrefix.MECHANIC):
             raise ValueError(f"Mechanic's ID '{self.id}' doesn't start with prefix '{_GameElementIdPrefix.MECHANIC}'")
@@ -128,7 +127,6 @@ class Mechanic(GameElement):
 
         yaml_content = f"""
 mechanic:
-  data:
   name: {self.name}
   id: {self.id}
   colors:{colors_str}
