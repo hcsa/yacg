@@ -12,7 +12,7 @@ creature:
         description: At the beginning of combat, you can have this (CREATURE) attack first. Can only be used once.
         id: TRA-017
       - name: Avenger
-        description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK).
+        description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK-S).
         id: TRA-002
     atk-strong: 3
     atk-technical: 1

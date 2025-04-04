@@ -1,7 +1,7 @@
 trait:
   data:
     name: Aura Animosity
-    description: In combat, if the opposing (CREATURE) has (AURA)s, get +2 (ATK).
+    description: In combat, if the opposing (CREATURE) has (AURA)s, get +2 (ATK-S).
 
   metadata:
     id: TRA-044

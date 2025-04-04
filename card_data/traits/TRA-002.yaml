@@ -1,7 +1,7 @@
 trait:
   data:
     name: Avenger
-    description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK).
+    description: If an ally (CREATURE) is killed or destroyed, get +1 (ATK-S).
 
   metadata:
     id: TRA-002

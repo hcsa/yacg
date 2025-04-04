@@ -1,7 +1,7 @@
 trait:
   data:
     name: Power Down
-    description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
+    description: If this (CREATURE) kills another (CREATURE), get -1 (ATK-S).
 
   metadata:
     id: TRA-001

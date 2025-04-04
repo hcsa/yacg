@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: Power Down
-        description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
+        description: If this (CREATURE) kills another (CREATURE), get -1 (ATK-S).
         id: TRA-001
     atk-strong: 3
     atk-technical: 1

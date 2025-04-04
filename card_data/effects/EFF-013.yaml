@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 0
     description: |
-      Target (CREATURE) gets +1 (HP) and +1 (ATK).
+      Target (CREATURE) gets +1 (HP) and +1 (ATK-S).
     flavor-text: |
       They grow up so fast!
 

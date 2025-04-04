@@ -1,7 +1,7 @@
 trait:
   data:
     name: Scary Stare
-    description: In combat, opposing (CREATURE) gets -1 (ATK).
+    description: In combat, opposing (CREATURE) gets -1 (ATK-S).
 
   metadata:
     id: TRA-024

@@ -9,7 +9,7 @@ creature:
     spe: 1
     traits:
       - name: Iron Will
-        description: This (CREATURE)'s (ATK) and (SPE) can't be lowered.
+        description: This (CREATURE)'s (ATK-S) and (SPE) can't be lowered.
         id: TRA-005
     atk-strong: 3
     atk-technical: 1

@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: Defeatist
-        description: If an ally (CREATURE) is killed or destroyed, get -1 (ATK).
+        description: If an ally (CREATURE) is killed or destroyed, get -1 (ATK-S).
         id: TRA-009
     atk-strong: 2
     atk-technical: 1

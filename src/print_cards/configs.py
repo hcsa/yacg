@@ -51,7 +51,7 @@ KEYWORD_TO_CHARACTER_DICT = {
     "(FIELD)": "\uE103",
 
     "(HP)": "\uE200",
-    "(ATK)": "\uE201",
+    "(ATK-S)": "\uE201",
     "(SPE)": "\uE202",
 
     "(NOCOLOR)": "\uE300",
