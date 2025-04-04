@@ -4,7 +4,7 @@ attack:
     description: This (CREATURE) deals (REF:VARIABLE) damage to another (CREATURE).
 
   metadata:
-    id: ATT-001
+    id: ATK-001
     colors:
       primary:
         - Yellow

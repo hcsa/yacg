@@ -17,7 +17,7 @@ creature:
       name: Longshot
       variable: 1
       description: This (CREATURE) deals (REF:VARIABLE) damage to another (CREATURE).
-      id: ATT-001
+      id: ATK-001
     flavor-text: |
       
 
