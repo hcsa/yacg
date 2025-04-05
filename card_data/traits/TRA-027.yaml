@@ -1,7 +1,7 @@
 trait:
   data:
     name: Power Up
-    description: If this (CREATURE) kills another (CREATURE), get +1 (ATK).
+    description: If this (CREATURE) kills another (CREATURE), get +1 (SATK).
 
   metadata:
     id: TRA-027

@@ -9,7 +9,7 @@ creature:
     spe: 1
     traits:
       - name: Bully Aura
-        description: If another ally (CREATURE) has (REF:TRA-018.NAME), every opposing (CREATURE) gets -1 (ATK). For each additional ally that has (REF:TRA-018.NAME), every opposing (CREATURE) gets -1 (ATK).
+        description: If another ally (CREATURE) has (REF:TRA-018.NAME), every opposing (CREATURE) gets -1 (SATK). For each additional ally that has (REF:TRA-018.NAME), every opposing (CREATURE) gets -1 (SATK).
         id: TRA-018
     atk-strong: 1
     atk-technical: 1

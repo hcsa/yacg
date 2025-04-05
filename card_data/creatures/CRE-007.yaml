@@ -9,10 +9,10 @@ creature:
     spe: 3
     traits:
       - name: Power Down
-        description: If this (CREATURE) kills another (CREATURE), get -1 (ATK).
+        description: If this (CREATURE) kills another (CREATURE), get -1 (SATK).
         id: TRA-001
       - name: Defeatist
-        description: If an ally (CREATURE) is killed or destroyed, get -1 (ATK).
+        description: If an ally (CREATURE) is killed or destroyed, get -1 (SATK).
         id: TRA-009
     atk-strong: 3
     atk-technical: 1

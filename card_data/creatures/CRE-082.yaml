@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: Valor Aura
-        description: If another ally (CREATURE) has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (ATK). For each additional ally that has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (ATK).
+        description: If another ally (CREATURE) has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (SATK). For each additional ally that has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (SATK).
         id: TRA-030
       - name: Martyr
         description: If another (CREATURE) were to take combat damage that would kill it, you can choose to kill this (CREATURE). If so, combat damage is nullified.

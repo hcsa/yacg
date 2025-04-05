@@ -9,7 +9,7 @@ creature:
     spe: 0
     traits:
       - name: Scary Stare
-        description: In combat, opposing (CREATURE) gets -1 (ATK).
+        description: In combat, opposing (CREATURE) gets -1 (SATK).
         id: TRA-024
       - name: Brute
         description: If this (CREATURE) deals excessive damage, opponent chooses opposing (CREATURE)s to take it.

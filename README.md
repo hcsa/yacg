@@ -38,25 +38,25 @@ This project uses two fonts, which are stored in the [fonts](/card_design/fonts)
   texts, to replace certain keywords with appropriate icons. These are stored in Unicode characters, in the block from
   U+E000 to U+F8FF (which is reserved for private use).
 
-| **Icon** | **Keyword** | **Unicode** |
-|:--------:|:-----------:|:-----------:|
-| Creature | (CREATURE)  |    E100     |
-|  Action  |  (ACTION)   |    E101     |
-|   Aura   |   (AURA)    |    E102     |
-|  Field   |   (FIELD)   |    E103     |
-|    HP    |    (HP)     |    E200     |
-|   Atk    |    (ATK)    |    E201     |
-|   Spe    |    (SPE)    |    E202     |
-| No color |  (NOCOLOR)  |    E300     |
-|  Black   |   (BLACK)   |    E301     |
-|   Blue   |   (BLUE)    |    E302     |
-|   Cyan   |   (CYAN)    |    E303     |
-|  Green   |   (GREEN)   |    E304     |
-|  Orange  |  (ORANGE)   |    E305     |
-|   Pink   |   (PINK)    |    E306     |
-|  Purple  |  (PURPLE)   |    E307     |
-|  White   |   (WHITE)   |    E308     |
-|  Yellow  |  (YELLOW)   |    E309     |
+|  **Icon**  | **Keyword** | **Unicode** |
+|:----------:|:-----------:|:-----------:|
+|  Creature  | (CREATURE)  |    E100     |
+|   Action   |  (ACTION)   |    E101     |
+|    Aura    |   (AURA)    |    E102     |
+|   Field    |   (FIELD)   |    E103     |
+|     HP     |    (HP)     |    E200     |
+| Strong Atk |   (SATK)    |    E201     |
+|    Spe     |    (SPE)    |    E202     |
+|  No color  |  (NOCOLOR)  |    E300     |
+|   Black    |   (BLACK)   |    E301     |
+|    Blue    |   (BLUE)    |    E302     |
+|    Cyan    |   (CYAN)    |    E303     |
+|   Green    |   (GREEN)   |    E304     |
+|   Orange   |  (ORANGE)   |    E305     |
+|    Pink    |   (PINK)    |    E306     |
+|   Purple   |  (PURPLE)   |    E307     |
+|   White    |   (WHITE)   |    E308     |
+|   Yellow   |  (YELLOW)   |    E309     |
 
 - The [auxiliary font](./card_design/fonts/YACG-Auxiliary.ttf) is used when generating the cards. It contains a
   character for all the Unicode characters form the icons font, plus all the characters from U+0020 to U+007E (Basic

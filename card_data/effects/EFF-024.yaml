@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Every ally (CREATURE) gets +1 (ATK).
+      Every ally (CREATURE) gets +1 (SATK).
     flavor-text: |
       
 

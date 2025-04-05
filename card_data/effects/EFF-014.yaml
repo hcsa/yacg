@@ -6,7 +6,7 @@ effect:
     cost-total: 3
     cost-color: 2
     description: |
-      Target (CREATURE) gets +4 (HP) and +2 (ATK).
+      Target (CREATURE) gets +4 (HP) and +2 (SATK).
       Target (CREATURE) has (REF:TRA-034.NAME) ((REF:TRA-034.DESCRIPTION)).
     flavor-text: |
       Sometimes the enemy is hiding in front of you

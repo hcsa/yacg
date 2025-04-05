@@ -12,7 +12,7 @@ creature:
         description: When this (CREATURE) is played, it deals 1 damage to every other (CREATURE).
         id: TRA-015
       - name: Scary Stare
-        description: In combat, opposing (CREATURE) gets -1 (ATK).
+        description: In combat, opposing (CREATURE) gets -1 (SATK).
         id: TRA-024
       - name: Brute
         description: If this (CREATURE) deals excessive damage, opponent chooses opposing (CREATURE)s to take it.

@@ -9,7 +9,7 @@ creature:
     spe: 2
     traits:
       - name: Valor Aura
-        description: If another ally (CREATURE) has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (ATK). For each additional ally that has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (ATK).
+        description: If another ally (CREATURE) has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (SATK). For each additional ally that has (REF:TRA-030.NAME), every ally (CREATURE) gets +1 (SATK).
         id: TRA-030
     atk-strong: 1
     atk-technical: 0
@@ -17,7 +17,7 @@ creature:
       name: Longshot
       variable: 1
       description: This (CREATURE) deals (REF:VARIABLE) damage to another (CREATURE).
-      id: ATT-001
+      id: ATK-001
     flavor-text: |
       
 

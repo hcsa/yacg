@@ -10,7 +10,7 @@ class _GameElementIdPrefix(StrEnum):
     If you change this, you'll have to change all ids of game elements
     """
 
-    ATTACK = "ATT-"
+    ATTACK = "ATK-"
     MECHANIC = "MEC-"
     TRAIT = "TRA-"
     EFFECT = "EFF-"
