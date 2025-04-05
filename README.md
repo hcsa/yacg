@@ -45,7 +45,7 @@ This project uses two fonts, which are stored in the [fonts](/card_design/fonts)
 |    Aura    |   (AURA)    |    E102     |
 |   Field    |   (FIELD)   |    E103     |
 |     HP     |    (HP)     |    E200     |
-| Strong Atk |   (ATK-S)   |    E201     |
+| Strong Atk |   (SATK)    |    E201     |
 |    Spe     |    (SPE)    |    E202     |
 |  No color  |  (NOCOLOR)  |    E300     |
 |   Black    |   (BLACK)   |    E301     |

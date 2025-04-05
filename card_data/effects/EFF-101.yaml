@@ -8,7 +8,7 @@ effect:
     description: |
       Destroy target (AURA) attached to a (CREATURE).
       Place this (AURA) in its place. Any cards targeting the destroyed (AURA) now target this (AURA).
-      Target (CREATURE) gets +1 (ATK-S).
+      Target (CREATURE) gets +1 (SATK).
     flavor-text: |
       
 

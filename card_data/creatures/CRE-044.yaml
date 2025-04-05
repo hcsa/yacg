@@ -9,10 +9,10 @@ creature:
     spe: 3
     traits:
       - name: Power Down
-        description: If this (CREATURE) kills another (CREATURE), get -1 (ATK-S).
+        description: If this (CREATURE) kills another (CREATURE), get -1 (SATK).
         id: TRA-001
       - name: Scary Stare
-        description: In combat, opposing (CREATURE) gets -1 (ATK-S).
+        description: In combat, opposing (CREATURE) gets -1 (SATK).
         id: TRA-024
     atk-strong: 2
     atk-technical: 1

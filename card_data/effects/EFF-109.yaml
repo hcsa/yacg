@@ -6,7 +6,7 @@ effect:
     cost-total: 4
     cost-color: 2
     description: |
-      Target (CREATURE) gets +1 (ATK-S) per ally (CREATURE) other than themselves.
+      Target (CREATURE) gets +1 (SATK) per ally (CREATURE) other than themselves.
     flavor-text: |
       
 

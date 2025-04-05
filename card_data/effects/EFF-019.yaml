@@ -6,7 +6,7 @@ effect:
     cost-total: 2
     cost-color: 2
     description: |
-      Every (CREATURE) gets -1 (ATK-S).
+      Every (CREATURE) gets -1 (SATK).
     flavor-text: |
       
 

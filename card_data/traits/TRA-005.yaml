@@ -1,7 +1,7 @@
 trait:
   data:
     name: Iron Will
-    description: This (CREATURE)'s (ATK-S) and (SPE) can't be lowered.
+    description: This (CREATURE)'s (SATK) and (SPE) can't be lowered.
 
   metadata:
     id: TRA-005

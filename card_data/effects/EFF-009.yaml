@@ -6,7 +6,7 @@ effect:
     cost-total: 1
     cost-color: 1
     description: |
-      Target (CREATURE) gets +2 (ATK-S) and -1 (SPE).
+      Target (CREATURE) gets +2 (SATK) and -1 (SPE).
     flavor-text: |
       
 

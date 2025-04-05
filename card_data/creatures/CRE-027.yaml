@@ -12,7 +12,7 @@ creature:
         description: When played, fights opponent's last played (CREATURE).
         id: TRA-020
       - name: Power Up
-        description: If this (CREATURE) kills another (CREATURE), get +1 (ATK-S).
+        description: If this (CREATURE) kills another (CREATURE), get +1 (SATK).
         id: TRA-027
     atk-strong: 3
     atk-technical: 1
