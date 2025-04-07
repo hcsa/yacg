@@ -180,7 +180,11 @@ class Creature(Card):
                 else None
             ),
             traits=traits_list,
-            flavor_text=str(yaml_data["data"]["flavor-text"]).strip()
+            flavor_text=(
+                str(yaml_data["data"]["flavor-text"]).strip()
+                if "flavor-text" in yaml_data["data"]
+                else ""
+            ),
         )
         creature_metadata = CreatureMetadata(
             id=str(yaml_data["metadata"]["id"]),
@@ -205,7 +209,11 @@ class Creature(Card):
                 if yaml_data["metadata"]["summary"] is not None
                 else ""
             ),
-            notes=str(yaml_data["metadata"]["notes"]).replace("\n      ", "\n").strip(),
+            notes=(
+                str(yaml_data["metadata"]["notes"]).strip()
+                if "notes" in yaml_data["metadata"]
+                else ""
+            ),
         )
         creature = Creature(
             data=creature_data,
@@ -223,12 +231,14 @@ class Creature(Card):
             flavor_text_str += "    flavor-text: |\n"
             flavor_text_str += "      "
             flavor_text_str += self.data.flavor_text.strip().replace("\n", "\n      ")
+            flavor_text_str += "\n"
 
         notes_str = ""
         if not self.metadata.notes == "":
             notes_str += "    notes: |\n"
             notes_str += "      "
             notes_str += self.metadata.notes.strip().replace("\n", "\n      ")
+            notes_str += "\n"
 
         atk_strong_str = (
                 "    atk-strong: "
