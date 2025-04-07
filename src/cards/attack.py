@@ -143,7 +143,7 @@ class Attack(GameElement):
                 else ""
             ),
             notes=(
-                str(yaml_data["metadata"]["notes"]).replace("\n      ", "\n").strip()
+                str(yaml_data["metadata"]["notes"]).strip()
                 if "notes" in yaml_data["metadata"]
                 else ""
             ),
