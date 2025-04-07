@@ -142,7 +142,11 @@ class Attack(GameElement):
                 if yaml_data["metadata"]["summary"] is not None
                 else ""
             ),
-            notes=str(yaml_data["metadata"]["notes"]).replace("\n      ", "\n").strip(),
+            notes=(
+                str(yaml_data["metadata"]["notes"]).replace("\n      ", "\n").strip()
+                if "notes" in yaml_data["metadata"]
+                else ""
+            ),
         )
         attack = Attack(
             data=attack_data,
@@ -155,9 +159,14 @@ class Attack(GameElement):
         Writes the attack data to the corresponding YAML file.
         """
 
-        notes_str = self.metadata.notes.strip().replace("\n", "\n      ")
+        notes_str = ""
+        if not self.metadata.notes == "":
+            notes_str += "    notes: |\n"
+            notes_str += "      "
+            notes_str += self.metadata.notes.strip().replace("\n", "\n      ")
+            notes_str += "\n"
 
-        colors_str = "\n"
+        colors_str = "    colors:\n"
         if len(self.metadata.colors.primary) > 0:
             colors_str += "      primary:\n"
             for color in self.metadata.colors.primary:
@@ -170,24 +179,21 @@ class Attack(GameElement):
             colors_str += "      tertiary:\n"
             for color in self.metadata.colors.tertiary:
                 colors_str += f"        - {color.name}\n"
-        colors_str = colors_str[:-1]
 
-        yaml_content = f"""
-attack:
-  data:
-    name: {self.data.name}
-    description: {self.data.description}
-
-  metadata:
-    id: {self.metadata.id}
-    colors:{colors_str}
-    value: {self.metadata.value if self.metadata.value is not None else ""}
-    dev-stage: {self.metadata.dev_stage.name}
-    dev-name: {self.metadata.dev_name}
-    order: {self.metadata.order if self.metadata.order is not None else ""}
-    summary: {self.metadata.summary}
-    notes: |
-      {notes_str}"""[1:]
+        yaml_content = "attack:\n"
+        yaml_content += f"  data:\n"
+        yaml_content += f"    name: {self.data.name}\n"
+        yaml_content += f"    description: {self.data.description}\n"
+        yaml_content += f"\n"
+        yaml_content += f"  metadata:\n"
+        yaml_content += f"    id: {self.metadata.id}\n"
+        yaml_content += colors_str
+        yaml_content += f"    value: {self.metadata.value if self.metadata.value is not None else ""}\n"
+        yaml_content += f"    dev-stage: {self.metadata.dev_stage.name}\n"
+        yaml_content += f"    dev-name: {self.metadata.dev_name}\n"
+        yaml_content += f"    order: {self.metadata.order if self.metadata.order is not None else ""}\n"
+        yaml_content += f"    summary: {self.metadata.summary}\n"
+        yaml_content += notes_str
 
         yaml_path = ATTACK_PATH / f"{self.metadata.id}.yaml"
         with open(yaml_path, "w", encoding=YAML_ENCODING) as f:
