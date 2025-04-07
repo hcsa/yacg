@@ -45,6 +45,9 @@ VALUES_DATA_PATH = BASE_DIR / "dev_data" / "values.yaml"
 
 # Paths to multiple files - END
 
+# TO be used when reading/writing a YAML file
+YAML_ENCODING = "utf-8"
+
 
 def _get_git_tag() -> Optional[str]:
     repo = Repo.init(BASE_DIR)

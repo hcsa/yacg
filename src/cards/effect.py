@@ -5,7 +5,7 @@ import yaml
 
 from src.cards.abstract_classes import Card
 from src.cards.enums import Color, DevStage, EffectType, _GameElementIdPrefix
-from src.utils import EFFECT_DATA_PATH
+from src.utils import EFFECT_DATA_PATH, YAML_ENCODING
 
 
 @dataclass(frozen=True)
@@ -91,7 +91,7 @@ class Effect(Card):
         """
 
         yaml_path = EFFECT_DATA_PATH / f"{effect_id}.yaml"
-        with open(yaml_path, "r") as f:
+        with open(yaml_path, "r", encoding=YAML_ENCODING) as f:
             yaml_data = yaml.safe_load(f)["effect"]
 
         effect_data = EffectData(
@@ -177,7 +177,7 @@ effect:
       {notes_str}"""[1:]
 
         yaml_path = EFFECT_DATA_PATH / f"{self.metadata.id}.yaml"
-        with open(yaml_path, "w") as f:
+        with open(yaml_path, "w", encoding=YAML_ENCODING) as f:
             f.write(yaml_content)
 
     @classmethod

@@ -5,7 +5,7 @@ import yaml
 
 from src.cards.abstract_classes import GameElement
 from src.cards.enums import Color, DevStage, TraitType, _GameElementIdPrefix
-from src.utils import TRAIT_DATA_PATH
+from src.utils import TRAIT_DATA_PATH, YAML_ENCODING
 
 
 @dataclass(frozen=True)
@@ -86,7 +86,7 @@ class Trait(GameElement):
         """
 
         yaml_path = TRAIT_DATA_PATH / f"{trait_id}.yaml"
-        with open(yaml_path, "r") as f:
+        with open(yaml_path, "r", encoding=YAML_ENCODING) as f:
             yaml_data = yaml.safe_load(f)["trait"]
 
         primary_colors_list = []
@@ -193,7 +193,7 @@ trait:
       {notes_str}"""[1:]
 
         yaml_path = TRAIT_DATA_PATH / f"{self.metadata.id}.yaml"
-        with open(yaml_path, "w") as f:
+        with open(yaml_path, "w", encoding=YAML_ENCODING) as f:
             f.write(yaml_content)
 
     @classmethod

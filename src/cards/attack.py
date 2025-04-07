@@ -5,7 +5,7 @@ import yaml
 
 from src.cards.abstract_classes import GameElement
 from src.cards.enums import Color, DevStage, _GameElementIdPrefix
-from src.utils import ATTACK_PATH
+from src.utils import ATTACK_PATH, YAML_ENCODING
 
 
 @dataclass(frozen=True)
@@ -85,7 +85,7 @@ class Attack(GameElement):
         """
 
         yaml_path = ATTACK_PATH / f"{attack_id}.yaml"
-        with open(yaml_path, "r") as f:
+        with open(yaml_path, "r", encoding=YAML_ENCODING) as f:
             yaml_data = yaml.safe_load(f)["attack"]
 
         primary_colors_list = []
@@ -190,7 +190,7 @@ attack:
       {notes_str}"""[1:]
 
         yaml_path = ATTACK_PATH / f"{self.metadata.id}.yaml"
-        with open(yaml_path, "w") as f:
+        with open(yaml_path, "w", encoding=YAML_ENCODING) as f:
             f.write(yaml_content)
 
     @classmethod

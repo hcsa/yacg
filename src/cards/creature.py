@@ -7,7 +7,7 @@ from src.cards.abstract_classes import Card
 from src.cards.enums import Color, DevStage, _GameElementIdPrefix
 from src.cards.trait import Trait
 from src.cards.attack import Attack
-from src.utils import CREATURE_DATA_PATH
+from src.utils import CREATURE_DATA_PATH, YAML_ENCODING
 
 
 @dataclass(frozen=True)
@@ -101,7 +101,7 @@ class Creature(Card):
         """
 
         yaml_path = CREATURE_DATA_PATH / f"{creature_id}.yaml"
-        with open(yaml_path, "r") as f:
+        with open(yaml_path, "r", encoding=YAML_ENCODING) as f:
             yaml_data = yaml.safe_load(f)["creature"]
 
         atk_strong_effect = None
@@ -296,7 +296,7 @@ class Creature(Card):
         yaml_content += notes_str
 
         yaml_path = CREATURE_DATA_PATH / f"{self.metadata.id}.yaml"
-        with open(yaml_path, "w") as f:
+        with open(yaml_path, "w", encoding=YAML_ENCODING) as f:
             f.write(yaml_content)
 
     @classmethod

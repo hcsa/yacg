@@ -5,7 +5,7 @@ import yaml
 
 from src.cards.abstract_classes import GameElement
 from src.cards.enums import Color, DevStage, _GameElementIdPrefix
-from src.utils import MECHANIC_DATA_PATH
+from src.utils import MECHANIC_DATA_PATH, YAML_ENCODING
 
 
 @dataclass(frozen=True)
@@ -65,7 +65,7 @@ class Mechanic(GameElement):
         """
 
         yaml_path = MECHANIC_DATA_PATH / f"{mechanic_id}.yaml"
-        with open(yaml_path, "r") as f:
+        with open(yaml_path, "r", encoding=YAML_ENCODING) as f:
             yaml_data = yaml.safe_load(f)["mechanic"]
 
         primary_colors_list = []
@@ -138,7 +138,7 @@ mechanic:
     {notes_str}"""[1:]
 
         yaml_path = MECHANIC_DATA_PATH / f"{self.id}.yaml"
-        with open(yaml_path, "w") as f:
+        with open(yaml_path, "w", encoding=YAML_ENCODING) as f:
             f.write(yaml_content)
 
     @classmethod
