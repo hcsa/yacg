@@ -7,8 +7,6 @@ effect:
     cost-color: 
     description: |
       Move target (AURA) in the field to another (CREATURE).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-102
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 
     summary: 
-    notes: |
-      

@@ -20,5 +20,3 @@ trait:
     dev-name: Flash
     order: 901
     summary: Can be cast at any point
-    notes: |
-      

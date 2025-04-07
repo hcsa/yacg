@@ -7,8 +7,5 @@ mechanic:
       - Cyan
     tertiary:
       - Green
-
   dev-stage: Alpha-0
   order: 311
-  notes: |
-    

@@ -13,8 +13,6 @@ creature:
         id: TRA-006
     atk-strong: 2
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-093
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 308
     summary: Hail buffed, Blue, good stats
-    notes: |
-      

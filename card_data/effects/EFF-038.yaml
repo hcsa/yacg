@@ -8,8 +8,6 @@ effect:
     description: |
       Target (CREATURE) gets -2 (HP).
       Other target (CREATURE) gets +2 (HP).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-038
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 606
     summary: HP drain
-    notes: |
-      

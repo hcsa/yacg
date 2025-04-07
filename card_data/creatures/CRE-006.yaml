@@ -13,8 +13,6 @@ creature:
         id: TRA-038
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-006
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 806
     summary: 0 Spd, Trickster, cheapest
-    notes: |
-      

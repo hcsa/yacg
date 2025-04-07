@@ -19,8 +19,6 @@ creature:
         id: TRA-036
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-050
@@ -29,5 +27,3 @@ creature:
     dev-name: Forest guardian
     order: 212
     summary: High HP, Defender, Protect
-    notes: |
-      

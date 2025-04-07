@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Target ally (CREATURE) fights target opposing (CREATURE).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-015
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 204
     summary: Force fight
-    notes: |
-      

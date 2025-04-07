@@ -16,5 +16,3 @@ trait:
     dev-name: U-turn
     order: 608
     summary: Can switch out in combat
-    notes: |
-      

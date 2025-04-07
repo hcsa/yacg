@@ -7,8 +7,6 @@ effect:
     cost-color: 1
     description: |
       Both players draw cards until they have 8, then discard cards equal to the number of cards drawn by themselves.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-058
@@ -16,5 +14,3 @@ effect:
     dev-name: Refresh, black
     order: 804
     summary: Refresh, black
-    notes: |
-      

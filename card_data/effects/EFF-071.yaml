@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Every opposing (CREATURE) gets -1 (SPE).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-071
@@ -16,5 +14,3 @@ effect:
     dev-name: Blizzard
     order: 909
     summary: -Spd spread, cyan
-    notes: |
-      

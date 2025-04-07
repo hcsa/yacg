@@ -6,7 +6,6 @@ mechanic:
     primary:
       - White
       - Purple
-
   dev-stage: Alpha-0
   order: 1999
   notes: |

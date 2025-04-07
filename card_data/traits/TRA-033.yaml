@@ -14,5 +14,3 @@ trait:
     dev-name: Self-destruct
     order: 604
     summary: Its attack kills both itself and opponent
-    notes: |
-      

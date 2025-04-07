@@ -10,8 +10,6 @@ effect:
       
       If target (CREATURE) were to take damage that would kill it, it lives on 1 (HP) instead.
       Destroy this card after target (CREATURE) takes damage once.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-111
@@ -19,5 +17,3 @@ effect:
     dev-name: Focus Sash
     order: 2011
     summary: Avoid 1 hit KO
-    notes: |
-      

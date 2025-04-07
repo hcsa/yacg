@@ -13,8 +13,6 @@ creature:
         id: TRA-026
     atk-strong: 2
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-058
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 906
     summary: Mind freeze, Cyan
-    notes: |
-      

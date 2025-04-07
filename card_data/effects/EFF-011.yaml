@@ -8,8 +8,6 @@ effect:
     description: |
       If 2 (CREATURE)s have (REF:TRA-035.NAME), Sun is set for 2 rounds.
       If that happens, destroy this card.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-011
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 106
     summary: Sun setter as an effect
-    notes: |
-      

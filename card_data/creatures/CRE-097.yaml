@@ -13,8 +13,6 @@ creature:
         id: TRA-003
     atk-strong: 4
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-097
@@ -23,5 +21,3 @@ creature:
     dev-name: Angry skeleton
     order: 604
     summary: Simple Brittle creature
-    notes: |
-      

@@ -16,8 +16,6 @@ creature:
         id: TRA-009
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-007
@@ -26,5 +24,3 @@ creature:
     dev-name: Fred playing padel with children
     order: 807
     summary: Arrogant, Defeatist
-    notes: |
-      

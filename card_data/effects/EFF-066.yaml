@@ -8,8 +8,6 @@ effect:
     description: |
       Choose 1 card from your discard pile and put it in your hand.
       Banish this card.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-066
@@ -17,5 +15,3 @@ effect:
     dev-name: Search, cyan
     order: 903
     summary: Search, cyan
-    notes: |
-      

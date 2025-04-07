@@ -9,8 +9,6 @@ creature:
     spe: 2
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-096
@@ -19,5 +17,3 @@ creature:
     dev-name: Gorilla
     order: 202
     summary: No trait, 2 cost, Green
-    notes: |
-      

@@ -13,8 +13,6 @@ creature:
         id: TRA-010
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-073
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 408
     summary: Defender, White, cheap
-    notes: |
-      

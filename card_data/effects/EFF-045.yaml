@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Look at the top 3 cards of your deck, choose one and put it in your hand, shuffle after
-    flavor-text: |
-      
 
   metadata:
     id: EFF-045

@@ -7,7 +7,6 @@ mechanic:
       - Purple
     tertiary:
       - Cyan
-
   dev-stage: Alpha-0
   order: 1302
   notes: |

@@ -13,8 +13,6 @@ creature:
         id: TRA-008
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-037
@@ -23,5 +21,3 @@ creature:
     dev-name: Vengeful mage
     order: 608
     summary: Death touch, good stats
-    notes: |
-      

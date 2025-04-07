@@ -13,8 +13,6 @@ creature:
         id: TRA-032
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-032
@@ -23,5 +21,3 @@ creature:
     dev-name: Zombie
     order: 603
     summary: Restless, Purple, cheapest
-    notes: |
-      

@@ -13,8 +13,6 @@ creature:
         id: TRA-028
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-087
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 302
     summary: Protect, Blue, cheapest
-    notes: |
-      

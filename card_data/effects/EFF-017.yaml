@@ -9,8 +9,6 @@ effect:
       Destroy ally (CREATURE) and choose target (CREATURE).
       Destroyed (CREATURE) becomes an aura of target (CREATURE). Target (CREATURE) gains (HP) and (SATK) equal to destroyed (CREATURE)'s (HP) and (SATK). Any cards targetting the destroyed (CREATURE) now target the new (CREATURE).
       Target creature has (REF:TRA-034.NAME) ((REF:TRA-034.DESCRIPTION)).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-017
@@ -18,5 +16,3 @@ effect:
     dev-name: Fusion
     order: 206
     summary: Join creatures
-    notes: |
-      

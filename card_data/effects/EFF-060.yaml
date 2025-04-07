@@ -8,8 +8,6 @@ effect:
     description: |
       When playing this card, put 3 markers on it. After a fight, remove a marker from this card. If it has 0 markers, destroy this card.
       All ally (CREATURE)s have (REF:TRA-038.NAME) ((REF:TRA-038.DESCRIPTION)).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-060

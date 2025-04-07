@@ -7,8 +7,6 @@ effect:
     cost-color: 
     description: |
       The player with the largest hand size discards cards until they have the same number of cards as their opponent.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-095
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 
     summary: 
-    notes: |
-      

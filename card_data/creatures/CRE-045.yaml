@@ -13,8 +13,6 @@ creature:
         id: TRA-010
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-045
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 207
     summary: Defender, considerable HP without being to costly
-    notes: |
-      

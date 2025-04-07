@@ -16,5 +16,3 @@ trait:
     dev-name: Avenger
     order: 103
     summary: +Atk when ally dies
-    notes: |
-      

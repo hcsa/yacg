@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Draw cards until you have 8 or more, then discard cards until you have 4.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-046
@@ -16,5 +14,3 @@ effect:
     dev-name: Refresh, pink
     order: 704
     summary: Refresh, pink
-    notes: |
-      

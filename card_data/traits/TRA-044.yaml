@@ -19,5 +19,3 @@ trait:
     dev-name: 
     order: 904
     summary: Combat buffs if opponent has auras
-    notes: |
-      

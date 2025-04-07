@@ -6,8 +6,5 @@ mechanic:
     primary:
       - Black
       - Cyan
-
   dev-stage: Alpha-0
   order: 1511
-  notes: |
-    

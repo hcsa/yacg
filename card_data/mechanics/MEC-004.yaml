@@ -7,8 +7,5 @@ mechanic:
       - Cyan
     secondary:
       - Blue
-
   dev-stage: Alpha-0
   order: 211
-  notes: |
-    

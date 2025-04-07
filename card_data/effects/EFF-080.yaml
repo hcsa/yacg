@@ -8,8 +8,6 @@ effect:
     description: |
       Opponent loses 1 (NOCOLOR) of the color of their choosing.
       You gain 1 (NOCOLOR) of the color of your choosing.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-080
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 1002
     summary: Charge, drain opponent
-    notes: |
-      

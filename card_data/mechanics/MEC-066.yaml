@@ -3,8 +3,5 @@ mechanic:
     Traits that buff attacking creatures (first creature chosen in combat)
   id: MEC-066
   colors:
-
   dev-stage: Alpha-0
   order: 1403
-  notes: |
-    

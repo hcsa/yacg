@@ -8,8 +8,6 @@ effect:
     description: |
       Gain 3 (NOCOLOR) of a color of your choosing.
       Banish the bottom 5 cards of your deck.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-079
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 1001
     summary: Charge, mull itself
-    notes: |
-      

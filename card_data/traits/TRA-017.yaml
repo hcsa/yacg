@@ -15,5 +15,3 @@ trait:
     dev-name: First strike
     order: 501
     summary: Attacks first
-    notes: |
-      

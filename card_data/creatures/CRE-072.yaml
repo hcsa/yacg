@@ -9,8 +9,6 @@ creature:
     spe: 3
     atk-strong: 2
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-072
@@ -19,5 +17,3 @@ creature:
     dev-name: 
     order: 406
     summary: 2-cost, White, no traits
-    notes: |
-      

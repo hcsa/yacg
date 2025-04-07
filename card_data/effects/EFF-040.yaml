@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Target (CREATURE) gets (REF:TRA-003.NAME) ((REF:TRA-003.DESCRIPTION)).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-040
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 605
     summary: Give Brittle
-    notes: |
-      

@@ -9,7 +9,6 @@ mechanic:
       - Green
     tertiary:
       - White
-
   dev-stage: Alpha-0
   order: 201
   notes: |

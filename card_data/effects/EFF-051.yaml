@@ -7,8 +7,6 @@ effect:
     cost-color: 6
     description: |
       You need to win -1 round to win the game
-    flavor-text: |
-      
 
   metadata:
     id: EFF-051

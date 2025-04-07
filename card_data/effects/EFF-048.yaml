@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       At the beginning of next round, you gain +3 (NOCOLOR) of a color of your choosing.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-048
@@ -16,5 +14,3 @@ effect:
     dev-name: Charge, pink
     order: 706
     summary: Charge, pink
-    notes: |
-      

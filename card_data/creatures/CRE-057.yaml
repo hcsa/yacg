@@ -13,8 +13,6 @@ creature:
         id: TRA-007
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-057
@@ -23,5 +21,3 @@ creature:
     dev-name: Olaf
     order: 905
     summary: -Spd w/ friends Cyan, cheapest
-    notes: |
-      

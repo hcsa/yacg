@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       This card becomes a copy of target (ACTION) in the effect stack. You may choose new targets for it (restrictions to the targets still apply).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-091
@@ -16,5 +14,3 @@ effect:
     dev-name: Double Up, black
     order: 805
     summary: Double Up, black
-    notes: |
-      

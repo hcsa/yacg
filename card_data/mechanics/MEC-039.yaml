@@ -9,7 +9,6 @@ mechanic:
       - Pink
     tertiary:
       - White
-
   dev-stage: Alpha-0
   order: 1999
   notes: |

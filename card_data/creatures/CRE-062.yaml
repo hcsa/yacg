@@ -13,8 +13,6 @@ creature:
         id: TRA-012
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-062
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 701
     summary: Disable, cheapest, Pink
-    notes: |
-      

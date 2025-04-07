@@ -8,7 +8,6 @@ mechanic:
     secondary:
       - Orange
       - Cyan
-
   dev-stage: Alpha-0
   order: 1102
   notes: |

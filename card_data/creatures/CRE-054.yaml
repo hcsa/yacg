@@ -9,8 +9,6 @@ creature:
     spe: 3
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-054
@@ -19,5 +17,3 @@ creature:
     dev-name: 
     order: 902
     summary: 2-cost, Cyan
-    notes: |
-      

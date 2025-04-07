@@ -13,8 +13,6 @@ creature:
         id: TRA-035
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-025

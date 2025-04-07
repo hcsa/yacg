@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Every (CREATURE) gets -1 (SATK).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-019
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 302
     summary: Spread -Atk, blue
-    notes: |
-      

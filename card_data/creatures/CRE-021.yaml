@@ -9,8 +9,6 @@ creature:
     spe: 2
     atk-strong: 2
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-021
@@ -19,5 +17,3 @@ creature:
     dev-name: 
     order: 102
     summary: Cheap, no traits, Orange
-    notes: |
-      

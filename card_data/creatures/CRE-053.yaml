@@ -13,8 +13,6 @@ creature:
         id: TRA-021
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-053
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 901
     summary: -Spd in combat, cheapest, Cyan
-    notes: |
-      

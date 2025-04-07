@@ -7,8 +7,6 @@ effect:
     cost-color: 1
     description: |
       Create two instances of (REF:CRE-098.NAME).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-025

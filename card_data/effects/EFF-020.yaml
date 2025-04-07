@@ -8,8 +8,6 @@ effect:
     description: |
       If 2 (CREATURE)s have (REF:TRA-029.NAME), Rain is set for 2 rounds.
       If that happens, destroy this card.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-020
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 303
     summary: Rain setter as an effect
-    notes: |
-      

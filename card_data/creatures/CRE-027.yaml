@@ -16,8 +16,6 @@ creature:
         id: TRA-027
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-027
@@ -26,5 +24,3 @@ creature:
     dev-name: Flint & Steel
     order: 108
     summary: Haste, +Atk when kills, decent stats
-    notes: |
-      

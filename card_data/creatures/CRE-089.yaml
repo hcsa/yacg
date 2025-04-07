@@ -9,8 +9,6 @@ creature:
     spe: 2
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-089
@@ -19,5 +17,3 @@ creature:
     dev-name: Drizzle
     order: 304
     summary: Considerable HP, no traits, Blue
-    notes: |
-      

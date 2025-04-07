@@ -14,5 +14,3 @@ trait:
     dev-name: Martyr
     order: 410
     summary: Can be sacrificed to prevent damage to another creature
-    notes: |
-      

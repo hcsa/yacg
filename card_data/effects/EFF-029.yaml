@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Target ally (CREATURE) has (REF:TRA-033.NAME) ((REF:TRA-033.DESCRIPTION)).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-029
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 502
     summary: Give Self-destruct
-    notes: |
-      

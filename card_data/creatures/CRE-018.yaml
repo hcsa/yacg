@@ -16,8 +16,6 @@ creature:
         id: TRA-039
     atk-strong: 0
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-018
@@ -26,5 +24,3 @@ creature:
     dev-name: Running conduit
     order: 510
     summary: +Spd w/ friends, U-turn, high Spd, no Atk
-    notes: |
-      

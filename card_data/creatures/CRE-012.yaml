@@ -13,8 +13,6 @@ creature:
         id: TRA-016
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-012
@@ -23,5 +21,3 @@ creature:
     dev-name: Conduit
     order: 505
     summary: +Spd w/ friends
-    notes: |
-      

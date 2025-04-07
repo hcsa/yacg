@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Target (CREATURE) gets +1 (SATK) per ally (CREATURE) other than themselves.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-109
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 
     summary: +ATK per ally
-    notes: |
-      

@@ -13,8 +13,6 @@ creature:
         id: TRA-033
     atk-strong: 0
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-011
@@ -23,5 +21,3 @@ creature:
     dev-name: Exploding bot
     order: 502
     summary: 1-cost, Self destruct, Yellow
-    notes: |
-      

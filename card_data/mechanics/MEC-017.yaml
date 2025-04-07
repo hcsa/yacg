@@ -7,8 +7,5 @@ mechanic:
       - Blue
     secondary:
       - White
-
   dev-stage: Alpha-0
   order: 103
-  notes: |
-    

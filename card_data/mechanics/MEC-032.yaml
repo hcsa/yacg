@@ -7,8 +7,5 @@ mechanic:
       - Yellow
     secondary:
       - Cyan
-
   dev-stage: Alpha-0
   order: 1999
-  notes: |
-    

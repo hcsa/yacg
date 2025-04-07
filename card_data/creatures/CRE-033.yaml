@@ -13,8 +13,6 @@ creature:
         id: TRA-003
     atk-strong: 2
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-033
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 604
     summary: 2-cost, Brittle
-    notes: |
-      

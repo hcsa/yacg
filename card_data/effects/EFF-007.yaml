@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Target opposing (CREATURE) gets -5 (HP), target ally (CREATURE) gets -2 (HP).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-007
@@ -16,5 +14,3 @@ effect:
     dev-name: Fireball+
     order: 103
     summary: High direct damage, orange
-    notes: |
-      

@@ -18,8 +18,6 @@ creature:
       variable: 1
       description: This (CREATURE) deals (REF:VARIABLE) damage to another (CREATURE).
       id: ATK-001
-    flavor-text: |
-      
 
   metadata:
     id: CRE-075
@@ -28,5 +26,3 @@ creature:
     dev-name: Protester
     order: 407
     summary: +Atk w/ friends, White, cheapest
-    notes: |
-      

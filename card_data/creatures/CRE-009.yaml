@@ -9,8 +9,6 @@ creature:
     spe: 3
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-009
@@ -19,5 +17,3 @@ creature:
     dev-name: Nano bot
     order: 501
     summary: 0-cost, Yellow
-    notes: |
-      

@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Destroy target ally (CREATURE) and target opposing (CREATURE).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-035
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 503
     summary: Kill creature, sacrifice ally
-    notes: |
-      
