@@ -218,11 +218,17 @@ class Creature(Card):
         Writes the creature data to the corresponding YAML file.
         """
 
-        flavor_text_str = "    flavor-text: |\n"
-        flavor_text_str += self.data.flavor_text.strip().replace("\n", "\n      ")
+        flavor_text_str = ""
+        if not self.data.flavor_text == "":
+            flavor_text_str += "    flavor-text: |\n"
+            flavor_text_str += "      "
+            flavor_text_str += self.data.flavor_text.strip().replace("\n", "\n      ")
 
-        notes_str = "    notes: |\n"
-        notes_str += self.metadata.notes.strip().replace("\n", "\n      ")
+        notes_str = ""
+        if not self.metadata.notes == "":
+            notes_str += "    notes: |\n"
+            notes_str += "      "
+            notes_str += self.metadata.notes.strip().replace("\n", "\n      ")
 
         atk_strong_str = (
                 "    atk-strong: "
