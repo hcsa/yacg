@@ -7,8 +7,6 @@ effect:
     cost-color: 0
     description: |
       Target (CREATURE) gets -1 (SATK).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-062
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 809
     summary: -Atk, cheap, black
-    notes: |
-      

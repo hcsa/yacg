@@ -17,5 +17,3 @@ trait:
     dev-name: Slow movement
     order: 503
     summary: Attacks last
-    notes: |
-      

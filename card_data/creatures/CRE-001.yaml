@@ -13,8 +13,6 @@ creature:
         id: TRA-009
     atk-strong: 2
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-001
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 801
     summary: 0-cost, Dark
-    notes: |
-      

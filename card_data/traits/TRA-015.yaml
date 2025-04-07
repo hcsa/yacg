@@ -16,5 +16,3 @@ trait:
     dev-name: Earthquake
     order: 701
     summary: Spead damage when it's cast
-    notes: |
-      

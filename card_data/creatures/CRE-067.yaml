@@ -13,8 +13,6 @@ creature:
         id: TRA-036
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-067
@@ -23,5 +21,3 @@ creature:
     dev-name: Old warrior
     order: 401
     summary: 0-cost, White
-    notes: |
-      

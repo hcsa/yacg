@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Banish the bottom 2 cards of opponent's deck.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-074
@@ -16,5 +14,3 @@ effect:
     dev-name: Mill
     order: 911
     summary: Mill, cheap
-    notes: |
-      

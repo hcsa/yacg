@@ -7,8 +7,6 @@ effect:
     cost-color: 1
     description: |
       Target (CREATURE) gets +2 (SATK) and -1 (SPE).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-009
@@ -16,5 +14,3 @@ effect:
     dev-name: Swords dance
     order: 101
     summary: Buff, cheap, orange
-    notes: |
-      

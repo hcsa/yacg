@@ -7,8 +7,5 @@ mechanic:
       - Pink
     secondary:
       - Black
-
   dev-stage: Alpha-0
   order: 1002
-  notes: |
-    

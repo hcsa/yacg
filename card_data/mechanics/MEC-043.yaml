@@ -5,7 +5,6 @@ mechanic:
   colors:
     primary:
       - Purple
-
   dev-stage: Alpha-0
   order: 1204
   notes: |

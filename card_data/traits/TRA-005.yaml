@@ -17,5 +17,3 @@ trait:
     dev-name: Clear body
     order: 802
     summary: Stats can't be lowered
-    notes: |
-      

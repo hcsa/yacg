@@ -8,8 +8,6 @@ effect:
     description: |
       Each player shuffles their hand and all played card into the deck and draws however many cards they shuffled.
       A (CREATURE) playing phase takes place, starting with you. In this playing phase, every (CREATURE) costs 0 (NOCOLOR) to play.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-061

@@ -6,8 +6,5 @@ mechanic:
     primary:
       - Pink
       - Black
-
   dev-stage: Alpha-0
   order: 1003
-  notes: |
-    

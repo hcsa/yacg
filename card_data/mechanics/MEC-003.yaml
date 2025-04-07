@@ -7,8 +7,5 @@ mechanic:
       - Orange
     tertiary:
       - White
-
   dev-stage: Alpha-0
   order: 203
-  notes: |
-    

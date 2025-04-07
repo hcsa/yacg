@@ -8,8 +8,6 @@ effect:
     description: |
       At any time, you can look at the top card of your deck.
       You can play the top card of your deck as if it were on your hand.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-053
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 711
     summary: Play with top card of deck
-    notes: |
-      

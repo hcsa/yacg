@@ -7,8 +7,6 @@ effect:
     cost-color: 1
     description: |
       Return target (CREATURE) to their owner's hand.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-021
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 304
     summary: Uncast
-    notes: |
-      

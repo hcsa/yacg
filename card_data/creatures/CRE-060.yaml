@@ -16,8 +16,6 @@ creature:
         id: TRA-021
     atk-strong: 4
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-060
@@ -26,5 +24,3 @@ creature:
     dev-name: Elsa
     order: 908
     summary: Spd w/friends, -Spd in combat
-    notes: |
-      

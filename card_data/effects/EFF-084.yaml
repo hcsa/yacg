@@ -8,8 +8,6 @@ effect:
     description: |
       Target opposing (CREATURE) gets -2 (HP).
       While this effect is being resolved, whenever a (CREATURE) gets -X (HP), its owner can choose to pay 1 (NOCOLOR). if they do, they choose target opposing (CREATURE) to get -(X+1) (HP).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-084

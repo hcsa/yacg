@@ -17,5 +17,3 @@ trait:
     dev-name: Defender
     order: 401
     summary: Takes damage from allies
-    notes: |
-      

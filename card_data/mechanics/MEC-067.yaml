@@ -3,8 +3,5 @@ mechanic:
     Traits that buff defending creatures (second creature chosen in combat)
   id: MEC-067
   colors:
-
   dev-stage: Alpha-0
   order: 1404
-  notes: |
-    

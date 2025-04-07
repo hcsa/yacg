@@ -9,8 +9,6 @@ creature:
     spe: 4
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-013
@@ -19,5 +17,3 @@ creature:
     dev-name: 
     order: 504
     summary: 2-cost, Yellow, no traits
-    notes: |
-      

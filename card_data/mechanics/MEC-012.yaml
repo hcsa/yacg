@@ -5,7 +5,6 @@ mechanic:
   colors:
     primary:
       - Cyan
-
   dev-stage: Alpha-0
   order: 312
   notes: |

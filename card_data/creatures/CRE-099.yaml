@@ -9,8 +9,6 @@ creature:
     spe: 2
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-099
@@ -19,5 +17,3 @@ creature:
     dev-name: Creation of E050
     order: 9901
     summary: 
-    notes: |
-      

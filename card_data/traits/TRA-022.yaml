@@ -14,5 +14,3 @@ trait:
     dev-name: Illegal charge
     order: 801
     summary: Charge, black
-    notes: |
-      

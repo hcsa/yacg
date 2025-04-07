@@ -13,8 +13,6 @@ creature:
         id: TRA-010
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-080
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 414
     summary: Defender, White, good HP
-    notes: |
-      

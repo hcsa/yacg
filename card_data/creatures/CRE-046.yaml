@@ -19,8 +19,6 @@ creature:
         id: TRA-034
     atk-strong: 2
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-046
@@ -29,5 +27,3 @@ creature:
     dev-name: Mountain
     order: 208
     summary: Medium creature, Slow movement, cheapest
-    notes: |
-      

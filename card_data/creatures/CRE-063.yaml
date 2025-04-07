@@ -13,8 +13,6 @@ creature:
         id: TRA-005
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-063
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 702
     summary: Clear body, cheapest, Pink
-    notes: |
-      

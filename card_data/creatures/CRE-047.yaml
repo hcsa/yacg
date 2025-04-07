@@ -16,8 +16,6 @@ creature:
         id: TRA-037
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-047
@@ -26,5 +24,3 @@ creature:
     dev-name: Elephant
     order: 209
     summary: High stats, EQ, Slow movement, costly
-    notes: |
-      

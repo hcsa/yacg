@@ -8,8 +8,6 @@ effect:
     description: |
       Destroy target (CREATURE).
       Create an instance of (REF:CRE-100.NAME) in their place. Any cards targetting the destroyed (CREATURE) now target the new (CREATURE).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-078

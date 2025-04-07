@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Both players draw or discard cards until they have 4 cards left on their hand.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-067
@@ -16,5 +14,3 @@ effect:
     dev-name: Refresh, cyan
     order: 904
     summary: Refresh, cyan
-    notes: |
-      

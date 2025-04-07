@@ -16,8 +16,6 @@ creature:
         id: TRA-035
     atk-strong: 2
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-048
@@ -26,5 +24,3 @@ creature:
     dev-name: Weather mage
     order: 210
     summary: Sun setter, Rain setter, Green
-    notes: |
-      

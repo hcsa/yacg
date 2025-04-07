@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Target (CREATURE) gets +(SATK) equal to their (SPE) (applies after other buffs and debuffs).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-032
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 506
     summary: +Atk based on Spe, yellow
-    notes: |
-      

@@ -19,5 +19,3 @@ trait:
     dev-name: Protect
     order: 806
     summary: Nullifies damage once
-    notes: |
-      

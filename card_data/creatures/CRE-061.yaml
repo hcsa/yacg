@@ -16,8 +16,6 @@ creature:
         id: TRA-039
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-061
@@ -26,5 +24,3 @@ creature:
     dev-name: 
     order: 909
     summary: Hail setter, Cya, good stats
-    notes: |
-      

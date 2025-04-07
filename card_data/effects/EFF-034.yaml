@@ -7,8 +7,6 @@ effect:
     cost-color: 4
     description: |
       Destroy every (CREATURE).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-034
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 915
     summary: Board clear
-    notes: |
-      

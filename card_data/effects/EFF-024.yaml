@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Every ally (CREATURE) gets +1 (SATK).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-024

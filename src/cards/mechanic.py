@@ -5,7 +5,7 @@ import yaml
 
 from src.cards.abstract_classes import GameElement
 from src.cards.enums import Color, DevStage, _GameElementIdPrefix
-from src.utils import MECHANIC_DATA_PATH
+from src.utils import MECHANIC_DATA_PATH, YAML_ENCODING
 
 
 @dataclass(frozen=True)
@@ -65,7 +65,7 @@ class Mechanic(GameElement):
         """
 
         yaml_path = MECHANIC_DATA_PATH / f"{mechanic_id}.yaml"
-        with open(yaml_path, "r") as f:
+        with open(yaml_path, "r", encoding=YAML_ENCODING) as f:
             yaml_data = yaml.safe_load(f)["mechanic"]
 
         primary_colors_list = []
@@ -100,7 +100,11 @@ class Mechanic(GameElement):
                 if yaml_data["order"] is not None
                 else None
             ),
-            notes=str(yaml_data["notes"]).replace("\n      ", "\n").strip(),
+            notes=(
+                str(yaml_data["notes"]).strip()
+                if "notes" in yaml_data
+                else ""
+            ),
         )
         return mechanic
 
@@ -109,7 +113,10 @@ class Mechanic(GameElement):
         Writes the mechanic data to the corresponding YAML file.
         """
 
-        colors_str = "\n"
+        name_str = "  name: |\n"   # Has a newline because mechanics' names may have quotes
+        name_str += f"    {self.name}\n"
+
+        colors_str = "  colors:\n"
         if len(self.colors.primary) > 0:
             colors_str += "    primary:\n"
             for color in self.colors.primary:
@@ -123,22 +130,23 @@ class Mechanic(GameElement):
             for color in self.colors.tertiary:
                 colors_str += f"      - {color.name}\n"
 
-        notes_str = self.notes.strip().replace("\n", "\n    ")
+        notes_str = ""
+        if not self.notes == "":
+            notes_str += "  notes: |\n"
+            notes_str += "    "
+            notes_str += self.notes.strip().replace("\n", "\n      ")
+            notes_str += "\n"
 
-        # -- Name below has a newline because mechanics' names may have quotes
-        yaml_content = f"""
-mechanic:
-  name: |
-    {self.name}
-  id: {self.id}
-  colors:{colors_str}
-  dev-stage: {self.dev_stage.name}
-  order: {self.order if self.order is not None else ""}
-  notes: |
-    {notes_str}"""[1:]
+        yaml_content = "mechanic:\n"
+        yaml_content += name_str
+        yaml_content += f"  id: {self.id}\n"
+        yaml_content += colors_str
+        yaml_content += f"  dev-stage: {self.dev_stage.name}\n"
+        yaml_content += f"  order: {self.order if self.order is not None else ""}\n"
+        yaml_content += notes_str
 
         yaml_path = MECHANIC_DATA_PATH / f"{self.id}.yaml"
-        with open(yaml_path, "w") as f:
+        with open(yaml_path, "w", encoding=YAML_ENCODING) as f:
             f.write(yaml_content)
 
     @classmethod

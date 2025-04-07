@@ -8,8 +8,6 @@ effect:
     description: |
       If 2 (CREATURE) have (REF:TRA-019.NAME), Hail is set for 2 rounds.
       If that happens, destroy this card.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-075
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 913
     summary: Hail setter as an effect
-    notes: |
-      

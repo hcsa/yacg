@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Every (CREATURE) gets -2 (HP).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-008
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 104
     summary: Spread damage, cheap
-    notes: |
-      

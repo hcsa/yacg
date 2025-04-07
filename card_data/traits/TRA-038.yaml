@@ -19,5 +19,3 @@ trait:
     dev-name: Trickster
     order: 607
     summary: Reverses speed order in combat
-    notes: |
-      

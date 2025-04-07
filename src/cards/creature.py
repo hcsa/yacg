@@ -7,7 +7,7 @@ from src.cards.abstract_classes import Card
 from src.cards.enums import Color, DevStage, _GameElementIdPrefix
 from src.cards.trait import Trait
 from src.cards.attack import Attack
-from src.utils import CREATURE_DATA_PATH
+from src.utils import CREATURE_DATA_PATH, YAML_ENCODING
 
 
 @dataclass(frozen=True)
@@ -101,7 +101,7 @@ class Creature(Card):
         """
 
         yaml_path = CREATURE_DATA_PATH / f"{creature_id}.yaml"
-        with open(yaml_path, "r") as f:
+        with open(yaml_path, "r", encoding=YAML_ENCODING) as f:
             yaml_data = yaml.safe_load(f)["creature"]
 
         atk_strong_effect = None
@@ -180,7 +180,11 @@ class Creature(Card):
                 else None
             ),
             traits=traits_list,
-            flavor_text=str(yaml_data["data"]["flavor-text"]).strip()
+            flavor_text=(
+                str(yaml_data["data"]["flavor-text"]).strip()
+                if "flavor-text" in yaml_data["data"]
+                else ""
+            ),
         )
         creature_metadata = CreatureMetadata(
             id=str(yaml_data["metadata"]["id"]),
@@ -205,7 +209,11 @@ class Creature(Card):
                 if yaml_data["metadata"]["summary"] is not None
                 else ""
             ),
-            notes=str(yaml_data["metadata"]["notes"]).replace("\n      ", "\n").strip(),
+            notes=(
+                str(yaml_data["metadata"]["notes"]).strip()
+                if "notes" in yaml_data["metadata"]
+                else ""
+            ),
         )
         creature = Creature(
             data=creature_data,
@@ -218,71 +226,87 @@ class Creature(Card):
         Writes the creature data to the corresponding YAML file.
         """
 
-        flavor_text_str = self.data.flavor_text.strip().replace("\n", "\n      ")
-        notes_str = self.metadata.notes.strip().replace("\n", "\n      ")
+        flavor_text_str = ""
+        if not self.data.flavor_text == "":
+            flavor_text_str += "    flavor-text: |\n"
+            flavor_text_str += "      "
+            flavor_text_str += self.data.flavor_text.strip().replace("\n", "\n      ")
+            flavor_text_str += "\n"
+
+        notes_str = ""
+        if not self.metadata.notes == "":
+            notes_str += "    notes: |\n"
+            notes_str += "      "
+            notes_str += self.metadata.notes.strip().replace("\n", "\n      ")
+            notes_str += "\n"
+
+        atk_strong_str = (
+                "    atk-strong: "
+                + (str(self.data.atk_strong) if self.data.atk_strong is not None else "")
+                + "\n"
+        )
+
+        atk_technical_str = (
+                "    atk-technical: "
+                + (str(self.data.atk_technical) if self.data.atk_technical is not None else "")
+                + "\n"
+        )
 
         traits_str = ""
         if len(self.data.traits) > 0:
-            traits_str += "traits:\n"
+            traits_str += "    traits:\n"
             for trait in self.data.traits:
-                trait_str = f"""
-      - name: {trait.data.name}
-        description: {trait.data.description}
-        id: {trait.metadata.id}"""[1:]
-                traits_str += trait_str + "\n"
-            traits_str = traits_str + "    "
+                traits_str += f"      - name: {trait.data.name}\n"
+                traits_str += f"        description: {trait.data.description}\n"
+                traits_str += f"        id: {trait.metadata.id}\n"
 
-        atk_strong_str = str(self.data.atk_strong) if self.data.atk_strong is not None else ""
         atk_strong_effect_str = ""
         if self.data.atk_strong_effect is not None:
             atk_strong_effect = self.data.atk_strong_effect
-            variable_str = ""
+            atk_strong_effect_str += f"    atk-strong-effect:\n"
+            atk_strong_effect_str += f"      name: {atk_strong_effect.data.name}\n"
             if self.data.atk_strong_effect_variable is not None:
-                variable_str = f"\n      variable: {self.data.atk_strong_effect_variable}"
-            atk_strong_effect_str = f"""atk-strong-effect:
-      name: {atk_strong_effect.data.name}{variable_str}
-      description: {atk_strong_effect.data.description}
-      id: {atk_strong_effect.metadata.id}\n"""
+                atk_strong_effect_str += f"      variable: {self.data.atk_strong_effect_variable}\n"
+            atk_strong_effect_str += f"      description: {atk_strong_effect.data.description}\n"
+            atk_strong_effect_str += f"      id: {atk_strong_effect.metadata.id}\n"
 
-        atk_technical_str = str(self.data.atk_technical) if self.data.atk_technical is not None else ""
         atk_technical_effect_str = ""
         if self.data.atk_technical_effect is not None:
             atk_technical_effect = self.data.atk_technical_effect
-            variable_str = ""
+            atk_technical_effect_str += f"    atk-technical-effect:\n"
+            atk_technical_effect_str += f"      name: {atk_technical_effect.data.name}\n"
             if self.data.atk_technical_effect_variable is not None:
-                variable_str = f"\n      variable: {self.data.atk_technical_effect_variable}"
-            atk_technical_effect_str = f"""atk-technical-effect:
-      name: {atk_technical_effect.data.name}{variable_str}
-      description: {atk_technical_effect.data.description}
-      id: {atk_technical_effect.metadata.id}\n    """
+                atk_technical_effect_str += f"      variable: {self.data.atk_technical_effect_variable}\n"
+            atk_technical_effect_str += f"      description: {atk_technical_effect.data.description}\n"
+            atk_technical_effect_str += f"      id: {atk_technical_effect.metadata.id}\n"
 
-        yaml_content = f"""
-creature:
-  data:
-    name: {self.data.name}
-    color: {self.data.color.name if self.data.color is not None else ""}
-    is-token: {self.data.is_token}
-    cost-total: {self.data.cost_total if self.data.cost_total is not None else ""}
-    cost-color: {self.data.cost_color if self.data.cost_color is not None else ""}
-    hp: {self.data.hp if self.data.hp is not None else ""}
-    spe: {self.data.spe if self.data.spe is not None else ""}
-    {traits_str}atk-strong: {atk_strong_str}
-    {atk_strong_effect_str}atk-technical: {atk_technical_str}
-    {atk_technical_effect_str}flavor-text: |
-      {flavor_text_str}
-
-  metadata:
-    id: {self.metadata.id}
-    value: {self.metadata.value if self.metadata.value is not None else ""}
-    dev-stage: {self.metadata.dev_stage.name}
-    dev-name: {self.metadata.dev_name}
-    order: {self.metadata.order if self.metadata.order is not None else ""}
-    summary: {self.metadata.summary}
-    notes: |
-      {notes_str}"""[1:]
+        yaml_content = "creature:\n"
+        yaml_content += f"  data:\n"
+        yaml_content += f"    name: {self.data.name}\n"
+        yaml_content += f"    color: {self.data.color.name if self.data.color is not None else ""}\n"
+        yaml_content += f"    is-token: {self.data.is_token}\n"
+        yaml_content += f"    cost-total: {self.data.cost_total if self.data.cost_total is not None else ""}\n"
+        yaml_content += f"    cost-color: {self.data.cost_color if self.data.cost_color is not None else ""}\n"
+        yaml_content += f"    hp: {self.data.hp if self.data.hp is not None else ""}\n"
+        yaml_content += f"    spe: {self.data.spe if self.data.spe is not None else ""}\n"
+        yaml_content += traits_str
+        yaml_content += atk_strong_str
+        yaml_content += atk_strong_effect_str
+        yaml_content += atk_technical_str
+        yaml_content += atk_technical_effect_str
+        yaml_content += flavor_text_str
+        yaml_content += f"\n"
+        yaml_content += f"  metadata:\n"
+        yaml_content += f"    id: {self.metadata.id}\n"
+        yaml_content += f"    value: {self.metadata.value if self.metadata.value is not None else ""}\n"
+        yaml_content += f"    dev-stage: {self.metadata.dev_stage.name}\n"
+        yaml_content += f"    dev-name: {self.metadata.dev_name}\n"
+        yaml_content += f"    order: {self.metadata.order if self.metadata.order is not None else ""}\n"
+        yaml_content += f"    summary: {self.metadata.summary}\n"
+        yaml_content += notes_str
 
         yaml_path = CREATURE_DATA_PATH / f"{self.metadata.id}.yaml"
-        with open(yaml_path, "w") as f:
+        with open(yaml_path, "w", encoding=YAML_ENCODING) as f:
             f.write(yaml_content)
 
     @classmethod

@@ -13,8 +13,6 @@ creature:
         id: TRA-024
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-004
@@ -23,5 +21,3 @@ creature:
     dev-name: Bloodhound
     order: 804
     summary: -Atk in combat, Black, cheapest
-    notes: |
-      

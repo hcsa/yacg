@@ -8,8 +8,6 @@ effect:
     description: |
       Choose target (CREATURE) in your discard pile. To play this card, you must additionally pay (NOCOLOR) equal to half (rounded down) the total cost of target (CREATURE).
       Play target (CREATURE).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-036
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 602
     summary: Cast from own trash, pay cost
-    notes: |
-      

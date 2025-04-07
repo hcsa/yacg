@@ -7,8 +7,6 @@ effect:
     cost-color: 
     description: |
       Target (CREATURE)'s traits have no effect.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-086
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 1008
     summary: 
-    notes: |
-      

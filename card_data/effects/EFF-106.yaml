@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Shuffle your discard pile face-down, put the top 5 cards on the bottom of your deck and put the remaining cards in the discard pile.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-106
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 
     summary: Put cards from trash back into the deck
-    notes: |
-      

@@ -16,5 +16,3 @@ trait:
     dev-name: Brittle
     order: 603
     summary: Dies after attacking
-    notes: |
-      

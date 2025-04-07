@@ -8,8 +8,6 @@ effect:
     description: |
       Target ally (CREATURE) gets +3 (SATK) and has (REF:TRA-031.NAME) ((REF:TRA-031.DESCRIPTION)).
       Opponent fights it until target (CREATURE) is killed or opponent has no more (CREATURE)s left.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-010

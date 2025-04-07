@@ -13,8 +13,6 @@ creature:
         id: TRA-022
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-002
@@ -23,5 +21,3 @@ creature:
     dev-name: Energy spy
     order: 802
     summary: Charge, black
-    notes: |
-      

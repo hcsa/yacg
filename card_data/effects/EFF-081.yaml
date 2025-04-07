@@ -8,8 +8,6 @@ effect:
     description: |
       Gain 2 (NOCOLOR) of a color of your choosing.
       At the beginning of next round, opponent gains 4 (NOCOLOR) of a color of their choosing.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-081
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 1003
     summary: Charge, delayed opponent charge
-    notes: |
-      

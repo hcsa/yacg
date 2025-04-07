@@ -16,8 +16,6 @@ creature:
         id: TRA-014
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-051
@@ -26,5 +24,3 @@ creature:
     dev-name: 
     order: 211
     summary: Sun buffed, Rain buffed, Green
-    notes: |
-      

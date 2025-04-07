@@ -13,8 +13,6 @@ creature:
         id: TRA-039
     atk-strong: 1
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-010
@@ -23,5 +21,3 @@ creature:
     dev-name: Jumper
     order: 503
     summary: U-turn, Yellow, cheapest
-    notes: |
-      

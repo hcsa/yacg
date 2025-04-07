@@ -7,8 +7,6 @@ effect:
     cost-color: 2
     description: |
       Destroy target ally (CREATURE). Gain (NOCOLOR) of a color of your choosing equal to destroyed (CREATURE)'s (HP).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-069
@@ -16,5 +14,3 @@ effect:
     dev-name: Charge, cyan
     order: 905
     summary: Charge, cyan
-    notes: |
-      

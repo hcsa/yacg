@@ -13,8 +13,6 @@ creature:
         id: TRA-013
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-084
@@ -23,5 +21,3 @@ creature:
     dev-name: 
     order: 418
     summary: Double strike, White, good stats
-    notes: |
-      

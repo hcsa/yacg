@@ -7,8 +7,6 @@ effect:
     cost-color: 3
     description: |
       After a fight, any surviving creatures get +1 (HP).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-108
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 
     summary: Recovery after fight
-    notes: |
-      

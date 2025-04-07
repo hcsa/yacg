@@ -19,5 +19,3 @@ trait:
     dev-name: Defeatist
     order: 104
     summary: -Atk when ally dies
-    notes: |
-      

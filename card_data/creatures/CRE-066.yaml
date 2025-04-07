@@ -16,8 +16,6 @@ creature:
         id: TRA-023
     atk-strong: 3
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-066
@@ -26,5 +24,3 @@ creature:
     dev-name: 
     order: 705
     summary: Defensive traits, good stats, Pink
-    notes: |
-      

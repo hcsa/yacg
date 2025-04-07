@@ -8,8 +8,6 @@ effect:
     description: |
       Choose target (CREATURE) in any discard pile and play it.
       Target (CREATURE) has (REF:TRA-003.NAME) ((REF:TRA-003.DESCRIPTION)).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-037
@@ -17,5 +15,3 @@ effect:
     dev-name: 
     order: 603
     summary: Cast from own trash, gets Brittle
-    notes: |
-      

@@ -9,8 +9,6 @@ creature:
     spe: 5
     atk-strong: 2
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-019
@@ -19,5 +17,3 @@ creature:
     dev-name: Lightning McQueen
     order: 511
     summary: Very high Spd, Yellow
-    notes: |
-      

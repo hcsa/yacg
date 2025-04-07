@@ -7,8 +7,6 @@ effect:
     cost-color: 3
     description: |
       Every (CREATURE) gets 1 (HP).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-031
@@ -16,5 +14,3 @@ effect:
     dev-name: 
     order: 505
     summary: High spread damage
-    notes: |
-      

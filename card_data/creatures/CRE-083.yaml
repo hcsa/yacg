@@ -16,8 +16,6 @@ creature:
         id: TRA-039
     atk-strong: 4
     atk-technical: 1
-    flavor-text: |
-      
 
   metadata:
     id: CRE-083
@@ -26,5 +24,3 @@ creature:
     dev-name: 
     order: 417
     summary: First strike, U-turn
-    notes: |
-      

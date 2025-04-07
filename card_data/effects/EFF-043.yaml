@@ -8,8 +8,6 @@ effect:
     description: |
       At the beginning of next round, draw 2 extra cards.
       Multiple copies of (REF:EFF-043.NAME) don't stack.
-    flavor-text: |
-      
 
   metadata:
     id: EFF-043

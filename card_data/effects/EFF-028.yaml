@@ -7,8 +7,6 @@ effect:
     cost-color: 1
     description: |
       Target (CREATURE) gets +1 (SPE) and -1 (HP).
-    flavor-text: |
-      
 
   metadata:
     id: EFF-028
@@ -16,5 +14,3 @@ effect:
     dev-name: Speed Boost
     order: 501
     summary: +Spd, cheap, yellow
-    notes: |
-      
