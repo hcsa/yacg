@@ -117,7 +117,11 @@ class Effect(Card):
                 else None
             ),
             description=str(yaml_data["data"]["description"]).strip(),
-            flavor_text=str(yaml_data["data"]["flavor-text"]).strip()
+            flavor_text=(
+                str(yaml_data["data"]["flavor-text"]).strip()
+                if "flavor-text" in yaml_data["data"]
+                else ""
+            ),
         )
         effect_metadata = EffectMetadata(
             id=str(yaml_data["metadata"]["id"]),
@@ -137,7 +141,11 @@ class Effect(Card):
                 if yaml_data["metadata"]["summary"] is not None
                 else ""
             ),
-            notes=str(yaml_data["metadata"]["notes"]).replace("\n      ", "\n").strip(),
+            notes=(
+                str(yaml_data["metadata"]["notes"]).strip()
+                if "notes" in yaml_data["metadata"]
+                else ""
+            ),
         )
         effect = Effect(
             data=effect_data,
@@ -150,31 +158,42 @@ class Effect(Card):
         Writes the effect data to the corresponding YAML file.
         """
 
-        description_str = self.data.description.strip().replace("\n", "\n      ")
-        flavor_text_str = self.data.flavor_text.strip().replace("\n", "\n      ")
-        notes_str = self.metadata.notes.strip().replace("\n", "\n      ")
+        description_str = "    description: |\n"
+        description_str += "      "
+        description_str += self.data.description.strip().replace("\n", "\n      ")
+        description_str += "\n"
 
-        yaml_content = f"""
-effect:
-  data:
-    name: {self.data.name}
-    color: {self.data.color.name if self.data.color is not None else ""}
-    type: {self.data.type.name}
-    cost-total: {self.data.cost_total if self.data.cost_total is not None else ""}
-    cost-color: {self.data.cost_color if self.data.cost_color is not None else ""}
-    description: |
-      {description_str}
-    flavor-text: |
-      {flavor_text_str}
+        flavor_text_str = ""
+        if not self.data.flavor_text == "":
+            flavor_text_str += "    flavor-text: |\n"
+            flavor_text_str += "      "
+            flavor_text_str += self.data.flavor_text.strip().replace("\n", "\n      ")
+            flavor_text_str += "\n"
 
-  metadata:
-    id: {self.metadata.id}
-    dev-stage: {self.metadata.dev_stage.name}
-    dev-name: {self.metadata.dev_name}
-    order: {self.metadata.order if self.metadata.order is not None else ""}
-    summary: {self.metadata.summary}
-    notes: |
-      {notes_str}"""[1:]
+        notes_str = ""
+        if not self.metadata.notes == "":
+            notes_str += "    notes: |\n"
+            notes_str += "      "
+            notes_str += self.metadata.notes.strip().replace("\n", "\n      ")
+            notes_str += "\n"
+
+        yaml_content = "effect:\n"
+        yaml_content += f"  data:\n"
+        yaml_content += f"    name: {self.data.name}\n"
+        yaml_content += f"    color: {self.data.color.name if self.data.color is not None else ""}\n"
+        yaml_content += f"    type: {self.data.type.name}\n"
+        yaml_content += f"    cost-total: {self.data.cost_total if self.data.cost_total is not None else ""}\n"
+        yaml_content += f"    cost-color: {self.data.cost_color if self.data.cost_color is not None else ""}\n"
+        yaml_content += description_str
+        yaml_content += flavor_text_str
+        yaml_content += f"\n"
+        yaml_content += f"  metadata:\n"
+        yaml_content += f"    id: {self.metadata.id}\n"
+        yaml_content += f"    dev-stage: {self.metadata.dev_stage.name}\n"
+        yaml_content += f"    dev-name: {self.metadata.dev_name}\n"
+        yaml_content += f"    order: {self.metadata.order if self.metadata.order is not None else ""}\n"
+        yaml_content += f"    summary: {self.metadata.summary}\n"
+        yaml_content += notes_str
 
         yaml_path = EFFECT_DATA_PATH / f"{self.metadata.id}.yaml"
         with open(yaml_path, "w", encoding=YAML_ENCODING) as f:
